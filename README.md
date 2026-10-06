@@ -9,7 +9,8 @@
 
    ```powershell
    cd "D:\New software\ResiScore\site-publish"
-   git init -b main
+   if (-not (Test-Path .git)) { git init -b main }
+   git branch -M main
    git add .
    git commit -m "chore: prepare ResiScore for GitHub Pages"
    git remote add origin https://github.com/<你的用户名>/resiscore-pages.git
