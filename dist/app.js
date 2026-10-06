@@ -5659,6 +5659,17 @@ async function loadCommunityEvidenceData(options = {}) {
     }
   } catch (error) {
     if (!activeDataLoad(token, cityId)) return;
+    const bundled = globalThis.RESISCORE_BUNDLED_EVIDENCE_DATA;
+    if (bundled) {
+      state.multiSourceData = bundled;
+      if (state.property) {
+        applyOfflineScoreLookup(state.property);
+        applyLifeLookup(state.property);
+        renderScore();
+      }
+      console.warn('广州多来源证据远端文件不可用，已使用随版本发布的内置证据包：', error);
+      return;
+    }
     state.multiSourceData = null;
     console.warn('广州多来源证据包不可用，继续使用单源字段并标记待确认：', error);
     if (state.property) renderScore();
