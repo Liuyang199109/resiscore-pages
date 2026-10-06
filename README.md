@@ -4,7 +4,7 @@
 
 ## 首次发布
 
-1. 在 GitHub 新建一个仓库，例如 `resiscore-pages`。如果使用 GitHub Free，建议选择公开仓库。
+1. GitHub 仓库地址是 [`Liuyang199109/resiscore-pages`](https://github.com/Liuyang199109/resiscore-pages)。如果使用 GitHub Free，建议选择公开仓库。
 2. 在本目录执行：
 
    ```powershell
@@ -13,7 +13,7 @@
    git branch -M main
    git add .
    git commit -m "chore: prepare ResiScore for GitHub Pages"
-   git remote add origin https://github.com/<你的用户名>/resiscore-pages.git
+   git remote add origin https://github.com/Liuyang199109/resiscore-pages.git
    git push -u origin main
    ```
 
@@ -21,7 +21,7 @@
 4. 打开 **Actions**，等待 `Deploy ResiScore to GitHub Pages` 成功。网址通常是：
 
    ```text
-   https://<你的用户名>.github.io/resiscore-pages/
+   https://liuyang199109.github.io/resiscore-pages/
    ```
 
 ## 后续更新
