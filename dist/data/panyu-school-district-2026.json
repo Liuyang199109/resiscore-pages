@@ -1,0 +1,1613 @@
+{
+  "schemaVersion": 1,
+  "city": "guangzhou",
+  "district": "panyu",
+  "districtName": "番禺区",
+  "schoolYear": 2026,
+  "sourcePublished": "2026-04-28",
+  "sourceUrls": [
+    "https://www.jiukao.com/fw/202605/8472.html",
+    "https://www.panyu.gov.cn/zwgk/zdlyxxgkml/jy/ndywjyhpgz/",
+    "https://www.panyu.gov.cn/attachment/8/8018/8018386/10794166.xls"
+  ],
+  "sourceFiles": [
+    "data/school-sources/panyu.html",
+    "data/panyu-middle-2026.xls"
+  ],
+  "mappingConfidence": "source-derived-table",
+  "propertyAliases": {
+    "丽江花园如英居": "如英居",
+    "锦绣生态园趣园": "锦绣生态园",
+    "番禺奥林匹克花园爱巢": "爱巢",
+    "华南碧桂园怡翠苑": "华南碧桂园",
+    "华南碧桂园映翠桃园": "华南碧桂园",
+    "华南碧桂园景翠苑": "华南碧桂园",
+    "华南碧桂园漾翠苑": "华南碧桂园",
+    "华南碧桂园盈峰翠庭": "华南碧桂园",
+    "华南碧桂园碧华坊": "华南碧桂园",
+    "华南碧桂园碧翠苑": "华南碧桂园",
+    "华南碧桂园紫翠苑": "华南碧桂园",
+    "华南碧桂园翠云山": "华南碧桂园",
+    "华南碧桂园翠宏台": "华南碧桂园",
+    "华南碧桂园翠湖居": "华南碧桂园",
+    "华南碧桂园芳翠苑": "华南碧桂园",
+    "华南碧桂园锦翠苑": "华南碧桂园",
+    "华南碧桂园雅翠苑": "华南碧桂园",
+    "金海岸花园金石碧苑": "金海岸花园",
+    "金海岸花园观海": "金海岸花园",
+    "锦绣香江花园百合园": "锦绣香江",
+    "广州雅居乐花园时光九篇": "时光九篇",
+    "广州雅居乐花园十年小雅": "十年小雅",
+    "锦绣半岛西区": "锦绣半岛",
+    "锦绣半岛东区": "锦绣半岛",
+    "丽江花园康城居": "丽江花园",
+    "自在城市花园四期诺德名筑": "诺德名筑",
+    "自在城市花园三期诺德名都": "诺德名都"
+  },
+  "schoolNameAliases": {},
+  "rankingEstimatePolicy": {
+    "name": "公开属性关键词分层估计（非官方排名）",
+    "primaryTotalSchools": 1012,
+    "middleTotalSchools": 420,
+    "method": "按公开办学属性关键词分层换算全市同学段估计名次，不能替代教育部门排名，可人工覆盖。"
+  },
+  "rankingEstimates": {
+    "小学": {
+      "东怡小学": 506,
+      "东湖洲小学": 506,
+      "丽江学校": 506,
+      "亚运城小学": 506,
+      "傍江东小学": 506,
+      "傍西小学": 506,
+      "剑桥郡小学": 506,
+      "化龙镇东沙小学": 506,
+      "化龙镇中心小学": 506,
+      "化龙镇复胜小学": 506,
+      "化龙镇第二小学": 506,
+      "华南师范大学附属广州大学城小学": 122,
+      "华南理工大学广州国际校区附属小学": 284,
+      "华师附中番禺小学": 506,
+      "南村镇中心小学": 506,
+      "南村镇南华小学": 506,
+      "南村镇员岗剑父小学": 506,
+      "南村镇坑头小学": 506,
+      "南村镇市头小学": 506,
+      "南村镇梅江小学": 506,
+      "南村镇樟边小学": 506,
+      "南村镇汇贤小学": 506,
+      "南村镇锦绣香江学校": 506,
+      "南村镇雅居乐小学": 506,
+      "南站小学": 506,
+      "南雅学校": 506,
+      "大石中心小学": 506,
+      "大石富丽小学": 506,
+      "大石小学": 506,
+      "大石新联小学": 506,
+      "大石河村小学": 506,
+      "大石礼村小学": 506,
+      "天峰小学": 506,
+      "天成小学": 506,
+      "天誉小学": 506,
+      "天韵小学": 506,
+      "小谷围街穗石小学": 506,
+      "屏山小学": 506,
+      "市桥东兴小学": 506,
+      "市桥东城小学": 506,
+      "市桥东沙小学": 506,
+      "市桥中心小学": 506,
+      "市桥云星小学": 506,
+      "市桥先锋小学": 506,
+      "市桥北城小学": 506,
+      "市桥南双玉小学": 506,
+      "市桥南新小学": 506,
+      "市桥南阳里小学": 506,
+      "市桥大平小学": 506,
+      "市桥大罗小学": 506,
+      "市桥实验小学": 284,
+      "市桥富豪山庄小学": 506,
+      "市桥富都小学": 506,
+      "市桥小平小学": 506,
+      "市桥左边小学": 506,
+      "市桥德兴小学": 506,
+      "市桥新世纪小学": 506,
+      "市桥桥东小学": 506,
+      "市桥汀根小学": 506,
+      "市桥沙墟一小学": 506,
+      "市桥沙墟二小学": 506,
+      "市桥草河小学": 506,
+      "市桥螺山小学": 506,
+      "市桥西丽小学": 506,
+      "市桥金山谷学校": 506,
+      "市桥锦庭小学": 506,
+      "市桥陈涌小学": 506,
+      "市桥黄编小学": 506,
+      "市桥龙美小学": 506,
+      "广东仲元中学莲花湾学校": 506,
+      "广东仲元中学附属学校": 284,
+      "广东外语外贸大学番禺实验学校": 284,
+      "广东外语外贸大学附属番禺小学": 284,
+      "广东番禺中学教育集团培兰小学": 284,
+      "广东番禺中学附属学校": 284,
+      "广东番禺区中学教育集团兴南学校": 284,
+      "广大附中番禺实验学校": 284,
+      "广州大学附属小学": 284,
+      "广州市东风农教育集团番禺小学": 284,
+      "新桥小学": 506,
+      "新造镇新造小学": 506,
+      "旧水坑小学": 506,
+      "时代南阳里小学": 506,
+      "横江民生学校": 506,
+      "毓正小学": 506,
+      "毓秀小学": 506,
+      "毓贤学校": 506,
+      "水濂小学": 506,
+      "沙头中心小学": 506,
+      "沙涌小学": 506,
+      "沙湾中心小学": 506,
+      "沙湾京兆小学": 506,
+      "沙湾兴贤小学": 506,
+      "沙湾实验小学": 284,
+      "沙湾德贤小学": 506,
+      "沙湾福涌小学": 506,
+      "沙湾红基学校": 506,
+      "沙湾荟贤小学": 506,
+      "沙湾西村育才小学": 506,
+      "沙湾龙岐螺园小学": 506,
+      "洛浦上激小学": 506,
+      "洛浦东乡小学": 506,
+      "洛浦中心小学": 506,
+      "洛浦沙溪小学": 506,
+      "洛浦洛溪小学": 506,
+      "洛浦西一小学": 506,
+      "洛浦西二小学": 506,
+      "洛溪新城小学": 506,
+      "珊瑚湾畔小学": 506,
+      "番广附万博学校": 506,
+      "番广附创新城学校": 506,
+      "番禺区实验小学": 284,
+      "石基镇中心小学": 506,
+      "石基镇前锋小学": 506,
+      "石壁小学": 506,
+      "石岗小学": 506,
+      "石楼镇中心小学": 506,
+      "石楼镇何澄溪小学": 506,
+      "石楼镇凌边小学": 506,
+      "石楼镇南派小学": 506,
+      "石楼镇小龙小学": 506,
+      "石楼镇文边小学": 506,
+      "石楼镇桥山小学": 506,
+      "石楼镇永善小学": 506,
+      "石楼镇海傍小学": 506,
+      "石楼镇海鸥学校": 506,
+      "石楼镇清流小学": 506,
+      "石楼镇联围小学": 506,
+      "石楼镇茂生小学": 506,
+      "石楼镇莲花山小学": 506,
+      "石楼镇赤岗小学": 506,
+      "石楼镇重文小学": 506,
+      "石楼镇金山小学": 506,
+      "石楼镇韵琴小学": 506,
+      "红郡小学": 506,
+      "罗家桥虹小学": 506,
+      "茶东小学": 506,
+      "蜆涌俊贤小学": 506,
+      "金海岸学校": 506,
+      "钟村中心小学": 506,
+      "钟村奥园学校": 506,
+      "钟村第二小学": 506,
+      "钟村育英小学": 506,
+      "钟村谢村小学": 506,
+      "钟村锦绣小学": 506,
+      "隽新学校": 506,
+      "韦大小学": 506
+    },
+    "初中": {}
+  },
+  "elementaryZones": [
+    {
+      "school": "广东番禺中学附属学校",
+      "coverage": "桥南街保利香逸花园、城南源著、可逸江畔、可逸阳光、番禺金业花园、番禺奥林匹克花园、金奥花园（爱巢）、冠军城小区符合“人户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "市桥北城小学",
+      "coverage": "市桥街康乐路116号、康乐大街、康裕大厦部分（康乐路162号）、康华大厦、繁华路170号嘉裕华庭、172号、174号小区，繁华路178号康嘉园、光明北路绿茵庭园、银都大厦、光明北路241号、富华西路（光明北路以西段）、丹山河以北、西环路以东、桥兴大道以西至捷进中路附近的小区（包含西环路鸿福花园、裕福花园、康裕北苑，捷进中路丹桂园大街、一巷至六巷、1号-118号、捷进二路等）符合“人户一致”条件的适龄儿童；沙头村、横山村、丹山村户籍的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "市桥实验小学",
+      "coverage": "桥南街华景新城、海伦堡、御院、花样年华、香缤豪庭（博学公馆）、福景园等小区符合“人户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "市桥中心小学",
+      "coverage": "市桥街康裕园、康乐园、康裕大厦部分（康乐路152、154号）、康乐路63号及禺华园、北丽园、乐华街、繁华路103号等小区符合“人户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "市桥西丽小学",
+      "coverage": "市桥街西丽路及西丽路以西至西环路包括华侨城、侨宫苑、西城花园、西秀园、华发明苑、祺康园、西丽中路1号等整片区以及长堤西路海景苑、海滨大厦，西丽南路325号、解放西路宝翠苑等符合“人户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "市桥南阳里小学",
+      "coverage": "市桥街光明南路以西、西丽路以东、长堤西路以北包括西丽园、西兴苑、江丽苑、西堤路、三堂路、解放路、环城西路（部分）、禺山大道禺雅园、裕林苑、华葆明苑、禺秀园、正太广场、繁华路江南花苑等符合“人户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "市桥东城小学",
+      "coverage": "市桥街长堤东路（部分）、环城东路（部分）、万丰路18、20、22、24、26、28、30幢，东沙路、德祥路、清河东路一街、43号、151号、163号，沙园南街、德厚大街、德胜路、德安新村、东晖园、东丽园等符合“人户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "市桥桥东小学",
+      "coverage": "市桥街大北路2、4、6、8座（巷）和大北路10号，东涌路（清河中路至柘东路区间段）以东、环城东路（部分）及以西、桥东路及桥东路以南至长堤的片区包括工业路、清河中路（东涌路至环城东路段），万丰路1-15幢、园丰大街、万丰大街、平康路（部分）以及长堤东路（部分）等符合“人户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "市桥富都小学",
+      "coverage": "市桥街富华中路和桥兴大道交界起以北以东、东环路以南包括来福园、北城白云花园、瑞华苑、富都华苑、上轩、康富花园、永恒大街、雍雅园、鸿禧华庭、侨基花园、富华西路（部分）、富华中路、桥兴大道33号、桥兴大道253号（金利大厦）、繁华路怡乐园、繁华路富丽园、光明北路光明大厦、大北路番艺花园、江南新村、鸣翠园、星誉花园、温馨里、梓雅园等片区符合“人户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "市桥先锋小学",
+      "coverage": "市桥街光明南路以东大北路以西禺山大道以南，东涌路以西包括清河中路东涌大街、清河中路（部分）、清河西路（部分）、大东路、大南路、大西路（部分）、海傍路、海傍后街、环城西路（部分）等，东涌路南段（清河路以南段）、繁华路（光明北路以东段）、锦绣华庭、北郊新村、丽景阁、环城中路，大北路（大东路至富华中路区间段）除2、4、6、8座（巷）和大北路10号外的地段、桥兴大道5号江南大厦、桥兴大道2号等符合“人户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "市桥德兴小学",
+      "coverage": "市桥街德兴路及德兴路以东、盛泰路以西、清河东路以南范围内包括东方花园、东明园、德兴园、兴业花园、东兴园1至6幢、开阳阁、东骏园、东逸豪园、璇玑金村、德福楼、德丰园及长堤东路（部分）等符合“人户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "市桥东兴小学",
+      "coverage": "市桥街清河东路东信华庭、东秀园、平康路（部分）、盛泰路及盛泰路以东包括盛泰花园、东翠园、东晟明珠、东逸华庭、东兴路及东兴路以南包括东兴园7至13幢、东平路康泰花园、长堤东路金融街融穗澜湾、盈创水悦轩、路劲美的·隽樾府、柏丽花园、绿城·玉海棠、黄沙岛小区等符合“人户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "市桥小平小学",
+      "coverage": "沙头街小平村户籍的适龄儿童：在小平村及附近居住且符合“人户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "市桥南双玉小学",
+      "coverage": "沙头街南双玉村户籍的适龄儿童：在南双玉村及附近居住且符合“人户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "横江民生学校",
+      "coverage": "沙头街横江村户籍的适龄儿童：沙头街翠涛二路10号、翠涛三路8号天璞花园、景文路1号洺悦玉府等小区符合“人户一致”条件的适龄儿童：在横江村及附近居住且符合“人户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "市桥左边小学",
+      "coverage": "东环街左边村、槐塘村户籍的适龄儿童：在左边村、槐塘村及附近居住且符合“人户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "市桥大平小学",
+      "coverage": "沙头街大平村户籍的适龄儿童：在大平村及附近居住且符合“人户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "市桥汀根小学",
+      "coverage": "沙头街汀根村、莲湖村户籍的适龄儿童：在汀根村、莲湖村及附近居住且符合“人户一致”条件的适龄儿童：东桥大街68号尚东嘉御小区符合“人户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "市桥螺山小学",
+      "coverage": "东环街蔡一、蔡二、蔡三村及甘棠村户籍的适龄儿童：在蔡一、蔡二、蔡三村及甘棠村附近居住且符合“人户一致”条件的适龄儿童：星力时代豪庭、市新路璞悦台小区符合“人户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "市桥南新小学",
+      "coverage": "桥南街南郊村户籍的适龄儿童：在南郊村及附近居住且符合“人户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "市桥沙墟一小学",
+      "coverage": "市桥街沙墟一村户籍的适龄儿童：在沙墟一村及附近、桥福园、华盛新村、华茵明苑、华怡居等居住且符合“人户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "市桥沙墟二小学",
+      "coverage": "市桥街沙墟二村户籍的适龄儿童：在沙墟二村及附近、侨丰苑、东华园、珠电苑等居住且符合“人户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "市桥草河小学",
+      "coverage": "桥南街草河村户籍的适龄儿童：在草河村及附近、水韵南湾小区居住且符合“人户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "蜆涌俊贤小学",
+      "coverage": "桥南街蜆涌村户籍的适龄儿童：在蜆涌村及附近、市南路、康城水郡、晴翠府等居住且符合“人户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "市桥富豪山庄小学",
+      "coverage": "东环街富豪山庄小区、兴学路顺诚花园（花语岭南）、鸿悦花园南区（东环街户籍）符合“人户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "市桥金山谷学校",
+      "coverage": "东环街金山谷小区符合“人户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "市桥黄编小学",
+      "coverage": "市桥街黄编村户籍的适龄儿童：在黄编村及附近居住且符合“人户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "市桥东沙小学",
+      "coverage": "东环街东沙村户籍的适龄儿童：在东沙村及附近居住且符合“人户一致”条件的适龄儿童：万博翠湖花园小区符合“人户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "市桥云星小学",
+      "coverage": "市桥街云星村户籍的适龄儿童：在云星村及附近居住且符合“人户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "市桥龙美小学",
+      "coverage": "东环街龙美村户籍的适龄儿童;在龙美村及附近包括金龙花园、天安科技园等居住且符合“人户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "市桥陈涌小学",
+      "coverage": "桥南街陈涌村户籍的适龄儿童;在陈涌村及附近居住且符合“人户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "市桥大罗小学",
+      "coverage": "沙头街大罗村、小罗村户籍的适龄儿童,以及在大罗村、小罗村附近居住且符合“人户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "市桥新世纪小学",
+      "coverage": "桥南街新世纪花园、喜盈雅境、朗陶居、昊龙花园、时代雅苑(时代柏林)等小区符合“人户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "市桥锦庭小学",
+      "coverage": "桥南街汇景大道(绿庭雅苑、汇庭雅苑、雍逸华庭、邮电小区)、贵平路南岸阳光、南岸春天、华荟南景园、桥景园、德宝花园、南庭路、华荟路、南珠路、南兴路、南堤西路、南堤东路、桥南路等符合“人户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "沙头中心小学",
+      "coverage": "沙头街大富村、北海村户籍且符合“人户一致”条件的适龄儿童;沙头街沙头村、槐山村非村民户籍符合“人户一致”条件的适龄儿童;西环路西侧及西环路以西、市广路以西、银平路以南、禺山西路(部分)以北包括康泰园、裕兴大厦、丽景花园、金晖明园、富图花园、交通综合楼、捷进西路金碧花园、恒兴楼、进宝大楼、骏兴大楼、银平路、银平花园、沙南路、捷进西路(西环路以西段)等片区符合“人户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "钟村中心小学",
+      "coverage": "珑翠花园(南区、北区)、瑞麓府符合“人户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "钟村奥园学校",
+      "coverage": "钟村居委(恒盛商住楼、宏达小区、华丰大厦、华盛楼、丽景楼、南屏苑、裕丰商城、顺景苑、亚华阁、怡乐园、钟灵南路、永发商住楼、民发大厦等)、钟村商贸城、锦绣南区北区、建委大楼等符合“人户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "钟村锦绣小学",
+      "coverage": "锦绣生态园符合“人户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "钟村第二小学",
+      "coverage": "胜石村户籍的适龄儿童;骏新居委锦绣趣园、趣园南街、长江数码花园符合“人户一致”条件适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "毓秀小学",
+      "coverage": "祈福新邨内康怡居、蝶舞轩、晓峰园、月明轩、康怡雅园、海晴居、倚云居、迎风阁、山泉居、湖景居等十个小区符合“人户一致”条件的适龄儿童。如适龄儿童人数超过招生计划,则按入户时间先后顺序安排学位,额满为止,入户时间靠后的统筹入读祈福新邨内的其他公办学校。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "毓贤学校",
+      "coverage": "祈福新邨内倚湖湾、翠湖居、天湖居、祈福A区、祈福B区、祈福C区、祈福D区、祈福E区、祈福臻品阁等九个小区符合“人户一致”条件的适龄儿童。如适龄儿童人数超过招生计划,则按入户时间先后顺序安排学位,额满为止,入户时间靠后的统筹入读祈福新邨内的其他公办学校。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "毓正小学",
+      "coverage": "祈福新邨内名望天下、缤纷汇、名家汇、青怡居、祈福名都、绿怡居、翠怡居、活力花园、绿怡花园、湖畔豪庭小区符合“人户一致”条件的适龄儿童。如适龄儿童人数超过招生计划,则按入户时间先后顺序安排学位,额满为止,入户时间靠后的统筹入读祈福新邨内的其他公办学校。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "钟村育英小学",
+      "coverage": "钟二村、钟三村户籍的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "钟村谢村小学",
+      "coverage": "谢村村户籍的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "石壁小学",
+      "coverage": "石一村、石二村、石三村、石四村户籍的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "屏山小学",
+      "coverage": "屏一村、屏二村、都那村户籍的适龄儿童；碧桂东苑符合“入户一致”条件适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "韦大小学",
+      "coverage": "韦涌村、大洲村户籍的适龄儿童。韦涌村、大洲村户籍村民适龄子女可一次性选择入读书大小学或南站小学。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "南站小学",
+      "coverage": "臻尚苑、南瑞花园（广州城投·领南府）符合“入户一致”条件的适龄儿童；韦涌村、大洲村户籍的适龄儿童（自愿选择入读）。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "广东外语外贸大学番禺实验学校",
+      "coverage": "星瀚园小区符合“入户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "隽新学校",
+      "coverage": "城隽和府、城隽玥府符合“入户一致”条件的适龄儿童（安置房和共有产权房业主子女，需把子女户籍迁到城隽和府、城隽玥府相应的钟村街集体户）；星寰小区（星颂花园）符合“入户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "广州市东风农教育集团番禺小学",
+      "coverage": "华润长隆万博悦府（长润花园）、越秀万博和樾府（越颂华府、华沁园、华颂公馆）、信基城符合“入户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "广东仲元中学附属学校",
+      "coverage": "南天名苑、吉祥北园C区D区、吉祥北街24幢26幢28幢、吉祥楼、新吉祥楼、海天花园、裕景花园西区、海棠居、彩虹花园东区西区符合“入户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "大石中心小学",
+      "coverage": "大石居委会户籍的大石原居民的适龄儿童（非小区管理）；植村村、大兴村户籍的适龄儿童；今日丽舍、怡景花园、金城花园、怡居、百乐园、大发大厦、富庭华园、富庭东园、滨江绿园、海龙湾、富丽居、藏珑府符合“入户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "大石富丽小学",
+      "coverage": "柏景台、百丰楼、百佳楼、富昌花园、锦华楼、凯跃大厦、穗华楼、永富楼、永达大厦、永信楼、渝达大厦、粤华楼、旺达楼、富海居、富丽12号楼、富泽居、富丽楼、东发楼、富宜居、原华大楼、三和大厦、富明楼、富新楼、莲芳园、乳芳园、福泰园、朝阳东路、爱华路、宾至路、福宁园、福安园、福宁大厦、丽水湾、锦绣银湾、领航公寓、房管所后座、丽水蓝天、华筑翡翠湾、星河湾（一、二期）、滨江和著、御湖境符合“入户一致”条件的适龄儿童；大山村户籍的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "大石新联小学",
+      "coverage": "康信楼、华贵大厦、香江大厦、豪景楼、桔芳园、朝阳西路（1、2、3、4幢）、荔芳园、富怡大厦、富丽广场、商业街、侨园符合“入户一致”条件的适龄子女；北联村户籍的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "大石小学",
+      "coverage": "东联村、山西村、猛涌村、大维村、洗村村、会江村、官坑村、涌口村、桔树村及东乡村24队户籍的适龄儿童；名伦花园、悦尚公馆符合“入户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "大石礼村小学",
+      "coverage": "礼村户籍的适龄儿童；礼村旧居民适龄儿童；新月明珠花园、四季花园、新城市宜家、群贤路周边自建房符合“入户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "大石河村小学",
+      "coverage": "河村户籍的适龄儿童；河村旧居民的适龄儿童；大石街内符合“租购同权”、集体户、各类统筹等条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "洛浦上激小学",
+      "coverage": "上激村户籍的适龄儿童；上激旧居民的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "洛浦沙溪小学",
+      "coverage": "沙溪村户籍的适龄儿童；沙溪旧居民的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "洛浦洛溪小学",
+      "coverage": "洛溪村户籍的适龄儿童；洛溪旧居民的适龄儿童；洛浦路符合“人户一致”条件的适龄儿童；洛浦街内集体户口适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "洛浦东乡小学",
+      "coverage": "东乡村户籍的适龄儿童；东乡村旧居民的适龄儿童；南浦长大小区、南浦海滨花园符合“人户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "洛浦西一小学",
+      "coverage": "西一村户籍的适龄儿童；西一村旧居民的适龄儿童；洛浦街内符合“租购同权”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "洛浦西二小学",
+      "coverage": "西二村、西三村户籍的适龄儿童；西二村、西三村旧居民的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "洛溪新城小学",
+      "coverage": "吉祥北园A区B区、如意花园、吉祥园、吉祥北街18幢20幢22幢、彩虹楼、综合楼、裕景花园东区、雅澜苑、洛湖居、洛涛北区、洛涛南区（单数幢号）、如意中心、如意二马路、如意三马路、吉祥南街15幢17幢、吉祥道149号155号、广奥花园、华荟明苑、华进明苑、中海蓝湾、莱茵花园、洛溪长大小区符合“人户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "洛浦中心小学",
+      "coverage": "厦滘村户籍的适龄儿童；上激海滨花园、广州碧桂园、东海花园、绿茵岛、洛涛南区（双数幢号）符合“人户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "丽江学校",
+      "coverage": "丽江花园、百事佳花园、如英居符合“人户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "番禺区实验小学",
+      "coverage": "锦绣半岛、金月湾符合“人户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "时代南阳里小学",
+      "coverage": "珠江花园、时代外滩符合“人户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "珊瑚湾畔小学",
+      "coverage": "珊瑚湾畔、海怡半岛（海怡花园）符合“人户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "南村镇中心小学",
+      "coverage": "南村社区居委（不含时代倾城）符合“人户一致”条件的适龄儿童；板桥村、草堂村、陈边村户籍适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "广东番禺中学教育集团培兰小学",
+      "coverage": "星河盛世锦城花园符合“人户一致”条件的适龄儿童；南村镇罗边村、永大社区居委户籍适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "南村镇梅江小学",
+      "coverage": "梅山村、江南村户籍适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "南村镇员岗剑父小学",
+      "coverage": "员岗村、新基村户籍适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "南村镇坑头小学",
+      "coverage": "坑头村户籍适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "南村镇市头小学",
+      "coverage": "市头村户籍适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "南村镇汇贤小学",
+      "coverage": "塘东村、塘西村、官堂村户籍适龄儿童；星河湾东区、广地花园、华南新城、金地壹阅府符合“人户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "南村镇樟边小学",
+      "coverage": "樟边村户籍适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "南村镇雅居乐小学",
+      "coverage": "广州雅居乐园内雅悦庭、雅翠庭、雅逸庭、逸悦街（即一尺山居）、天域（观景路274号）、雅湖居（含花巷）、雅湖一带（即浅山小筑）、灏湖居、灏湖居南区（含：峰会、邻居）组团的符合“人户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "南雅学校",
+      "coverage": "广州雅居乐花园内的半山别墅（含：御景峰）、上善若水、十年小雅（观景路333号）、新地（观景路395号）、俊园（含：时光九篇观景路649号）组团的符合“人户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "南村镇锦绣香江学校",
+      "coverage": "锦绣香江符合“人户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "南村镇南华小学",
+      "coverage": "华南碧桂园小区符合“人户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "红郡小学",
+      "coverage": "新光城市花园（含万科欧泊、万科红郡小区）符合“人户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "剑桥郡小学",
+      "coverage": "广州雅居乐北苑（剑桥郡）符合“人户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "华师附中番禺小学",
+      "coverage": "铂世湾小区符合“人户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "华南理工大学广州国际校区附属小学",
+      "coverage": "华南理工大学广州国际校区符合条件的在职老师适龄子女；文颂华府（星汇文玺）符合“人户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "广东番禺区中学教育集团兴南学校",
+      "coverage": "越秀星汇锦城（明颂花园、盛颂花园）、时代倾城符合“人户一致”条件的适龄儿童；南村镇南村村户籍的村民适龄子女。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "番广附万博学校",
+      "coverage": "里仁洞村户籍适龄儿童；越秀万博城（御颂花园、臻颂台）、自在城市花园、诺德名都、诺德名筑、诺德中心城、保利悦公馆（南村镇户籍）符合“人户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "化龙镇中心小学",
+      "coverage": "东南村、塘头村、草堂村、莘汀村、水门村、化龙居委、盛龙社区户籍的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "化龙镇第二小学",
+      "coverage": "山门村、西山村、潭山村、眉山村、明经村户籍的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "化龙镇东沙小学",
+      "coverage": "柏堂村、沙亭村户籍的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "化龙镇复胜小学",
+      "coverage": "复胜村户籍的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "新造镇新造小学",
+      "coverage": "东西庄村、思贤村、南约村、北约村、崇德村、秀发村、农场村户籍的适龄儿童，户籍登记住址为谷围新邨的适龄儿童；兴业大道以南、金光东大道以东范围内的新造社区户籍的适龄儿童；锦溪苑非新造镇曾边村户籍的适龄儿童；广州医科大学、暨南大学新造校区在职在编人员的适龄子女。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "番广附创新城学校",
+      "coverage": "越秀大学城和越府（博颂花园、卓颂花园、翰颂花园）、越秀大学星汇城（德颂华庭）、十二光年花园符合“人户一致”条件的适龄儿童；锦溪苑中具有新造镇曾边村户籍的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "小谷围街穗石小学",
+      "coverage": "小谷围街四条保留村户籍的适龄儿童；小谷围街辖区内小区符合“人户一致”条件的适龄儿童；大学城（小谷围街辖区内）高校在职在编人员适龄子女。（电脑派位）",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "广州大学附属小学",
+      "coverage": "小谷围街四条保留村户籍的适龄儿童；小谷围街辖区内小区符合“人户一致”条件的适龄儿童；大学城（小谷围街辖区内）高校在职在编人员适龄子女。（电脑派位）",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "华南师范大学附属广州大学城小学",
+      "coverage": "小谷围街四条保留村户籍的适龄儿童；小谷围街辖区内小区符合“人户一致”条件的适龄儿童；大学城（小谷围街辖区内）高校在职在编人员适龄子女。（电脑派位）",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "广东仲元中学莲花湾学校",
+      "coverage": "山海连城（含利凯花园和利联花园）、领秀海（秀悦湾）符合“人户一致”条件的适龄儿童；菱塘西村、菱塘东村户籍的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "石楼镇中心小学",
+      "coverage": "石楼居委（世居原居民）户籍的适龄儿童；石一村、石二村、裕丰村、胜洲村户籍的适龄儿童；莲港花园、七里海、莲花湾畔、莲花别墅、庄士映蝶蓝湾三期（首铸铂瑞云湾）、榕苑、百福园符合“人户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "石楼镇何澄溪小学",
+      "coverage": "官桥村、大岭村、岳溪村户籍的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "石楼镇赤岗小学",
+      "coverage": "赤岗村、赤东村户籍的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "石楼镇莲花山小学",
+      "coverage": "莲花山居委、莲花山林场、群星村、东星村、明星村、卫星村户籍的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "石楼镇联围小学",
+      "coverage": "联围村户籍的适龄儿童；锦绣一方、倚莲半岛、莲山首府符合“人户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "石楼镇海鸥学校",
+      "coverage": "海心村、沙北村、江鸥村、沙南村户籍的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "石楼镇南派小学",
+      "coverage": "南派村户籍的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "石楼镇清流小学",
+      "coverage": "清流村户籍的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "亚运城小学",
+      "coverage": "亚运城符合“人户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "天誉小学",
+      "coverage": "亚运城符合“人户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "天成小学",
+      "coverage": "亚运城符合“人户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "天韵小学",
+      "coverage": "亚运城符合“人户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "天峰小学",
+      "coverage": "亚运城符合“人户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "石楼镇重文小学",
+      "coverage": "庄士映蝶蓝湾（一、二期）、保利亚奥北苑、保利亚奥南苑、尚上名筑、左岸澜庭符合“人户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "广大附中番禺实验学校",
+      "coverage": "智联花园、智睿花园符合“人户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "石楼镇茂生小学",
+      "coverage": "官涌村户籍的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "石楼镇永善小学",
+      "coverage": "永善村户籍的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "石楼镇韵琴小学",
+      "coverage": "南浦村户籍的适龄儿童；阅麓花园符合“人户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "石楼镇小龙小学",
+      "coverage": "小龙村户籍的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "沙涌小学",
+      "coverage": "沙涌村户籍的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "新桥小学",
+      "coverage": "新桥村户籍的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "傍江东小学",
+      "coverage": "傍江东村户籍的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "石楼镇金山小学",
+      "coverage": "金山村户籍的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "石楼镇凌边小学",
+      "coverage": "凌边村户籍的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "石楼镇桥山小学",
+      "coverage": "桥山村户籍的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "石楼镇文边小学",
+      "coverage": "文边村户籍的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "茶东小学",
+      "coverage": "茶东村户籍的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "水濂小学",
+      "coverage": "新水坑村户籍的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "旧水坑小学",
+      "coverage": "旧水坑村户籍的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "石楼镇海傍小学",
+      "coverage": "海傍村、低涌村户籍的适龄儿童；海愉苑符合“人户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "石基镇前锋小学",
+      "coverage": "前锋村、岐山社区农科所片区（原番禺区良种繁殖场、番禺区农业科学研究所）户籍的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "罗家桥虹小学",
+      "coverage": "罗家村、竹山村户籍的适龄儿童；东方白云花园、鑫润花园、桥虹花园、桥华楼、云山诗意、建业大厦、翠竹园、咏翠苑、榕林北苑、东平苑、天颐华府符合“入户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "石岗小学",
+      "coverage": "石岗东村、石岗西村户籍的适龄儿童；美心社区居委（美心花园、美心东苑、翠拥华庭一期、翠拥华庭二期、美心苑）、海关宿舍符合“入户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "傍西小学",
+      "coverage": "傍江西村户籍的适龄儿童；城市花园、星尚名玥花园符合“入户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "东怡小学",
+      "coverage": "罗家村六队户籍的适龄儿童；东怡新区、东怡新地、东华花园、东瀚园、广华苑符合“入户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "石基镇中心小学",
+      "coverage": "中心本校区：莲塘村、望边村户籍的适龄儿童；大龙居委(不含加富花园二期)、岐山居委(不含盛恒家园、海愉苑、农科所片区、瀚御轩)、富庭雅园符合“入户一致”条件的适龄儿童；大龙校区：大龙村户籍的适龄儿童；金龙居委(不含富庭雅园)、加富花园二期、瀚御轩符合“入户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "东湖洲小学",
+      "coverage": "东湖洲花园、尚东尚筑符合“入户一致”条件的适龄儿童；雁洲村、长坦村、大刀沙村户籍的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "金海岸学校",
+      "coverage": "金海岸花园、金海御苑、美心翡翠明庭、信业尚誉华府符合“入户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "广东外语外贸大学附属番禺小学",
+      "coverage": "丰耀华庭（龙湖金地天峯）、朗誉花园符合“入户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "沙湾中心小学",
+      "coverage": "西环路以西及金沙湾花园前三期具有沙湾街东区社区居委、青萝社区居委或金沙湾社区居委户籍的适龄儿童（派位生）；沙南村户籍的适龄儿童。派位生：采取电脑派位方式分派至沙湾中心小学或沙湾实验小学。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "沙湾实验小学",
+      "coverage": "西环路以西及金沙湾花园前三期具有沙湾街东区社区居委、青萝社区居委或金沙湾社区居委户籍的适龄儿童（派位生）；祈福水城及怡景苑符合“入户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "沙湾京兆小学",
+      "coverage": "沙东村、沙北村（1-3队，11-13队）户籍的适龄儿童；大巷涌路以东、滑石巷以东、官巷里大街以北、华光巷以东、华光路以东及以北具有沙湾社区居委户籍的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "沙湾西村育才小学",
+      "coverage": "沙西村、沙南村、沙北村（4-10队）户籍的适龄儿童；大巷涌路以西、滑石巷以西、官巷里大街以南、华光巷以西、华光路以南具有沙湾社区居委户籍的适龄儿童；沙西村尚贤坊符合“入户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "沙湾兴贤小学",
+      "coverage": "涌口村户籍的适龄儿童；君华香柏华府、金沙诚筑、金沙御苑符合“入户一致”条件的适龄儿童。（君华香柏华府、金沙诚筑、金沙御苑符合“入户一致”条件）",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "沙湾荟贤小学",
+      "coverage": "君华香柏华府、君华香柏御府、万科金色城品、星辰时代豪庭、雅居乐锦官城、雅居乐星汇、金沙诚筑、金沙御苑符合“入户一致”条件的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "沙湾福涌小学",
+      "coverage": "福涌村户籍的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "沙湾龙岐螺园小学",
+      "coverage": "龙岐村户籍、沙湾街渡头社区居委户籍的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "沙湾红基学校",
+      "coverage": "紫妮村、三善村、沙湾街紫妮社区居委户籍的适龄儿童。沙湾街紫妮社区居委户籍适龄儿童可一次性选择入读红基学校或德贤小学。",
+      "sourceConfidence": "secondary-table-mirror"
+    },
+    {
+      "school": "沙湾德贤小学",
+      "coverage": "新洲村、龙湾村、古东村、古西村、沙湾街紫妮社区居委户籍的适龄儿童。",
+      "sourceConfidence": "secondary-table-mirror"
+    }
+  ],
+  "middleGroups": {
+    "direct": [
+      {
+        "group": "番禺2026-市桥、城区-广东番禺中学附属学校",
+        "primaryScope": "具有桥南街保利香逸花园、城南源著、可逸江畔、可逸阳光、番禺金业花园、番禺奥林匹克花园、金奥花园（爱巢）、冠军城户籍的小学应届毕业生（必须是业主子女身份）。",
+        "middleSchools": "广东番禺中学附属学校",
+        "area": "市桥、城区",
+        "planClasses": 14.0,
+        "note": "",
+        "sourceConfidence": "official-xls-2026",
+        "sourceFile": "data/panyu-middle-2026.xls",
+        "sourceYear": 2026,
+        "sourceKind": "official-panyu-middle-xls"
+      },
+      {
+        "group": "番禺2026-市桥、城区-市桥东风中学",
+        "primaryScope": "",
+        "middleSchools": "市桥东风中学",
+        "area": "市桥、城区",
+        "planClasses": 11.0,
+        "note": "",
+        "sourceConfidence": "official-xls-2026",
+        "sourceFile": "data/panyu-middle-2026.xls",
+        "sourceYear": 2026,
+        "sourceKind": "official-panyu-middle-xls"
+      },
+      {
+        "group": "番禺2026-市桥、城区-市桥侨联中学",
+        "primaryScope": "",
+        "middleSchools": "市桥侨联中学",
+        "area": "市桥、城区",
+        "planClasses": 11.0,
+        "note": "",
+        "sourceConfidence": "official-xls-2026",
+        "sourceFile": "data/panyu-middle-2026.xls",
+        "sourceYear": 2026,
+        "sourceKind": "official-panyu-middle-xls"
+      },
+      {
+        "group": "番禺2026-市桥、城区-市桥星海中学",
+        "primaryScope": "",
+        "middleSchools": "市桥星海中学",
+        "area": "市桥、城区",
+        "planClasses": 16.0,
+        "note": "",
+        "sourceConfidence": "official-xls-2026",
+        "sourceFile": "data/panyu-middle-2026.xls",
+        "sourceYear": 2026,
+        "sourceKind": "official-panyu-middle-xls"
+      },
+      {
+        "group": "番禺2026-市桥、城区-市桥桥城中学",
+        "primaryScope": "",
+        "middleSchools": "市桥桥城中学",
+        "area": "市桥、城区",
+        "planClasses": 16.0,
+        "note": "",
+        "sourceConfidence": "official-xls-2026",
+        "sourceFile": "data/panyu-middle-2026.xls",
+        "sourceYear": 2026,
+        "sourceKind": "official-panyu-middle-xls"
+      },
+      {
+        "group": "番禺2026-市桥、城区-市桥桥兴中学",
+        "primaryScope": "桥南街南郊村户籍的小学应届毕业生；华荟南景园、华景新城、海伦堡、御院、花样年华、香缤豪庭（博学公馆）、福景园、新世纪花园、喜盈雅境、朗陶居、昊龙花园、时代柏林、绿庭雅苑、汇庭雅苑、雍逸华庭、德宝花园、贵平路南岸阳光、南岸春天、南堤西路、绣品大街、桥南路、南珠路等户籍的小学应届毕业生。",
+        "middleSchools": "市桥桥兴中学",
+        "area": "市桥、城区",
+        "planClasses": 16.0,
+        "note": "",
+        "sourceConfidence": "official-xls-2026",
+        "sourceFile": "data/panyu-middle-2026.xls",
+        "sourceYear": 2026,
+        "sourceKind": "official-panyu-middle-xls"
+      },
+      {
+        "group": "番禺2026-市桥、城区-市桥沙头中学",
+        "primaryScope": "沙头街小平村、大平村、横江村、汀根村、莲湖村、南双玉村、大罗村、小罗村户籍以及这八个村区域内（附近）居民户籍的小学应届毕业生；沙头街禺山西路335号紫悦府，翠涛二路10号、翠涛三路8号天璞花园，景文路1号洺悦玉府等小区户籍的小学应届毕业生。",
+        "middleSchools": "市桥沙头中学",
+        "area": "市桥、城区",
+        "planClasses": 6.0,
+        "note": "",
+        "sourceConfidence": "official-xls-2026",
+        "sourceFile": "data/panyu-middle-2026.xls",
+        "sourceYear": 2026,
+        "sourceKind": "official-panyu-middle-xls"
+      },
+      {
+        "group": "番禺2026-市桥、城区-市桥象圣中学",
+        "primaryScope": "桥南街陈涌村、蚬涌村、草河村户籍以及这三个村区域内（附近）居民户籍的小学应届毕业生；水韵南湾、康城水郡小区、晴翠府户籍的小学应届毕业生。",
+        "middleSchools": "市桥象圣中学",
+        "area": "市桥、城区",
+        "planClasses": 9.0,
+        "note": "",
+        "sourceConfidence": "official-xls-2026",
+        "sourceFile": "data/panyu-middle-2026.xls",
+        "sourceYear": 2026,
+        "sourceKind": "official-panyu-middle-xls"
+      },
+      {
+        "group": "番禺2026-市桥、城区-市桥金山谷学校",
+        "primaryScope": "东环街富豪山庄、金山谷、顺诚花园（花语岭南）、保利悦公馆（东环街户籍）小区户籍的小学应届毕业生（必须是业主子女身份）。",
+        "middleSchools": "市桥金山谷学校",
+        "area": "市桥、城区",
+        "planClasses": 5.0,
+        "note": "见说明2",
+        "sourceConfidence": "official-xls-2026",
+        "sourceFile": "data/panyu-middle-2026.xls",
+        "sourceYear": 2026,
+        "sourceKind": "official-panyu-middle-xls"
+      },
+      {
+        "group": "番禺2026-西片-广东番禺中学实验学校",
+        "primaryScope": "珑翠花园（南区、北区）、瑞麓府户籍的小学应届毕业生（必须是业主子女身份）。",
+        "middleSchools": "广东番禺中学实验学校",
+        "area": "西片",
+        "planClasses": 6.0,
+        "note": "见说明2",
+        "sourceConfidence": "official-xls-2026",
+        "sourceFile": "data/panyu-middle-2026.xls",
+        "sourceYear": 2026,
+        "sourceKind": "official-panyu-middle-xls"
+      },
+      {
+        "group": "番禺2026-西片-钟村奥园学校",
+        "primaryScope": "汉溪村、诜敦村户籍的小学应届毕业生；钟村南国奥林匹克花园、保利红馆、耀胜新世界广场.耀胜尊府户籍的小学应届毕业生（必须是业主子女身份）。",
+        "middleSchools": "钟村奥园学校",
+        "area": "西片",
+        "planClasses": 2.0,
+        "note": "见说明2",
+        "sourceConfidence": "official-xls-2026",
+        "sourceFile": "data/panyu-middle-2026.xls",
+        "sourceYear": 2026,
+        "sourceKind": "official-panyu-middle-xls"
+      },
+      {
+        "group": "番禺2026-西片-钟村中学",
+        "primaryScope": "钟一村、钟二村、钟三村、钟四村、谢村村、胜石村户籍以及钟村墟镇原户籍的小学应届毕业生；钟村商贸城、锦绣南区北区、锦绣生态园、锦绣趣园、长江数码花园、丽景一街3号中怡居户籍小学应届毕业生。",
+        "middleSchools": "钟村中学",
+        "area": "西片",
+        "planClasses": 12.0,
+        "note": "见说明3",
+        "sourceConfidence": "official-xls-2026",
+        "sourceFile": "data/panyu-middle-2026.xls",
+        "sourceYear": 2026,
+        "sourceKind": "official-panyu-middle-xls"
+      },
+      {
+        "group": "番禺2026-西片-毓贤学校",
+        "primaryScope": "祈福新邨户籍的小学应届毕业生（必须是业主子女身份）。",
+        "middleSchools": "毓贤学校",
+        "area": "西片",
+        "planClasses": 15.0,
+        "note": "东校区招生计划11个班，西校区招生计划4个班；见说明2",
+        "sourceConfidence": "official-xls-2026",
+        "sourceFile": "data/panyu-middle-2026.xls",
+        "sourceYear": 2026,
+        "sourceKind": "official-panyu-middle-xls"
+      },
+      {
+        "group": "番禺2026-西片-广东第二师范学院广州南站附属学校",
+        "primaryScope": "具有石一村、石二村、石三村、石四村、韦涌村、大洲村、屏一村、屏二村、都那村户籍的小学应届毕业生；石壁街南站社区居委户籍的小学应届毕业生；碧桂东苑户籍小学应届毕业生。",
+        "middleSchools": "广东第二师范学院广州南站附属学校",
+        "area": "西片",
+        "planClasses": 10.0,
+        "note": "",
+        "sourceConfidence": "official-xls-2026",
+        "sourceFile": "data/panyu-middle-2026.xls",
+        "sourceYear": 2026,
+        "sourceKind": "official-panyu-middle-xls"
+      },
+      {
+        "group": "番禺2026-西片-广东外语外贸大学番禺实验学校",
+        "primaryScope": "星瀚园小区户籍的小学应届毕业生（必须是业主子女身份）。",
+        "middleSchools": "广东外语外贸大学番禺实验学校",
+        "area": "西片",
+        "planClasses": 4.0,
+        "note": "见说明2",
+        "sourceConfidence": "official-xls-2026",
+        "sourceFile": "data/panyu-middle-2026.xls",
+        "sourceYear": 2026,
+        "sourceKind": "official-panyu-middle-xls"
+      },
+      {
+        "group": "番禺2026-西片-隽新学校",
+        "primaryScope": "城隽和府、城隽玥府户籍的小学应届毕业生（安置房和共有产权房业主子女，需把子女户籍迁到城隽和府、城隽玥府），星寰小区（星颂花园）户籍的小学应届毕业生（必须是业主子女身份）。",
+        "middleSchools": "隽新学校",
+        "area": "西片",
+        "planClasses": 4.0,
+        "note": "",
+        "sourceConfidence": "official-xls-2026",
+        "sourceFile": "data/panyu-middle-2026.xls",
+        "sourceYear": 2026,
+        "sourceKind": "official-panyu-middle-xls"
+      },
+      {
+        "group": "番禺2026-西片-番雅实验学校",
+        "primaryScope": "华润万博悦府（长润花园）、越秀万博和樾府（越颂华府、华沁园、华颂公馆）、信基城户籍的小学应届毕业生（必须是业主子女身份）。",
+        "middleSchools": "番雅实验学校",
+        "area": "西片",
+        "planClasses": 8.0,
+        "note": "见说明2",
+        "sourceConfidence": "official-xls-2026",
+        "sourceFile": "data/panyu-middle-2026.xls",
+        "sourceYear": 2026,
+        "sourceKind": "official-panyu-middle-xls"
+      },
+      {
+        "group": "番禺2026-北片-广东仲元中学附属学校",
+        "primaryScope": "南天名苑、吉祥北园C区D区、吉祥北街24幢26幢28幢、吉祥楼、新吉祥楼、海天花园、裕景花园西区、海棠居、彩虹花园东区西区户籍的小学应届毕业生（必须是业主子女身份）；洛溪村户籍的小学应届毕业生（必须是村民子女身份）。",
+        "middleSchools": "广东仲元中学附属学校",
+        "area": "北片",
+        "planClasses": 5.0,
+        "note": "见说明2",
+        "sourceConfidence": "official-xls-2026",
+        "sourceFile": "data/panyu-middle-2026.xls",
+        "sourceYear": 2026,
+        "sourceKind": "official-panyu-middle-xls"
+      },
+      {
+        "group": "番禺2026-北片-丽江学校",
+        "primaryScope": "丽江花园、百事佳花园、如英居户籍的小学应届毕业生（必须是业主子女身份）。",
+        "middleSchools": "丽江学校",
+        "area": "北片",
+        "planClasses": 4.0,
+        "note": "",
+        "sourceConfidence": "official-xls-2026",
+        "sourceFile": "data/panyu-middle-2026.xls",
+        "sourceYear": 2026,
+        "sourceKind": "official-panyu-middle-xls"
+      },
+      {
+        "group": "番禺2026-北片-大石中学",
+        "primaryScope": "具有大石居委、东联村、山西村、大兴村、桔树村、猛涌村、诜村、会江村、官坑村、大维村、大山村、涌口村、北联村、植村、礼村、河村户籍的小学应届毕业生；今日丽舍、怡景花园、金城花园、怡居、百乐园、大发大厦、四季花园、藏珑府、新城市宜家、群贤路周边自建房、富庭华园、富庭东园、滨江绿园、海龙湾、新月明珠、富丽居户籍的小学应届毕业生（必须是业主子女身份）。",
+        "middleSchools": "大石中学",
+        "area": "北片",
+        "planClasses": 16.0,
+        "note": "见说明3",
+        "sourceConfidence": "official-xls-2026",
+        "sourceFile": "data/panyu-middle-2026.xls",
+        "sourceYear": 2026,
+        "sourceKind": "official-panyu-middle-xls"
+      },
+      {
+        "group": "番禺2026-北片-大石富丽中学",
+        "primaryScope": "柏景台、百丰楼、百佳楼、富昌花园、锦华楼、凯跃大厦、穗华楼、永富楼、永达大厦、永信楼、渝达大厦、粤华楼、旺达楼、富海居、富泽居、富丽12号楼、富丽楼、东发楼、富宜居、原华大楼、三和大厦、富明楼、富新楼、莲芳园、乳芳园、福泰园、朝阳东路、爱华路、宾至路、福宁园、福安园、福宁大厦、丽水湾、东海花园、锦绣银湾、领航公寓、房管所后座、康信楼、华贵大厦、香江大厦、豪景楼、桔芳园、朝阳西路（1、2、3、4幢）、荔芳园、富怡大厦、富丽广场、商业街、丽水蓝天、名伦花园、悦尚公馆、华筑翡翠湾、星河湾（一、二期）、侨园、滨江和著、御湖境户籍的小学应届毕业生（必须是业主子女身份）。",
+        "middleSchools": "大石富丽中学",
+        "area": "北片",
+        "planClasses": 10.0,
+        "note": "见说明3",
+        "sourceConfidence": "official-xls-2026",
+        "sourceFile": "data/panyu-middle-2026.xls",
+        "sourceYear": 2026,
+        "sourceKind": "official-panyu-middle-xls"
+      },
+      {
+        "group": "番禺2026-北片-洛溪新城中学",
+        "primaryScope": "吉祥北园A区B区、如意花园、吉祥园、吉祥北街18幢20幢22幢、彩虹楼、综合楼、裕景花园东区、雅澜苑、洛湖居、洛涛北区、洛涛南区、如意中心、如意二马路、如意三马路、吉祥南街15幢17幢、吉祥道149号155号、广州碧桂园、广奥花园、华荟明苑、华进明苑、中海蓝湾、莱茵花园、绿茵岛、上漖海滨、洛溪长大小区户籍的小学应届毕业生（必须是业主子女身份）。",
+        "middleSchools": "洛溪新城中学",
+        "area": "北片",
+        "planClasses": 10.0,
+        "note": "见说明3",
+        "sourceConfidence": "official-xls-2026",
+        "sourceFile": "data/panyu-middle-2026.xls",
+        "sourceYear": 2026,
+        "sourceKind": "official-panyu-middle-xls"
+      },
+      {
+        "group": "番禺2026-北片-洛浦中学",
+        "primaryScope": "东乡村、西一村、西二村、西三村户籍的小学应届毕业生；南浦岛旧居民的小学应届毕业生；南浦长大小区、南浦海滨花园、锦绣半岛、金月湾户籍的小学应届毕业生（必须是业主子女身份）。",
+        "middleSchools": "洛浦中学",
+        "area": "北片",
+        "planClasses": 6.0,
+        "note": "",
+        "sourceConfidence": "official-xls-2026",
+        "sourceFile": "data/panyu-middle-2026.xls",
+        "sourceYear": 2026,
+        "sourceKind": "official-panyu-middle-xls"
+      },
+      {
+        "group": "番禺2026-北片-广东仲元中学附属学校教育集团沙滘中学",
+        "primaryScope": "厦滘村、上漖村、沙溪村户籍的小学应届毕业生；沙溪旧居民的小学应届毕业生；珠江花园、时代外滩、珊瑚湾畔、海怡半岛（海怡花园）户籍的小学应届毕业生（必须是业主子女身份）。",
+        "middleSchools": "广东仲元中学附属学校教育集团沙滘中学",
+        "area": "北片",
+        "planClasses": 6.0,
+        "note": "",
+        "sourceConfidence": "official-xls-2026",
+        "sourceFile": "data/panyu-middle-2026.xls",
+        "sourceYear": 2026,
+        "sourceKind": "official-panyu-middle-xls"
+      },
+      {
+        "group": "番禺2026-南村-南村中学",
+        "primaryScope": "梅山村、江南村、坑头村、市头村、樟边村、板桥村以及南村社区居委（不含时代倾城）、永大社区居委户籍的小学应届毕业生；华南碧桂园小区户籍的小学应届毕业生。",
+        "middleSchools": "南村中学",
+        "area": "南村",
+        "planClasses": 8.0,
+        "note": "",
+        "sourceConfidence": "official-xls-2026",
+        "sourceFile": "data/panyu-middle-2026.xls",
+        "sourceYear": 2026,
+        "sourceKind": "official-panyu-middle-xls"
+      },
+      {
+        "group": "番禺2026-南村-南村侨联中学",
+        "primaryScope": "塘东村、塘西村、官堂村、员岗村、新基村、草堂村、陈边村户籍的小学应届毕业生；广州雅居乐北苑（剑桥郡）、华南新城、广地花园、星河湾东区、海怡花园、万科欧泊、万科红郡、铂世湾、金地壹阅府户籍的小学应届毕业生。",
+        "middleSchools": "南村侨联中学",
+        "area": "南村",
+        "planClasses": 8.0,
+        "note": "",
+        "sourceConfidence": "official-xls-2026",
+        "sourceFile": "data/panyu-middle-2026.xls",
+        "sourceYear": 2026,
+        "sourceKind": "official-panyu-middle-xls"
+      },
+      {
+        "group": "番禺2026-南村-锦绣香江学校",
+        "primaryScope": "锦绣香江户籍的小学应届毕业生（必须是业主子女身份）。",
+        "middleSchools": "锦绣香江学校",
+        "area": "南村",
+        "planClasses": 4.0,
+        "note": "见说明2",
+        "sourceConfidence": "official-xls-2026",
+        "sourceFile": "data/panyu-middle-2026.xls",
+        "sourceYear": 2026,
+        "sourceKind": "official-panyu-middle-xls"
+      },
+      {
+        "group": "番禺2026-南村-南雅学校",
+        "primaryScope": "广州雅居乐花园户籍的小学应届毕业生（必须是业主子女身份）。",
+        "middleSchools": "南雅学校",
+        "area": "南村",
+        "planClasses": 6.0,
+        "note": "见说明2",
+        "sourceConfidence": "official-xls-2026",
+        "sourceFile": "data/panyu-middle-2026.xls",
+        "sourceYear": 2026,
+        "sourceKind": "official-panyu-middle-xls"
+      },
+      {
+        "group": "番禺2026-南村-广东番禺中学教育集团兴南学校",
+        "primaryScope": "越秀星汇锦城（明颂花园、盛颂花园）、时代倾城、星汇文玺（文颂华府）、星河盛世锦城（盛悦锦府、盛悦云庭）户籍的小学应届毕业生（必须是业主子女身份）；南村镇南村村、罗边村户籍的小学应届毕业生（必须是村民子女身份）；具有南村镇户籍的华南理工大学广州国际校区教职工适龄子女（小学应届毕业生）。",
+        "middleSchools": "广东番禺中学教育集团兴南学校",
+        "area": "南村",
+        "planClasses": 6.0,
+        "note": "见说明2",
+        "sourceConfidence": "official-xls-2026",
+        "sourceFile": "data/panyu-middle-2026.xls",
+        "sourceYear": 2026,
+        "sourceKind": "official-panyu-middle-xls"
+      },
+      {
+        "group": "番禺2026-南村-番广附万博学校",
+        "primaryScope": "里仁洞村户籍的小学应届毕业生；越秀万博城（御颂花园、臻颂台）、自在城市花园、诺德名都、诺德名筑、诺德中心城、保利悦公馆(南村镇户籍）户籍的小学应届毕业生（必须是业主子女身份）。",
+        "middleSchools": "番广附万博学校",
+        "area": "南村",
+        "planClasses": 7.0,
+        "note": "见说明2",
+        "sourceConfidence": "official-xls-2026",
+        "sourceFile": "data/panyu-middle-2026.xls",
+        "sourceYear": 2026,
+        "sourceKind": "official-panyu-middle-xls"
+      },
+      {
+        "group": "番禺2026-化龙片-广东第二师范学院番禺附属初中",
+        "primaryScope": "新造镇东西庄村、思贤村、南约村、北约村、崇德村、秀发村、农场村户籍的小学应届毕业生，户籍登记住址为谷围新邨的小学应届毕业生；兴业大道以南、金光东大道以东范围内的新造社区户籍的小学应届毕业生；锦溪苑非曾边村户籍的小学应届毕业生；广州医科大学、暨南大学新造校区在职在编人员适龄子女（小学应届毕业生）。",
+        "middleSchools": "广东第二师范学院番禺附属初中",
+        "area": "化龙片",
+        "planClasses": 10.0,
+        "note": "",
+        "sourceConfidence": "official-xls-2026",
+        "sourceFile": "data/panyu-middle-2026.xls",
+        "sourceYear": 2026,
+        "sourceKind": "official-panyu-middle-xls"
+      },
+      {
+        "group": "番禺2026-化龙片-番广附创新城学校",
+        "primaryScope": "越秀大学城和樾府（博颂花园、卓颂花园、翰颂花园）、越秀大学星汇城（德颂华庭）、十二光年花园户籍的小学应届毕业生（必须是业主子女身份）；锦溪苑中具有新造镇曾边村户籍的小学应届毕业生。",
+        "middleSchools": "番广附创新城学校",
+        "area": "化龙片",
+        "planClasses": 4.0,
+        "note": "见说明2",
+        "sourceConfidence": "official-xls-2026",
+        "sourceFile": "data/panyu-middle-2026.xls",
+        "sourceYear": 2026,
+        "sourceKind": "official-panyu-middle-xls"
+      },
+      {
+        "group": "番禺2026-化龙片-化龙中学",
+        "primaryScope": "化龙镇户籍的小学应届毕业生。",
+        "middleSchools": "化龙中学",
+        "area": "化龙片",
+        "planClasses": 8.0,
+        "note": "",
+        "sourceConfidence": "official-xls-2026",
+        "sourceFile": "data/panyu-middle-2026.xls",
+        "sourceYear": 2026,
+        "sourceKind": "official-panyu-middle-xls"
+      },
+      {
+        "group": "番禺2026-化龙片-广州大学附属中学大学城校区",
+        "primaryScope": "小谷围街四条保留村户籍的小学应届毕业生；小谷围街辖区内小区户籍的小学应届毕业生（必须是业主子女身份）；大学城（小谷围街辖区内）高校在职在编人员小学应届毕业生子女。",
+        "middleSchools": "广州大学附属中学大学城校区",
+        "area": "化龙片",
+        "planClasses": 14.0,
+        "note": "电脑抽签；招生计划以市教育局下达为准",
+        "sourceConfidence": "official-xls-2026",
+        "sourceFile": "data/panyu-middle-2026.xls",
+        "sourceYear": 2026,
+        "sourceKind": "official-panyu-middle-xls"
+      },
+      {
+        "group": "番禺2026-石楼-广东仲元中学莲花湾学校",
+        "primaryScope": "山海连城（含利凯花园和利联花园）、领秀海（秀悦湾）户籍的小学应届毕业生（必须是业主子女身份）；茭塘西村及茭塘东村户籍的小学应届毕业生。",
+        "middleSchools": "广东仲元中学莲花湾学校",
+        "area": "石楼",
+        "planClasses": 6.0,
+        "note": "见说明2",
+        "sourceConfidence": "official-xls-2026",
+        "sourceFile": "data/panyu-middle-2026.xls",
+        "sourceYear": 2026,
+        "sourceKind": "official-panyu-middle-xls"
+      },
+      {
+        "group": "番禺2026-石楼-石楼中学",
+        "primaryScope": "官桥村、大岭村、赤岗村、赤山东村、岳溪村户籍的小学应届毕业生；石楼世居（原居民）、石一村、石二村户籍50%的小学应届毕业生；七里海、尚上名筑、中海左岸澜庭户籍的小学应届毕业生。",
+        "middleSchools": "石楼中学",
+        "area": "石楼",
+        "planClasses": 6.0,
+        "note": "",
+        "sourceConfidence": "official-xls-2026",
+        "sourceFile": "data/panyu-middle-2026.xls",
+        "sourceYear": 2026,
+        "sourceKind": "official-panyu-middle-xls"
+      },
+      {
+        "group": "番禺2026-石楼-石楼镇第二中学",
+        "primaryScope": "南派村、清流村、裕丰村、胜洲村户籍的小学应届毕业生；石楼世居（原居民）、石一村、石二村户籍50%的小学应届毕业生；鑫隆世家、保利亚奥南（北）苑、建发广场、莲花别墅、莲港花园、庄士映蝶蓝湾、莲花湾畔户籍的小学应届毕业生。",
+        "middleSchools": "石楼镇第二中学",
+        "area": "石楼",
+        "planClasses": 8.0,
+        "note": "",
+        "sourceConfidence": "official-xls-2026",
+        "sourceFile": "data/panyu-middle-2026.xls",
+        "sourceYear": 2026,
+        "sourceKind": "official-panyu-middle-xls"
+      },
+      {
+        "group": "番禺2026-石楼-石楼镇莲花山中学",
+        "primaryScope": "群星村、东星村、明星村、卫星村、联围村、莲花山居委及林场户籍的小学应届毕业生；锦绣一方、倚莲半岛、莲山首府户籍的小学应届毕业生。",
+        "middleSchools": "石楼镇莲花山中学",
+        "area": "石楼",
+        "planClasses": 6.0,
+        "note": "",
+        "sourceConfidence": "official-xls-2026",
+        "sourceFile": "data/panyu-middle-2026.xls",
+        "sourceYear": 2026,
+        "sourceKind": "official-panyu-middle-xls"
+      },
+      {
+        "group": "番禺2026-石楼-石楼镇海鸥学校",
+        "primaryScope": "海心村、沙北村、江鸥村、沙南村户籍的小学应届毕业生。",
+        "middleSchools": "石楼镇海鸥学校",
+        "area": "石楼",
+        "planClasses": 5.0,
+        "note": "",
+        "sourceConfidence": "official-xls-2026",
+        "sourceFile": "data/panyu-middle-2026.xls",
+        "sourceYear": 2026,
+        "sourceKind": "official-panyu-middle-xls"
+      },
+      {
+        "group": "番禺2026-石楼-广铁一中铁英学校",
+        "primaryScope": "",
+        "middleSchools": "广铁一中铁英学校",
+        "area": "石楼",
+        "planClasses": 28.0,
+        "note": "",
+        "sourceConfidence": "official-xls-2026",
+        "sourceFile": "data/panyu-middle-2026.xls",
+        "sourceYear": 2026,
+        "sourceKind": "official-panyu-middle-xls"
+      },
+      {
+        "group": "番禺2026-石楼-广大附中番禺实验学校",
+        "primaryScope": "智联花园、智睿花园户籍的小学应届毕业生（必须是业主子女身份）。",
+        "middleSchools": "广大附中番禺实验学校",
+        "area": "石楼",
+        "planClasses": 4.0,
+        "note": "见说明2",
+        "sourceConfidence": "official-xls-2026",
+        "sourceFile": "data/panyu-middle-2026.xls",
+        "sourceYear": 2026,
+        "sourceKind": "official-panyu-middle-xls"
+      },
+      {
+        "group": "番禺2026-石碁-石碁中学",
+        "primaryScope": "莲塘村、塱边村、石碁村、南浦村、官涌村、永善村户籍的小学应届毕业生；盛恒家园、瀚御轩、阅麓花园户籍的小学应届毕业生（必须是业主子女身份）。",
+        "middleSchools": "石碁中学",
+        "area": "石碁",
+        "planClasses": 4.0,
+        "note": "见说明3",
+        "sourceConfidence": "official-xls-2026",
+        "sourceFile": "data/panyu-middle-2026.xls",
+        "sourceYear": 2026,
+        "sourceKind": "official-panyu-middle-xls"
+      },
+      {
+        "group": "番禺2026-石碁-育龙中学",
+        "primaryScope": "大龙村、小龙村、金山村、桥山村、文边村、凌边村、沙涌村户籍的小学应届毕业生。",
+        "middleSchools": "育龙中学",
+        "area": "石碁",
+        "planClasses": 10.0,
+        "note": "",
+        "sourceConfidence": "official-xls-2026",
+        "sourceFile": "data/panyu-middle-2026.xls",
+        "sourceYear": 2026,
+        "sourceKind": "official-panyu-middle-xls"
+      },
+      {
+        "group": "番禺2026-石碁-大龙中学",
+        "primaryScope": "罗家村、竹山村、石岗东村、石岗西村、傍江东村（不含股民及股民子女）、傍江西村（不含股民及股民子女）、旧水坑村、新水坑村、茶东村、新桥村户籍的小学应届毕业生；东怡新区、东怡新地、东华花园、东瀚园、广华苑、美心花园、美心苑、美心东苑、翠拥华庭（一、二期）、美心翡翠明庭、尚东尚筑花园、鑫润花园、东方白云花园、桥虹花园、城市花园、云山诗意、星尚名玥花园、金海御苑、翠竹园、咏翠苑、榕林北苑、桥华楼、丰耀华庭（龙湖金地天峯）、朗誉花园、天颐华府、信业尚誉户籍的小学应届毕业生（必须是业主子女身份）。",
+        "middleSchools": "大龙中学",
+        "area": "石碁",
+        "planClasses": 10.0,
+        "note": "见说明3",
+        "sourceConfidence": "official-xls-2026",
+        "sourceFile": "data/panyu-middle-2026.xls",
+        "sourceYear": 2026,
+        "sourceKind": "official-panyu-middle-xls"
+      },
+      {
+        "group": "番禺2026-石碁-石碁第四中学",
+        "primaryScope": "海傍村、低涌村、前锋村、雁洲村、长坦村、大刀沙村户籍的小学应届毕业生；岐山居委（不含盛恒家园、瀚御轩、阅麓花园）、大龙居委、金龙居委、东湖洲花园、岐山社区农科所片区（原番禺区良种繁殖场、番禺区农业科学研究所）户籍的小学应届毕业生。",
+        "middleSchools": "石碁第四中学",
+        "area": "石碁",
+        "planClasses": 10.0,
+        "note": "见说明3",
+        "sourceConfidence": "official-xls-2026",
+        "sourceFile": "data/panyu-middle-2026.xls",
+        "sourceYear": 2026,
+        "sourceKind": "official-panyu-middle-xls"
+      },
+      {
+        "group": "番禺2026-石碁-金海岸学校",
+        "primaryScope": "金海岸花园户籍的小学应届毕业生（必须是业主子女身份）。",
+        "middleSchools": "金海岸学校",
+        "area": "石碁",
+        "planClasses": 2.0,
+        "note": "见说明2",
+        "sourceConfidence": "official-xls-2026",
+        "sourceFile": "data/panyu-middle-2026.xls",
+        "sourceYear": 2026,
+        "sourceKind": "official-panyu-middle-xls"
+      },
+      {
+        "group": "番禺2026-沙湾-沙湾象达中学",
+        "primaryScope": "沙湾街沙湾社区居委、东区社区居委、金沙湾社区居委、青萝社区居委、渡头社区居委、沙坑村、龙岐村、福涌村、涌口村、沙东村、沙西村、沙南村、沙北村户籍的小学应届毕业生。",
+        "middleSchools": "沙湾象达中学",
+        "area": "沙湾",
+        "planClasses": 15.0,
+        "note": "见说明3",
+        "sourceConfidence": "official-xls-2026",
+        "sourceFile": "data/panyu-middle-2026.xls",
+        "sourceYear": 2026,
+        "sourceKind": "official-panyu-middle-xls"
+      },
+      {
+        "group": "番禺2026-沙湾-沙湾象骏中学",
+        "primaryScope": "紫坭村、三善村、 新洲村、龙湾村、古东村、古西村以及紫坭社区居委户籍的小学应届毕业生。",
+        "middleSchools": "沙湾象骏中学",
+        "area": "沙湾",
+        "planClasses": 8.0,
+        "note": "",
+        "sourceConfidence": "official-xls-2026",
+        "sourceFile": "data/panyu-middle-2026.xls",
+        "sourceYear": 2026,
+        "sourceKind": "official-panyu-middle-xls"
+      }
+    ],
+    "lottery": [
+      {
+        "group": "番禺2026-市桥、城区-广东仲元中学一校区（初中部）",
+        "primaryScope": "80%的招生计划面向具有市桥城区电脑派位资格(见番禺区教育局当年发布的公办初中招生计划、招生地段及条件表格中市桥城区电脑派位部分内容)的小学应届毕业生招生；20%的招生计划面向番禺区户籍的小学应届毕业生(不含大龙街户籍及具有市桥城区电脑派位资格的小学应届毕业生)及实际居住地在番禺区的广州市政策性照顾学生招生。",
+        "middleSchools": "广东仲元中学一校区（初中部）",
+        "area": "市桥、城区",
+        "planClasses": 10.0,
+        "note": "学生按学校要求申请宿位。",
+        "sourceConfidence": "official-xls-2026",
+        "sourceFile": "data/panyu-middle-2026.xls",
+        "sourceYear": 2026,
+        "sourceKind": "official-panyu-middle-xls"
+      },
+      {
+        "group": "番禺2026-市桥、城区-番禺区实验中学",
+        "primaryScope": "市桥街、东环街〔不含富豪山庄、金山谷、顺诚花园（花语岭南）、保利悦公馆（东环街户籍）小区〕户籍的小学应届毕业生；沙头街的沙头村、榄山村、大富村、北海村村民户籍小学应届毕业生；沙头街宝翠苑、西环路西侧及西环路以西、市广路以西、银平路以南、禺山西路（部分）以北包括康泰园、裕兴大厦、丽景花园、金晖明园、富图花园、交通综合楼，捷进西路金碧花园、恒兴楼、进宝大楼、骏兴大楼、银平路、银平花园、沙南路、捷进西路（西环路以西段）户籍的小学应届毕业生；大龙街东晟明珠、东逸华庭、盈创·水悦轩、路劲美的·隽樾府户籍的小学应届毕业生。",
+        "middleSchools": "番禺区实验中学",
+        "area": "市桥、城区",
+        "planClasses": 6.0,
+        "note": "电脑派位",
+        "sourceConfidence": "official-xls-2026",
+        "sourceFile": "data/panyu-middle-2026.xls",
+        "sourceYear": 2026,
+        "sourceKind": "official-panyu-middle-xls"
+      },
+      {
+        "group": "番禺2026-石楼-广铁一中番禺校区",
+        "primaryScope": "亚运城户籍的小学应届毕业生（必须是业主子女身份）。",
+        "middleSchools": "广铁一中番禺校区",
+        "area": "石楼",
+        "planClasses": 5.0,
+        "note": "电脑派位；铁英学校西校区招生计划14个班，铁英学校东校区招生计划14个班；见说明2",
+        "sourceConfidence": "official-xls-2026",
+        "sourceFile": "data/panyu-middle-2026.xls",
+        "sourceYear": 2026,
+        "sourceKind": "official-panyu-middle-xls"
+      },
+      {
+        "group": "番禺2026-石碁-广东仲元中学二校区（初中部）",
+        "primaryScope": "350个学位面向大龙街招生，首先安排番禺区大龙街傍江东村和傍江西村股民及股民子女入读广东仲元中学，余下学位面向大龙街户籍小学应届毕业生招生；100个学位面向番禺区户籍的小学应届毕业生及实际居住地在番禺区的广州市政策性照顾学生招生。",
+        "middleSchools": "广东仲元中学二校区（初中部）",
+        "area": "石碁",
+        "planClasses": 10.0,
+        "note": "电脑派位；学生按学校要求申请宿位。",
+        "sourceConfidence": "official-xls-2026",
+        "sourceFile": "data/panyu-middle-2026.xls",
+        "sourceYear": 2026,
+        "sourceKind": "official-panyu-middle-xls"
+      }
+    ]
+  },
+  "notes": [
+    "服务地段按2026来源表建立索引；小区/社区名称匹配仅作为模型估算，最终以当年度区教育局核准结果为准。",
+    "初中采用对口小学或招生片区规则；没有公开统一全市排名的学校使用非官方中性估值。"
+  ],
+  "addressAliases": {
+    "光明北路241号大院": {
+      "elementary": [
+        "市桥北城小学"
+      ],
+      "status": "provisional",
+      "address": "光明北路241号",
+      "sourceNote": "2026官方小学地段文本中精确出现“光明北路241号”；小区名称未直接命中，需按当年招生细则核验。"
+    },
+    "光明北路241号": {
+      "elementary": [
+        "市桥北城小学"
+      ],
+      "status": "provisional",
+      "address": "光明北路241号",
+      "sourceNote": "2026官方小学地段文本中精确出现“光明北路241号”；小区名称未直接命中，需按当年招生细则核验。"
+    },
+    "禺秀园": {
+      "elementary": [
+        "市桥中心小学"
+      ],
+      "status": "provisional",
+      "address": "繁华路103号",
+      "sourceNote": "2026官方小学地段文本中精确出现“繁华路103号”；小区名称未直接命中，需按当年招生细则核验。"
+    },
+    "繁华路103号": {
+      "elementary": [
+        "市桥中心小学"
+      ],
+      "status": "provisional",
+      "address": "繁华路103号",
+      "sourceNote": "2026官方小学地段文本中精确出现“繁华路103号”；小区名称未直接命中，需按当年招生细则核验。"
+    }
+  },
+  "middleGroupsSource": "official-panyu-middle-xls-2026",
+  "middleGroupsSourceYear": 2026
+}

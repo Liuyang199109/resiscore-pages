@@ -1,0 +1,439 @@
+{
+  "schemaVersion": 1,
+  "city": "guangzhou",
+  "district": "haizhu",
+  "districtName": "海珠区",
+  "schoolYear": 2026,
+  "sourcePublished": "2026-04-28",
+  "sourceUrls": [
+    "https://www.haizhu.gov.cn/gzjg/qzf/hzqjyj/zsgz/content/post_10791399.html"
+  ],
+  "sourceFiles": [
+    "data/school-sources/haizhu-2026-service.png"
+  ],
+  "mappingConfidence": "source-derived-table",
+  "propertyAliases": {},
+  "schoolNameAliases": {},
+  "rankingEstimatePolicy": {
+    "name": "公开属性关键词分层估计（非官方排名）",
+    "primaryTotalSchools": 1012,
+    "middleTotalSchools": 420,
+    "method": "按公开办学属性关键词分层换算全市同学段估计名次，不能替代教育部门排名，可人工覆盖。"
+  },
+  "rankingEstimates": {
+    "小学": {
+      "万松园小学": 506,
+      "三滘小学": 506,
+      "东风小学": 506,
+      "五风小学": 506,
+      "企头小学": 506,
+      "会影小学": 506,
+      "凤江小学": 506,
+      "前进路小学": 506,
+      "北山小学": 506,
+      "南武中学附属学校": 284,
+      "南武实验小学": 284,
+      "南武小学": 506,
+      "南武文润学校": 506,
+      "南燕小学": 506,
+      "卫国尧纪念小学": 506,
+      "同福中路第一小学": 506,
+      "后乐园街小学": 506,
+      "启能学校": 506,
+      "土华小学": 506,
+      "培红小学": 506,
+      "基立道小学": 506,
+      "大元师府小学": 506,
+      "大江苑小学": 506,
+      "学附属第二小学": 284,
+      "宝玉直实验小学": 284,
+      "宝玉直小学": 506,
+      "客村小学": 506,
+      "怡乐路小学": 506,
+      "新洲小学": 506,
+      "新港中路小学": 506,
+      "新港路小学": 506,
+      "昌岗东路小学": 506,
+      "昌岗中路小学": 506,
+      "晓园小学": 506,
+      "晓港东马路小学": 506,
+      "晓港湾小学": 506,
+      "晓港西马路小学": 506,
+      "梅因西路小学": 506,
+      "汇源大街小学": 506,
+      "江南大道中小学": 506,
+      "江南新村第一小学": 506,
+      "江南新村第二小学": 506,
+      "洲小学": 506,
+      "海富小学": 506,
+      "海珠镇泰实验小学": 284,
+      "海联路小学": 506,
+      "滨江东路小学": 506,
+      "瑞宝小学": 506,
+      "知信小学": 506,
+      "石溪劳小学": 506,
+      "第三实验小学": 284,
+      "第四实验小学": 284,
+      "红棉小学": 506,
+      "绿翠小学": 506,
+      "绿翠现代实验学校": 284,
+      "聚德东小学": 506,
+      "聚德西路小学": 506,
+      "菩提路小学": 506,
+      "赤岗东小学": 506,
+      "赤岗小学": 506,
+      "赤沙小学": 506,
+      "邓世昌纪念小学": 506,
+      "金碧第一小学": 506,
+      "鸣五巷小学": 506,
+      "黄埔小学": 506,
+      "龙潭小学": 506
+    },
+    "初中": {}
+  },
+  "elementaryZones": [
+    {
+      "school": "赤岗小学",
+      "coverage": "赤岗街：①竹园社区：②赤塘社区的部分：③石榴岗社区的部分",
+      "sourceConfidence": "official-image-ocr"
+    },
+    {
+      "school": "新港中路小学",
+      "coverage": "赤岗街：①七所社区：②汇美社区：①新鸿社区的部分。",
+      "sourceConfidence": "official-image-ocr"
+    },
+    {
+      "school": "会影小学",
+      "coverage": "赤岗街：①珠影社区：②鸿运社区；③泰塘社区的部分； 江海街：①金影社区：②敦和社区的部分：金穗社区的部分。",
+      "sourceConfidence": "official-image-ocr"
+    },
+    {
+      "school": "聚德东小学",
+      "coverage": "江海街：①坚真社区：②富文社区；③新村社区；③聚德东社区：③石榕岗社区的 部分：金丰社区的部分。",
+      "sourceConfidence": "official-image-ocr"
+    },
+    {
+      "school": "聚德西路小学",
+      "coverage": "江海街：①聚德西社区；②金丰社区的部分； 赤岗街：①石榴岗社区的部分。",
+      "sourceConfidence": "official-image-ocr"
+    },
+    {
+      "school": "赤岗东小学",
+      "coverage": "赤岗街：①金基社区的部分：②石榴岗社区的部分； 江海街：①新安社区：②合涌社区：①马骑岗社区",
+      "sourceConfidence": "official-image-ocr"
+    },
+    {
+      "school": "赤沙小学",
+      "coverage": "官洲街：①学院社区：②赤沙西北约社区：③赤沙东南约社区：④琶洲南区社区",
+      "sourceConfidence": "official-image-ocr"
+    },
+    {
+      "school": "北山小学",
+      "coverage": "官洲街：①北山社区：②官洲社区",
+      "sourceConfidence": "official-image-ocr"
+    },
+    {
+      "school": "企头小学",
+      "coverage": "官洲街：①仑头东社区；②公头西社区。 广东实验中学琶洲 官洲街：①仓洲西区社区。 第二实验小学（南 赤岗街：①毛纺社区：②七星岗社区的部分；③赤塘社区的部分：④石榴岗社区的 校区） 部分：③金星社区的部分； 琶洲街：①磨禄沙南社区 第二实验小学（北 赤岗街：①珠江帝景社区；②新鸿社区的部分。 校区） 江海街：①桂田社区：②江贝社区：",
+      "sourceConfidence": "official-image-ocr"
+    },
+    {
+      "school": "客村小学",
+      "coverage": "赤岗街：①客村社区：②鹭江社区的部分： 凤阳街：①敦和社区的部分：②和平社区的部分。",
+      "sourceConfidence": "official-image-ocr"
+    },
+    {
+      "school": "大江苑小学",
+      "coverage": "赤岗街：①大江涌社区；②大江苑社区：愉景雅苑社区：南赞社区 凤阳街：①鹭江社区：②汇源社区；①康乐西社区；④康乐中社区；③康乐东社",
+      "sourceConfidence": "official-image-ocr"
+    },
+    {
+      "school": "凤江小学",
+      "coverage": "区；风和社区；②敦和社区的部分； 赤岗街：①鹭江社区的部分； 新港街：①海洋社区的部分：②海康社区的部分。",
+      "sourceConfidence": "official-image-ocr"
+    },
+    {
+      "school": "第三实验小学",
+      "coverage": "琶洲街：①南园居社区：②雅郡花园社区：③杨青杜区的部分 执信中学管洲实验 琶洲街：①琶洲东北社区；②琶洲西南社区。",
+      "sourceConfidence": "official-image-ocr"
+    },
+    {
+      "school": "黄埔小学",
+      "coverage": "琶洲街：①石基社区：②黄埔离社区：黄埔北社区：①杨青社区的部分。",
+      "sourceConfidence": "official-image-ocr"
+    },
+    {
+      "school": "新洲小学",
+      "coverage": "琶洲街：①广渔社区：②新洲社区",
+      "sourceConfidence": "official-image-ocr"
+    },
+    {
+      "school": "绿翠小学",
+      "coverage": "赤岗街：①江画社区：②江景社区；①下渡社区的部分； 新港街：①海康社区的部分 逸景第一小学（逸 凤阳街：①逸景东社区：②逸景西社区， 景校区） 逸景第一小学（金 江海街：①金穗社区的部分：②敦和社区的部分； 穗校区） 风阳街：①叠彩园社区；②和平社区的部分。",
+      "sourceConfidence": "official-image-ocr"
+    },
+    {
+      "school": "知信小学",
+      "coverage": "赤岗街：①赤岗社区：②七星岗社区的部分； 琶洲街：①磨建沙北社区。",
+      "sourceConfidence": "official-image-ocr"
+    },
+    {
+      "school": "卫国尧纪念小学",
+      "coverage": "南洲街：①新鱼社区：②环秀坊社区：西村社区：④水基社区的部分。",
+      "sourceConfidence": "official-image-ocr"
+    },
+    {
+      "school": "三滘小学",
+      "coverage": "南洲街：①后滘社区：②池滘社区",
+      "sourceConfidence": "official-image-ocr"
+    },
+    {
+      "school": "土华小学",
+      "coverage": "华洲街：①土华社区：②华泰社区；③洪福社区",
+      "sourceConfidence": "official-image-ocr"
+    },
+    {
+      "school": "洲小学",
+      "coverage": "华洲街：①小洲社区：②演园社区；①瀛豪社区",
+      "sourceConfidence": "official-image-ocr"
+    },
+    {
+      "school": "晓港湾小学",
+      "coverage": "瑞宝街：①钟绣名居社区；②晓港湾社区；瑞宝花园社区；@名苑社区：③宝通 社区：侨诚社区",
+      "sourceConfidence": "official-image-ocr"
+    },
+    {
+      "school": "瑞宝小学",
+      "coverage": "宝街：①南约社区；②北约社区；③东约社区；④万华社区；③和辉社区；英 豪社区的部分。",
+      "sourceConfidence": "official-image-ocr"
+    },
+    {
+      "school": "东风小学",
+      "coverage": "江海街：①大塘东社区；②大塘西社区： 南洲街：①桥南社区：②上涌西约社区：③上涌中约社区：上通东约社区",
+      "sourceConfidence": "official-image-ocr"
+    },
+    {
+      "school": "龙潭小学",
+      "coverage": "华洲街：①龙潭社区：②万年社区：西环社区",
+      "sourceConfidence": "official-image-ocr"
+    },
+    {
+      "school": "南武文润学校",
+      "coverage": "南洲街：①水基社区的部分。",
+      "sourceConfidence": "official-image-ocr"
+    },
+    {
+      "school": "南武小学",
+      "coverage": "瑞宝街：①南洲社区：②英豪社区的部分； 南洲街：①西滘社区",
+      "sourceConfidence": "official-image-ocr"
+    },
+    {
+      "school": "南武实验小学",
+      "coverage": "南洲街：①大沙社区：②珠江御景湾社区。 实验小学（穗花校 昌岗街：①穗花南社区；②穗花北社区， 区） 实验小学（富基校 滨江街：①怡安社区：②小港社区；③益丰社区的部分。 区）",
+      "sourceConfidence": "official-image-ocr"
+    },
+    {
+      "school": "晓港东马路小学",
+      "coverage": "昌岗街：①晓港东社区；②晓港中社区的部分： 新港街：①擎桂社区的部分",
+      "sourceConfidence": "official-image-ocr"
+    },
+    {
+      "school": "晓港西马路小学",
+      "coverage": "昌岗街：①细岗东社区；②晓西社区：③青曙社区；①跃造南社区；跃进北社区 的部分：晓港中社区的部分：晓园东社区的部分 新港街：①银禧社区；",
+      "sourceConfidence": "official-image-ocr"
+    },
+    {
+      "school": "昌岗东路小学",
+      "coverage": "昌岗街：①细岗西社区：②昌岗东社区：③跃进北社区的部分：④晓园东社区的部 分",
+      "sourceConfidence": "official-image-ocr"
+    },
+    {
+      "school": "晓园小学",
+      "coverage": "凤阳街：①泰宁社区；②润翠社区；①富康社区；④凤阳社区；③金马社区； 昌岗街：①亮园新社区",
+      "sourceConfidence": "official-image-ocr"
+    },
+    {
+      "school": "海富小学",
+      "coverage": "昌岗街：①江南大道南社区：②海室花园社区：③江南雅居社区：④昌岗中社区的 部分。",
+      "sourceConfidence": "official-image-ocr"
+    },
+    {
+      "school": "五风小学",
+      "coverage": "凤阳街：①西畔里社区：②五凤社区：③五村社区；④旧凤凰社区",
+      "sourceConfidence": "official-image-ocr"
+    },
+    {
+      "school": "新港路小学",
+      "coverage": "新港街：①立新社区：②穗华社区：①南景社区：④海洋社区的部分：③海康社区 的部分：怡乐社区的部分：攀桂社区的部分。",
+      "sourceConfidence": "official-image-ocr"
+    },
+    {
+      "school": "绿翠现代实验学校",
+      "coverage": "新港街：①祈乐社区：②怡乐社区的部分。",
+      "sourceConfidence": "official-image-ocr"
+    },
+    {
+      "school": "怡乐路小学",
+      "coverage": "新港街：①江怡社区：②嘉仕社区；③中大社区",
+      "sourceConfidence": "official-image-ocr"
+    },
+    {
+      "school": "万松园小学",
+      "coverage": "江南中街：①南园西社区：②万寿社区；①南园东社区：④万松园社区的部分：③ 得胜社区的部分；聚龙社区的部分。 滨江街：①海运社区：②江湾社区；③海城社区；④仲恺社区；③远安社区；涛",
+      "sourceConfidence": "official-image-ocr"
+    },
+    {
+      "school": "大元师府小学",
+      "coverage": "景社区： 泰社街：①郭场社区。",
+      "sourceConfidence": "official-image-ocr"
+    },
+    {
+      "school": "南武中学附属学校",
+      "coverage": "滨江街：①中海社区：②草芳社区 新港街：①金雅社区的部分；",
+      "sourceConfidence": "official-image-ocr"
+    },
+    {
+      "school": "滨江东路小学",
+      "coverage": "泰社街：①海联北社区；②桥东社区的部分； 滨江街：①海景社区",
+      "sourceConfidence": "official-image-ocr"
+    },
+    {
+      "school": "第四实验小学",
+      "coverage": "新港街：①半岛社区：②金雅社区的部分； 赤岗衡：①下渡社区的部分。 海珠外国语实验中 素社街：①素社东社区：②怡海社区的部分.",
+      "sourceConfidence": "official-image-ocr"
+    },
+    {
+      "school": "前进路小学",
+      "coverage": "素社街：①素社中社区；②万寿北社区；婚龙社区；③基立新村社区；③基立南 社区的部分：金汇社区的部分。",
+      "sourceConfidence": "official-image-ocr"
+    },
+    {
+      "school": "基立道小学",
+      "coverage": "素社街：①稳岗社区；②金汇社区的部分；③基立南社区的部分： 江南中街：万松园社区的部分。",
+      "sourceConfidence": "official-image-ocr"
+    },
+    {
+      "school": "海联路小学",
+      "coverage": "素社街：①海印南社区；②怡海社区的部分：③桥东社区的部分。 海幢街：①南村社区：②永龙社区；",
+      "sourceConfidence": "official-image-ocr"
+    },
+    {
+      "school": "江南大道中小学",
+      "coverage": "江南中街：①复兴社区；贵德东社区；①江宝社区；④万松园社区的部分； 滨江街：③益丰社区的部分。",
+      "sourceConfidence": "official-image-ocr"
+    },
+    {
+      "school": "菩提路小学",
+      "coverage": "沙园街：①华苑社区；②广重社区；③广船社区；④荔福社区的部分：③光大花园 南社区的部分 沙国街：①橡胶新村社区：奋勇社区的部分：",
+      "sourceConfidence": "official-image-ocr"
+    },
+    {
+      "school": "昌岗中路小学",
+      "coverage": "昌岗街：①慎德里社区的部分：②昌岗中社区的部分：③汇源社区的部分： 南石头街：①翠城社区的部分",
+      "sourceConfidence": "official-image-ocr"
+    },
+    {
+      "school": "石溪劳小学",
+      "coverage": "宝街：①工业大道南社区：②石溪社区；③富全社区。",
+      "sourceConfidence": "official-image-ocr"
+    },
+    {
+      "school": "金碧第一小学",
+      "coverage": "宝街：①金碧西社区：②金碧东社区：③金碧南社区。",
+      "sourceConfidence": "official-image-ocr"
+    },
+    {
+      "school": "红棉小学",
+      "coverage": "凤阳街：①南珠社区",
+      "sourceConfidence": "official-image-ocr"
+    },
+    {
+      "school": "培红小学",
+      "coverage": "南石头街：①南箕社区：②保利社区 宝玉直实验星悦小 南石头街：①邓岗社区：②纸南社区；③纸北社区：④泉塘社区；③翠城社区的部 学 分：星汇湾社区的部分。",
+      "sourceConfidence": "official-image-ocr"
+    },
+    {
+      "school": "南燕小学",
+      "coverage": "南石头街：①南景园社区：②晓燕湾社区 海珠外国语实验中 南石头街：①石岗社区；",
+      "sourceConfidence": "official-image-ocr"
+    },
+    {
+      "school": "学附属第二小学",
+      "coverage": "宝街：①大干图社区",
+      "sourceConfidence": "official-image-ocr"
+    },
+    {
+      "school": "宝玉直实验小学",
+      "coverage": "沙园街：①光大花园北社区；光大花园南社区的部分 （光大校区）",
+      "sourceConfidence": "official-image-ocr"
+    },
+    {
+      "school": "宝玉直实验小学",
+      "coverage": "南石头街：①庄头社区；②様园社区；③翠城社区的部分：①星汇湾社区的部分。 （南边校区） 宝玉直实验第二小 龙凤街：①革新社区：②新民社区：①金沙社区的部分 学",
+      "sourceConfidence": "official-image-ocr"
+    },
+    {
+      "school": "宝玉直小学",
+      "coverage": "海幢街：①宝玉直社区：②宝贤社区：③宏宇社区；①仁厚直社区； 龙风街：①世昌社区的部分。 江南中街：①紫来社区：②聚源社区；③紫龙社区：④青凤社区；③青葵社区：",
+      "sourceConfidence": "official-image-ocr"
+    },
+    {
+      "school": "江南新村第一小学",
+      "coverage": "得胜社区的部分：②聚龙社区的部分：⑧繁金社区的部分； 昌岗街：①信和社区：②隔山社区",
+      "sourceConfidence": "official-image-ocr"
+    },
+    {
+      "school": "江南新村第二小学",
+      "coverage": "江南中街：①杏园社区：②紫金社区的部分： 海幢街：①杏坛社区。",
+      "sourceConfidence": "official-image-ocr"
+    },
+    {
+      "school": "鸣五巷小学",
+      "coverage": "龙风街：①龙导社区；②鹤洲社区；①凤宁社区；④状元社区；③鹤兴社区； 南华西街：①龙武里社区：②兆龙里社区：③聚龙社区",
+      "sourceConfidence": "official-image-ocr"
+    },
+    {
+      "school": "汇源大街小学",
+      "coverage": "昌岗街：①朝圣社区：②慎德里社区的部分：①汇源社区的部分： 沙园街：①沙园新村社区：②港海社区：奋勇社区的部分：④荔福社区的部分。",
+      "sourceConfidence": "official-image-ocr"
+    },
+    {
+      "school": "邓世昌纪念小学",
+      "coverage": "龙风街：①马通社区：②康隆社区；①龙田社区；④昌盛社区的部分；③世昌社区 的部分， 海幢街：①寺前社区：",
+      "sourceConfidence": "official-image-ocr"
+    },
+    {
+      "school": "同福中路第一小学",
+      "coverage": "龙风街：①环珠社区；②仁和社区； 南华西街：①敬和里社区：②福安社区：①整洲社区",
+      "sourceConfidence": "official-image-ocr"
+    },
+    {
+      "school": "海珠镇泰实验小学",
+      "coverage": "海幢街：①堑口社区：②福仁社区：③同庆社区；④蒙圣社区：③南华中社区： 百些社区。",
+      "sourceConfidence": "official-image-ocr"
+    },
+    {
+      "school": "后乐园街小学",
+      "coverage": "南华西街：①海天社区；洲头咀社区；①厚德社区；④后乐园社区；德和新社 区：永兴社区。",
+      "sourceConfidence": "official-image-ocr"
+    },
+    {
+      "school": "梅因西路小学",
+      "coverage": "龙凤街：①荔福社区；②凤凰社区；①梅园南社区；④富力社区；③金沙社区的部 分：@昌盛社区的部分。",
+      "sourceConfidence": "official-image-ocr"
+    },
+    {
+      "school": "启能学校",
+      "coverage": "海珠区户籍、持《残疾人证》，且具有一定的学习和自理能力的中重度适龄未入学 残疾儿童。",
+      "sourceConfidence": "official-image-ocr"
+    }
+  ],
+  "middleGroups": {
+    "direct": [],
+    "lottery": []
+  },
+  "notes": [
+    "服务地段按2026来源表建立索引；小区/社区名称匹配仅作为模型估算，最终以当年度区教育局核准结果为准。",
+    "初中采用对口小学或招生片区规则；没有公开统一全市排名的学校使用非官方中性估值。"
+  ]
+}

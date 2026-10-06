@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ResiScore · 城市置业评估台</title>
+  <link rel="stylesheet" href="styles.css?v=20261005-32" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="brand-lockup">
+        <div class="brand-mark">RS</div>
+        <div>
+          <div class="brand-name">ResiScore</div>
+          <div class="brand-caption">城市置业评估台</div>
+        </div>
+      </div>
+      <button id="citySwitcher" class="city-switcher" type="button" aria-label="切换城市" aria-expanded="false">
+        <span class="pin-dot"></span> <span id="cityNameLabel">广州</span> · 2026 <span class="chevron">⌄</span>
+      </button>
+      <div id="cityMenu" class="city-menu" hidden>
+        <div class="city-menu-head"><span>选择评估城市</span><small>先准备城市基础数据</small></div>
+        <div id="cityOptions" class="city-options"></div>
+        <button id="addCustomCityBtn" class="add-custom-city" type="button">＋ 添加其他城市</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">BUY SMART / LIVE WELL</p>
+          <h1>把喜欢的房子，<em>算清楚。</em></h1>
+          <p class="hero-intro">从通勤、学区到总价压力，把一套房放进同一张城市坐标系里。</p>
+          <div class="community-search" role="search">
+            <div class="search-box">
+              <div class="search-icon">⌕</div>
+              <input id="propertyInput" type="text" value="大壮名城" placeholder="输入小区或楼盘名称" aria-label="输入小区或楼盘名称" aria-controls="communitySuggestions" aria-autocomplete="list" />
+              <button id="evaluateBtn" type="button">开始评估 <span>→</span></button>
+            </div>
+            <div id="communitySuggestions" class="community-suggestions" role="listbox" aria-label="小区匹配候选" hidden></div>
+            <div id="communityMatchNotice" class="community-match-notice" role="status" aria-live="polite" hidden></div>
+          </div>
+          <div class="search-hints">
+            <span>支持简称、别名和模糊匹配</span>
+            <button class="hint-chip" type="button" data-name="前滩海悦">前滩海悦</button>
+            <button class="hint-chip" type="button" data-name="徐汇滨江一品">徐汇滨江一品</button>
+            <button class="hint-chip" type="button" data-name="张江名流豪庭">张江名流豪庭</button>
+          </div>
+        </div>
+        <div class="city-signal" aria-label="大壮名城真实数据概览">
+          <div class="signal-top"><span id="citySignalName">大壮名城</span><span class="signal-live"><i></i> DATA</span></div>
+          <div class="signal-number"><span id="signalMetricValue">—</span><span id="signalMetricUnit"></span></div>
+          <div class="signal-label" id="signalMetricLabel">当前公开参考均价</div>
+          <div class="signal-chart" aria-label="各评分维度数据状态">
+            <span data-signal-bar data-factor-id="transport" title="交通位置"></span><span data-signal-bar data-factor-id="center" title="市中心距离"></span><span data-signal-bar data-factor-id="school" title="学区资源"></span><span data-signal-bar data-factor-id="price" title="单价压力"></span><span data-signal-bar data-factor-id="life" title="生活配套"></span><span data-signal-bar data-factor-id="quality" title="小区品质"></span><span data-signal-bar data-factor-id="future" title="未来潜力"></span>
+          </div>
+          <div class="signal-foot"><span id="signalFootLabel">公开均价包</span><span class="up" id="signalFootValue">待加载</span></div>
+        </div>
+      </section>
+
+      <section class="usage-guide" aria-labelledby="usageGuideTitle">
+        <div class="usage-guide-mark" aria-hidden="true">!</div>
+        <div class="usage-guide-content">
+          <div class="usage-guide-head">
+            <div>
+              <p class="eyebrow">HOW TO READ THE SCORE</p>
+              <h2 id="usageGuideTitle">使用说明</h2>
+            </div>
+            <span class="usage-guide-badge">先看口径，再做判断</span>
+          </div>
+          <ol class="usage-guide-list">
+            <li>
+              <span class="usage-guide-index">01</span>
+              <div>
+                <strong>数据来源与可信度</strong>
+                <p>软件中后台数据均来自计算机采集的网上公开/开源数据，准确性需进一步确认。可信度较高的数据以黑色字体显示；可信度相对较低的数据以红色字体显示，需后期进一步确认。公开资源未搜到相关数据时会留白，并提示用户手动填写。</p>
+              </div>
+            </li>
+            <li>
+              <span class="usage-guide-index">02</span>
+              <div>
+                <strong>现场修正与自动更新</strong>
+                <p>用户实际考察后，可在评分细则板块修改每个维度的原始数据，修改后分项得分及总得分会自动更新；也可以直接在分项得分板块直接对每一项分数进行主观评定修改，修改后总分会自动更新。</p>
+              </div>
+            </li>
+          </ol>
+          <div class="usage-guide-legend" aria-label="数据颜色说明">
+            <span><i class="legend-swatch confirmed"></i>已接入/可信度较高</span>
+            <span><i class="legend-swatch provisional"></i>待确认/估算数据</span>
+            <span><i class="legend-swatch missing"></i>缺失，需人工填写</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="resultSection" class="result-section" aria-live="polite">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">CURRENT SCORECARD</p>
+          <h2 id="propertyTitle">大壮名城</h2>
+          </div>
+          <div class="heading-actions">
+            <span class="updated-label">刚刚更新</span>
+            <button id="shareResultBtn" class="icon-button" type="button" title="分享评估" aria-label="分享当前评估">↗</button>
+            <button id="favoriteResultBtn" class="icon-button" type="button" title="收藏" aria-label="收藏当前评估" aria-pressed="false">☆</button>
+          </div>
+        </div>
+
+        <div class="score-layout">
+          <article class="score-card">
+            <div class="score-card-head">
+              <div>
+                <span class="recommend-badge">性价比优选</span>
+                <p id="scoreSummary" class="score-summary">学区资源数据尚未补齐，补充红色字段后才会计算综合分。</p>
+              </div>
+              <div class="score-orbit">
+                <svg viewBox="0 0 120 120" aria-hidden="true">
+                  <circle class="orbit-track" cx="60" cy="60" r="48"></circle>
+                  <circle id="orbitProgress" class="orbit-progress" cx="60" cy="60" r="48"></circle>
+                </svg>
+            <div class="score-value"><strong id="totalScore">—</strong><span>/ <b id="scoreMax">100</b></span></div>
+              </div>
+            </div>
+          <div class="score-meta"><span id="scoreCoverageLabel">已完成 0 / 7 个维度</span><strong id="scoreCoveragePercent">—</strong></div>
+            <div class="confidence-line"><span>数据置信度</span><div class="confidence-bar"><i id="confidenceBar"></i></div><strong id="confidenceLabel">待完整数据</strong></div>
+          </article>
+
+          <article class="insight-card">
+            <div class="insight-kicker">ONE-LINE READ</div>
+            <p id="insightText">“如果你每天需要换乘 1 次以内，它会是内环外少见的均衡选手。”</p>
+            <div class="insight-byline"><span class="avatar">R</span><span>ResiScore 编辑部</span><span class="dot-sep">·</span><span>基于 7 项指标</span></div>
+          </article>
+        </div>
+
+        <div class="score-actions" aria-label="评分结果操作">
+          <button id="saveResultBtn" class="save-result-button" type="button"><span aria-hidden="true">✓</span> 保存结果</button>
+          <button id="addCompareBtn" class="compare-result-button" type="button"><span aria-hidden="true">＋</span> 加入对比</button>
+          <button id="openDetailsBtn" class="details-result-button" type="button"><span aria-hidden="true">⌄</span> 查看评分细则</button>
+          <button id="fillMissingBtn" class="details-result-button details-result-button-warn" type="button"><span aria-hidden="true">!</span> 补齐待确认数据</button>
+        </div>
+
+        <div class="detail-grid">
+          <article class="breakdown-card">
+            <div class="card-title-row">
+              <div><p class="eyebrow">SCORE BREAKDOWN</p><h3>分项得分</h3></div>
+              <span class="unit-label">维度得分 / 维度满分 · 人工模式可调整子项满分</span>
+            </div>
+            <div class="manual-toolbar" id="manualToolbar">
+              <div class="manual-toolbar-copy"><span class="manual-status-dot"></span><div><strong id="manualModeLabel">自动计算</strong><small id="manualModeHint">数据由规则和已登记信息自动生成</small></div></div>
+              <div class="manual-toolbar-actions"><button id="manualToggleBtn" class="manual-toggle" type="button">开启人工修正</button><button id="manualResetBtn" class="manual-reset" type="button" hidden>恢复自动值</button></div>
+            </div>
+            <div id="breakdownList" class="breakdown-list"></div>
+          </article>
+
+          <article class="weight-card">
+            <div class="card-title-row">
+              <div><p class="eyebrow">TUNE THE MODEL</p><h3>调整权重</h3></div>
+              <div class="weight-card-actions"><button id="normalizeBtn" class="text-button" type="button">归一到 100</button><button id="saveWeightsBtn" class="text-button" type="button">保存权重</button><button id="resetWeightsBtn" class="text-button text-button-muted" type="button">恢复默认值</button></div>
+            </div>
+            <p class="weight-note">拖动滑杆，告诉我们什么对你更重要。</p>
+            <div id="weightList" class="weight-list"></div>
+            <div id="weightProfileStatus" class="weight-profile-status">当前使用默认权重</div>
+            <div class="weight-total"><span>当前权重合计</span><strong><b id="weightTotal">100</b><small> / 100</small></strong></div>
+          </article>
+        </div>
+
+        <section id="rulesSection" class="rules-section" aria-labelledby="rulesTitle">
+          <div class="rules-heading">
+            <div>
+              <p class="eyebrow">SCORING LOGIC</p>
+              <h3 id="rulesTitle">评分细则</h3>
+            </div>
+            <div class="rules-heading-actions">
+              <span id="rulesStatus" class="rules-status"><i></i> 广州交通与生活配套数据准备同步</span>
+              <button id="refreshCityDataBtn" class="text-button" type="button">更新离线数据</button>
+            </div>
+          </div>
+          <div id="rulesList" class="rules-list"></div>
+          <div class="formula-card">
+            <div class="formula-mark">Σ</div>
+            <div>
+              <p class="eyebrow">HOW THE TOTAL IS CALCULATED</p>
+              <h4>总分 = Σ（各维度原始分 × 该维度权重 ÷ 100）</h4>
+              <p>每个子项先按该维度分配到的满分计算，子项得分相加得到维度得分；所有维度得分相加得到综合总分。生活配套基础满分 15 分，按商业 5 分、餐饮 4 分、医疗 3 分、公园 3 分拆分；大型成熟商场为额外加分，1 个加 2 分、2 个及以上加 3 分，最终仍封顶 15 分：商业和餐饮统计 2km 店铺数量，医疗和公园按 5km 内最近点位直线距离连续插值计分。广州生活配套数据以本地 OpenStreetMap 数据包为基础，并补入已核实的重点商业体与公开地图店铺样本；未登记的店铺不能被当作现实中的 0 家。单价压力按 1 万–10 万元/㎡幂函数换算，低价段的分数差异更明显。学区资源先分别计算小学、初中，再按学区权重折算。权重合计建议保持为 100。</p>
+            </div>
+            <div class="formula-example"><span>交通位置示例</span><strong>距离 8.8 / 10 + 站点等级 4.6 / 5，合计 13.4 / 15</strong></div>
+          </div>
+        </section>
+      </section>
+
+      <section id="workspaceSection" class="workspace-section">
+        <div class="workspace-heading">
+          <div><p class="eyebrow">YOUR WORKSPACE</p><h3>已保存与对比</h3></div>
+          <span id="workspaceCount" class="workspace-count"></span>
+        </div>
+        <div class="workspace-grid">
+          <article class="favorites-card">
+            <div class="workspace-card-title"><h4>我的收藏</h4><div class="workspace-card-actions"><span>最多 50 条 · 本机保存</span></div></div>
+            <div id="favoriteResultsList" class="favorite-results-list"></div>
+          </article>
+          <article class="saved-results-card">
+            <div class="workspace-card-title"><h4>保存的结果</h4><div class="workspace-card-actions"><span>最多 24 条 · 手动保存</span><button id="refreshSavedBtn" class="text-button" type="button">更新分数</button></div></div>
+            <div id="savedResultsList" class="saved-results-list"></div>
+          </article>
+          <article class="compare-card">
+            <div class="workspace-card-title"><div class="compare-title"><h4>横向对比</h4><span>最多 16 个</span></div><div class="workspace-card-actions"><button id="refreshCompareBtn" class="text-button" type="button">更新分数</button><button id="clearCompareBtn" class="text-button" type="button">清空对比</button></div></div>
+            <div id="compareTable" class="compare-table"></div>
+          </article>
+        </div>
+      </section>
+
+    </main>
+
+    <nav class="bottom-nav" aria-label="底部导航">
+      <button class="nav-item active" type="button" data-nav-target="resultSection"><span class="nav-glyph">◒</span><span>评估</span></button>
+      <button class="nav-item" type="button" data-nav-target="workspaceSection"><span class="nav-glyph">⇄</span><span>对比</span></button>
+      <button id="favoriteNavBtn" class="nav-item" type="button" data-nav-target="workspaceSection"><span class="nav-glyph">⌁</span><span>收藏</span></button>
+      <button class="nav-item" type="button" data-nav-target="rulesSection"><span class="nav-glyph">◌</span><span>细则</span></button>
+    </nav>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <div id="cityDataModal" class="city-modal" hidden>
+      <div class="city-modal-backdrop" data-close-city-modal></div>
+      <section class="city-modal-card" role="dialog" aria-modal="true" aria-labelledby="cityModalTitle">
+        <button id="closeCityModal" class="city-modal-close" type="button" aria-label="关闭">×</button>
+        <p class="eyebrow">CITY DATA PACK</p>
+        <h3 id="cityModalTitle">先下载城市多维数据</h3>
+        <p id="cityModalDescription" class="city-modal-description"></p>
+        <div id="cityDataPacks" class="city-data-packs"></div>
+        <div class="city-download-progress"><div id="cityDownloadProgressBar"></div></div>
+        <div class="city-download-meta"><span id="cityDownloadStatus">共 7 类基础数据</span><strong id="cityDownloadPercent">0%</strong></div>
+        <button id="downloadCityDataBtn" class="download-city-button" type="button">下载该城市多维数据 <span>↓</span></button>
+        <p class="city-modal-footnote">数据包用于计算价格、地理位置、交通、学区、配套、小区品质和未来潜力；下载后保存在本机。</p>
+      </section>
+    </div>
+    <div id="customCityModal" class="city-modal" hidden>
+      <div class="city-modal-backdrop" data-close-custom-city></div>
+      <section class="city-modal-card custom-city-card" role="dialog" aria-modal="true" aria-labelledby="customCityTitle">
+        <button id="closeCustomCityModal" class="city-modal-close" type="button" aria-label="关闭">×</button>
+        <p class="eyebrow">ADD A CITY</p>
+        <h3 id="customCityTitle">添加其他城市</h3>
+        <p class="city-modal-description">输入城市名称后，我们会为它创建一个待下载的数据空间。下载完成前不会开始评分。</p>
+        <label class="custom-city-label" for="customCityInput">城市名称</label>
+        <input id="customCityInput" class="custom-city-input" type="text" maxlength="20" placeholder="例如：南京、武汉、重庆" />
+        <button id="confirmCustomCityBtn" class="download-city-button" type="button">继续准备数据 <span>→</span></button>
+      </section>
+    </div>
+    <div id="missingDataModal" class="city-modal" hidden>
+      <div class="city-modal-backdrop" data-close-missing-data></div>
+      <section class="city-modal-card missing-data-card" role="dialog" aria-modal="true" aria-labelledby="missingDataTitle">
+        <button id="closeMissingDataModal" class="city-modal-close" type="button" aria-label="关闭">×</button>
+        <p class="eyebrow">RAW DATA NEEDED</p>
+        <h3 id="missingDataTitle">有分项缺少原始数据</h3>
+        <p class="city-modal-description">这些项目目前没有可计算的原始值，综合分暂不能计算。点击“去填写”后，页面会开启人工填写并跳到第一个缺失项目。</p>
+        <div id="missingDataList" class="missing-data-list"></div>
+        <button id="fillMissingDataBtn" class="download-city-button" type="button">去填写原始数据 <span>→</span></button>
+      </section>
+    </div>
+    <div id="refreshResultsModal" class="city-modal" hidden>
+      <div class="city-modal-backdrop" data-close-refresh-results></div>
+      <section class="city-modal-card refresh-results-card" role="dialog" aria-modal="true" aria-labelledby="refreshResultsTitle">
+        <button id="closeRefreshResultsModal" class="city-modal-close" type="button" aria-label="关闭">×</button>
+        <p class="eyebrow">UPDATE SCORES</p>
+        <h3 id="refreshResultsTitle">选择要更新的记录</h3>
+        <p class="city-modal-description">只更新勾选的记录；未勾选的记录会保留原来的权重、人工数据和计算结果。</p>
+        <div class="refresh-results-toolbar"><button id="selectAllRefreshResults" class="text-button" type="button">全选</button><button id="clearRefreshResults" class="text-button" type="button">取消全选</button></div>
+        <div id="refreshResultsList" class="refresh-results-list"></div>
+        <div class="refresh-results-actions"><button id="cancelRefreshResults" class="text-button" type="button">取消</button><button id="confirmRefreshResults" class="download-city-button" type="button">更新选中记录 <span>→</span></button></div>
+      </section>
+    </div>
+    <div id="saveConflictModal" class="city-modal" hidden>
+      <div class="city-modal-backdrop" data-close-save-conflict></div>
+      <section class="city-modal-card save-conflict-card" role="dialog" aria-modal="true" aria-labelledby="saveConflictTitle">
+        <button id="closeSaveConflictModal" class="city-modal-close" type="button" aria-label="关闭">×</button>
+        <p id="saveConflictEyebrow" class="eyebrow">SAVE RESULT</p>
+        <h3 id="saveConflictTitle">发现同名历史结果</h3>
+        <p id="saveConflictDescription" class="city-modal-description"></p>
+        <div id="saveConflictPreview" class="save-conflict-preview"></div>
+        <div class="save-conflict-actions">
+          <button id="cancelSaveConflict" class="text-button" type="button">取消</button>
+          <button id="saveAsNewBtn" class="save-as-new-button" type="button">另存一份</button>
+          <button id="replaceSaveConflictBtn" class="download-city-button" type="button">替换原结果</button>
+        </div>
+      </section>
+    </div>
+    <div id="historyWeightModal" class="city-modal" hidden>
+      <div class="city-modal-backdrop" data-close-history-weight></div>
+      <section class="city-modal-card save-conflict-card" role="dialog" aria-modal="true" aria-labelledby="historyWeightTitle">
+        <button id="closeHistoryWeightModal" class="city-modal-close" type="button" aria-label="关闭">×</button>
+        <p class="eyebrow">WEIGHT PROFILE</p>
+        <h3 id="historyWeightTitle">历史结果权重与当前设置不同</h3>
+        <p id="historyWeightDescription" class="city-modal-description"></p>
+        <div id="historyWeightPreview" class="save-conflict-preview"></div>
+        <div class="save-conflict-actions">
+          <button id="cancelHistoryWeight" class="text-button" type="button">取消</button>
+          <button id="useHistoryWeight" class="save-as-new-button" type="button">按历史权重加载</button>
+          <button id="useLatestHistoryWeight" class="download-city-button" type="button">按当前模板加载</button>
+        </div>
+      </section>
+    </div>
+    <div id="offlineSyncModal" class="city-modal" hidden>
+      <div class="city-modal-backdrop" data-close-offline-sync></div>
+      <section class="city-modal-card save-conflict-card" role="dialog" aria-modal="true" aria-labelledby="offlineSyncTitle">
+        <button id="closeOfflineSyncModal" class="city-modal-close" type="button" aria-label="关闭">×</button>
+        <p class="eyebrow">LOCAL OFFLINE OVERRIDE</p>
+        <h3 id="offlineSyncTitle">是否同步人工数据？</h3>
+        <p id="offlineSyncDescription" class="city-modal-description"></p>
+        <div class="save-conflict-actions">
+          <button id="skipOfflineSyncBtn" class="text-button" type="button">仅保存本次结果</button>
+          <button id="confirmOfflineSyncBtn" class="download-city-button" type="button">同步到本机离线覆盖层</button>
+        </div>
+      </section>
+    </div>
+  </div>
+  <script src="data/transport-bundle.js"></script>
+  <script src="transport-data.js?v=20261005-8"></script>
+  <script src="data/huangpu-school-district-2026.js"></script>
+  <script src="data/guangzhou-school-district-supplement-2026.js"></script>
+  <script src="school-district-data.js"></script>
+  <script src="amenities-bundle.js"></script>
+  <script src="amenities-data.js?v=20261005-8"></script>
+  <script src="data/community-price-bundle.js"></script>
+  <script src="data/community-quality-bundle.js"></script>
+  <script src="data/community-future-bundle.js"></script>
+  <script src="data/community-score-data.js"></script>
+  <script src="multi-source-data.js"></script>
+  <script src="app.js?v=20261006-69"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-04T00:00:00Z",
+  "cities": {
+    "guangzhou": {
+      "cityName": "广州",
+      "version": "2026-10-04-transport-v4",
+      "url": "data/transport/cities/guangzhou.json",
+      "sha256": "ff9ec9995fd96f2e396c7b5c03b4e59c94d72053fef66ab105716fb6d5e6adcb",
+      "bytes": 120529,
+      "stationCount": 310,
+      "generatedAt": "2026-10-04T00:00:00Z"
+    }
+  }
+}

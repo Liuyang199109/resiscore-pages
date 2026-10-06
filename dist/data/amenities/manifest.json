@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-04T00:00:00Z",
+  "cities": {
+    "guangzhou": {
+      "cityName": "广州",
+      "version": "2026-10-r6",
+      "url": "data/amenities/cities/guangzhou.json",
+      "sha256": "3054c504a126bcd3e9cc1565da1b4a41cdb5f0adc7278604a3af7d2550e95b1c",
+      "bytes": 2698777,
+      "stats": {
+        "residentialCount": 4861,
+        "commercialCount": 1863,
+        "diningCount": 2158,
+        "medicalCount": 424,
+        "tertiaryHospitalCount": 103,
+        "parkCount": 493,
+        "residentialOverrideCount": 5,
+        "supplementalPoiCount": 51,
+        "matureMallCount": 5
+      },
+      "generatedAt": "2026-10-04T00:00:00Z"
+    }
+  }
+}

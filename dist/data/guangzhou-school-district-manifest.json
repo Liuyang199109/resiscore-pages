@@ -1,0 +1,178 @@
+{
+  "schemaVersion": 1,
+  "city": "guangzhou",
+  "cityName": "广州",
+  "schoolYear": 2026,
+  "generatedAt": "2026-10-04",
+  "description": "广州各区义务教育招生资料离线索引。已把可解析的2026官方/公开表格、官方图片OCR和部分PDF附件接入；来源置信度、上一年度回退和非官方排名估值均在各包中标明，不能替代当年教育部门核验。",
+  "districts": [
+    {
+      "id": "yuexiu",
+      "name": "越秀区",
+      "status": "source-normalized",
+      "normalizedData": "data/yuexiu-school-district-2026.json",
+      "sourceType": "legacy-doc-recovered",
+      "sourceUrl": "https://www.yuexiu.gov.cn/gzjg/qzf/qjyj/jyzl/gk/zswd/content/post_10790637.html",
+      "mappingNote": "已从2026官方ZIP附件5 Legacy DOC恢复并结构化43所小学登记地段；道路/街巷/社区文本可检索，但不等于逐小区确认；越秀初中对口/派位表仍未在本批资料中。",
+      "sourceFiles": [
+        "data/school-sources/yuexiu-2026-schools.zip",
+        "data/school-sources/yuexiu-5-2026年越秀区小学新生登记范围.doc",
+        "data/school-sources/yuexiu-5-2026年越秀区小学新生登记范围.doc.recovered.txt",
+        "data/school-sources/yuexiu.html",
+        "yuexiu-school-district-2026.json"
+      ]
+    },
+    {
+      "id": "liwan",
+      "name": "荔湾区",
+      "status": "partial",
+      "normalizedData": "data/liwan-school-district-2026.json",
+      "sourceType": "html",
+      "sourceUrl": "https://www.lw.gov.cn/gzlwjy/gkmlpt/content/10/10789/post_10789624.html",
+      "mappingNote": "已接入2026公办小学服务地段表；初中对口/派位和全市排名仍待补充。 已加入公开办学属性关键词排名估算，界面标记为中性估值。",
+      "sourceFiles": [
+        "data/school-sources/liwan-01.docx",
+        "data/school-sources/liwan-02.docx",
+        "data/school-sources/liwan-03.docx",
+        "data/school-sources/liwan-04.docx",
+        "data/school-sources/liwan-05.docx"
+      ]
+    },
+    {
+      "id": "haizhu",
+      "name": "海珠区",
+      "status": "partial",
+      "normalizedData": "data/haizhu-school-district-2026.json",
+      "sourceType": "html-image",
+      "sourceUrl": "https://www.haizhu.gov.cn/hzdt/hzyw/hzzc/content/post_10791357.html",
+      "mappingNote": "已接入官方服务地段图片OCR，覆盖67条小学地段索引；OCR行合并和初中对口仍需逐项核验。",
+      "sourceFiles": [
+        "data/school-sources/haizhu-01.png",
+        "data/school-sources/haizhu-02.png",
+        "data/school-sources/haizhu-03.png",
+        "data/school-sources/haizhu-04.png",
+        "data/school-sources/haizhu-05.png",
+        "haizhu-school-district-2026.json"
+      ]
+    },
+    {
+      "id": "tianhe",
+      "name": "天河区",
+      "status": "partial",
+      "normalizedData": "data/tianhe-school-district-2026.json",
+      "sourceType": "pdf",
+      "sourceUrl": "https://www.thnet.gov.cn/gzjg/qzf/qjyj/zsks/content/post_10791180.html",
+      "mappingNote": "已接入73条小学、21组初中地段；机器可读表为公开镜像，官方PDF保留作核验源。",
+      "sourceFiles": [
+        "data/school-sources/tianhe-01.pdf",
+        "tianhe-school-district-2026.json"
+      ]
+    },
+    {
+      "id": "baiyun",
+      "name": "白云区",
+      "status": "partial",
+      "normalizedData": "data/baiyun-school-district-2026.json",
+      "sourceType": "html-pdf",
+      "sourceUrl": "https://www.by.gov.cn/gzbyjy/gkmlpt/content/10/10791/mpost_10791512.html",
+      "mappingNote": "已接入2026政府门户XLS：204条小学、79组初中；部分统筹学校仍按当年学位安排。",
+      "sourceFiles": [
+        "data/school-sources/baiyun-01.docx",
+        "data/school-sources/baiyun-02.doc",
+        "data/school-sources/baiyun-03.docx",
+        "baiyun-school-district-2026.json"
+      ]
+    },
+    {
+      "id": "huangpu",
+      "name": "黄埔区",
+      "status": "normalized",
+      "normalizedData": "data/huangpu-school-district-2026.json",
+      "sourceType": "json",
+      "sourceUrl": "https://www.hp.gov.cn/gzhpjy/gkmlpt/content/10/10791/post_10791834.html",
+      "mappingNote": "已接入2026小学地段、初中对口/派位及排名估值。",
+      "sourceFiles": [
+        "data/school-sources/huangpu-01.pdf"
+      ]
+    },
+    {
+      "id": "panyu",
+      "name": "番禺区",
+      "status": "partial",
+      "normalizedData": "data/panyu-school-district-2026.json",
+      "sourceType": "html",
+      "sourceUrl": "https://www.panyu.gov.cn/zwgk/zdlyxxgkml/jy/ndywjyhpgz/",
+      "mappingNote": "已接入147条小学招生地段表；初中对口/派位仍需按最终文件核验。",
+      "sourceFiles": [
+        "data/school-sources/panyu.html",
+        "panyu-school-district-2026.json"
+      ]
+    },
+    {
+      "id": "huadu",
+      "name": "花都区",
+      "status": "source-normalized",
+      "normalizedData": "data/huadu-school-district-2026.json",
+      "sourceType": "official-pdf-ocr",
+      "sourceUrl": "https://www.huadu.gov.cn/gzhdjy/gkmlpt/content/10/10791/post_10791093.html",
+      "mappingNote": "已接入2026公办小学及公办初中计划PDF（56小学、42初中），初中地段含定点对口/电脑派位；原始范围为PDF OCR文本，命中后需按教育指导中心细则核验。",
+      "sourceFiles": [
+        "data/school-ocr/huadu-02.json",
+        "data/school-sources/huadu-01.pdf",
+        "data/school-sources/huadu-02.pdf"
+      ]
+    },
+    {
+      "id": "nansha",
+      "name": "南沙区",
+      "status": "partial",
+      "normalizedData": "data/nansha-school-district-2026.json",
+      "sourceType": "docx",
+      "sourceUrl": "https://www.gzns.gov.cn/zwgk/zdlyxxgk/jyxx/content/post_10791917.html",
+      "mappingNote": "已接入2026学校招生计划和招生地段DOCX附件，已转换为离线地段映射；官方未提供全市统一学校排名。 已加入公开办学属性关键词排名估算，界面标记为中性估值。",
+      "sourceFiles": [
+        "data/school-sources/nansha-01.docx"
+      ]
+    },
+    {
+      "id": "zengcheng",
+      "name": "增城区",
+      "status": "partial",
+      "normalizedData": "data/zengcheng-school-district-2026.json",
+      "sourceType": "pdf",
+      "sourceUrl": "https://www.zc.gov.cn/jg/qzfbm/qjyj/tzgg/content/post_10790404.html",
+      "mappingNote": "已接入官方PDF OCR转换的重点学校及四校初中地段，覆盖为来源草稿，其他镇街待逐项核验。",
+      "sourceFiles": [
+        "data/school-sources/zengcheng-01.pdf",
+        "data/school-sources/zengcheng-02.pdf",
+        "data/school-sources/zengcheng-03.pdf",
+        "data/school-sources/zengcheng-04.pdf",
+        "data/school-sources/zengcheng-05.pdf",
+        "zengcheng-school-district-2026.json"
+      ]
+    },
+    {
+      "id": "conghua",
+      "name": "从化区",
+      "status": "source-normalized",
+      "normalizedData": "data/conghua-school-district-2026.json",
+      "sourceType": "legacy-doc-recovered",
+      "sourceUrl": "https://www.conghua.gov.cn/zwgk/zdlyxxgk/jyxxzkxx/content/post_10791777.html",
+      "mappingNote": "已从2026官方Legacy DOC附件4恢复并结构化城区、城西片、城东片、鳌头镇、太平镇、北片的小学/初中服务地段（67小学、22初中组），并补充附件7广州六中从化校区；仍是地段文本索引，逐小区需按当年人户一致规则核验。",
+      "sourceFiles": [
+        "data/school-sources/conghua-01.doc",
+        "data/school-sources/conghua-02.doc",
+        "data/school-sources/conghua-03.doc",
+        "data/school-sources/conghua-04.doc",
+        "data/school-sources/conghua-05.doc",
+        "data/school-sources/conghua-06.doc",
+        "data/school-sources/conghua-07.doc",
+        "data/school-sources/conghua-08.doc",
+        "data/school-sources/conghua-09.doc",
+        "data/school-sources/conghua-10.doc",
+        "data/school-sources/conghua-04.recovered.txt",
+        "data/school-sources/conghua-07.recovered.txt"
+      ]
+    }
+  ]
+}

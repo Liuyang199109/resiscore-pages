@@ -1,0 +1,3935 @@
+{
+  "schemaVersion": 1,
+  "city": "guangzhou",
+  "generatedAt": "2026-10-04",
+  "source": "广州都市圈小区详情页公开“地铁站距离”与小区坐标/地铁站坐标对照；该距离可能是地图估算，不等同核验步行轨迹。",
+  "sampleCount": 490,
+  "validRatioCount": 49,
+  "mean": 1.236,
+  "median": 1.059,
+  "trimmedMean10to90": 1.144,
+  "p10": 0.849,
+  "p90": 1.792,
+  "samples": [
+    {
+      "community": "113中学宿舍",
+      "station": "龙口西",
+      "publishedDistanceM": 367,
+      "straightDistanceM": 1658,
+      "ratio": 0.221,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13126/"
+    },
+    {
+      "community": "SOLO禺意湾8号",
+      "station": "厦滘",
+      "publishedDistanceM": 1371,
+      "straightDistanceM": 494,
+      "ratio": 2.777,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/10586/"
+    },
+    {
+      "community": "万华花园",
+      "station": "逸景路",
+      "publishedDistanceM": 200,
+      "straightDistanceM": 1223,
+      "ratio": 0.164,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/11385/"
+    },
+    {
+      "community": "万科世博汇",
+      "station": "广州南站",
+      "publishedDistanceM": 918,
+      "straightDistanceM": 2021,
+      "ratio": 0.454,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/10414/"
+    },
+    {
+      "community": "万科东荟城",
+      "station": "香雪",
+      "publishedDistanceM": 1532,
+      "straightDistanceM": 1805,
+      "ratio": 0.849,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12254/"
+    },
+    {
+      "community": "万科云城米酷",
+      "station": "天河智慧城",
+      "publishedDistanceM": 504,
+      "straightDistanceM": 1771,
+      "ratio": 0.285,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13671/"
+    },
+    {
+      "community": "万科城",
+      "station": "金峰",
+      "publishedDistanceM": 347,
+      "straightDistanceM": 1368,
+      "ratio": 0.254,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12175/"
+    },
+    {
+      "community": "万科城市之光",
+      "station": "文冲",
+      "publishedDistanceM": 517,
+      "straightDistanceM": 763,
+      "ratio": 0.678,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12211/"
+    },
+    {
+      "community": "万科尚城",
+      "station": "沙园",
+      "publishedDistanceM": 171,
+      "straightDistanceM": 28943,
+      "ratio": 0.006,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12270/"
+    },
+    {
+      "community": "万科山景城",
+      "station": "萝岗",
+      "publishedDistanceM": 86,
+      "straightDistanceM": 7057,
+      "ratio": 0.012,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12276/"
+    },
+    {
+      "community": "万科峯境",
+      "station": "飞翔公园",
+      "publishedDistanceM": 1145,
+      "straightDistanceM": 2420,
+      "ratio": 0.473,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/9694/"
+    },
+    {
+      "community": "万科幸福誉",
+      "station": "何棠下",
+      "publishedDistanceM": 450,
+      "straightDistanceM": 954,
+      "ratio": 0.472,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12279/"
+    },
+    {
+      "community": "万科欧泊",
+      "station": "员岗",
+      "publishedDistanceM": 947,
+      "straightDistanceM": 225,
+      "ratio": 4.209,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/10640/"
+    },
+    {
+      "community": "万科派",
+      "station": "江泰路",
+      "publishedDistanceM": 190,
+      "straightDistanceM": 1175,
+      "ratio": 0.162,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/11409/"
+    },
+    {
+      "community": "万科金色悦府",
+      "station": "大沙地",
+      "publishedDistanceM": 447,
+      "straightDistanceM": 3250,
+      "ratio": 0.138,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12015/"
+    },
+    {
+      "community": "三荣大厦",
+      "station": "淘金",
+      "publishedDistanceM": 740,
+      "straightDistanceM": 1512,
+      "ratio": 0.49,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13685/"
+    },
+    {
+      "community": "上步花园",
+      "station": "同德",
+      "publishedDistanceM": 100,
+      "straightDistanceM": 1821,
+      "ratio": 0.055,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/9730/"
+    },
+    {
+      "community": "世茂天越",
+      "station": "五羊邨",
+      "publishedDistanceM": 107,
+      "straightDistanceM": 1366,
+      "ratio": 0.078,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/14249/"
+    },
+    {
+      "community": "东华花园",
+      "station": "番禺广场",
+      "publishedDistanceM": 585,
+      "straightDistanceM": 2219,
+      "ratio": 0.264,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/10163/"
+    },
+    {
+      "community": "东圃小学教师宿舍",
+      "station": "车陂",
+      "publishedDistanceM": 306,
+      "straightDistanceM": 1499,
+      "ratio": 0.204,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13422/"
+    },
+    {
+      "community": "东城雅苑",
+      "station": "南岗",
+      "publishedDistanceM": 1016,
+      "straightDistanceM": 2273,
+      "ratio": 0.447,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12094/"
+    },
+    {
+      "community": "东堤水岸",
+      "station": "北京路",
+      "publishedDistanceM": 50,
+      "straightDistanceM": 2086,
+      "ratio": 0.024,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13912/"
+    },
+    {
+      "community": "东山公寓",
+      "station": "东湖",
+      "publishedDistanceM": 504,
+      "straightDistanceM": 1962,
+      "ratio": 0.257,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/14174/"
+    },
+    {
+      "community": "东山公馆",
+      "station": "东风",
+      "publishedDistanceM": 173,
+      "straightDistanceM": 57156,
+      "ratio": 0.003,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13738/"
+    },
+    {
+      "community": "东山领汇广场",
+      "station": "杨箕",
+      "publishedDistanceM": 48,
+      "straightDistanceM": 1260,
+      "ratio": 0.038,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13730/"
+    },
+    {
+      "community": "东川路91号大院",
+      "station": "东山口",
+      "publishedDistanceM": 973,
+      "straightDistanceM": 546,
+      "ratio": 1.781,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/14339/"
+    },
+    {
+      "community": "东怡新地",
+      "station": "番禺广场",
+      "publishedDistanceM": 339,
+      "straightDistanceM": 1658,
+      "ratio": 0.204,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/10288/"
+    },
+    {
+      "community": "东方之珠花园",
+      "station": "华师",
+      "publishedDistanceM": 188,
+      "straightDistanceM": 1243,
+      "ratio": 0.151,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13622/"
+    },
+    {
+      "community": "东方新世界",
+      "station": "天河公园",
+      "publishedDistanceM": 795,
+      "straightDistanceM": 1494,
+      "ratio": 0.532,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13343/"
+    },
+    {
+      "community": "东方都会广场",
+      "station": "天河公园",
+      "publishedDistanceM": 735,
+      "straightDistanceM": 1693,
+      "ratio": 0.434,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13145/"
+    },
+    {
+      "community": "东晖花园",
+      "station": "天河公园",
+      "publishedDistanceM": 468,
+      "straightDistanceM": 1386,
+      "ratio": 0.338,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13625/"
+    },
+    {
+      "community": "东海嘉园",
+      "station": "杨箕",
+      "publishedDistanceM": 443,
+      "straightDistanceM": 1554,
+      "ratio": 0.285,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13954/"
+    },
+    {
+      "community": "东港花园",
+      "station": "双岗",
+      "publishedDistanceM": 146,
+      "straightDistanceM": 1350,
+      "ratio": 0.108,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12029/"
+    },
+    {
+      "community": "东湖北大院",
+      "station": "东湖",
+      "publishedDistanceM": 259,
+      "straightDistanceM": 1635,
+      "ratio": 0.158,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13862/"
+    },
+    {
+      "community": "东璟花园",
+      "station": "员村",
+      "publishedDistanceM": 715,
+      "straightDistanceM": 1573,
+      "ratio": 0.455,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13618/"
+    },
+    {
+      "community": "东风广场",
+      "station": "动物园",
+      "publishedDistanceM": 379,
+      "straightDistanceM": 1574,
+      "ratio": 0.241,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13959/"
+    },
+    {
+      "community": "中兴花园",
+      "station": "江夏",
+      "publishedDistanceM": 100,
+      "straightDistanceM": 18196,
+      "ratio": 0.005,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13585/"
+    },
+    {
+      "community": "中冶·逸璟台",
+      "station": "长平",
+      "publishedDistanceM": 1134,
+      "straightDistanceM": 2432,
+      "ratio": 0.466,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12226/"
+    },
+    {
+      "community": "中国铁建国际花园",
+      "station": "朱村",
+      "publishedDistanceM": 81,
+      "straightDistanceM": 1388,
+      "ratio": 0.058,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/14834/"
+    },
+    {
+      "community": "中山一路小区",
+      "station": "杨箕",
+      "publishedDistanceM": 616,
+      "straightDistanceM": 1889,
+      "ratio": 0.326,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/14243/"
+    },
+    {
+      "community": "中旅侨苑",
+      "station": "昌岗",
+      "publishedDistanceM": 278,
+      "straightDistanceM": 954,
+      "ratio": 0.291,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/11292/"
+    },
+    {
+      "community": "中泰国际广场",
+      "station": "广州东站",
+      "publishedDistanceM": 260,
+      "straightDistanceM": 1052,
+      "ratio": 0.247,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13311/"
+    },
+    {
+      "community": "中泰天境",
+      "station": "镇龙",
+      "publishedDistanceM": 1250,
+      "straightDistanceM": 857,
+      "ratio": 1.458,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12287/"
+    },
+    {
+      "community": "中海云麓公馆",
+      "station": "云霄路",
+      "publishedDistanceM": 80,
+      "straightDistanceM": 3369,
+      "ratio": 0.024,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/9789/"
+    },
+    {
+      "community": "中海名都",
+      "station": "北京路",
+      "publishedDistanceM": 50,
+      "straightDistanceM": 1930,
+      "ratio": 0.026,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/11415/"
+    },
+    {
+      "community": "中海康城",
+      "station": "江夏",
+      "publishedDistanceM": 100,
+      "straightDistanceM": 15729,
+      "ratio": 0.006,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13640/"
+    },
+    {
+      "community": "中海花城湾",
+      "station": "猎德",
+      "publishedDistanceM": 172,
+      "straightDistanceM": 1208,
+      "ratio": 0.142,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13669/"
+    },
+    {
+      "community": "中海观园国际",
+      "station": "珠江新城",
+      "publishedDistanceM": 422,
+      "straightDistanceM": 3244,
+      "ratio": 0.13,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13434/"
+    },
+    {
+      "community": "中海锦苑",
+      "station": "二沙岛",
+      "publishedDistanceM": 461,
+      "straightDistanceM": 2337,
+      "ratio": 0.197,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/10735/"
+    },
+    {
+      "community": "中石化大厦",
+      "station": "体育西路",
+      "publishedDistanceM": 128,
+      "straightDistanceM": 1817,
+      "ratio": 0.07,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13548/"
+    },
+    {
+      "community": "中鼎君和名城",
+      "station": "沙村",
+      "publishedDistanceM": 375,
+      "straightDistanceM": 10594,
+      "ratio": 0.035,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12264/"
+    },
+    {
+      "community": "丰兴广场",
+      "station": "石牌桥",
+      "publishedDistanceM": 184,
+      "straightDistanceM": 1405,
+      "ratio": 0.131,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13017/"
+    },
+    {
+      "community": "丰逸尚居",
+      "station": "文冲",
+      "publishedDistanceM": 590,
+      "straightDistanceM": 1176,
+      "ratio": 0.502,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12042/"
+    },
+    {
+      "community": "丽园雅庭",
+      "station": "赤岗",
+      "publishedDistanceM": 517,
+      "straightDistanceM": 551,
+      "ratio": 0.938,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/11399/"
+    },
+    {
+      "community": "丽康居",
+      "station": "同德",
+      "publishedDistanceM": 1040,
+      "straightDistanceM": 3412,
+      "ratio": 0.305,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/9895/"
+    },
+    {
+      "community": "丽晶华庭",
+      "station": "珠江新城",
+      "publishedDistanceM": 313,
+      "straightDistanceM": 1210,
+      "ratio": 0.259,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13676/"
+    },
+    {
+      "community": "乐得花园",
+      "station": "鹤龙",
+      "publishedDistanceM": 50,
+      "straightDistanceM": 1569,
+      "ratio": 0.032,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/9921/"
+    },
+    {
+      "community": "乐怡居",
+      "station": "龙溪",
+      "publishedDistanceM": 100,
+      "straightDistanceM": 5724,
+      "ratio": 0.017,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12329/"
+    },
+    {
+      "community": "二沙岛花城苑",
+      "station": "珠江新城",
+      "publishedDistanceM": 375,
+      "straightDistanceM": 566,
+      "ratio": 0.663,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/14135/"
+    },
+    {
+      "community": "五山花园",
+      "station": "五山",
+      "publishedDistanceM": 1029,
+      "straightDistanceM": 1464,
+      "ratio": 0.703,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12954/"
+    },
+    {
+      "community": "五矿招商·鹭山府",
+      "station": "鱼珠",
+      "publishedDistanceM": 975,
+      "straightDistanceM": 1989,
+      "ratio": 0.49,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12048/"
+    },
+    {
+      "community": "五羊华轩",
+      "station": "杨箕",
+      "publishedDistanceM": 358,
+      "straightDistanceM": 1419,
+      "ratio": 0.252,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/14301/"
+    },
+    {
+      "community": "仓边路35号大院",
+      "station": "农讲所",
+      "publishedDistanceM": 347,
+      "straightDistanceM": 983,
+      "ratio": 0.353,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13832/"
+    },
+    {
+      "community": "仙湖名苑",
+      "station": "天河公园",
+      "publishedDistanceM": 338,
+      "straightDistanceM": 1799,
+      "ratio": 0.188,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13027/"
+    },
+    {
+      "community": "仰忠街11号大院",
+      "station": "北京路",
+      "publishedDistanceM": 149,
+      "straightDistanceM": 1398,
+      "ratio": 0.107,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13986/"
+    },
+    {
+      "community": "会展世界城",
+      "station": "万胜围",
+      "publishedDistanceM": 203,
+      "straightDistanceM": 1369,
+      "ratio": 0.148,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/11377/"
+    },
+    {
+      "community": "余荫花园",
+      "station": "板桥",
+      "publishedDistanceM": 590,
+      "straightDistanceM": 2035,
+      "ratio": 0.29,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/10018/"
+    },
+    {
+      "community": "佳信花园",
+      "station": "赤岗",
+      "publishedDistanceM": 828,
+      "straightDistanceM": 769,
+      "ratio": 1.076,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/10812/"
+    },
+    {
+      "community": "佳地华苑大厦",
+      "station": "五羊邨",
+      "publishedDistanceM": 366,
+      "straightDistanceM": 1069,
+      "ratio": 0.342,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13811/"
+    },
+    {
+      "community": "佳滨苑",
+      "station": "滨江东路",
+      "publishedDistanceM": 771,
+      "straightDistanceM": 490,
+      "ratio": 1.575,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/11128/"
+    },
+    {
+      "community": "侨基花园",
+      "station": "市桥",
+      "publishedDistanceM": 557,
+      "straightDistanceM": 1377,
+      "ratio": 0.404,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/10702/"
+    },
+    {
+      "community": "侨林苑",
+      "station": "林和西",
+      "publishedDistanceM": 690,
+      "straightDistanceM": 1963,
+      "ratio": 0.352,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13428/"
+    },
+    {
+      "community": "侨爱苑",
+      "station": "同德",
+      "publishedDistanceM": 100,
+      "straightDistanceM": 3255,
+      "ratio": 0.031,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/9790/"
+    },
+    {
+      "community": "侨福苑",
+      "station": "淘金",
+      "publishedDistanceM": 863,
+      "straightDistanceM": 1482,
+      "ratio": 0.582,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13712/"
+    },
+    {
+      "community": "侨诚花园",
+      "station": "逸景路",
+      "publishedDistanceM": 200,
+      "straightDistanceM": 1056,
+      "ratio": 0.189,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/11307/"
+    },
+    {
+      "community": "侨鑫汇悦台",
+      "station": "潭村",
+      "publishedDistanceM": 581,
+      "straightDistanceM": 1125,
+      "ratio": 0.517,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13430/"
+    },
+    {
+      "community": "保利东郡",
+      "station": "鹤洞",
+      "publishedDistanceM": 1245,
+      "straightDistanceM": 2396,
+      "ratio": 0.52,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12524/"
+    },
+    {
+      "community": "保利中宇广场",
+      "station": "五山",
+      "publishedDistanceM": 151,
+      "straightDistanceM": 1031,
+      "ratio": 0.146,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13095/"
+    },
+    {
+      "community": "保利中海金地·大国璟",
+      "station": "钟岗",
+      "publishedDistanceM": 1829,
+      "straightDistanceM": 831,
+      "ratio": 2.202,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/14714/"
+    },
+    {
+      "community": "保利半岛",
+      "station": "黄阁",
+      "publishedDistanceM": 1234,
+      "straightDistanceM": 3220,
+      "ratio": 0.383,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12732/"
+    },
+    {
+      "community": "保利南沙天汇",
+      "station": "黄阁",
+      "publishedDistanceM": 861,
+      "straightDistanceM": 3039,
+      "ratio": 0.283,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12824/"
+    },
+    {
+      "community": "保利和光晨樾",
+      "station": "坑口",
+      "publishedDistanceM": 1212,
+      "straightDistanceM": 2450,
+      "ratio": 0.495,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12672/"
+    },
+    {
+      "community": "保利国际广场",
+      "station": "琶洲",
+      "publishedDistanceM": 281,
+      "straightDistanceM": 1870,
+      "ratio": 0.15,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/11199/"
+    },
+    {
+      "community": "保利堂悦",
+      "station": "鹤洞",
+      "publishedDistanceM": 1268,
+      "straightDistanceM": 1889,
+      "ratio": 0.671,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12629/"
+    },
+    {
+      "community": "保利塞纳维拉",
+      "station": "龙溪",
+      "publishedDistanceM": 100,
+      "straightDistanceM": 3007,
+      "ratio": 0.033,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12698/"
+    },
+    {
+      "community": "保利大都汇",
+      "station": "汉溪长隆",
+      "publishedDistanceM": 528,
+      "straightDistanceM": 1825,
+      "ratio": 0.289,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/10692/"
+    },
+    {
+      "community": "保利天汇",
+      "station": "大观南路",
+      "publishedDistanceM": 888,
+      "straightDistanceM": 2053,
+      "ratio": 0.432,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13531/"
+    },
+    {
+      "community": "保利康桥",
+      "station": "东湖",
+      "publishedDistanceM": 475,
+      "straightDistanceM": 1391,
+      "ratio": 0.342,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/10883/"
+    },
+    {
+      "community": "保利悦公馆",
+      "station": "市广路",
+      "publishedDistanceM": 359,
+      "straightDistanceM": 2593,
+      "ratio": 0.138,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/10218/"
+    },
+    {
+      "community": "保利林海山庄",
+      "station": "植物园",
+      "publishedDistanceM": 650,
+      "straightDistanceM": 701,
+      "ratio": 0.928,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13582/"
+    },
+    {
+      "community": "保利林语山庄",
+      "station": "金峰",
+      "publishedDistanceM": 395,
+      "straightDistanceM": 1678,
+      "ratio": 0.235,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12241/"
+    },
+    {
+      "community": "保利紫云",
+      "station": "棠涌",
+      "publishedDistanceM": 414,
+      "straightDistanceM": 1043,
+      "ratio": 0.397,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/9850/"
+    },
+    {
+      "community": "保利红棉花园",
+      "station": "燕岗",
+      "publishedDistanceM": 459,
+      "straightDistanceM": 1697,
+      "ratio": 0.27,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/11308/"
+    },
+    {
+      "community": "保利罗兰国际",
+      "station": "南岗",
+      "publishedDistanceM": 991,
+      "straightDistanceM": 9917,
+      "ratio": 0.1,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12255/"
+    },
+    {
+      "community": "保利花海湾",
+      "station": "龙溪",
+      "publishedDistanceM": 100,
+      "straightDistanceM": 5458,
+      "ratio": 0.018,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12621/"
+    },
+    {
+      "community": "保利葛洲坝海德公馆",
+      "station": "坑口",
+      "publishedDistanceM": 869,
+      "straightDistanceM": 2383,
+      "ratio": 0.365,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12580/"
+    },
+    {
+      "community": "保利越秀岭南林语",
+      "station": "长平",
+      "publishedDistanceM": 1301,
+      "straightDistanceM": 2594,
+      "ratio": 0.501,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12271/"
+    },
+    {
+      "community": "保利金融大都汇",
+      "station": "科韵路",
+      "publishedDistanceM": 641,
+      "straightDistanceM": 1785,
+      "ratio": 0.359,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13565/"
+    },
+    {
+      "community": "保利香槟花园",
+      "station": "五羊邨",
+      "publishedDistanceM": 437,
+      "straightDistanceM": 1676,
+      "ratio": 0.261,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13605/"
+    },
+    {
+      "community": "保利香雪山别墅",
+      "station": "香雪",
+      "publishedDistanceM": 491,
+      "straightDistanceM": 1714,
+      "ratio": 0.286,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12055/"
+    },
+    {
+      "community": "保利高尔夫郡",
+      "station": "飞鹅岭",
+      "publishedDistanceM": 1810,
+      "straightDistanceM": 1244,
+      "ratio": 1.456,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/11493/"
+    },
+    {
+      "community": "信和广场",
+      "station": "昌岗",
+      "publishedDistanceM": 37,
+      "straightDistanceM": 1054,
+      "ratio": 0.035,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/10804/"
+    },
+    {
+      "community": "信基玥岛",
+      "station": "大石",
+      "publishedDistanceM": 321,
+      "straightDistanceM": 2469,
+      "ratio": 0.13,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/10212/"
+    },
+    {
+      "community": "信达金茂广场",
+      "station": "梅花园",
+      "publishedDistanceM": 876,
+      "straightDistanceM": 1155,
+      "ratio": 0.759,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13560/"
+    },
+    {
+      "community": "信达阳光海岸",
+      "station": "二沙岛",
+      "publishedDistanceM": 839,
+      "straightDistanceM": 1513,
+      "ratio": 0.554,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/11225/"
+    },
+    {
+      "community": "元邦明月水岸",
+      "station": "西塱",
+      "publishedDistanceM": 860,
+      "straightDistanceM": 827,
+      "ratio": 1.04,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12685/"
+    },
+    {
+      "community": "光华大厦",
+      "station": "体育西路",
+      "publishedDistanceM": 174,
+      "straightDistanceM": 1756,
+      "ratio": 0.099,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13584/"
+    },
+    {
+      "community": "光大花园",
+      "station": "凤凰新村",
+      "publishedDistanceM": 798,
+      "straightDistanceM": 1330,
+      "ratio": 0.6,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/11064/"
+    },
+    {
+      "community": "六运小区",
+      "station": "体育中心",
+      "publishedDistanceM": 368,
+      "straightDistanceM": 924,
+      "ratio": 0.398,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13579/"
+    },
+    {
+      "community": "兰亭熙园",
+      "station": "昌岗",
+      "publishedDistanceM": 470,
+      "straightDistanceM": 926,
+      "ratio": 0.508,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/10848/"
+    },
+    {
+      "community": "兰亭盛荟",
+      "station": "东圃",
+      "publishedDistanceM": 848,
+      "straightDistanceM": 1955,
+      "ratio": 0.434,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13680/"
+    },
+    {
+      "community": "农科所宿舍",
+      "station": "新港东",
+      "publishedDistanceM": 616,
+      "straightDistanceM": 796,
+      "ratio": 0.774,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/11182/"
+    },
+    {
+      "community": "凤安花园",
+      "station": "凤凰新村",
+      "publishedDistanceM": 490,
+      "straightDistanceM": 1044,
+      "ratio": 0.469,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/11095/"
+    },
+    {
+      "community": "凯云新世界",
+      "station": "白云大道北",
+      "publishedDistanceM": 922,
+      "straightDistanceM": 1603,
+      "ratio": 0.575,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/9906/"
+    },
+    {
+      "community": "凯旋会",
+      "station": "二沙岛",
+      "publishedDistanceM": 591,
+      "straightDistanceM": 2278,
+      "ratio": 0.259,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13904/"
+    },
+    {
+      "community": "利汇名悦大厦",
+      "station": "五羊邨",
+      "publishedDistanceM": 259,
+      "straightDistanceM": 1662,
+      "ratio": 0.156,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13219/"
+    },
+    {
+      "community": "利福大厦",
+      "station": "北京路",
+      "publishedDistanceM": 213,
+      "straightDistanceM": 1115,
+      "ratio": 0.191,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13842/"
+    },
+    {
+      "community": "利雅湾",
+      "station": "猎德",
+      "publishedDistanceM": 214,
+      "straightDistanceM": 884,
+      "ratio": 0.242,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13364/"
+    },
+    {
+      "community": "力迅时光里",
+      "station": "宝岗大道",
+      "publishedDistanceM": 285,
+      "straightDistanceM": 2534,
+      "ratio": 0.112,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/11332/"
+    },
+    {
+      "community": "加拿大花园",
+      "station": "棠东",
+      "publishedDistanceM": 369,
+      "straightDistanceM": 1445,
+      "ratio": 0.255,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12957/"
+    },
+    {
+      "community": "北秀花园",
+      "station": "大石",
+      "publishedDistanceM": 213,
+      "straightDistanceM": 13821,
+      "ratio": 0.015,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/14307/"
+    },
+    {
+      "community": "北站路沙涌北大围街",
+      "station": "同德",
+      "publishedDistanceM": 100,
+      "straightDistanceM": 2680,
+      "ratio": 0.037,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/9655/"
+    },
+    {
+      "community": "半山溪谷E墅",
+      "station": "大观南路",
+      "publishedDistanceM": 1202,
+      "straightDistanceM": 2415,
+      "ratio": 0.498,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13306/"
+    },
+    {
+      "community": "半山雍景苑",
+      "station": "华景路",
+      "publishedDistanceM": 1148,
+      "straightDistanceM": 2341,
+      "ratio": 0.49,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12986/"
+    },
+    {
+      "community": "华南御景园",
+      "station": "科韵路",
+      "publishedDistanceM": 100,
+      "straightDistanceM": 6405,
+      "ratio": 0.016,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13649/"
+    },
+    {
+      "community": "华南碧桂园怡翠苑",
+      "station": "钟村",
+      "publishedDistanceM": 461,
+      "straightDistanceM": 5061,
+      "ratio": 0.091,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/10121/"
+    },
+    {
+      "community": "华南碧桂园映翠桃园",
+      "station": "员岗",
+      "publishedDistanceM": 1982,
+      "straightDistanceM": 2343,
+      "ratio": 0.846,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/10622/"
+    },
+    {
+      "community": "华南碧桂园翠云山",
+      "station": "员岗",
+      "publishedDistanceM": 1947,
+      "straightDistanceM": 2793,
+      "ratio": 0.697,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/10570/"
+    },
+    {
+      "community": "华南碧桂园翠湖居",
+      "station": "钟村",
+      "publishedDistanceM": 507,
+      "straightDistanceM": 5014,
+      "ratio": 0.101,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/10283/"
+    },
+    {
+      "community": "华发中央公园",
+      "station": "坑口",
+      "publishedDistanceM": 954,
+      "straightDistanceM": 2003,
+      "ratio": 0.476,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12622/"
+    },
+    {
+      "community": "华天国际广场",
+      "station": "龙口西",
+      "publishedDistanceM": 309,
+      "straightDistanceM": 1702,
+      "ratio": 0.182,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12995/"
+    },
+    {
+      "community": "华景新城芳满庭园",
+      "station": "华景路",
+      "publishedDistanceM": 777,
+      "straightDistanceM": 1974,
+      "ratio": 0.394,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13624/"
+    },
+    {
+      "community": "华景新城陶然庭苑",
+      "station": "华景路",
+      "publishedDistanceM": 765,
+      "straightDistanceM": 1904,
+      "ratio": 0.402,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13651/"
+    },
+    {
+      "community": "华标广场",
+      "station": "龙口西",
+      "publishedDistanceM": 90,
+      "straightDistanceM": 1521,
+      "ratio": 0.059,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13105/"
+    },
+    {
+      "community": "华标涛景湾",
+      "station": "东湖",
+      "publishedDistanceM": 889,
+      "straightDistanceM": 625,
+      "ratio": 1.422,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/11331/"
+    },
+    {
+      "community": "华江花园",
+      "station": "珠江新城",
+      "publishedDistanceM": 1104,
+      "straightDistanceM": 4771,
+      "ratio": 0.231,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12993/"
+    },
+    {
+      "community": "华海达公寓",
+      "station": "岗顶",
+      "publishedDistanceM": 173,
+      "straightDistanceM": 1383,
+      "ratio": 0.125,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13463/"
+    },
+    {
+      "community": "华润天合",
+      "station": "东圃",
+      "publishedDistanceM": 1210,
+      "straightDistanceM": 5653,
+      "ratio": 0.214,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13419/"
+    },
+    {
+      "community": "华颖花园",
+      "station": "潭村",
+      "publishedDistanceM": 1015,
+      "straightDistanceM": 2289,
+      "ratio": 0.443,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13415/"
+    },
+    {
+      "community": "协和新世界",
+      "station": "龙口西",
+      "publishedDistanceM": 207,
+      "straightDistanceM": 1342,
+      "ratio": 0.154,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13229/"
+    },
+    {
+      "community": "南国公馆",
+      "station": "珠江新城",
+      "publishedDistanceM": 740,
+      "straightDistanceM": 3054,
+      "ratio": 0.242,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13134/"
+    },
+    {
+      "community": "南天名苑",
+      "station": "石溪",
+      "publishedDistanceM": 1801,
+      "straightDistanceM": 1701,
+      "ratio": 1.059,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/9996/"
+    },
+    {
+      "community": "南天广场",
+      "station": "五羊邨",
+      "publishedDistanceM": 220,
+      "straightDistanceM": 1627,
+      "ratio": 0.135,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13154/"
+    },
+    {
+      "community": "南沙·十里方圆",
+      "station": "黄阁",
+      "publishedDistanceM": 775,
+      "straightDistanceM": 866,
+      "ratio": 0.894,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12864/"
+    },
+    {
+      "community": "南沙万达广场",
+      "station": "蕉门",
+      "publishedDistanceM": 234,
+      "straightDistanceM": 1709,
+      "ratio": 0.137,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12887/"
+    },
+    {
+      "community": "南沙云山诗意",
+      "station": "蕉门",
+      "publishedDistanceM": 601,
+      "straightDistanceM": 1686,
+      "ratio": 0.356,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12885/"
+    },
+    {
+      "community": "南沙保利城",
+      "station": "黄阁",
+      "publishedDistanceM": 201,
+      "straightDistanceM": 1379,
+      "ratio": 0.146,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12724/"
+    },
+    {
+      "community": "南沙碧桂园豪庭",
+      "station": "飞沙角",
+      "publishedDistanceM": 998,
+      "straightDistanceM": 2132,
+      "ratio": 0.468,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12925/"
+    },
+    {
+      "community": "南沙金茂湾",
+      "station": "黄阁",
+      "publishedDistanceM": 1407,
+      "straightDistanceM": 4850,
+      "ratio": 0.29,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12892/"
+    },
+    {
+      "community": "南洲名苑",
+      "station": "逸景路",
+      "publishedDistanceM": 200,
+      "straightDistanceM": 1378,
+      "ratio": 0.145,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/11359/"
+    },
+    {
+      "community": "南珠广场",
+      "station": "江泰路",
+      "publishedDistanceM": 152,
+      "straightDistanceM": 1196,
+      "ratio": 0.127,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/11147/"
+    },
+    {
+      "community": "南雅苑",
+      "station": "石牌桥",
+      "publishedDistanceM": 526,
+      "straightDistanceM": 1135,
+      "ratio": 0.464,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13576/"
+    },
+    {
+      "community": "博雅首府",
+      "station": "珠江新城",
+      "publishedDistanceM": 323,
+      "straightDistanceM": 2001,
+      "ratio": 0.161,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13181/"
+    },
+    {
+      "community": "印象琶洲公寓",
+      "station": "新港东",
+      "publishedDistanceM": 345,
+      "straightDistanceM": 552,
+      "ratio": 0.625,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/11051/"
+    },
+    {
+      "community": "叠彩园",
+      "station": "逸景路",
+      "publishedDistanceM": 991,
+      "straightDistanceM": 1993,
+      "ratio": 0.497,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/11354/"
+    },
+    {
+      "community": "叠翠台",
+      "station": "天河公园",
+      "publishedDistanceM": 623,
+      "straightDistanceM": 1648,
+      "ratio": 0.378,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13239/"
+    },
+    {
+      "community": "可逸家园",
+      "station": "江南西",
+      "publishedDistanceM": 169,
+      "straightDistanceM": 798,
+      "ratio": 0.212,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/10780/"
+    },
+    {
+      "community": "合和新城",
+      "station": "清塘",
+      "publishedDistanceM": 864,
+      "straightDistanceM": 406,
+      "ratio": 2.126,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12006/"
+    },
+    {
+      "community": "合生湖山国际",
+      "station": "新塘",
+      "publishedDistanceM": 1896,
+      "straightDistanceM": 2960,
+      "ratio": 0.641,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/14836/"
+    },
+    {
+      "community": "同逸苑",
+      "station": "同德",
+      "publishedDistanceM": 100,
+      "straightDistanceM": 1430,
+      "ratio": 0.07,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/9909/"
+    },
+    {
+      "community": "名门大厦",
+      "station": "五羊邨",
+      "publishedDistanceM": 191,
+      "straightDistanceM": 1557,
+      "ratio": 0.123,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12946/"
+    },
+    {
+      "community": "名雅苑",
+      "station": "石牌桥",
+      "publishedDistanceM": 362,
+      "straightDistanceM": 1311,
+      "ratio": 0.276,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13586/"
+    },
+    {
+      "community": "君林天下",
+      "station": "植物园",
+      "publishedDistanceM": 332,
+      "straightDistanceM": 1619,
+      "ratio": 0.205,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13593/"
+    },
+    {
+      "community": "君汇世家",
+      "station": "动物园",
+      "publishedDistanceM": 567,
+      "straightDistanceM": 1847,
+      "ratio": 0.307,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13723/"
+    },
+    {
+      "community": "君紫花园",
+      "station": "珠江新城",
+      "publishedDistanceM": 430,
+      "straightDistanceM": 3876,
+      "ratio": 0.111,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13119/"
+    },
+    {
+      "community": "员村二横路11号大院",
+      "station": "天河公园",
+      "publishedDistanceM": 1216,
+      "straightDistanceM": 1307,
+      "ratio": 0.93,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12972/"
+    },
+    {
+      "community": "员村新村",
+      "station": "天河公园",
+      "publishedDistanceM": 1088,
+      "straightDistanceM": 1118,
+      "ratio": 0.974,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13191/"
+    },
+    {
+      "community": "品秀·星樾",
+      "station": "香雪",
+      "publishedDistanceM": 769,
+      "straightDistanceM": 1676,
+      "ratio": 0.459,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12232/"
+    },
+    {
+      "community": "品秀·星瀚",
+      "station": "石壁",
+      "publishedDistanceM": 1372,
+      "straightDistanceM": 2277,
+      "ratio": 0.602,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/10204/"
+    },
+    {
+      "community": "品秀星图",
+      "station": "官湖",
+      "publishedDistanceM": 192,
+      "straightDistanceM": 1321,
+      "ratio": 0.145,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/14783/"
+    },
+    {
+      "community": "嘉怡花苑",
+      "station": "五山",
+      "publishedDistanceM": 293,
+      "straightDistanceM": 687,
+      "ratio": 0.427,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13129/"
+    },
+    {
+      "community": "嘉怡苑",
+      "station": "林和西",
+      "publishedDistanceM": 813,
+      "straightDistanceM": 2079,
+      "ratio": 0.391,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13588/"
+    },
+    {
+      "community": "嘉柏居",
+      "station": "同德",
+      "publishedDistanceM": 100,
+      "straightDistanceM": 1566,
+      "ratio": 0.064,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/9716/"
+    },
+    {
+      "community": "嘉裕丹顿阳光",
+      "station": "猎德",
+      "publishedDistanceM": 863,
+      "straightDistanceM": 1762,
+      "ratio": 0.49,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13040/"
+    },
+    {
+      "community": "嘉裕公馆",
+      "station": "猎德",
+      "publishedDistanceM": 65,
+      "straightDistanceM": 902,
+      "ratio": 0.072,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13360/"
+    },
+    {
+      "community": "嘉裕礼顿阳光",
+      "station": "五羊邨",
+      "publishedDistanceM": 380,
+      "straightDistanceM": 1788,
+      "ratio": 0.213,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13187/"
+    },
+    {
+      "community": "嘉颐居",
+      "station": "小北",
+      "publishedDistanceM": 810,
+      "straightDistanceM": 1812,
+      "ratio": 0.447,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13934/"
+    },
+    {
+      "community": "园田居",
+      "station": "华师",
+      "publishedDistanceM": 526,
+      "straightDistanceM": 1818,
+      "ratio": 0.289,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13201/"
+    },
+    {
+      "community": "国利大厦",
+      "station": "北京路",
+      "publishedDistanceM": 50,
+      "straightDistanceM": 1893,
+      "ratio": 0.026,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13796/"
+    },
+    {
+      "community": "大壮名城",
+      "station": "科丰路",
+      "publishedDistanceM": 538,
+      "straightDistanceM": 1038,
+      "ratio": 0.518,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12234/"
+    },
+    {
+      "community": "大洋江畔雅苑",
+      "station": "北京路",
+      "publishedDistanceM": 50,
+      "straightDistanceM": 1074,
+      "ratio": 0.047,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/14186/"
+    },
+    {
+      "community": "天伦东时区",
+      "station": "鱼珠",
+      "publishedDistanceM": 706,
+      "straightDistanceM": 2533,
+      "ratio": 0.279,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12225/"
+    },
+    {
+      "community": "天伦花园",
+      "station": "小北",
+      "publishedDistanceM": 902,
+      "straightDistanceM": 1910,
+      "ratio": 0.472,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/14306/"
+    },
+    {
+      "community": "天健上城",
+      "station": "大观南路",
+      "publishedDistanceM": 1370,
+      "straightDistanceM": 106,
+      "ratio": 12.966,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13673/"
+    },
+    {
+      "community": "天力居",
+      "station": "东圃",
+      "publishedDistanceM": 279,
+      "straightDistanceM": 1852,
+      "ratio": 0.151,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13665/"
+    },
+    {
+      "community": "天寿大厦",
+      "station": "龙口西",
+      "publishedDistanceM": 488,
+      "straightDistanceM": 1251,
+      "ratio": 0.39,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13206/"
+    },
+    {
+      "community": "天文苑",
+      "station": "体育西路",
+      "publishedDistanceM": 330,
+      "straightDistanceM": 1443,
+      "ratio": 0.229,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13389/"
+    },
+    {
+      "community": "天河云商汇",
+      "station": "新塘",
+      "publishedDistanceM": 799,
+      "straightDistanceM": 19601,
+      "ratio": 0.041,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13569/"
+    },
+    {
+      "community": "天河广场",
+      "station": "江夏",
+      "publishedDistanceM": 100,
+      "straightDistanceM": 16460,
+      "ratio": 0.006,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12955/"
+    },
+    {
+      "community": "天河星作",
+      "station": "天河智慧城",
+      "publishedDistanceM": 891,
+      "straightDistanceM": 1335,
+      "ratio": 0.667,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13465/"
+    },
+    {
+      "community": "天河鸿运花园",
+      "station": "天河公园",
+      "publishedDistanceM": 606,
+      "straightDistanceM": 1710,
+      "ratio": 0.354,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13279/"
+    },
+    {
+      "community": "天翔花园",
+      "station": "五山",
+      "publishedDistanceM": 152,
+      "straightDistanceM": 1104,
+      "ratio": 0.138,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13137/"
+    },
+    {
+      "community": "天胜村",
+      "station": "小北",
+      "publishedDistanceM": 829,
+      "straightDistanceM": 2001,
+      "ratio": 0.414,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13765/"
+    },
+    {
+      "community": "天誉半岛花园",
+      "station": "同福西",
+      "publishedDistanceM": 475,
+      "straightDistanceM": 794,
+      "ratio": 0.598,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/11161/"
+    },
+    {
+      "community": "天誉花园",
+      "station": "广州东站",
+      "publishedDistanceM": 471,
+      "straightDistanceM": 1425,
+      "ratio": 0.33,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13262/"
+    },
+    {
+      "community": "天逸名都",
+      "station": "龙口西",
+      "publishedDistanceM": 235,
+      "straightDistanceM": 1425,
+      "ratio": 0.165,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13631/"
+    },
+    {
+      "community": "天銮",
+      "station": "珠江新城",
+      "publishedDistanceM": 244,
+      "straightDistanceM": 2122,
+      "ratio": 0.115,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13242/"
+    },
+    {
+      "community": "天隆花苑",
+      "station": "龙口西",
+      "publishedDistanceM": 106,
+      "straightDistanceM": 1453,
+      "ratio": 0.073,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13246/"
+    },
+    {
+      "community": "天雅居",
+      "station": "江夏",
+      "publishedDistanceM": 100,
+      "straightDistanceM": 17053,
+      "ratio": 0.006,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13021/"
+    },
+    {
+      "community": "天马丽苑二期",
+      "station": "花都汽车城",
+      "publishedDistanceM": 1284,
+      "straightDistanceM": 1840,
+      "ratio": 0.698,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/11921/"
+    },
+    {
+      "community": "天骄时代城",
+      "station": "大涌",
+      "publishedDistanceM": 1052,
+      "straightDistanceM": 36739,
+      "ratio": 0.029,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/10393/"
+    },
+    {
+      "community": "天鹅花苑",
+      "station": "五山",
+      "publishedDistanceM": 270,
+      "straightDistanceM": 2450,
+      "ratio": 0.11,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13656/"
+    },
+    {
+      "community": "天鹿花园",
+      "station": "黄陂",
+      "publishedDistanceM": 602,
+      "straightDistanceM": 1434,
+      "ratio": 0.42,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12262/"
+    },
+    {
+      "community": "奥园国际中心",
+      "station": "南村万博",
+      "publishedDistanceM": 378,
+      "straightDistanceM": 1489,
+      "ratio": 0.254,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/10596/"
+    },
+    {
+      "community": "奥园城市天地",
+      "station": "汉溪长隆",
+      "publishedDistanceM": 550,
+      "straightDistanceM": 1746,
+      "ratio": 0.315,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/10634/"
+    },
+    {
+      "community": "奥园广场",
+      "station": "市桥",
+      "publishedDistanceM": 1985,
+      "straightDistanceM": 2601,
+      "ratio": 0.763,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/10652/"
+    },
+    {
+      "community": "奥园越时代",
+      "station": "广州南站",
+      "publishedDistanceM": 786,
+      "straightDistanceM": 1936,
+      "ratio": 0.406,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/10538/"
+    },
+    {
+      "community": "奥园香雪公馆",
+      "station": "南岗",
+      "publishedDistanceM": 452,
+      "straightDistanceM": 9852,
+      "ratio": 0.046,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12267/"
+    },
+    {
+      "community": "宇立轩",
+      "station": "员村",
+      "publishedDistanceM": 441,
+      "straightDistanceM": 1892,
+      "ratio": 0.233,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13099/"
+    },
+    {
+      "community": "宏城花园",
+      "station": "东湖",
+      "publishedDistanceM": 1195,
+      "straightDistanceM": 2298,
+      "ratio": 0.52,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/14252/"
+    },
+    {
+      "community": "宏景台",
+      "station": "体育中心",
+      "publishedDistanceM": 571,
+      "straightDistanceM": 1711,
+      "ratio": 0.334,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13006/"
+    },
+    {
+      "community": "官洲南苑",
+      "station": "北山",
+      "publishedDistanceM": 936,
+      "straightDistanceM": 1782,
+      "ratio": 0.525,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/10754/"
+    },
+    {
+      "community": "宝兴翠园",
+      "station": "江夏",
+      "publishedDistanceM": 100,
+      "straightDistanceM": 18416,
+      "ratio": 0.005,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13469/"
+    },
+    {
+      "community": "宝翠园",
+      "station": "植物园",
+      "publishedDistanceM": 404,
+      "straightDistanceM": 1071,
+      "ratio": 0.377,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13652/"
+    },
+    {
+      "community": "富凯星堤",
+      "station": "南漖",
+      "publishedDistanceM": 992,
+      "straightDistanceM": 2007,
+      "ratio": 0.494,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12569/"
+    },
+    {
+      "community": "富力东堤湾",
+      "station": "杨箕",
+      "publishedDistanceM": 249,
+      "straightDistanceM": 1339,
+      "ratio": 0.186,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/14317/"
+    },
+    {
+      "community": "富力千禧花园",
+      "station": "晓港",
+      "publishedDistanceM": 494,
+      "straightDistanceM": 1729,
+      "ratio": 0.286,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/11370/"
+    },
+    {
+      "community": "富力唐宁花园",
+      "station": "同德",
+      "publishedDistanceM": 100,
+      "straightDistanceM": 2123,
+      "ratio": 0.047,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12640/"
+    },
+    {
+      "community": "富力御龙庭",
+      "station": "黄花岗",
+      "publishedDistanceM": 359,
+      "straightDistanceM": 1000,
+      "ratio": 0.359,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13863/"
+    },
+    {
+      "community": "富力新村",
+      "station": "江夏",
+      "publishedDistanceM": 100,
+      "straightDistanceM": 16717,
+      "ratio": 0.006,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13012/"
+    },
+    {
+      "community": "富力桃园",
+      "station": "同德",
+      "publishedDistanceM": 100,
+      "straightDistanceM": 1662,
+      "ratio": 0.06,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/9946/"
+    },
+    {
+      "community": "富力盈力大厦",
+      "station": "珠江新城",
+      "publishedDistanceM": 388,
+      "straightDistanceM": 1439,
+      "ratio": 0.27,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13659/"
+    },
+    {
+      "community": "富力盈通大厦",
+      "station": "体育西路",
+      "publishedDistanceM": 569,
+      "straightDistanceM": 1294,
+      "ratio": 0.44,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13567/"
+    },
+    {
+      "community": "富力金禧花园",
+      "station": "一德路",
+      "publishedDistanceM": 831,
+      "straightDistanceM": 1576,
+      "ratio": 0.527,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/10843/"
+    },
+    {
+      "community": "富力银禧花园",
+      "station": "中大",
+      "publishedDistanceM": 1025,
+      "straightDistanceM": 1862,
+      "ratio": 0.55,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/11312/"
+    },
+    {
+      "community": "富力院士庭",
+      "station": "龙口西",
+      "publishedDistanceM": 708,
+      "straightDistanceM": 1943,
+      "ratio": 0.364,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13635/"
+    },
+    {
+      "community": "富基广场",
+      "station": "北京路",
+      "publishedDistanceM": 50,
+      "straightDistanceM": 1655,
+      "ratio": 0.03,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/11000/"
+    },
+    {
+      "community": "富宏花园",
+      "station": "大石",
+      "publishedDistanceM": 153,
+      "straightDistanceM": 14047,
+      "ratio": 0.011,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13930/"
+    },
+    {
+      "community": "富林居",
+      "station": "同德",
+      "publishedDistanceM": 100,
+      "straightDistanceM": 647,
+      "ratio": 0.155,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/9639/"
+    },
+    {
+      "community": "富泽园",
+      "station": "凤凰新村",
+      "publishedDistanceM": 416,
+      "straightDistanceM": 908,
+      "ratio": 0.458,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/10792/"
+    },
+    {
+      "community": "富豪山庄",
+      "station": "市广路",
+      "publishedDistanceM": 462,
+      "straightDistanceM": 2618,
+      "ratio": 0.176,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/10700/"
+    },
+    {
+      "community": "尚东宏御",
+      "station": "潭村",
+      "publishedDistanceM": 176,
+      "straightDistanceM": 1106,
+      "ratio": 0.159,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13623/"
+    },
+    {
+      "community": "尚东峰景",
+      "station": "逸景路",
+      "publishedDistanceM": 200,
+      "straightDistanceM": 1306,
+      "ratio": 0.153,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/10900/"
+    },
+    {
+      "community": "尚东柏悦府",
+      "station": "猎德",
+      "publishedDistanceM": 451,
+      "straightDistanceM": 1575,
+      "ratio": 0.286,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13466/"
+    },
+    {
+      "community": "尚德大厦",
+      "station": "华师",
+      "publishedDistanceM": 139,
+      "straightDistanceM": 1168,
+      "ratio": 0.119,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13231/"
+    },
+    {
+      "community": "岭南新世界",
+      "station": "嘉禾望岗",
+      "publishedDistanceM": 725,
+      "straightDistanceM": 1688,
+      "ratio": 0.429,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/9923/"
+    },
+    {
+      "community": "岭南新世界锦云峰",
+      "station": "嘉禾望岗",
+      "publishedDistanceM": 1019,
+      "straightDistanceM": 2242,
+      "ratio": 0.455,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/9930/"
+    },
+    {
+      "community": "岭南湾畔",
+      "station": "同德",
+      "publishedDistanceM": 100,
+      "straightDistanceM": 1909,
+      "ratio": 0.052,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12459/"
+    },
+    {
+      "community": "岭南花园",
+      "station": "同德",
+      "publishedDistanceM": 100,
+      "straightDistanceM": 958,
+      "ratio": 0.104,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/9744/"
+    },
+    {
+      "community": "岭南雅院",
+      "station": "同德",
+      "publishedDistanceM": 100,
+      "straightDistanceM": 758,
+      "ratio": 0.132,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/9419/"
+    },
+    {
+      "community": "峰湖御境",
+      "station": "黄陂",
+      "publishedDistanceM": 1183,
+      "straightDistanceM": 2066,
+      "ratio": 0.573,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12212/"
+    },
+    {
+      "community": "峻林",
+      "station": "广州东站",
+      "publishedDistanceM": 371,
+      "straightDistanceM": 1521,
+      "ratio": 0.244,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13275/"
+    },
+    {
+      "community": "希尔顿阳光",
+      "station": "龙口西",
+      "publishedDistanceM": 275,
+      "straightDistanceM": 1040,
+      "ratio": 0.264,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13247/"
+    },
+    {
+      "community": "帝景山庄",
+      "station": "大观南路",
+      "publishedDistanceM": 1654,
+      "straightDistanceM": 2929,
+      "ratio": 0.565,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13245/"
+    },
+    {
+      "community": "广州奥林匹克花园",
+      "station": "南桂路",
+      "publishedDistanceM": 100,
+      "straightDistanceM": 16966,
+      "ratio": 0.006,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/10681/"
+    },
+    {
+      "community": "广州雅居乐花园灏湖居",
+      "station": "员岗",
+      "publishedDistanceM": 1595,
+      "straightDistanceM": 2251,
+      "ratio": 0.708,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/10621/"
+    },
+    {
+      "community": "广州雅居乐花园雅湖居",
+      "station": "员岗",
+      "publishedDistanceM": 1282,
+      "straightDistanceM": 1677,
+      "ratio": 0.764,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/10296/"
+    },
+    {
+      "community": "广工大院",
+      "station": "区庄",
+      "publishedDistanceM": 266,
+      "straightDistanceM": 1505,
+      "ratio": 0.177,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/14292/"
+    },
+    {
+      "community": "广弘天琪",
+      "station": "珠江新城",
+      "publishedDistanceM": 360,
+      "straightDistanceM": 910,
+      "ratio": 0.396,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13361/"
+    },
+    {
+      "community": "广氮新村",
+      "station": "江夏",
+      "publishedDistanceM": 100,
+      "straightDistanceM": 15791,
+      "ratio": 0.006,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12963/"
+    },
+    {
+      "community": "广氮花园",
+      "station": "棠下",
+      "publishedDistanceM": 1253,
+      "straightDistanceM": 2934,
+      "ratio": 0.427,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13571/"
+    },
+    {
+      "community": "府前铭泰",
+      "station": "公园前",
+      "publishedDistanceM": 136,
+      "straightDistanceM": 1135,
+      "ratio": 0.12,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/14129/"
+    },
+    {
+      "community": "康丽居",
+      "station": "团一大广场",
+      "publishedDistanceM": 445,
+      "straightDistanceM": 1303,
+      "ratio": 0.341,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13875/"
+    },
+    {
+      "community": "康大龙祥汇",
+      "station": "汤村",
+      "publishedDistanceM": 1094,
+      "straightDistanceM": 1209,
+      "ratio": 0.905,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12257/"
+    },
+    {
+      "community": "康湖山庄",
+      "station": "员村",
+      "publishedDistanceM": 1066,
+      "straightDistanceM": 1296,
+      "ratio": 0.823,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13101/"
+    },
+    {
+      "community": "建丰大厦",
+      "station": "石牌桥",
+      "publishedDistanceM": 246,
+      "straightDistanceM": 1055,
+      "ratio": 0.233,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12950/"
+    },
+    {
+      "community": "建雅台",
+      "station": "农讲所",
+      "publishedDistanceM": 498,
+      "straightDistanceM": 1608,
+      "ratio": 0.31,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13763/"
+    },
+    {
+      "community": "御华苑",
+      "station": "龙口西",
+      "publishedDistanceM": 233,
+      "straightDistanceM": 1378,
+      "ratio": 0.169,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13643/"
+    },
+    {
+      "community": "御江苑",
+      "station": "北京路",
+      "publishedDistanceM": 50,
+      "straightDistanceM": 1143,
+      "ratio": 0.044,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13848/"
+    },
+    {
+      "community": "御湖名邸",
+      "station": "金坑",
+      "publishedDistanceM": 1515,
+      "straightDistanceM": 846,
+      "ratio": 1.792,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12253/"
+    },
+    {
+      "community": "御溪世家",
+      "station": "镇龙",
+      "publishedDistanceM": 995,
+      "straightDistanceM": 2231,
+      "ratio": 0.446,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/14530/"
+    },
+    {
+      "community": "德埔小区",
+      "station": "石牌桥",
+      "publishedDistanceM": 661,
+      "straightDistanceM": 1544,
+      "ratio": 0.428,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13282/"
+    },
+    {
+      "community": "德意居",
+      "station": "农讲所",
+      "publishedDistanceM": 134,
+      "straightDistanceM": 1173,
+      "ratio": 0.114,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13710/"
+    },
+    {
+      "community": "德欣小区",
+      "station": "石牌桥",
+      "publishedDistanceM": 430,
+      "straightDistanceM": 1551,
+      "ratio": 0.277,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13405/"
+    },
+    {
+      "community": "怡园小区",
+      "station": "大沙地",
+      "publishedDistanceM": 568,
+      "straightDistanceM": 1785,
+      "ratio": 0.318,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12145/"
+    },
+    {
+      "community": "怡新花园",
+      "station": "梅花园",
+      "publishedDistanceM": 447,
+      "straightDistanceM": 1504,
+      "ratio": 0.297,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/9890/"
+    },
+    {
+      "community": "怡港花园",
+      "station": "大沙地",
+      "publishedDistanceM": 254,
+      "straightDistanceM": 2035,
+      "ratio": 0.125,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12075/"
+    },
+    {
+      "community": "恒仕大厦",
+      "station": "农讲所",
+      "publishedDistanceM": 561,
+      "straightDistanceM": 1607,
+      "ratio": 0.349,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13701/"
+    },
+    {
+      "community": "恒达苑",
+      "station": "广州东站",
+      "publishedDistanceM": 619,
+      "straightDistanceM": 1691,
+      "ratio": 0.366,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13176/"
+    },
+    {
+      "community": "悦涛雅苑",
+      "station": "裕丰围",
+      "publishedDistanceM": 203,
+      "straightDistanceM": 1483,
+      "ratio": 0.137,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12149/"
+    },
+    {
+      "community": "惠雅阁",
+      "station": "农讲所",
+      "publishedDistanceM": 1043,
+      "straightDistanceM": 2296,
+      "ratio": 0.454,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13820/"
+    },
+    {
+      "community": "招商雍华府",
+      "station": "东圃",
+      "publishedDistanceM": 1242,
+      "straightDistanceM": 6223,
+      "ratio": 0.2,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13445/"
+    },
+    {
+      "community": "招商雍景湾",
+      "station": "何棠下",
+      "publishedDistanceM": 786,
+      "straightDistanceM": 2047,
+      "ratio": 0.384,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12282/"
+    },
+    {
+      "community": "拥翠小区",
+      "station": "小北",
+      "publishedDistanceM": 555,
+      "straightDistanceM": 1603,
+      "ratio": 0.346,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/14347/"
+    },
+    {
+      "community": "振业天颂花园",
+      "station": "鹤洞",
+      "publishedDistanceM": 909,
+      "straightDistanceM": 1740,
+      "ratio": 0.522,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12573/"
+    },
+    {
+      "community": "敏捷上品公馆",
+      "station": "市广路",
+      "publishedDistanceM": 63,
+      "straightDistanceM": 2195,
+      "ratio": 0.029,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/10126/"
+    },
+    {
+      "community": "敏捷时空壹号",
+      "station": "广州南站",
+      "publishedDistanceM": 796,
+      "straightDistanceM": 1323,
+      "ratio": 0.602,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/10577/"
+    },
+    {
+      "community": "文德先生",
+      "station": "北京路",
+      "publishedDistanceM": 50,
+      "straightDistanceM": 1510,
+      "ratio": 0.033,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/14101/"
+    },
+    {
+      "community": "文德广场",
+      "station": "北京路",
+      "publishedDistanceM": 50,
+      "straightDistanceM": 1497,
+      "ratio": 0.033,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13714/"
+    },
+    {
+      "community": "文船生活区东区",
+      "station": "双岗",
+      "publishedDistanceM": 297,
+      "straightDistanceM": 1598,
+      "ratio": 0.186,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12078/"
+    },
+    {
+      "community": "新世界东逸花园",
+      "station": "天河公园",
+      "publishedDistanceM": 635,
+      "straightDistanceM": 1150,
+      "ratio": 0.552,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13590/"
+    },
+    {
+      "community": "新世界凯粤湾",
+      "station": "滘口",
+      "publishedDistanceM": 504,
+      "straightDistanceM": 1785,
+      "ratio": 0.282,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12704/"
+    },
+    {
+      "community": "新世界天逸",
+      "station": "天河公园",
+      "publishedDistanceM": 383,
+      "straightDistanceM": 1351,
+      "ratio": 0.284,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13501/"
+    },
+    {
+      "community": "新月明珠花园",
+      "station": "大石",
+      "publishedDistanceM": 828,
+      "straightDistanceM": 1008,
+      "ratio": 0.822,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/10037/"
+    },
+    {
+      "community": "新理想华庭",
+      "station": "二沙岛",
+      "publishedDistanceM": 464,
+      "straightDistanceM": 2678,
+      "ratio": 0.173,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/11004/"
+    },
+    {
+      "community": "方圆月岛",
+      "station": "猎德",
+      "publishedDistanceM": 131,
+      "straightDistanceM": 1075,
+      "ratio": 0.122,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13612/"
+    },
+    {
+      "community": "旭日雅苑",
+      "station": "员村",
+      "publishedDistanceM": 1194,
+      "straightDistanceM": 1069,
+      "ratio": 1.117,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13592/"
+    },
+    {
+      "community": "旭景家园",
+      "station": "江夏",
+      "publishedDistanceM": 100,
+      "straightDistanceM": 16069,
+      "ratio": 0.006,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13634/"
+    },
+    {
+      "community": "时代外滩",
+      "station": "沙溪",
+      "publishedDistanceM": 439,
+      "straightDistanceM": 2195,
+      "ratio": 0.2,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/10633/"
+    },
+    {
+      "community": "时代天韵（黄埔）",
+      "station": "萝岗",
+      "publishedDistanceM": 1814,
+      "straightDistanceM": 6326,
+      "ratio": 0.287,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12229/"
+    },
+    {
+      "community": "时代春树里",
+      "station": "香雪",
+      "publishedDistanceM": 1656,
+      "straightDistanceM": 2315,
+      "ratio": 0.715,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12269/"
+    },
+    {
+      "community": "昌乐园",
+      "station": "员村",
+      "publishedDistanceM": 611,
+      "straightDistanceM": 1609,
+      "ratio": 0.38,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13185/"
+    },
+    {
+      "community": "明达大厦",
+      "station": "大石",
+      "publishedDistanceM": 215,
+      "straightDistanceM": 14067,
+      "ratio": 0.015,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13946/"
+    },
+    {
+      "community": "星晖园",
+      "station": "南洲",
+      "publishedDistanceM": 139,
+      "straightDistanceM": 2417,
+      "ratio": 0.058,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/10876/"
+    },
+    {
+      "community": "星樾·山畔",
+      "station": "水西",
+      "publishedDistanceM": 1562,
+      "straightDistanceM": 1741,
+      "ratio": 0.897,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12236/"
+    },
+    {
+      "community": "星汇园",
+      "station": "珠江新城",
+      "publishedDistanceM": 330,
+      "straightDistanceM": 1319,
+      "ratio": 0.25,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13429/"
+    },
+    {
+      "community": "星河·东悦湾",
+      "station": "黄阁",
+      "publishedDistanceM": 719,
+      "straightDistanceM": 2830,
+      "ratio": 0.254,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12792/"
+    },
+    {
+      "community": "晓港湾",
+      "station": "晓港",
+      "publishedDistanceM": 92,
+      "straightDistanceM": 3365,
+      "ratio": 0.027,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/11382/"
+    },
+    {
+      "community": "景泰名苑",
+      "station": "中医药大学",
+      "publishedDistanceM": 567,
+      "straightDistanceM": 1276,
+      "ratio": 0.445,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/9837/"
+    },
+    {
+      "community": "景泰新村",
+      "station": "中医药大学",
+      "publishedDistanceM": 904,
+      "straightDistanceM": 1671,
+      "ratio": 0.541,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/9929/"
+    },
+    {
+      "community": "暨南花园",
+      "station": "岗顶",
+      "publishedDistanceM": 816,
+      "straightDistanceM": 1782,
+      "ratio": 0.458,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12996/"
+    },
+    {
+      "community": "朝晖苑",
+      "station": "林和西",
+      "publishedDistanceM": 841,
+      "straightDistanceM": 2116,
+      "ratio": 0.397,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13595/"
+    },
+    {
+      "community": "机安宿舍",
+      "station": "三元里",
+      "publishedDistanceM": 852,
+      "straightDistanceM": 2646,
+      "ratio": 0.322,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/9442/"
+    },
+    {
+      "community": "杏园小区",
+      "station": "江南西",
+      "publishedDistanceM": 350,
+      "straightDistanceM": 552,
+      "ratio": 0.635,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/11007/"
+    },
+    {
+      "community": "枫溪苑",
+      "station": "三元里",
+      "publishedDistanceM": 280,
+      "straightDistanceM": 3108,
+      "ratio": 0.09,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/9593/"
+    },
+    {
+      "community": "柏涛雅苑",
+      "station": "昌岗",
+      "publishedDistanceM": 414,
+      "straightDistanceM": 1107,
+      "ratio": 0.374,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/10946/"
+    },
+    {
+      "community": "榕景园",
+      "station": "文冲",
+      "publishedDistanceM": 811,
+      "straightDistanceM": 742,
+      "ratio": 1.094,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12154/"
+    },
+    {
+      "community": "横枝岗56号大院",
+      "station": "黄花岗",
+      "publishedDistanceM": 1164,
+      "straightDistanceM": 1030,
+      "ratio": 1.13,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13868/"
+    },
+    {
+      "community": "橡树园",
+      "station": "燕塘",
+      "publishedDistanceM": 956,
+      "straightDistanceM": 1894,
+      "ratio": 0.505,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13666/"
+    },
+    {
+      "community": "正佳东方国际",
+      "station": "黄花岗",
+      "publishedDistanceM": 859,
+      "straightDistanceM": 178,
+      "ratio": 4.818,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/14309/"
+    },
+    {
+      "community": "正升雅境",
+      "station": "云霄路",
+      "publishedDistanceM": 50,
+      "straightDistanceM": 732,
+      "ratio": 0.068,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/9777/"
+    },
+    {
+      "community": "正太广场",
+      "station": "市桥",
+      "publishedDistanceM": 986,
+      "straightDistanceM": 846,
+      "ratio": 1.166,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/10342/"
+    },
+    {
+      "community": "汇东国际花园",
+      "station": "新塘",
+      "publishedDistanceM": 684,
+      "straightDistanceM": 1364,
+      "ratio": 0.501,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/14805/"
+    },
+    {
+      "community": "汇侨新城南区",
+      "station": "黄沙",
+      "publishedDistanceM": 504,
+      "straightDistanceM": 10579,
+      "ratio": 0.048,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/9524/"
+    },
+    {
+      "community": "汇友苑",
+      "station": "江夏",
+      "publishedDistanceM": 100,
+      "straightDistanceM": 16660,
+      "ratio": 0.006,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13102/"
+    },
+    {
+      "community": "汇景新城世家",
+      "station": "科韵路",
+      "publishedDistanceM": 100,
+      "straightDistanceM": 3796,
+      "ratio": 0.026,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13296/"
+    },
+    {
+      "community": "汇景新城维纶特莱",
+      "station": "科韵路",
+      "publishedDistanceM": 100,
+      "straightDistanceM": 3665,
+      "ratio": 0.027,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13393/"
+    },
+    {
+      "community": "汇景新城龙熹山",
+      "station": "科韵路",
+      "publishedDistanceM": 100,
+      "straightDistanceM": 3776,
+      "ratio": 0.026,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13355/"
+    },
+    {
+      "community": "江南家园",
+      "station": "江南西",
+      "publishedDistanceM": 640,
+      "straightDistanceM": 787,
+      "ratio": 0.813,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/11209/"
+    },
+    {
+      "community": "江南花园",
+      "station": "江南西",
+      "publishedDistanceM": 336,
+      "straightDistanceM": 383,
+      "ratio": 0.877,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/10973/"
+    },
+    {
+      "community": "江南雅居",
+      "station": "昌岗",
+      "publishedDistanceM": 519,
+      "straightDistanceM": 1211,
+      "ratio": 0.428,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/11155/"
+    },
+    {
+      "community": "江山国际",
+      "station": "万胜围",
+      "publishedDistanceM": 445,
+      "straightDistanceM": 1499,
+      "ratio": 0.297,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/11279/"
+    },
+    {
+      "community": "江湾花苑",
+      "station": "文化公园",
+      "publishedDistanceM": 634,
+      "straightDistanceM": 4139,
+      "ratio": 0.153,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/11094/"
+    },
+    {
+      "community": "泓景花园",
+      "station": "赤岗",
+      "publishedDistanceM": 759,
+      "straightDistanceM": 775,
+      "ratio": 0.979,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/11404/"
+    },
+    {
+      "community": "洛桑美地",
+      "station": "团一大广场",
+      "publishedDistanceM": 881,
+      "straightDistanceM": 2122,
+      "ratio": 0.415,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13772/"
+    },
+    {
+      "community": "海伦堡海伦时光",
+      "station": "大沙地",
+      "publishedDistanceM": 1454,
+      "straightDistanceM": 1174,
+      "ratio": 1.238,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12054/"
+    },
+    {
+      "community": "海印苑",
+      "station": "新南",
+      "publishedDistanceM": 256,
+      "straightDistanceM": 34574,
+      "ratio": 0.007,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13713/"
+    },
+    {
+      "community": "海天花苑",
+      "station": "滨江东路",
+      "publishedDistanceM": 571,
+      "straightDistanceM": 3457,
+      "ratio": 0.165,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/11373/"
+    },
+    {
+      "community": "海富花园",
+      "station": "江泰路",
+      "publishedDistanceM": 367,
+      "straightDistanceM": 1125,
+      "ratio": 0.326,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/10922/"
+    },
+    {
+      "community": "海琴湾",
+      "station": "二沙岛",
+      "publishedDistanceM": 728,
+      "straightDistanceM": 1691,
+      "ratio": 0.431,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/11366/"
+    },
+    {
+      "community": "源泉广场",
+      "station": "天河客运站",
+      "publishedDistanceM": 480,
+      "straightDistanceM": 1676,
+      "ratio": 0.286,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13383/"
+    },
+    {
+      "community": "滨江1933",
+      "station": "北京路",
+      "publishedDistanceM": 50,
+      "straightDistanceM": 817,
+      "ratio": 0.061,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/11386/"
+    },
+    {
+      "community": "滨江明珠",
+      "station": "鹭江",
+      "publishedDistanceM": 1021,
+      "straightDistanceM": 1468,
+      "ratio": 0.695,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/10996/"
+    },
+    {
+      "community": "滨江瑞城",
+      "station": "晓港",
+      "publishedDistanceM": 157,
+      "straightDistanceM": 3535,
+      "ratio": 0.044,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/11201/"
+    },
+    {
+      "community": "濠畔商厦",
+      "station": "一德路",
+      "publishedDistanceM": 414,
+      "straightDistanceM": 1356,
+      "ratio": 0.305,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13941/"
+    },
+    {
+      "community": "爱群荟景湾",
+      "station": "一德路",
+      "publishedDistanceM": 360,
+      "straightDistanceM": 1461,
+      "ratio": 0.246,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13780/"
+    },
+    {
+      "community": "珊瑚湾畔",
+      "station": "南洲",
+      "publishedDistanceM": 414,
+      "straightDistanceM": 6757,
+      "ratio": 0.061,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/10617/"
+    },
+    {
+      "community": "珠光新城御景",
+      "station": "潭村",
+      "publishedDistanceM": 168,
+      "straightDistanceM": 1336,
+      "ratio": 0.126,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13211/"
+    },
+    {
+      "community": "珠光金融城壹号",
+      "station": "东圃",
+      "publishedDistanceM": 254,
+      "straightDistanceM": 2423,
+      "ratio": 0.105,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13324/"
+    },
+    {
+      "community": "珠影大院",
+      "station": "客村",
+      "publishedDistanceM": 304,
+      "straightDistanceM": 1378,
+      "ratio": 0.221,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/11309/"
+    },
+    {
+      "community": "珠江东境花园",
+      "station": "科韵路",
+      "publishedDistanceM": 100,
+      "straightDistanceM": 3870,
+      "ratio": 0.026,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13418/"
+    },
+    {
+      "community": "珠江俊园",
+      "station": "天河公园",
+      "publishedDistanceM": 932,
+      "straightDistanceM": 2283,
+      "ratio": 0.408,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13057/"
+    },
+    {
+      "community": "珠江别墅",
+      "station": "猎德",
+      "publishedDistanceM": 653,
+      "straightDistanceM": 1615,
+      "ratio": 0.404,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13397/"
+    },
+    {
+      "community": "珠江岭南苑",
+      "station": "白云文化广场",
+      "publishedDistanceM": 867,
+      "straightDistanceM": 1901,
+      "ratio": 0.456,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/9650/"
+    },
+    {
+      "community": "珠江帝景苑",
+      "station": "磨碟沙",
+      "publishedDistanceM": 468,
+      "straightDistanceM": 895,
+      "ratio": 0.523,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/11400/"
+    },
+    {
+      "community": "珠江广场",
+      "station": "二沙岛",
+      "publishedDistanceM": 670,
+      "straightDistanceM": 1911,
+      "ratio": 0.351,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/11319/"
+    },
+    {
+      "community": "珠江御景湾",
+      "station": "沥滘",
+      "publishedDistanceM": 686,
+      "straightDistanceM": 3295,
+      "ratio": 0.208,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/11334/"
+    },
+    {
+      "community": "珠江新岸公寓",
+      "station": "滨江东路",
+      "publishedDistanceM": 567,
+      "straightDistanceM": 3546,
+      "ratio": 0.16,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/11368/"
+    },
+    {
+      "community": "珠江花园",
+      "station": "大石",
+      "publishedDistanceM": 243,
+      "straightDistanceM": 4055,
+      "ratio": 0.06,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/10705/"
+    },
+    {
+      "community": "珠江花城",
+      "station": "东圃",
+      "publishedDistanceM": 990,
+      "straightDistanceM": 5721,
+      "ratio": 0.173,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13661/"
+    },
+    {
+      "community": "珠江金茂府",
+      "station": "鹤洞",
+      "publishedDistanceM": 806,
+      "straightDistanceM": 1920,
+      "ratio": 0.42,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12572/"
+    },
+    {
+      "community": "珠江铂世湾",
+      "station": "员岗",
+      "publishedDistanceM": 807,
+      "straightDistanceM": 1454,
+      "ratio": 0.555,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/10415/"
+    },
+    {
+      "community": "理想蓝堡国际花园",
+      "station": "员村",
+      "publishedDistanceM": 621,
+      "straightDistanceM": 1939,
+      "ratio": 0.32,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13639/"
+    },
+    {
+      "community": "理想青年荟",
+      "station": "员村",
+      "publishedDistanceM": 600,
+      "straightDistanceM": 2134,
+      "ratio": 0.281,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13037/"
+    },
+    {
+      "community": "瑞安·创逸",
+      "station": "龙口西",
+      "publishedDistanceM": 150,
+      "straightDistanceM": 1587,
+      "ratio": 0.095,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13633/"
+    },
+    {
+      "community": "田心花园",
+      "station": "同德",
+      "publishedDistanceM": 100,
+      "straightDistanceM": 1292,
+      "ratio": 0.077,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/9649/"
+    },
+    {
+      "community": "电视台大院",
+      "station": "小北",
+      "publishedDistanceM": 688,
+      "straightDistanceM": 1917,
+      "ratio": 0.359,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13758/"
+    },
+    {
+      "community": "番禺万达广场",
+      "station": "南村万博",
+      "publishedDistanceM": 282,
+      "straightDistanceM": 1741,
+      "ratio": 0.162,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/10632/"
+    },
+    {
+      "community": "白云尚城",
+      "station": "江夏",
+      "publishedDistanceM": 795,
+      "straightDistanceM": 1450,
+      "ratio": 0.548,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/9322/"
+    },
+    {
+      "community": "白云雅苑",
+      "station": "聚龙",
+      "publishedDistanceM": 235,
+      "straightDistanceM": 773,
+      "ratio": 0.304,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/9711/"
+    },
+    {
+      "community": "百好居",
+      "station": "东风",
+      "publishedDistanceM": 268,
+      "straightDistanceM": 57088,
+      "ratio": 0.005,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13843/"
+    },
+    {
+      "community": "盈彩美居",
+      "station": "江夏",
+      "publishedDistanceM": 100,
+      "straightDistanceM": 18272,
+      "ratio": 0.005,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13684/"
+    },
+    {
+      "community": "盈翠华庭",
+      "station": "飞翔公园",
+      "publishedDistanceM": 923,
+      "straightDistanceM": 2179,
+      "ratio": 0.424,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/9735/"
+    },
+    {
+      "community": "益鹏翠苑",
+      "station": "逸景路",
+      "publishedDistanceM": 200,
+      "straightDistanceM": 1818,
+      "ratio": 0.11,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/11346/"
+    },
+    {
+      "community": "省中医院宿舍",
+      "station": "坑口",
+      "publishedDistanceM": 705,
+      "straightDistanceM": 1874,
+      "ratio": 0.376,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12406/"
+    },
+    {
+      "community": "碧桂园凤凰城凤泉苑",
+      "station": "新塘",
+      "publishedDistanceM": 1156,
+      "straightDistanceM": 1917,
+      "ratio": 0.603,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/14785/"
+    },
+    {
+      "community": "碧桂园凤凰城凤湖苑",
+      "station": "新塘",
+      "publishedDistanceM": 1920,
+      "straightDistanceM": 1758,
+      "ratio": 1.092,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/14732/"
+    },
+    {
+      "community": "碧桂园凤凰城凤馨苑",
+      "station": "新塘",
+      "publishedDistanceM": 1155,
+      "straightDistanceM": 1360,
+      "ratio": 0.849,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/14811/"
+    },
+    {
+      "community": "碧桂园凤凰城凤鸣苑",
+      "station": "白江",
+      "publishedDistanceM": 1153,
+      "straightDistanceM": 1043,
+      "ratio": 1.105,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/14736/"
+    },
+    {
+      "community": "碧桂园海湾1号",
+      "station": "南沙客运港",
+      "publishedDistanceM": 1307,
+      "straightDistanceM": 927,
+      "ratio": 1.41,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12712/"
+    },
+    {
+      "community": "碧桂园蜜柚",
+      "station": "金洲",
+      "publishedDistanceM": 1389,
+      "straightDistanceM": 3767,
+      "ratio": 0.369,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12924/"
+    },
+    {
+      "community": "碧海湾",
+      "station": "二沙岛",
+      "publishedDistanceM": 496,
+      "straightDistanceM": 2968,
+      "ratio": 0.167,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13196/"
+    },
+    {
+      "community": "祈福天龙苑",
+      "station": "广州北站",
+      "publishedDistanceM": 849,
+      "straightDistanceM": 633,
+      "ratio": 1.341,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/11975/"
+    },
+    {
+      "community": "祈福缤纷汇",
+      "station": "市广路",
+      "publishedDistanceM": 990,
+      "straightDistanceM": 745,
+      "ratio": 1.33,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/10654/"
+    },
+    {
+      "community": "祥龙花园",
+      "station": "林和西",
+      "publishedDistanceM": 265,
+      "straightDistanceM": 1027,
+      "ratio": 0.258,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13033/"
+    },
+    {
+      "community": "福龙苑",
+      "station": "燕塘",
+      "publishedDistanceM": 907,
+      "straightDistanceM": 1904,
+      "ratio": 0.476,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13346/"
+    },
+    {
+      "community": "科城山庄",
+      "station": "萝岗",
+      "publishedDistanceM": 986,
+      "straightDistanceM": 1999,
+      "ratio": 0.493,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12174/"
+    },
+    {
+      "community": "科慧花园",
+      "station": "燕岗",
+      "publishedDistanceM": 150,
+      "straightDistanceM": 48160,
+      "ratio": 0.003,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/14793/"
+    },
+    {
+      "community": "积德花园",
+      "station": "同德",
+      "publishedDistanceM": 100,
+      "straightDistanceM": 2073,
+      "ratio": 0.048,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/9933/"
+    },
+    {
+      "community": "穗东花园",
+      "station": "天河公园",
+      "publishedDistanceM": 479,
+      "straightDistanceM": 1792,
+      "ratio": 0.267,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12947/"
+    },
+    {
+      "community": "穗园小区",
+      "station": "龙口西",
+      "publishedDistanceM": 210,
+      "straightDistanceM": 1464,
+      "ratio": 0.143,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13431/"
+    },
+    {
+      "community": "穗花新村",
+      "station": "宝岗大道",
+      "publishedDistanceM": 130,
+      "straightDistanceM": 2292,
+      "ratio": 0.057,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/11145/"
+    },
+    {
+      "community": "粤泰荣廷府",
+      "station": "团一大广场",
+      "publishedDistanceM": 447,
+      "straightDistanceM": 1493,
+      "ratio": 0.299,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/14260/"
+    },
+    {
+      "community": "粤海丽江花园",
+      "station": "猎德",
+      "publishedDistanceM": 871,
+      "straightDistanceM": 1814,
+      "ratio": 0.48,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13115/"
+    },
+    {
+      "community": "粤海壹桂府",
+      "station": "海珠广场",
+      "publishedDistanceM": 528,
+      "straightDistanceM": 1791,
+      "ratio": 0.295,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/14093/"
+    },
+    {
+      "community": "粤海拾桂府",
+      "station": "北京路",
+      "publishedDistanceM": 50,
+      "straightDistanceM": 1551,
+      "ratio": 0.032,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/14297/"
+    },
+    {
+      "community": "粤虹大厦",
+      "station": "团一大广场",
+      "publishedDistanceM": 323,
+      "straightDistanceM": 1448,
+      "ratio": 0.223,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13735/"
+    },
+    {
+      "community": "粤韵庭园",
+      "station": "天河公园",
+      "publishedDistanceM": 722,
+      "straightDistanceM": 1792,
+      "ratio": 0.403,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13221/"
+    },
+    {
+      "community": "纵横缤城",
+      "station": "棠涌",
+      "publishedDistanceM": 462,
+      "straightDistanceM": 1176,
+      "ratio": 0.393,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/9920/"
+    },
+    {
+      "community": "绿地滨江汇",
+      "station": "石溪",
+      "publishedDistanceM": 827,
+      "straightDistanceM": 135,
+      "ratio": 6.107,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/11281/"
+    },
+    {
+      "community": "绿地越秀海玥",
+      "station": "燕岗",
+      "publishedDistanceM": 865,
+      "straightDistanceM": 487,
+      "ratio": 1.775,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/11339/"
+    },
+    {
+      "community": "罗马家园",
+      "station": "沥滘",
+      "publishedDistanceM": 467,
+      "straightDistanceM": 1777,
+      "ratio": 0.263,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/11317/"
+    },
+    {
+      "community": "羊和园",
+      "station": "杨箕",
+      "publishedDistanceM": 256,
+      "straightDistanceM": 1076,
+      "ratio": 0.238,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13790/"
+    },
+    {
+      "community": "羊城国际商贸中心",
+      "station": "石牌桥",
+      "publishedDistanceM": 446,
+      "straightDistanceM": 1181,
+      "ratio": 0.378,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13317/"
+    },
+    {
+      "community": "羊城花园",
+      "station": "江夏",
+      "publishedDistanceM": 100,
+      "straightDistanceM": 17362,
+      "ratio": 0.006,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13619/"
+    },
+    {
+      "community": "美林海岸花园",
+      "station": "员村",
+      "publishedDistanceM": 1206,
+      "straightDistanceM": 2156,
+      "ratio": 0.559,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13663/"
+    },
+    {
+      "community": "翠城花园",
+      "station": "昌岗",
+      "publishedDistanceM": 805,
+      "straightDistanceM": 774,
+      "ratio": 1.04,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/11338/"
+    },
+    {
+      "community": "翠拥华庭锋尚",
+      "station": "车陂",
+      "publishedDistanceM": 887,
+      "straightDistanceM": 1250,
+      "ratio": 0.709,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13603/"
+    },
+    {
+      "community": "翡翠绿洲森林半岛",
+      "station": "新塘",
+      "publishedDistanceM": 1827,
+      "straightDistanceM": 3366,
+      "ratio": 0.543,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/14818/"
+    },
+    {
+      "community": "耀中广场",
+      "station": "林和西",
+      "publishedDistanceM": 187,
+      "straightDistanceM": 1305,
+      "ratio": 0.143,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13549/"
+    },
+    {
+      "community": "联发名阁",
+      "station": "新南",
+      "publishedDistanceM": 353,
+      "straightDistanceM": 34410,
+      "ratio": 0.01,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13951/"
+    },
+    {
+      "community": "聚龙明珠花园",
+      "station": "二沙岛",
+      "publishedDistanceM": 786,
+      "straightDistanceM": 1468,
+      "ratio": 0.535,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/14045/"
+    },
+    {
+      "community": "育蕾小区",
+      "station": "体育西路",
+      "publishedDistanceM": 460,
+      "straightDistanceM": 1363,
+      "ratio": 0.337,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13388/"
+    },
+    {
+      "community": "腾飞园中新里",
+      "station": "何棠下",
+      "publishedDistanceM": 482,
+      "straightDistanceM": 1655,
+      "ratio": 0.291,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12261/"
+    },
+    {
+      "community": "臻尚苑",
+      "station": "石壁",
+      "publishedDistanceM": 407,
+      "straightDistanceM": 944,
+      "ratio": 0.431,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/10548/"
+    },
+    {
+      "community": "芭堤水岸",
+      "station": "滨江东路",
+      "publishedDistanceM": 401,
+      "straightDistanceM": 3387,
+      "ratio": 0.118,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/11375/"
+    },
+    {
+      "community": "花地河湾",
+      "station": "西塱",
+      "publishedDistanceM": 905,
+      "straightDistanceM": 877,
+      "ratio": 1.032,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12679/"
+    },
+    {
+      "community": "花语水岸",
+      "station": "河沙",
+      "publishedDistanceM": 990,
+      "straightDistanceM": 1158,
+      "ratio": 0.855,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12675/"
+    },
+    {
+      "community": "芳村花园",
+      "station": "龙溪",
+      "publishedDistanceM": 100,
+      "straightDistanceM": 4700,
+      "ratio": 0.021,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12670/"
+    },
+    {
+      "community": "芳草园",
+      "station": "龙口西",
+      "publishedDistanceM": 318,
+      "straightDistanceM": 1218,
+      "ratio": 0.261,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13399/"
+    },
+    {
+      "community": "芳草轩",
+      "station": "逸景路",
+      "publishedDistanceM": 200,
+      "straightDistanceM": 1382,
+      "ratio": 0.145,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/10711/"
+    },
+    {
+      "community": "英豪花园",
+      "station": "逸景路",
+      "publishedDistanceM": 200,
+      "straightDistanceM": 1319,
+      "ratio": 0.152,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/11320/"
+    },
+    {
+      "community": "茶景阁",
+      "station": "花地湾",
+      "publishedDistanceM": 968,
+      "straightDistanceM": 1414,
+      "ratio": 0.685,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12431/"
+    },
+    {
+      "community": "荔园小区",
+      "station": "鱼珠",
+      "publishedDistanceM": 728,
+      "straightDistanceM": 2584,
+      "ratio": 0.282,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12165/"
+    },
+    {
+      "community": "荔香花园",
+      "station": "鱼珠",
+      "publishedDistanceM": 794,
+      "straightDistanceM": 2425,
+      "ratio": 0.327,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12217/"
+    },
+    {
+      "community": "荟雅苑",
+      "station": "林和西",
+      "publishedDistanceM": 370,
+      "straightDistanceM": 1646,
+      "ratio": 0.225,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13165/"
+    },
+    {
+      "community": "葛洲坝广州紫郡府",
+      "station": "坑口",
+      "publishedDistanceM": 1442,
+      "straightDistanceM": 2827,
+      "ratio": 0.51,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12617/"
+    },
+    {
+      "community": "蓝色康园",
+      "station": "鹭江",
+      "publishedDistanceM": 967,
+      "straightDistanceM": 1371,
+      "ratio": 0.705,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/10774/"
+    },
+    {
+      "community": "藏珑府",
+      "station": "西村",
+      "publishedDistanceM": 942,
+      "straightDistanceM": 16239,
+      "ratio": 0.058,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/10410/"
+    },
+    {
+      "community": "誉城苑",
+      "station": "猎德",
+      "publishedDistanceM": 703,
+      "straightDistanceM": 1811,
+      "ratio": 0.388,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13614/"
+    },
+    {
+      "community": "誉峰",
+      "station": "潭村",
+      "publishedDistanceM": 945,
+      "straightDistanceM": 1085,
+      "ratio": 0.871,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13252/"
+    },
+    {
+      "community": "豪利花园",
+      "station": "清塘",
+      "publishedDistanceM": 1993,
+      "straightDistanceM": 1020,
+      "ratio": 1.953,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/11943/"
+    },
+    {
+      "community": "豪贤苑",
+      "station": "农讲所",
+      "publishedDistanceM": 372,
+      "straightDistanceM": 1148,
+      "ratio": 0.324,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13753/"
+    },
+    {
+      "community": "贝丽花园",
+      "station": "三元里",
+      "publishedDistanceM": 313,
+      "straightDistanceM": 3015,
+      "ratio": 0.104,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/9717/"
+    },
+    {
+      "community": "贤人阁",
+      "station": "龙口西",
+      "publishedDistanceM": 205,
+      "straightDistanceM": 1005,
+      "ratio": 0.204,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13683/"
+    },
+    {
+      "community": "赛拉维",
+      "station": "员村",
+      "publishedDistanceM": 1088,
+      "straightDistanceM": 1358,
+      "ratio": 0.801,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13186/"
+    },
+    {
+      "community": "越秀和樾府",
+      "station": "南村万博",
+      "publishedDistanceM": 1124,
+      "straightDistanceM": 403,
+      "ratio": 2.786,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/10495/"
+    },
+    {
+      "community": "越秀星汇云城",
+      "station": "朝安",
+      "publishedDistanceM": 872,
+      "straightDistanceM": 30086,
+      "ratio": 0.029,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/9931/"
+    },
+    {
+      "community": "越秀星汇御府",
+      "station": "珠江新城",
+      "publishedDistanceM": 265,
+      "straightDistanceM": 3402,
+      "ratio": 0.078,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13460/"
+    },
+    {
+      "community": "越秀星汇海珠湾",
+      "station": "燕岗",
+      "publishedDistanceM": 544,
+      "straightDistanceM": 704,
+      "ratio": 0.772,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/11324/"
+    },
+    {
+      "community": "路劲隽泷湾",
+      "station": "龙溪",
+      "publishedDistanceM": 100,
+      "straightDistanceM": 3603,
+      "ratio": 0.028,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12384/"
+    },
+    {
+      "community": "远东御江豪庭",
+      "station": "龙溪",
+      "publishedDistanceM": 100,
+      "straightDistanceM": 5817,
+      "ratio": 0.017,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12593/"
+    },
+    {
+      "community": "远洋天骄",
+      "station": "天河客运站",
+      "publishedDistanceM": 962,
+      "straightDistanceM": 967,
+      "ratio": 0.995,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13443/"
+    },
+    {
+      "community": "逸景翠园",
+      "station": "逸景路",
+      "publishedDistanceM": 200,
+      "straightDistanceM": 1609,
+      "ratio": 0.124,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/11414/"
+    },
+    {
+      "community": "逸雅居",
+      "station": "小北",
+      "publishedDistanceM": 744,
+      "straightDistanceM": 1690,
+      "ratio": 0.44,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13824/"
+    },
+    {
+      "community": "邦华翠悦湾",
+      "station": "同德",
+      "publishedDistanceM": 100,
+      "straightDistanceM": 811,
+      "ratio": 0.123,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/9697/"
+    },
+    {
+      "community": "金亚花园",
+      "station": "二沙岛",
+      "publishedDistanceM": 328,
+      "straightDistanceM": 1932,
+      "ratio": 0.17,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/14053/"
+    },
+    {
+      "community": "金地天河公馆",
+      "station": "东圃",
+      "publishedDistanceM": 1438,
+      "straightDistanceM": 6116,
+      "ratio": 0.235,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13606/"
+    },
+    {
+      "community": "金坤花园",
+      "station": "燕塘",
+      "publishedDistanceM": 828,
+      "straightDistanceM": 1928,
+      "ratio": 0.43,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13273/"
+    },
+    {
+      "community": "金宇花园",
+      "station": "南漖",
+      "publishedDistanceM": 1356,
+      "straightDistanceM": 2263,
+      "ratio": 0.599,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12359/"
+    },
+    {
+      "community": "金宝怡庭",
+      "station": "农讲所",
+      "publishedDistanceM": 494,
+      "straightDistanceM": 1749,
+      "ratio": 0.282,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13841/"
+    },
+    {
+      "community": "金山谷",
+      "station": "文化公园",
+      "publishedDistanceM": 1127,
+      "straightDistanceM": 18148,
+      "ratio": 0.062,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/10196/"
+    },
+    {
+      "community": "金山轩",
+      "station": "华师",
+      "publishedDistanceM": 383,
+      "straightDistanceM": 1594,
+      "ratio": 0.24,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13045/"
+    },
+    {
+      "community": "金建苑",
+      "station": "燕塘",
+      "publishedDistanceM": 372,
+      "straightDistanceM": 1666,
+      "ratio": 0.223,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13310/"
+    },
+    {
+      "community": "金德苑",
+      "station": "同德",
+      "publishedDistanceM": 100,
+      "straightDistanceM": 942,
+      "ratio": 0.106,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/9638/"
+    },
+    {
+      "community": "金泽豪庭",
+      "station": "新塘",
+      "publishedDistanceM": 619,
+      "straightDistanceM": 594,
+      "ratio": 1.043,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/14839/"
+    },
+    {
+      "community": "金湖翡翠山",
+      "station": "龙洞",
+      "publishedDistanceM": 1613,
+      "straightDistanceM": 2581,
+      "ratio": 0.625,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/9685/"
+    },
+    {
+      "community": "金田花苑",
+      "station": "龙口西",
+      "publishedDistanceM": 391,
+      "straightDistanceM": 1078,
+      "ratio": 0.363,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13271/"
+    },
+    {
+      "community": "金碧华府",
+      "station": "潭村",
+      "publishedDistanceM": 389,
+      "straightDistanceM": 893,
+      "ratio": 0.436,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13406/"
+    },
+    {
+      "community": "金碧新城",
+      "station": "小坪",
+      "publishedDistanceM": 373,
+      "straightDistanceM": 1355,
+      "ratio": 0.275,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/9936/"
+    },
+    {
+      "community": "金碧湾",
+      "station": "凤凰新村",
+      "publishedDistanceM": 548,
+      "straightDistanceM": 866,
+      "ratio": 0.633,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/10770/"
+    },
+    {
+      "community": "金碧雅苑",
+      "station": "鹤龙",
+      "publishedDistanceM": 396,
+      "straightDistanceM": 3231,
+      "ratio": 0.123,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/9721/"
+    },
+    {
+      "community": "金羊花园",
+      "station": "杨箕",
+      "publishedDistanceM": 170,
+      "straightDistanceM": 1376,
+      "ratio": 0.124,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13760/"
+    },
+    {
+      "community": "金逸雅居",
+      "station": "裕丰围",
+      "publishedDistanceM": 227,
+      "straightDistanceM": 1527,
+      "ratio": 0.149,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12144/"
+    },
+    {
+      "community": "金雅苑",
+      "station": "中大",
+      "publishedDistanceM": 1188,
+      "straightDistanceM": 2046,
+      "ratio": 0.581,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/11379/"
+    },
+    {
+      "community": "银山大厦",
+      "station": "北京路",
+      "publishedDistanceM": 417,
+      "straightDistanceM": 1983,
+      "ratio": 0.21,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/14361/"
+    },
+    {
+      "community": "银汇华庭",
+      "station": "华师",
+      "publishedDistanceM": 394,
+      "straightDistanceM": 1412,
+      "ratio": 0.279,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13681/"
+    },
+    {
+      "community": "锦丽居",
+      "station": "晓港",
+      "publishedDistanceM": 100,
+      "straightDistanceM": 2888,
+      "ratio": 0.035,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/11392/"
+    },
+    {
+      "community": "锦林山庄",
+      "station": "萝岗",
+      "publishedDistanceM": 694,
+      "straightDistanceM": 676,
+      "ratio": 1.027,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12290/"
+    },
+    {
+      "community": "锦绣银湾",
+      "station": "大石",
+      "publishedDistanceM": 913,
+      "straightDistanceM": 2268,
+      "ratio": 0.403,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/10688/"
+    },
+    {
+      "community": "锦麟万博星公馆",
+      "station": "南村万博",
+      "publishedDistanceM": 677,
+      "straightDistanceM": 1622,
+      "ratio": 0.417,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/10499/"
+    },
+    {
+      "community": "阳光假日园",
+      "station": "棠下",
+      "publishedDistanceM": 872,
+      "straightDistanceM": 2275,
+      "ratio": 0.383,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13308/"
+    },
+    {
+      "community": "阳华国花苑",
+      "station": "棠下",
+      "publishedDistanceM": 1226,
+      "straightDistanceM": 2945,
+      "ratio": 0.416,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13647/"
+    },
+    {
+      "community": "隆康花园",
+      "station": "云霄路",
+      "publishedDistanceM": 50,
+      "straightDistanceM": 2606,
+      "ratio": 0.019,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/9517/"
+    },
+    {
+      "community": "隽峰苑",
+      "station": "猎德",
+      "publishedDistanceM": 347,
+      "straightDistanceM": 1304,
+      "ratio": 0.266,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13615/"
+    },
+    {
+      "community": "雅居乐富春山居",
+      "station": "香雪",
+      "publishedDistanceM": 487,
+      "straightDistanceM": 6299,
+      "ratio": 0.077,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12278/"
+    },
+    {
+      "community": "雅怡阁",
+      "station": "东圃",
+      "publishedDistanceM": 38,
+      "straightDistanceM": 2192,
+      "ratio": 0.017,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13130/"
+    },
+    {
+      "community": "雅郡花园",
+      "station": "万胜围",
+      "publishedDistanceM": 641,
+      "straightDistanceM": 1443,
+      "ratio": 0.444,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/11330/"
+    },
+    {
+      "community": "雅骏花园",
+      "station": "同德",
+      "publishedDistanceM": 100,
+      "straightDistanceM": 1368,
+      "ratio": 0.073,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/9729/"
+    },
+    {
+      "community": "顺丰翠园",
+      "station": "石井",
+      "publishedDistanceM": 624,
+      "straightDistanceM": 1166,
+      "ratio": 0.535,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/9940/"
+    },
+    {
+      "community": "顺欣花园",
+      "station": "新塘",
+      "publishedDistanceM": 1952,
+      "straightDistanceM": 3265,
+      "ratio": 0.598,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/14820/"
+    },
+    {
+      "community": "领江壹号",
+      "station": "客村",
+      "publishedDistanceM": 599,
+      "straightDistanceM": 1217,
+      "ratio": 0.492,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/11104/"
+    },
+    {
+      "community": "颐和高尔夫庄园",
+      "station": "同和",
+      "publishedDistanceM": 1406,
+      "straightDistanceM": 3606,
+      "ratio": 0.39,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/9896/"
+    },
+    {
+      "community": "颐秀华庭",
+      "station": "流花",
+      "publishedDistanceM": 536,
+      "straightDistanceM": 2561,
+      "ratio": 0.209,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13857/"
+    },
+    {
+      "community": "首开龙湖天奕",
+      "station": "萧岗",
+      "publishedDistanceM": 300,
+      "straightDistanceM": 966,
+      "ratio": 0.311,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/9854/"
+    },
+    {
+      "community": "馨怡花苑",
+      "station": "龙口西",
+      "publishedDistanceM": 395,
+      "straightDistanceM": 1747,
+      "ratio": 0.226,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12953/"
+    },
+    {
+      "community": "骏御华庭",
+      "station": "三元里",
+      "publishedDistanceM": 547,
+      "straightDistanceM": 3381,
+      "ratio": 0.162,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/9444/"
+    },
+    {
+      "community": "骏文雅苑",
+      "station": "农讲所",
+      "publishedDistanceM": 398,
+      "straightDistanceM": 997,
+      "ratio": 0.399,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/14313/"
+    },
+    {
+      "community": "骏景花园",
+      "station": "车陂南",
+      "publishedDistanceM": 840,
+      "straightDistanceM": 1359,
+      "ratio": 0.618,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13655/"
+    },
+    {
+      "community": "骏逸苑",
+      "station": "潭村",
+      "publishedDistanceM": 442,
+      "straightDistanceM": 1699,
+      "ratio": 0.26,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13626/"
+    },
+    {
+      "community": "鸣翠花园",
+      "station": "石溪",
+      "publishedDistanceM": 652,
+      "straightDistanceM": 1176,
+      "ratio": 0.554,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/10805/"
+    },
+    {
+      "community": "鸿翔大厦",
+      "station": "龙口西",
+      "publishedDistanceM": 120,
+      "straightDistanceM": 1603,
+      "ratio": 0.075,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13025/"
+    },
+    {
+      "community": "鸿辉阁",
+      "station": "赤岗",
+      "publishedDistanceM": 761,
+      "straightDistanceM": 595,
+      "ratio": 1.28,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/10852/"
+    },
+    {
+      "community": "鹤林苑",
+      "station": "鱼珠",
+      "publishedDistanceM": 374,
+      "straightDistanceM": 2603,
+      "ratio": 0.144,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12097/"
+    },
+    {
+      "community": "黄埔花园",
+      "station": "裕丰围",
+      "publishedDistanceM": 545,
+      "straightDistanceM": 1708,
+      "ratio": 0.319,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12248/"
+    },
+    {
+      "community": "黄石花园",
+      "station": "鹤边",
+      "publishedDistanceM": 890,
+      "straightDistanceM": 1295,
+      "ratio": 0.687,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/9878/"
+    },
+    {
+      "community": "龙光峰景华庭",
+      "station": "科学城",
+      "publishedDistanceM": 747,
+      "straightDistanceM": 3244,
+      "ratio": 0.23,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/12245/"
+    },
+    {
+      "community": "龙口花苑",
+      "station": "龙口西",
+      "publishedDistanceM": 114,
+      "straightDistanceM": 969,
+      "ratio": 0.118,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13392/"
+    },
+    {
+      "community": "龙湖首开天宸原著",
+      "station": "东圃",
+      "publishedDistanceM": 1465,
+      "straightDistanceM": 5898,
+      "ratio": 0.248,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13493/"
+    },
+    {
+      "community": "龙苑大厦",
+      "station": "岗顶",
+      "publishedDistanceM": 169,
+      "straightDistanceM": 1098,
+      "ratio": 0.154,
+      "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13131/"
+    }
+  ]
+}

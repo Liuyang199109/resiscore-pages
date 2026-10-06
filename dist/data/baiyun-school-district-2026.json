@@ -1,0 +1,2108 @@
+{
+  "schemaVersion": 1,
+  "city": "guangzhou",
+  "district": "baiyun",
+  "districtName": "白云区",
+  "schoolYear": 2026,
+  "sourceYear": 2026,
+  "sourcePublished": "2026-04-28",
+  "sourceUrls": [
+    "https://www.by.gov.cn/zwfw/zdfw/xwsq/index.html",
+    "https://www.by.gov.cn/gzbyjy/gkmlpt/content/10/10791/mpost_10791512.html"
+  ],
+  "sourceFiles": [
+    "data/school-sources/baiyun-2026-1.xlsx",
+    "data/school-sources/baiyun-2026-middle-1.xlsx"
+  ],
+  "mappingConfidence": "official-xlsx",
+  "propertyAliases": {
+    "白云高尔夫花园荷塘月色": "荷塘月色",
+    "岭南新世界锦云峰": "锦云峰",
+    "岭南新世界映悦园": "映悦园"
+  },
+  "schoolNameAliases": {},
+  "rankingEstimatePolicy": {
+    "name": "公开属性关键词分层估计（非官方排名）",
+    "primaryTotalSchools": 1012,
+    "middleTotalSchools": 420,
+    "method": "按办学属性关键词分层换算全市同学段估计名次，不能替代教育部门排名，可人工覆盖。"
+  },
+  "rankingEstimates": {
+    "小学": {
+      "广州市白云区广园小学": 506,
+      "广州市白云区景泰小学": 506,
+      "广州市培英中学附属小学": 284,
+      "广州市白云区三元里小学": 506,
+      "羊城铁路总公司广州铁路第五小学": 506,
+      "广州市白云区民航学校 （校本部）": 210,
+      "广州市白云区远景小学": 506,
+      "广州市白云区棠溪小学": 506,
+      "广州市白云区棠涌小学": 506,
+      "广州市白云区汇侨第一小学": 506,
+      "广州市白云区萧岗小学": 506,
+      "广东实验中学（云城校区）": 51,
+      "广州市白云区马务小学": 506,
+      "广州市白云区黄石学校": 210,
+      "广州市白云区江夏小学": 506,
+      "广东外语外贸大学实验中学（陈田西校区）小学部": 284,
+      "广州实验教育集团花城实验学校": 118,
+      "广州市白云区金桂园小学": 506,
+      "广州市白云区机场西小学": 506,
+      "广州市白云区方圆实验小学": 284,
+      "广州市白云中学附属小学": 284,
+      "广州市白云区白云外国语小学": 284,
+      "广州市白云中学 （棠景校区）": 210,
+      "广州市白云区夏茅小学": 506,
+      "广州市白云区大岡小学": 506,
+      "广州市白云区大朗小学": 506,
+      "广州市白云区龙湖小学": 506,
+      "广州市白云区环滘小学": 506,
+      "广州市白云区唐阁小学": 506,
+      "广州市白云区松溪小学": 506,
+      "广州市白云区槎龙镇泰小学": 506,
+      "广州市白云区螺涌小学": 506,
+      "广州市白云区同德小学": 506,
+      "广州市白云区明德小学": 506,
+      "广州市白云区滘心小学": 506,
+      "广州市白云区红星小学": 506,
+      "广州市白云区鸦岗小学": 506,
+      "广州市白云区朝阳小学": 506,
+      "广州市白云区潭岗小学": 506,
+      "广州市白云区张村中心小学": 506,
+      "广州市白云区金沙小学": 506,
+      "广州市白云区沙凤小学": 506,
+      "广州市白云区横沙小学": 506,
+      "广州市第六十五中学附属小学": 284,
+      "广州市白云区金碧新城小学": 506,
+      "广州市白云区岭南花园小学": 506,
+      "广州市白云区金广实验学校 (金域蓝湾校区）": 118,
+      "广州市白云区金广实验学校 （御金沙校区）": 118,
+      "广州市白云区桃园小学": 506,
+      "广州市白云区庆丰实验学校": 118,
+      "广州市白云区金沙第二小学": 506,
+      "广州市白云区白云广附同悦实验小学": 284,
+      "广州市白云区白云广附云湖实验学校": 118,
+      "广州市白云区白云广附金悦实验小学": 284,
+      "广州市白云区培英中学附属科技城小学": 284,
+      "广州市白云区平沙培英学校": 210,
+      "广州市白云区平沙小学": 506,
+      "广州市白云区望岗小学": 506,
+      "广州市白云区石马小学": 506,
+      "广州市白云区加禾小学": 506,
+      "广州市白云区新兴白云小学": 506,
+      "广州市白云区新科小学": 506,
+      "广州市白云区罗岗村小学": 506,
+      "广州市白云区长红小学": 506,
+      "广州市白云区东平学校": 210,
+      "广州市白云区清湖小学": 506,
+      "广州市白云区鹤边镇泰小学": 506,
+      "广州市白云区永泰小学": 506,
+      "广州市白云区黄边小学": 506,
+      "广州市白云区握山小学": 506,
+      "广州市白云区同和小学": 506,
+      "广州市白云区广大附中实验小学": 284,
+      "广州市白云区华师附中实验小学": 284,
+      "广州市白云区京溪小学": 506,
+      "广州市白云区集贤小学": 506,
+      "广州市白云区颐和实验小学": 284,
+      "广州市白云区培英实验学校 （小学部）": 284,
+      "广州市白云区云英实验附属小学": 284,
+      "广州市白云区中黄外国语小学": 284,
+      "广州市白云区培英中学附属第三小学": 284,
+      "广州市白云区华中师范大学白云学校（暂定名，以上级批复为准）": 210,
+      "广州市白云区新楼小学": 506,
+      "广州市白云区双岗小学": 506,
+      "广州市白云区水沥小学": 506,
+      "广州市白云区江村小学": 506,
+      "广州市白云区茅山小学": 506,
+      "广州市白云区蓼江小学": 506,
+      "广州市白云区小塘小学": 506,
+      "广州市白云区大田小学": 506,
+      "广州市白云区江高镇中心小学": 506,
+      "羊城铁路总公司广州铁路第八小学": 506,
+      "广州市白云区神山第一小学": 506,
+      "广州市白云区神山第二小学": 506,
+      "广州市白云区神山第三小学": 506,
+      "广州市白云区神山第五小学": 506,
+      "广州市白云区大岭小学": 506,
+      "广州市白云区郭塘小学": 506,
+      "广州市白云区沙龙小学": 506,
+      "广州市白云区石华小学": 506,
+      "广州市白云区人和镇第一小学": 506,
+      "广州市白云区人和镇第二小学": 506,
+      "广州市白云区六中实验小学 （北校区）": 284,
+      "广州市白云区六中实验小学 （南校区）": 284,
+      "广州市白云区人和镇第五小学 （凤和校区）": 506,
+      "广州市白云区人和镇第五小学 （太成校区）": 506,
+      "广州市白云区人和镇第七小学": 506,
+      "广州市白云区广州空港实验小学": 284,
+      "广州市白云区人和镇第六小学": 506,
+      "广州市第七十三中学小学部": 506,
+      "广州市白云区民航学校 （人和校区）": 210,
+      "广州市白云区人和镇第一小学（鸦湖校区）": 506,
+      "广州市白云区人和镇第二小学（建南校区）": 506,
+      "广州市白云区太和第一小学": 506,
+      "广州市白云区石湖小学": 506,
+      "广州市白云区大源小学": 506,
+      "广州市白云区太和第二小学": 506,
+      "广州市白云区穗丰学校": 210,
+      "广州市白云区头陂小学": 506,
+      "广州市白云区沙亭岗小学": 506,
+      "广州市白云区谢家庄小学": 506,
+      "广州市白云区营溪小学": 506,
+      "广州市白云区大沥小学": 506,
+      "广州市白云区夏良小学": 506,
+      "广州市白云区南村小学": 506,
+      "广州市白云区南园小学": 506,
+      "广州市白云区永兴小学": 506,
+      "广州市白云区龙归学校": 210,
+      "广州市白云区蓝山小学": 506,
+      "广东外语外贸大学实验中学 （小学部）": 284,
+      "广州市白云区云翔学校": 210,
+      "广州市白云区培英中学附属第二小学": 284,
+      "广州市白云区龙归学校 （珑璟校区）": 210,
+      "广东第二师范学院实验小学": 284,
+      "广州市白云区蟠龙小学": 506,
+      "广州市白云区龙岗学校": 210,
+      "广州市白云区新和学校": 210,
+      "广州市白云区竹料第一小学": 506,
+      "广州市白云区竹料第二小学": 506,
+      "广州市白云区竹料第三小学": 506,
+      "广州市白云区竹料第四小学": 506,
+      "广州市白云区竹料第五小学": 506,
+      "广州市白云区良田第一小学": 506,
+      "广州市白云区良田第二小学": 506,
+      "广州市白云区良田第三小学": 506,
+      "广州市白云区星悦实验学校": 118,
+      "广州市白云区贤丰第二实验小学": 284,
+      "广州市白云区贤丰实验小学": 284,
+      "广州市白云区金源小学": 506,
+      "广州市白云区龙溪小学": 506,
+      "广州市白云区新园小学": 506,
+      "广州市白云区春蕾小学": 506,
+      "广州市白云区龙江小学": 506,
+      "广州市白云区公度小学": 506,
+      "广州市白云区新纪元小学": 506,
+      "广州市白云区同心小学": 506,
+      "广州市白云区新正小学": 506,
+      "广州市白云区龙德小学": 506,
+      "广州市白云区新苗小学": 506,
+      "广州市白云区江南明珠小学": 506,
+      "广州市白云区元培实验小学": 284,
+      "广州市白云区白云实验学校": 118,
+      "广州市白云区云雅实验学校": 118,
+      "广州市白云区广云外国语学校小学": 284,
+      "广州市白云区白云实验附属小学": 284,
+      "广州市白云区嘉禾新都学校": 210,
+      "广州市白云区京师实验学校": 118,
+      "广州市白云区育贤小学": 506,
+      "广州市白云区方正实验小学": 284,
+      "广州市白云区华龙小学": 506,
+      "广州市白云区金晖小学": 506,
+      "广州市白云区广辉小学": 506,
+      "广州市白云区平安小学": 506,
+      "广州市白云区龙嘉小学": 506,
+      "广州市白云区锦阳小学": 506,
+      "广州市白云区小太阳小学": 506,
+      "广州市白云区元下田小学": 506,
+      "广州市白云区金龙小学": 506,
+      "广州市白云区华丰小学": 506,
+      "广州市白云区国泰小学": 506,
+      "广州市白云区东方小学": 506,
+      "广州市白云区新都小学": 506,
+      "广州市白云区启明小学": 506,
+      "广州市白云区金华小学": 506,
+      "广州市白云区长江小学": 506,
+      "广州市白云区英才小学": 506,
+      "广州市白云区博海小学": 506,
+      "广州市白云区文星小学": 506,
+      "广州市白云区广州培文外国语学校(小学部）": 284,
+      "广州市白云区东辉小学": 506,
+      "广州市白云区才子小学": 506,
+      "广州市白云区锦华小学": 506,
+      "广州市白云区龙涛外国语实验小学": 284,
+      "广州市龙外实验学校": 118,
+      "广州市白云区金星小学": 506,
+      "广州市白云区天宏小学": 506,
+      "广州市白云区为民小学": 506,
+      "广州市白云区嘉龙小学": 506,
+      "广州市白云区龙兴小学": 506,
+      "广州市白云区华赋学校": 210,
+      "广州市白云区茶山小学": 506,
+      "广州市源雅学校（小学部）": 506,
+      "广州市白云区嘉美小学": 506,
+      "广州市白云区东润小学": 506,
+      "广州华联外语实验学校": 118
+    },
+    "初中": {
+      "广州市广园中学": 210,
+      "广州市白云中学 （汇侨校区）": 210,
+      "广州市白云中学 （棠景校区）": 210,
+      "广州市三元里中学": 210,
+      "广州市白云区民航学校": 210,
+      "广州市白云区新市中学": 210,
+      "广州市白云区景泰中学": 210,
+      "广州市白云区梓元岗中学": 210,
+      "广州市第六十七中学": 210,
+      "广州市白云区黄石学校": 210,
+      "广州市白云区白云外国语中学": 118,
+      "广东外语外贸大学实验中学（陈田西校区）": 118,
+      "广州市白云区大朗中学": 210,
+      "广州市第一一四中学": 210,
+      "广州彭加木纪念中学": 210,
+      "广州市第六十五中学 （桃园校区）": 210,
+      "广州市第六十五中学 （明德校区、同德校区）": 210,
+      "广州市白云区石井中学": 210,
+      "广州市白云区景泰中学分校区（原广州市白云区南悦中学）": 210,
+      "广州市白云区广大附中实验中学": 118,
+      "广州市白云区白云广附云湖实验学校": 118,
+      "广州市培英中学 （科技城校区）": 210,
+      "广州市白云区同和中学": 210,
+      "广州市白云区培英实验学校（同和校区）": 118,
+      "广州市铁一中学 （白云校区）": 51,
+      "广州市白云区嘉禾中学": 210,
+      "广州市白云区平沙培英学校": 210,
+      "广州市培英中学（岭南校区）": 210,
+      "广州市白云区培英实验学校（云景校区）": 118,
+      "广州市白云区东平学校": 210,
+      "广东实验中学 （白云校区）": 51,
+      "广州市白云区颜乐天纪念中学": 210,
+      "广州市培英中学（鹤洞校区）": 210,
+      "广州市白云区江高镇第二初级中学": 210,
+      "广州市白云区江村中学": 210,
+      "广州市白云区神山中学": 210,
+      "广州市白云区石龙中学": 210,
+      "广州市六十五中学 （江府校区）": 210,
+      "广州市白云区广州空港实验中学（东校区）": 118,
+      "广州市白云区广州空港实验中学（西校区）": 118,
+      "广州市白云区广州空港实验中学（本部）": 118,
+      "广州市白云区六中实验中学（空港校区）": 118,
+      "广州市白云区六中实验中学（福和校区）": 118,
+      "广州市白云区民航学校 （人和校区）": 210,
+      "广州市第一一五中学": 210,
+      "广州市白云区穗丰学校": 210,
+      "广州市白云区太和中学": 210,
+      "广州市第七十中学": 210,
+      "广州市白云区龙归学校": 210,
+      "广东外语外贸大学实验中学": 118,
+      "广州市白云区云翔学校": 210,
+      "广州市白云区龙归学校 （珑璟校区）": 210,
+      "广东第二师范学院实验中学": 118,
+      "广州市白云区龙岗学校": 210,
+      "广州市白云区新和学校": 210,
+      "广州市白云区竹料第一中学": 118,
+      "广州市白云区竹料第三中学": 210,
+      "广州大同中学": 210,
+      "广州市白云区星悦实验学校": 118,
+      "广州市白云区龙江中学": 210,
+      "广州市庆丰实验学校": 118,
+      "广州市白云区元培实验中学（原广州市白云区嘉福中学）": 118,
+      "广州市白云区云雅实验学校": 118,
+      "广州市白云区白云实验学校": 118,
+      "广州市白云广云外国语学校（初中部）": 118,
+      "广州市白云区华新学校": 210,
+      "广州市白云区珠江实验学校": 118,
+      "广州市白云区嘉禾新都学校": 210,
+      "广州市实验外语学校": 118,
+      "广州市白云区京师实验学校": 118,
+      "广州市白云区应元颐和实验学校": 118,
+      "广州市白云区珠江中学": 210,
+      "广州市白云区广州培文外国语学校（初中部）": 118,
+      "广州市龙外实验学校": 118,
+      "广州市白云区珠江实验学校分校区": 118,
+      "广州市白云区华赋学校": 210,
+      "广州市源雅学校（初中部）": 210,
+      "广州市白云区成龙中学": 210,
+      "广州华联外语实验学校": 118
+    }
+  },
+  "elementaryZones": [
+    {
+      "school": "广州市白云区广园小学",
+      "coverage": "景泰东社区、景泰西社区、景泰北社区、政通社区、云苑南社区、大金钟社区（只招广园中路633号大院）、松柏岗社区、机场第一社区（只招机场路以东）、机场第三社区（南航公司职工子弟除外）、飞鹅新村社区（只招飞鹅西路以北）、石榴桥社区",
+      "area": "新市片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区景泰小学",
+      "coverage": "云苑西社区、云苑东社区、云龙社区、云翠社区、平安社区、长安社区、大金钟社区（广园中路633号大院除外）、景云社区、广园中社区、金泰社区",
+      "area": "新市片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市培英中学附属小学",
+      "coverage": "竹园社区、隆康社区",
+      "area": "新市片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区三元里小学",
+      "coverage": "本部、南校区：三元里东约社区、三元里西约社区、华园社区、机场一社区（只招机场路以西）、机场二社区、中医药大学社区 北校区：棠下南社区（棠下原村民除外）、机场北社区（棠溪原村民除外）、机场西社区（只招万方园、腾龙阁、翠逸家园）",
+      "area": "新市片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "羊城铁路总公司广州铁路第五小学",
+      "coverage": "梓元岗社区、走马岗社区、飞鹅新村社区（只招飞鹅西路以南，花季小区除外）",
+      "area": "新市片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区民航学校 （校本部）",
+      "coverage": "民航家属区民航职工人户一致地段生、机场一社区、机场二社区、机场第三社区",
+      "area": "新市片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区远景小学",
+      "coverage": "远景校区：棠下南社区（只招棠下原村民子弟、美景苑及远景路以西的小区）、机场西社区（只招棠下原村民子弟）、心谊社区（只招棠下原村民子弟)、沙涌北社区、棠下西社区、水边街社区（时代花园除外）； 合益校区：合益社区（原棠溪村民除外）、水边街社区（只招时代花园）",
+      "area": "新市片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区棠溪小学",
+      "coverage": "棠溪校区：百顺社区、祥岗社区、棠溪社区、棠溪南社区、岗贝社区、大围社区、机场北社区（只招原棠溪村民）、合益社区（只招原棠溪村民）； 百荣校区：百荣社区",
+      "area": "新市片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区棠涌小学",
+      "coverage": "棠涌社区、紫荆社区、南航新村社区、大埔社区",
+      "area": "新市片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区汇侨第一小学",
+      "coverage": "汇侨校区：汇侨南社区、汇侨北社区、汇侨东社区、紫薇槟城社区、95035部队； 小坪校区：小坪社区、松柏苑社区、阳光美居社区、松园岭社区",
+      "area": "新市片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区萧岗小学",
+      "coverage": "萧岗南社区、萧岗得朋社区、萧岗东安社区、萧岗北社区、萧岗花园社区、明珠社区、齐富社区、连元桥社区、云山社区",
+      "area": "新市片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广东实验中学（云城校区）",
+      "coverage": "萧岗南社区、萧岗得朋社区、萧岗东安社区、萧岗北社区、萧岗花园社区、明珠社区、齐富社区、连元桥社区、云山社区",
+      "area": "新市片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区马务小学",
+      "coverage": "马务社区、石岗社区、元邦社区",
+      "area": "新市片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区黄石学校",
+      "coverage": "黄石花园第一社区、黄石花园第二社区、祥景花园社区、保利云境（沐云花园）",
+      "area": "新市片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区江夏小学",
+      "coverage": "江夏社区、陈田第二社区（只招江夏村范围）、白云尚城社区、荷塘月色社区（荷塘月色小区除外）",
+      "area": "新市片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广东外语外贸大学实验中学（陈田西校区）小学部",
+      "coverage": "陈田第一社区、陈田第二社区（江夏村范围除外）",
+      "area": "新市片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州实验教育集团花城实验学校",
+      "coverage": "白云区户籍生（普通生）；广州市户籍生（听障生）",
+      "area": "新市片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区金桂园小学",
+      "coverage": "金桂园社区、飞鹅新村社区",
+      "area": "新市片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区机场西小学",
+      "coverage": "心谊社区、机场西社区（棠下原村民、万方园、腾龙阁、翠逸家园除外）、金迪社区",
+      "area": "新市片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区方圆实验小学",
+      "coverage": "高尔夫社区、荷塘月色社区（只招荷塘月色小区）",
+      "area": "新市片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云中学附属小学",
+      "coverage": "新街社区、西街社区",
+      "area": "新市片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区白云外国语小学",
+      "coverage": "广外大社区",
+      "area": "新市片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云中学 （棠景校区）",
+      "coverage": "保利阅云台小区",
+      "area": "新市片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区夏茅小学",
+      "coverage": "夏茅富民居委、夏茅利民居委、兵房居委、南悦第一居委、南悦第二居委、南悦第三居委",
+      "area": "石井片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区大岡小学",
+      "coverage": "大冈居委、榕溪居委",
+      "area": "石井片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区大朗小学",
+      "coverage": "大朗北居委、大朗南居委、大朗货场居委",
+      "area": "石井片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区龙湖小学",
+      "coverage": "龙湖居委",
+      "area": "石井片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区环滘小学",
+      "coverage": "环滘居委",
+      "area": "石井片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区唐阁小学",
+      "coverage": "唐阁居委",
+      "area": "石井片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区松溪小学",
+      "coverage": "松北居委、松南居委、团结居委、华糖居委",
+      "area": "石井片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区槎龙镇泰小学",
+      "coverage": "阳光居委、槎龙居委、西洲居委",
+      "area": "石井片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区螺涌小学",
+      "coverage": "螺涌社区、桥西社区、松鹤社区",
+      "area": "石井片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区同德小学",
+      "coverage": "鹅掌坦居委、粤溪居委、上步居委、横滘居委、积德居委、泽德居委、怡德居委、横滘望江居委、田心社区（万科金域悦府小区除外）",
+      "area": "石井片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区明德小学",
+      "coverage": "明德居委、金德苑居委、同康居委、同景苑居委、同雅苑居委、汇德居委、恒丰居委、紫竹苑居委",
+      "area": "石井片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区滘心小学",
+      "coverage": "滘心南庄居委、滘心居委",
+      "area": "石井片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区红星小学",
+      "coverage": "亭冈居委、联兴居委",
+      "area": "石井片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区鸦岗小学",
+      "coverage": "鸦岗南居委、鸦岗北居委",
+      "area": "石井片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区朝阳小学",
+      "coverage": "朝阳一、二社区",
+      "area": "石井片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区潭岗小学",
+      "coverage": "潭岗南、北居委、马岗居委、凰岗居委、顺丰翠园居委（顺丰翠园小区地段生除外）",
+      "area": "石井片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区张村中心小学",
+      "coverage": "石井居委、张村居委、新庄居委(原居民）、顺丰翠园居委（只招顺丰翠园小区）、海苑居委、龙腾居委",
+      "area": "石井片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区金沙小学",
+      "coverage": "平乐居委、金藤居委、新凤居委、凤岭居委；金御苑南居委、金御苑北居委",
+      "area": "石井片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区沙凤小学",
+      "coverage": "马头岗居委、沙贝居委、沙凤新村居委、凤岗居委、浔峰居委（星汇金沙一期、二期，保利春天里、万科爱地、华润瑞府）",
+      "area": "石井片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区横沙小学",
+      "coverage": "横沙居委、丽日居委",
+      "area": "石井片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市第六十五中学附属小学",
+      "coverage": "本部：富力半岛居委、河畔居委 分校区：侨德居委、荔德居委",
+      "area": "石井片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区金碧新城小学",
+      "coverage": "金碧新城社区",
+      "area": "石井片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区岭南花园小学",
+      "coverage": "岭南居委",
+      "area": "石井片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区金广实验学校 (金域蓝湾校区）",
+      "coverage": "金域蓝湾居委",
+      "area": "石井片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区金广实验学校 （御金沙校区）",
+      "coverage": "御金沙居委",
+      "area": "nan",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区桃园小学",
+      "coverage": "桃园居委、富林居委",
+      "area": "石井片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区庆丰实验学校",
+      "coverage": "庆丰居委、新庄居委（非原居民）、兴隆围居委",
+      "area": "石井片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区金沙第二小学",
+      "coverage": "沙顶居委、西海岸居委",
+      "area": "石井片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区白云广附同悦实验小学",
+      "coverage": "田心社区（只限万科金域悦府小区）",
+      "area": "石井片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区白云广附云湖实验学校",
+      "coverage": "云湖花城、天悦云湖",
+      "area": "石井片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区白云广附金悦实验小学",
+      "coverage": "天悦金沙",
+      "area": "石井片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区培英中学附属科技城小学",
+      "coverage": "中建星光城、雍云邸",
+      "area": "石井片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区平沙培英学校",
+      "coverage": "均禾街富力城花园社区居委（只限广州富力城小区部分）",
+      "area": "永平片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区平沙小学",
+      "coverage": "均禾街平沙南居委、平沙北居委",
+      "area": "永平片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区望岗小学",
+      "coverage": "广州市白云区嘉禾街望岗村望南居委、望北居委、西岭居委",
+      "area": "永平片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区石马小学",
+      "coverage": "均禾街属鸿图居委、德圣居委、均禾居委、西桥居委",
+      "area": "永平片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区加禾小学",
+      "coverage": "尹边居委、彭上居委、彭西居委、嘉禾居委、嘉翠苑居委、金碧雅苑居委",
+      "area": "永平片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区新兴白云小学",
+      "coverage": "新兴白云花园居委、解放庄居委（只限云泉居小区、中海麓府）",
+      "area": "永平片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区新科小学",
+      "coverage": "科甲居委、新村居委",
+      "area": "永平片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区罗岗村小学",
+      "coverage": "罗岗居委、罗南居委",
+      "area": "永平片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区长红小学",
+      "coverage": "嘉禾街属长湴居委、太和居委、双和居委",
+      "area": "永平片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区东平学校",
+      "coverage": "白云区永平街属东恒居委会、平中居委会、凤凰居委会（只限万科云山小区部分），东苑居委",
+      "area": "永平片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区清湖小学",
+      "coverage": "清湖村南居委、清湖村北居委",
+      "area": "永平片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区鹤边镇泰小学",
+      "coverage": "鹤南居委、鹤边居委、鹤北居委、员村居委",
+      "area": "永平片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区永泰小学",
+      "coverage": "永平街属元下田居委、磨刀坑居委、新南庄居委、官厅窿居委、集贤庄居委（不含泰悦花苑）、白云堡居委、松涛北苑、云山居、春庭居委、颐和山庄社区居委（不含颐和小区部分）、解放庄居委（不含云泉居小区）、集贤苑居委（不含集贤苑教师新村小区），磨溪居委；新顺居委（仅限依云小镇、集贤路29号大院）",
+      "area": "永平片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区黄边小学",
+      "coverage": "黄边居委（不含黄边村村民子女）、乐得居委、云山诗意居委、云筑上品、时代玫瑰园居委、金碧雅苑居委",
+      "area": "永平片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区握山小学",
+      "coverage": "同和街属榕树头居委、蟹山居委、倚绿山庄居委（不含同和北路9号大院及广州大道北2218号）、白云山制药厂居委、云祥居委、石桥头居委、何屋居委、握山居委。",
+      "area": "永平片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区同和小学",
+      "coverage": "同和街属斯文井居委、新庄居委、老庄居委、大陂居委、富和居委、蟾蜍石居委、白水塘居委、白山居委（星汇云山花园除外）、倚绿山庄居委〖只限同和路9号(原同和北路9号大院)、广州大道北2218号（原同和中路1122号）〗",
+      "area": "永平片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区广大附中实验小学",
+      "coverage": "星汇云山花园、金湖居委",
+      "area": "永平片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区华师附中实验小学",
+      "coverage": "广州市白云区永平街属倚云天居委、蝶云天居委（只限岭南新世界花园部分）、新顺居委（仅限凯云新世界、嘉云府、锦云峰、映悦园）",
+      "area": "永平片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区京溪小学",
+      "coverage": "京溪街属京海居委、京鹏居委、京宇居委、京麟居委、京龙居委、白天鹅花园居委、麦地居委、白灰场居委、犀牛角居委、恒骏花园居委、梅花园居委、南方医科大学居委、金麟居委、梅苑居委、东圣居委、云景花园居委（只限符合条件的天河御品业主子女）",
+      "area": "永平片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区集贤小学",
+      "coverage": "永平街集贤苑居委会（只限集贤苑教师新村小区）、华发四季小区（人户一致地段生）",
+      "area": "永平片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区颐和实验小学",
+      "coverage": "永平街属颐和社区居委（仅限颐和小区部分）",
+      "area": "永平片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区培英实验学校 （小学部）",
+      "coverage": "京溪云景花园居委（只限云景花园部分）",
+      "area": "永平片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区云英实验附属小学",
+      "coverage": "金湖居委",
+      "area": "永平片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区中黄外国语小学",
+      "coverage": "南湖雅居乐居委会",
+      "area": "永平片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区培英中学附属第三小学",
+      "coverage": "凤凰居委会（仅限托斯卡纳小区部分及大一山庄小区）、泰悦花苑",
+      "area": "永平片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区华中师范大学白云学校（暂定名，以上级批复为准）",
+      "coverage": "黄边村村民子女、中建白云之星小区",
+      "area": "永平片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区新楼小学",
+      "coverage": "新楼村",
+      "area": "江高镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区双岗小学",
+      "coverage": "长岗村、双岗村",
+      "area": "江高镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区水沥小学",
+      "coverage": "水沥村",
+      "area": "江高镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区江村小学",
+      "coverage": "江村村、塘贝村",
+      "area": "江高镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区茅山小学",
+      "coverage": "茅山村",
+      "area": "江高镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区蓼江小学",
+      "coverage": "蓼江村、大龙头村",
+      "area": "江高镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区小塘小学",
+      "coverage": "小塘村、叶边村",
+      "area": "江高镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区大田小学",
+      "coverage": "大田村、沙溪村、勤星村",
+      "area": "江高镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区江高镇中心小学",
+      "coverage": "江兴社区、高塘社区、松岗社区、河心洲社区、江华社区、金沙社区、珠江村、南岗村、何布村、田南路13号",
+      "area": "江高镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "羊城铁路总公司广州铁路第八小学",
+      "coverage": "广北居委、泉溪村、江府社区（筹建，只招收中铁诺德阅泷、龙光玖誉府、绿城江府海棠（奥园）小区符合招生政策的适龄儿童）",
+      "area": "江高镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区神山第一小学",
+      "coverage": "雄丰村、井岗村、南浦村、罗溪村",
+      "area": "江高镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区神山第二小学",
+      "coverage": "南山居委、神山居委、五丰村、中八村",
+      "area": "江高镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区神山第三小学",
+      "coverage": "两上村、两下村、朗头村、聚龙村",
+      "area": "江高镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区神山第五小学",
+      "coverage": "杨山村、鹤岗村、峡石村",
+      "area": "江高镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区大岭小学",
+      "coverage": "大岭村",
+      "area": "江高镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区郭塘小学",
+      "coverage": "郭塘村",
+      "area": "江高镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区沙龙小学",
+      "coverage": "沙龙村",
+      "area": "江高镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区石华小学",
+      "coverage": "大石岗村、石龙居委、档铺街",
+      "area": "江高镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区人和镇第一小学",
+      "coverage": "鸦湖村、大巷村、方石村、人和居委、岗尾下坑庄",
+      "area": "人和镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区人和镇第二小学",
+      "coverage": "西成村、东华村、矮岗村",
+      "area": "人和镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区六中实验小学 （北校区）",
+      "coverage": "福和雅苑安置区地段生",
+      "area": "人和镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区六中实验小学 （南校区）",
+      "coverage": "明星村、高增村",
+      "area": "人和镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区人和镇第五小学 （凤和校区）",
+      "coverage": "凤和村、太成村",
+      "area": "人和镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区人和镇第五小学 （太成校区）",
+      "coverage": "太成村、凤和村、穗和居委",
+      "area": "人和镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区人和镇第七小学",
+      "coverage": "横沥村、岗尾村",
+      "area": "人和镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区广州空港实验小学",
+      "coverage": "黄榜岭村、新联村、镇湖村、西湖村、建南村、清河村、南方村、蚌湖居委",
+      "area": "人和镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区人和镇第六小学",
+      "coverage": "秀水村、鹤亭村",
+      "area": "人和镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市第七十三中学小学部",
+      "coverage": "人和村",
+      "area": "人和镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区民航学校 （人和校区）",
+      "coverage": "南方安置区（民强村、新兴村）、清河村、南方村",
+      "area": "人和镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区人和镇第一小学（鸦湖校区）",
+      "coverage": "方石安置区（民强村、新兴村）、凤和安置区（矮岗村）",
+      "area": "人和镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区人和镇第二小学（建南校区）",
+      "coverage": "建南安置区（汉塘村、矮岗村）、黄榜岭村、新联村、镇湖村、西湖村、建南村、蚌湖居委",
+      "area": "人和镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区太和第一小学",
+      "coverage": "太和镇联升居委、和珊居委户籍居民子女，谢家庄村8社，13社户籍村民子女",
+      "area": "太和镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区石湖小学",
+      "coverage": "石湖村",
+      "area": "太和镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区大源小学",
+      "coverage": "大源村、（大源山庄小区、桐林别墅、江南世家、荔宛公寓等）人户一致的业主子女",
+      "area": "太和镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区太和第二小学",
+      "coverage": "米龙村、和龙村、白山村",
+      "area": "太和镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区穗丰学校",
+      "coverage": "穗丰村",
+      "area": "太和镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区头陂小学",
+      "coverage": "头陂村",
+      "area": "太和镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区沙亭岗小学",
+      "coverage": "沙亭岗村",
+      "area": "太和镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区谢家庄小学",
+      "coverage": "谢家庄村（8社、13社除外）",
+      "area": "太和镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区营溪小学",
+      "coverage": "白云区太和镇营溪村",
+      "area": "太和镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区大沥小学",
+      "coverage": "大沥村、田心村、草庄村",
+      "area": "太和镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区夏良小学",
+      "coverage": "夏良村、北村、柏塘村、龙归公路北、汇雅花园（人户一致）的业主子女",
+      "area": "太和镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区南村小学",
+      "coverage": "南村、龙归墟祥云大街（龙归居委）公路以西",
+      "area": "太和镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区南园小学",
+      "coverage": "南岭村、园夏村",
+      "area": "太和镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区永兴小学",
+      "coverage": "永兴村",
+      "area": "太和镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区龙归学校",
+      "coverage": "龙归城社区、东湖映月（人户一致的业主子女）",
+      "area": "太和镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区蓝山小学",
+      "coverage": "万科蓝山小区",
+      "area": "太和镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广东外语外贸大学实验中学 （小学部）",
+      "coverage": "沙亭岗新社区棚改项目环保搬迁业主子女、云麓花城小区业主子女（人户一致业主子女）",
+      "area": "太和镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区云翔学校",
+      "coverage": "白云区户籍",
+      "area": "太和镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区培英中学附属第二小学",
+      "coverage": "嘉瑾花园住宅小区业主子女（人户一致业主子女）",
+      "area": "太和镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区龙归学校 （珑璟校区）",
+      "coverage": "珑璟小区业主子女（人户一致业主子女）",
+      "area": "太和镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广东第二师范学院实验小学",
+      "coverage": "钟落潭居委、钟落潭村、五龙岗村1-2社；长沙埔村；黎家塘村",
+      "area": "钟落潭镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区蟠龙小学",
+      "coverage": "五龙岗村3-13社、障岗村、梅田村、白土村、 茅岗村、马沥村1-6社、马洞村、长腰岭村",
+      "area": "钟落潭镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区龙岗学校",
+      "coverage": "龙岗村、安平村",
+      "area": "钟落潭镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区新和学校",
+      "coverage": "新村村、登塘村、湴湖村、马沥村7-8社",
+      "area": "钟落潭镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区竹料第一小学",
+      "coverage": "竹一村、红旗村、竹料居委",
+      "area": "钟落潭镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区竹料第二小学",
+      "coverage": "竹二村、竹三村",
+      "area": "钟落潭镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区竹料第三小学",
+      "coverage": "寮采村、米岗村、雄伟村",
+      "area": "钟落潭镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区竹料第四小学",
+      "coverage": "大纲领村、乌溪村、东凤村、中和墟（户籍属竹料派出所）",
+      "area": "钟落潭镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区竹料第五小学",
+      "coverage": "龙塘村、虎塘村、大罗村、小罗村",
+      "area": "钟落潭镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区良田第一小学",
+      "coverage": "沙田居委、沙田村、华坑村、陈洞村、光明村（4社千家围除外）",
+      "area": "钟落潭镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区良田第二小学",
+      "coverage": "良田村、光明村4社（千家围）、良城居委",
+      "area": "钟落潭镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区良田第三小学",
+      "coverage": "白沙村、金盆村",
+      "area": "钟落潭镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区星悦实验学校",
+      "coverage": "星汇城",
+      "area": "钟落潭镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区贤丰第二实验小学",
+      "coverage": "36227323",
+      "area": "新市片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区贤丰实验小学",
+      "coverage": "86345387",
+      "area": "新市片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区金源小学",
+      "coverage": "36192602",
+      "area": "新市片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区龙溪小学",
+      "coverage": "62645360",
+      "area": "新市片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区新园小学",
+      "coverage": "36226103",
+      "area": "新市片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区春蕾小学",
+      "coverage": "020-86645917",
+      "area": "新市片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区龙江小学",
+      "coverage": "66264218",
+      "area": "新市片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区公度小学",
+      "coverage": "17701940938",
+      "area": "新市片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区新纪元小学",
+      "coverage": "15011871946",
+      "area": "石井片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区同心小学",
+      "coverage": "020-86285030",
+      "area": "石井片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区新正小学",
+      "coverage": "81769995",
+      "area": "石井片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区龙德小学",
+      "coverage": "2086534277",
+      "area": "石井片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区新苗小学",
+      "coverage": "81995778/81995783",
+      "area": "石井片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区江南明珠小学",
+      "coverage": "020-81602447",
+      "area": "石井片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区元培实验小学",
+      "coverage": "（020）61726099",
+      "area": "石井片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区白云实验学校",
+      "coverage": "020-36686668",
+      "area": "石井片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区云雅实验学校",
+      "coverage": "38563050",
+      "area": "石井片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区广云外国语学校小学",
+      "coverage": "18138771666",
+      "area": "石井片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区白云实验附属小学",
+      "coverage": "020-36686668",
+      "area": "石井片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区嘉禾新都学校",
+      "coverage": "86090337",
+      "area": "永平片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区京师实验学校",
+      "coverage": "36630213",
+      "area": "永平片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区育贤小学",
+      "coverage": "020-86099526",
+      "area": "永平片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区方正实验小学",
+      "coverage": "020-31521340",
+      "area": "永平片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区华龙小学",
+      "coverage": "18902404835",
+      "area": "永平片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区金晖小学",
+      "coverage": "020-35620243 020-35620346",
+      "area": "永平片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区广辉小学",
+      "coverage": "020-37243495 13533158506",
+      "area": "永平片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区平安小学",
+      "coverage": "66821088",
+      "area": "永平片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区龙嘉小学",
+      "coverage": "020-86327380",
+      "area": "永平片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区锦阳小学",
+      "coverage": "020-86029661",
+      "area": "永平片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区小太阳小学",
+      "coverage": "36088336",
+      "area": "永平片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区元下田小学",
+      "coverage": "02061788602 02061788603",
+      "area": "永平片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区金龙小学",
+      "coverage": "020-36458950",
+      "area": "永平片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区华丰小学",
+      "coverage": "020-86298752",
+      "area": "永平片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区国泰小学",
+      "coverage": "15920429408",
+      "area": "永平片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区东方小学",
+      "coverage": "020-86312703",
+      "area": "永平片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区新都小学",
+      "coverage": "（020）37380946",
+      "area": "永平片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区启明小学",
+      "coverage": "020-37385665",
+      "area": "永平片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区金华小学",
+      "coverage": "020-87062787",
+      "area": "永平片",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区长江小学",
+      "coverage": "86206798",
+      "area": "江高镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区英才小学",
+      "coverage": "86604728",
+      "area": "江高镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区博海小学",
+      "coverage": "020-86611649",
+      "area": "江高镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区文星小学",
+      "coverage": "36374206",
+      "area": "江高镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区广州培文外国语学校(小学部）",
+      "coverage": "020-86628118",
+      "area": "江高镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区东辉小学",
+      "coverage": "36021546",
+      "area": "人和镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区才子小学",
+      "coverage": "18922267203",
+      "area": "人和镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区锦华小学",
+      "coverage": "36540209",
+      "area": "人和镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区龙涛外国语实验小学",
+      "coverage": "18011878073",
+      "area": "人和镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市龙外实验学校",
+      "coverage": "18011878073",
+      "area": "人和镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区金星小学",
+      "coverage": "87430460",
+      "area": "太和镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区天宏小学",
+      "coverage": "87431171",
+      "area": "太和镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区为民小学",
+      "coverage": "36527338",
+      "area": "太和镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区嘉龙小学",
+      "coverage": "86049997",
+      "area": "太和镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区龙兴小学",
+      "coverage": "87432468 87479051",
+      "area": "太和镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区华赋学校",
+      "coverage": "13119508831 13160878831",
+      "area": "太和镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区茶山小学",
+      "coverage": "36505045",
+      "area": "太和镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市源雅学校（小学部）",
+      "coverage": "36077833",
+      "area": "太和镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区嘉美小学",
+      "coverage": "020-37420362",
+      "area": "钟落潭镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州市白云区东润小学",
+      "coverage": "18148783520",
+      "area": "钟落潭镇",
+      "sourceConfidence": "official-xlsx"
+    },
+    {
+      "school": "广州华联外语实验学校",
+      "coverage": "020-87060820",
+      "area": "永平片",
+      "sourceConfidence": "official-xlsx"
+    }
+  ],
+  "middleGroups": {
+    "direct": [
+      {
+        "group": "广州市广园中学",
+        "primaryScope": "广园小学、景泰小学，培英附小部分户籍生（摇号产生）",
+        "middleSchools": "广州市广园中学",
+        "area": "新市片",
+        "sourceConfidence": "official-xlsx"
+      },
+      {
+        "group": "广州市白云中学 （汇侨校区）",
+        "primaryScope": "汇侨第一小学",
+        "middleSchools": "广州市白云中学 （汇侨校区）",
+        "area": "新市片",
+        "sourceConfidence": "official-xlsx"
+      },
+      {
+        "group": "广州市白云中学 （棠景校区）",
+        "primaryScope": "广州市白云中学棠景校区小学部",
+        "middleSchools": "广州市白云中学 （棠景校区）",
+        "area": "新市片",
+        "sourceConfidence": "official-xlsx"
+      },
+      {
+        "group": "广州市三元里中学",
+        "primaryScope": "三元里小学（不含北校区）、羊城铁路总公司广州铁路第五小学",
+        "middleSchools": "广州市三元里中学",
+        "area": "新市片",
+        "sourceConfidence": "official-xlsx"
+      },
+      {
+        "group": "广州市白云区民航学校",
+        "primaryScope": "民航学校（小学部），培英附小部分户籍生（摇号产生）",
+        "middleSchools": "广州市白云区民航学校",
+        "area": "新市片",
+        "sourceConfidence": "official-xlsx"
+      },
+      {
+        "group": "广州市白云区新市中学",
+        "primaryScope": "萧岗小学、棠涌小学、白云中学附属小学",
+        "middleSchools": "广州市白云区新市中学",
+        "area": "新市片",
+        "sourceConfidence": "official-xlsx"
+      },
+      {
+        "group": "广州市白云区景泰中学",
+        "primaryScope": "景泰小学（柯子岭地段人户一致地段生），培英附小部分户籍生（摇号产生）",
+        "middleSchools": "广州市白云区景泰中学",
+        "area": "新市片",
+        "sourceConfidence": "official-xlsx"
+      },
+      {
+        "group": "广州市白云区梓元岗中学",
+        "primaryScope": "金桂园小学（广州户籍生）、梓元岗、走马岗地段人户一致地段生。",
+        "middleSchools": "广州市白云区梓元岗中学",
+        "area": "新市片",
+        "sourceConfidence": "official-xlsx"
+      },
+      {
+        "group": "广州市第六十七中学",
+        "primaryScope": "棠溪小学、远景小学、机场西小学（广州户籍生）、三元里小学北校区",
+        "middleSchools": "广州市第六十七中学",
+        "area": "新市片",
+        "sourceConfidence": "official-xlsx"
+      },
+      {
+        "group": "广州市白云区黄石学校",
+        "primaryScope": "江夏小学、马务小学、黄石学校（小学部）、方圆实验小学（地段生）",
+        "middleSchools": "广州市白云区黄石学校",
+        "area": "新市片",
+        "sourceConfidence": "official-xlsx"
+      },
+      {
+        "group": "广州市白云区白云外国语中学",
+        "primaryScope": "广州市白云区白云外国语小学",
+        "middleSchools": "广州市白云区白云外国语中学",
+        "area": "新市片",
+        "sourceConfidence": "official-xlsx"
+      },
+      {
+        "group": "广东外语外贸大学实验中学（陈田西校区）",
+        "primaryScope": "广东外语外贸大学实验中学（陈田西校区小学部）、广州市花城实验学校（普通生）",
+        "middleSchools": "广东外语外贸大学实验中学（陈田西校区）",
+        "area": "新市片",
+        "sourceConfidence": "official-xlsx"
+      },
+      {
+        "group": "广州市白云区大朗中学",
+        "primaryScope": "大朗小学、龙湖小学、唐阁小学",
+        "middleSchools": "广州市白云区大朗中学",
+        "area": "石井片",
+        "sourceConfidence": "official-xlsx"
+      },
+      {
+        "group": "广州市第一一四中学",
+        "primaryScope": "鸦岗小学、红星小学、朝阳小学、滘心小学、庆丰实验学校（庆丰、兴隆围地段学生）",
+        "middleSchools": "广州市第一一四中学",
+        "area": "石井片",
+        "sourceConfidence": "official-xlsx"
+      },
+      {
+        "group": "广州彭加木纪念中学",
+        "primaryScope": "螺涌小学、松溪小学、槎龙小学、65中附小（除地段生外的广州市户籍学生）",
+        "middleSchools": "广州彭加木纪念中学",
+        "area": "石井片",
+        "sourceConfidence": "official-xlsx"
+      },
+      {
+        "group": "广州市第六十五中学 （桃园校区）",
+        "primaryScope": "65中附属小学（地段生），桃园小学",
+        "middleSchools": "广州市第六十五中学 （桃园校区）",
+        "area": "石井片",
+        "sourceConfidence": "official-xlsx"
+      },
+      {
+        "group": "广州市第六十五中学 （明德校区、同德校区）",
+        "primaryScope": "明德校区：明德小学（本部）、同德小学、岭南花园小学（地段生）、65附小分校区（地段生） 同德校区：明德小学富康校区",
+        "middleSchools": "广州市第六十五中学 （明德校区、同德校区）",
+        "area": "石井片",
+        "sourceConfidence": "official-xlsx"
+      },
+      {
+        "group": "广州市白云区石井中学",
+        "primaryScope": "张村小学、大岡小学、潭岗小学、金碧小学（地段生），庆丰实验学校新庄地段学生",
+        "middleSchools": "广州市白云区石井中学",
+        "area": "石井片",
+        "sourceConfidence": "official-xlsx"
+      },
+      {
+        "group": "广州市白云区景泰中学分校区（原广州市白云区南悦中学）",
+        "primaryScope": "夏茅小学、环滘小学",
+        "middleSchools": "广州市白云区景泰中学分校区（原广州市白云区南悦中学）",
+        "area": "石井片",
+        "sourceConfidence": "official-xlsx"
+      },
+      {
+        "group": "广州市白云区广大附中实验中学",
+        "primaryScope": "金沙小学、横沙小学、沙凤小学、金广实验学校、金沙二小",
+        "middleSchools": "广州市白云区广大附中实验中学",
+        "area": "石井片",
+        "sourceConfidence": "official-xlsx"
+      },
+      {
+        "group": "广州市白云区白云广附云湖实验学校",
+        "primaryScope": "广州市白云区白云广附云湖实验学校小学部",
+        "middleSchools": "广州市白云区白云广附云湖实验学校",
+        "area": "石井片",
+        "sourceConfidence": "official-xlsx"
+      },
+      {
+        "group": "广州市培英中学 （科技城校区）",
+        "primaryScope": "广州市白云区培英中学附属科技城小学",
+        "middleSchools": "广州市培英中学 （科技城校区）",
+        "area": "石井片",
+        "sourceConfidence": "official-xlsx"
+      },
+      {
+        "group": "广州市白云区同和中学",
+        "primaryScope": "京溪小学、同和小学、握山小学、广大附中实验小学、中黄外国语小学(地段生和符合条件的统筹生）、永泰小学、新兴白云小学、颐和实验小学(地段生和符合条件的统筹生）",
+        "middleSchools": "广州市白云区同和中学",
+        "area": "永平片",
+        "sourceConfidence": "official-xlsx"
+      },
+      {
+        "group": "广州市白云区培英实验学校（同和校区）",
+        "primaryScope": "京溪小学、同和小学、握山小学、广大附中实验小学、中黄外国语小学（地段生）",
+        "middleSchools": "广州市白云区培英实验学校（同和校区）",
+        "area": "永平片",
+        "sourceConfidence": "official-xlsx"
+      },
+      {
+        "group": "广州市铁一中学 （白云校区）",
+        "primaryScope": "长红小学、新科小学、石马小学、平沙小学、清湖小学、罗岗村小学",
+        "middleSchools": "广州市铁一中学 （白云校区）",
+        "area": "永平片",
+        "sourceConfidence": "official-xlsx"
+      },
+      {
+        "group": "广州市白云区嘉禾中学",
+        "primaryScope": "黄边小学、加禾小学、望岗小学、鹤边镇泰小学、永泰小学、新兴白云小学、颐和实验小学(地段生和符合条件的统筹生）",
+        "middleSchools": "广州市白云区嘉禾中学",
+        "area": "永平片",
+        "sourceConfidence": "official-xlsx"
+      },
+      {
+        "group": "广州市白云区平沙培英学校",
+        "primaryScope": "平沙培英学校（小学部）",
+        "middleSchools": "广州市白云区平沙培英学校",
+        "area": "永平片",
+        "sourceConfidence": "official-xlsx"
+      },
+      {
+        "group": "广州市培英中学（岭南校区）",
+        "primaryScope": "华师附小(地段生和符合条件的统筹生）、集贤小学",
+        "middleSchools": "广州市培英中学（岭南校区）",
+        "area": "永平片",
+        "sourceConfidence": "official-xlsx"
+      },
+      {
+        "group": "广州市白云区培英实验学校（云景校区）",
+        "primaryScope": "云英实验学校（小学部）",
+        "middleSchools": "广州市白云区培英实验学校（云景校区）",
+        "area": "永平片",
+        "sourceConfidence": "official-xlsx"
+      },
+      {
+        "group": "广州市白云区东平学校",
+        "primaryScope": "东平学校小学部、培英中学附属第三小学",
+        "middleSchools": "广州市白云区东平学校",
+        "area": "永平片",
+        "sourceConfidence": "official-xlsx"
+      },
+      {
+        "group": "广东实验中学 （白云校区）",
+        "primaryScope": "详见已印发方案",
+        "middleSchools": "广东实验中学 （白云校区）",
+        "area": "永平片",
+        "sourceConfidence": "official-xlsx"
+      },
+      {
+        "group": "广州市白云区颜乐天纪念中学",
+        "primaryScope": "长红小学、新科小学、石马小学、平沙小学、清湖小学、罗岗村小学",
+        "middleSchools": "广州市白云区颜乐天纪念中学",
+        "area": "永平片",
+        "sourceConfidence": "official-xlsx"
+      },
+      {
+        "group": "广州市培英中学（鹤洞校区）",
+        "primaryScope": "高水平运动队员、政策性照顾学生等符合条件的适龄儿童",
+        "middleSchools": "广州市培英中学（鹤洞校区）",
+        "area": "永平片",
+        "sourceConfidence": "official-xlsx"
+      },
+      {
+        "group": "广州市白云区江高镇第二初级中学",
+        "primaryScope": "江高镇中心小学、蓼江小学、茅山小学、大田小学、小塘小学",
+        "middleSchools": "广州市白云区江高镇第二初级中学",
+        "area": "江高镇",
+        "sourceConfidence": "official-xlsx"
+      },
+      {
+        "group": "广州市白云区江村中学",
+        "primaryScope": "江高镇中心小学、江村小学",
+        "middleSchools": "广州市白云区江村中学",
+        "area": "江高镇",
+        "sourceConfidence": "official-xlsx"
+      },
+      {
+        "group": "广州市白云区神山中学",
+        "primaryScope": "神山一小、神山二小、大岭小学、郭塘小学",
+        "middleSchools": "广州市白云区神山中学",
+        "area": "江高镇",
+        "sourceConfidence": "official-xlsx"
+      },
+      {
+        "group": "广州市白云区石龙中学",
+        "primaryScope": "神山三小、神山五小、石华小学、沙龙小学、郭塘小学",
+        "middleSchools": "广州市白云区石龙中学",
+        "area": "江高镇",
+        "sourceConfidence": "official-xlsx"
+      },
+      {
+        "group": "广州市六十五中学 （江府校区）",
+        "primaryScope": "水沥小学、双岗小学、新楼小学、广铁八小、江村小学（塘贝户籍）",
+        "middleSchools": "广州市六十五中学 （江府校区）",
+        "area": "江高镇",
+        "sourceConfidence": "official-xlsx"
+      },
+      {
+        "group": "广州市白云区广州空港实验中学（东校区）",
+        "primaryScope": "白云区人和镇第一小学、白云区人和镇第六小学、73中小学部",
+        "middleSchools": "广州市白云区广州空港实验中学（东校区）",
+        "area": "人和镇",
+        "sourceConfidence": "official-xlsx"
+      },
+      {
+        "group": "广州市白云区广州空港实验中学（西校区）",
+        "primaryScope": "广州市白云区广州空港实验小学（总校区、北校区）、广州市白云区六中实验小学南校区（除民强村、新兴村外） 人和镇第二小学（建南校区）、广州市白云区六中实验小学北校区（汉塘村、明星村）",
+        "middleSchools": "广州市白云区广州空港实验中学（西校区）",
+        "area": "人和镇",
+        "sourceConfidence": "official-xlsx"
+      },
+      {
+        "group": "广州市白云区广州空港实验中学（本部）",
+        "primaryScope": "白云区人和镇第一小学、白云区人和镇第六小学",
+        "middleSchools": "广州市白云区广州空港实验中学（本部）",
+        "area": "人和镇",
+        "sourceConfidence": "official-xlsx"
+      },
+      {
+        "group": "广州市白云区六中实验中学（空港校区）",
+        "primaryScope": "白云区人和镇第二小学、白云区人和镇第五小学、白云区人和镇第七小学、广州市白云区六中实验小学北校区（除汉塘村、民强村、新兴村、明星村、福和雅苑安置区外）",
+        "middleSchools": "广州市白云区六中实验中学（空港校区）",
+        "area": "人和镇",
+        "sourceConfidence": "official-xlsx"
+      },
+      {
+        "group": "广州市白云区六中实验中学（福和校区）",
+        "primaryScope": "广州市白云区六中实验小学福和雅苑安置区地段生",
+        "middleSchools": "广州市白云区六中实验中学（福和校区）",
+        "area": "人和镇",
+        "sourceConfidence": "official-xlsx"
+      },
+      {
+        "group": "广州市白云区民航学校 （人和校区）",
+        "primaryScope": "广州市白云区民航学校（人和校区）小学部、 空港实验小学南校区、六中实验小学（民强村、新兴村）",
+        "middleSchools": "广州市白云区民航学校 （人和校区）",
+        "area": "人和镇",
+        "sourceConfidence": "official-xlsx"
+      },
+      {
+        "group": "广州市第一一五中学",
+        "primaryScope": "（太和镇第一小学、太和镇第二小学、谢家庄小学、头陂小学、营溪小学、大源小学、大沥小学、沙亭岗小学、石湖小学）部分毕业生，蓝山小学（部分地段生）",
+        "middleSchools": "广州市第一一五中学",
+        "area": "太和镇",
+        "sourceConfidence": "official-xlsx"
+      },
+      {
+        "group": "广州市白云区穗丰学校",
+        "primaryScope": "穗丰学校小学部",
+        "middleSchools": "广州市白云区穗丰学校",
+        "area": "太和镇",
+        "sourceConfidence": "official-xlsx"
+      },
+      {
+        "group": "广州市白云区太和中学",
+        "primaryScope": "（太和镇第一小学、太和镇第二小学、谢家庄小学、头陂小学、营溪小学、大源小学、大沥小学、沙亭岗小学、石湖小学）部分毕业生，蓝山小学（部分地段生）",
+        "middleSchools": "广州市白云区太和中学",
+        "area": "太和镇",
+        "sourceConfidence": "official-xlsx"
+      },
+      {
+        "group": "广州市第七十中学",
+        "primaryScope": "夏良小学、南村小学、南园小学",
+        "middleSchools": "广州市第七十中学",
+        "area": "太和镇",
+        "sourceConfidence": "official-xlsx"
+      },
+      {
+        "group": "广州市白云区龙归学校",
+        "primaryScope": "永兴小学、龙归学校小学部",
+        "middleSchools": "广州市白云区龙归学校",
+        "area": "太和镇",
+        "sourceConfidence": "official-xlsx"
+      },
+      {
+        "group": "广东外语外贸大学实验中学",
+        "primaryScope": "广东外语外贸大学实验中学小学部",
+        "middleSchools": "广东外语外贸大学实验中学",
+        "area": "太和镇",
+        "sourceConfidence": "official-xlsx"
+      },
+      {
+        "group": "广州市白云区云翔学校",
+        "primaryScope": "白云区户籍",
+        "middleSchools": "广州市白云区云翔学校",
+        "area": "太和镇",
+        "sourceConfidence": "official-xlsx"
+      },
+      {
+        "group": "广州市白云区龙归学校 （珑璟校区）",
+        "primaryScope": "广州市白云区龙归学校（珑璟校区）小学部",
+        "middleSchools": "广州市白云区龙归学校 （珑璟校区）",
+        "area": "太和镇（新增）",
+        "sourceConfidence": "official-xlsx"
+      },
+      {
+        "group": "广东第二师范学院实验中学",
+        "primaryScope": "广东第二师范学院实验小学、蟠龙小学",
+        "middleSchools": "广东第二师范学院实验中学",
+        "area": "钟落潭镇",
+        "sourceConfidence": "official-xlsx"
+      },
+      {
+        "group": "广州市白云区龙岗学校",
+        "primaryScope": "龙岗学校小学部",
+        "middleSchools": "广州市白云区龙岗学校",
+        "area": "钟落潭镇",
+        "sourceConfidence": "official-xlsx"
+      },
+      {
+        "group": "广州市白云区新和学校",
+        "primaryScope": "新和学校小学部",
+        "middleSchools": "广州市白云区新和学校",
+        "area": "钟落潭镇",
+        "sourceConfidence": "official-xlsx"
+      },
+      {
+        "group": "广州市白云区竹料第一中学",
+        "primaryScope": "南校区：竹料一小、竹料二小、竹料四小 北校区：竹料一小、竹料三小",
+        "middleSchools": "广州市白云区竹料第一中学",
+        "area": "钟落潭镇",
+        "sourceConfidence": "official-xlsx"
+      },
+      {
+        "group": "广州市白云区竹料第三中学",
+        "primaryScope": "竹料四小、竹料五小",
+        "middleSchools": "广州市白云区竹料第三中学",
+        "area": "钟落潭镇",
+        "sourceConfidence": "official-xlsx"
+      },
+      {
+        "group": "广州大同中学",
+        "primaryScope": "良田一小、良田二小、良田三小",
+        "middleSchools": "广州大同中学",
+        "area": "钟落潭镇",
+        "sourceConfidence": "official-xlsx"
+      },
+      {
+        "group": "广州市白云区星悦实验学校",
+        "primaryScope": "星悦实验学校小学部",
+        "middleSchools": "广州市白云区星悦实验学校",
+        "area": "钟落潭镇",
+        "sourceConfidence": "official-xlsx"
+      },
+      {
+        "group": "广州市白云区龙江中学",
+        "primaryScope": "18300618526",
+        "middleSchools": "广州市白云区龙江中学",
+        "area": "新市片",
+        "sourceConfidence": "official-xlsx"
+      },
+      {
+        "group": "广州市庆丰实验学校",
+        "primaryScope": "020-86023067",
+        "middleSchools": "广州市庆丰实验学校",
+        "area": "石井片",
+        "sourceConfidence": "official-xlsx"
+      },
+      {
+        "group": "广州市白云区元培实验中学（原广州市白云区嘉福中学）",
+        "primaryScope": "（020）61726099",
+        "middleSchools": "广州市白云区元培实验中学（原广州市白云区嘉福中学）",
+        "area": "石井片",
+        "sourceConfidence": "official-xlsx"
+      },
+      {
+        "group": "广州市白云区云雅实验学校",
+        "primaryScope": "38563000",
+        "middleSchools": "广州市白云区云雅实验学校",
+        "area": "石井片",
+        "sourceConfidence": "official-xlsx"
+      },
+      {
+        "group": "广州市白云区白云实验学校",
+        "primaryScope": "020-36686668",
+        "middleSchools": "广州市白云区白云实验学校",
+        "area": "石井片",
+        "sourceConfidence": "official-xlsx"
+      },
+      {
+        "group": "广州市白云广云外国语学校（初中部）",
+        "primaryScope": "18138771666",
+        "middleSchools": "广州市白云广云外国语学校（初中部）",
+        "area": "石井片",
+        "sourceConfidence": "official-xlsx"
+      },
+      {
+        "group": "广州市白云区华新学校",
+        "primaryScope": "61118839",
+        "middleSchools": "广州市白云区华新学校",
+        "area": "永平片",
+        "sourceConfidence": "official-xlsx"
+      },
+      {
+        "group": "广州市白云区珠江实验学校",
+        "primaryScope": "31215629",
+        "middleSchools": "广州市白云区珠江实验学校",
+        "area": "永平片",
+        "sourceConfidence": "official-xlsx"
+      },
+      {
+        "group": "广州市白云区嘉禾新都学校",
+        "primaryScope": "86090337",
+        "middleSchools": "广州市白云区嘉禾新都学校",
+        "area": "永平片",
+        "sourceConfidence": "official-xlsx"
+      },
+      {
+        "group": "广州市实验外语学校",
+        "primaryScope": "020-36209730",
+        "middleSchools": "广州市实验外语学校",
+        "area": "永平片",
+        "sourceConfidence": "official-xlsx"
+      },
+      {
+        "group": "广州市白云区京师实验学校",
+        "primaryScope": "36630213",
+        "middleSchools": "广州市白云区京师实验学校",
+        "area": "永平片",
+        "sourceConfidence": "official-xlsx"
+      },
+      {
+        "group": "广州市白云区应元颐和实验学校",
+        "primaryScope": "36608818",
+        "middleSchools": "广州市白云区应元颐和实验学校",
+        "area": "永平片",
+        "sourceConfidence": "official-xlsx"
+      },
+      {
+        "group": "广州市白云区珠江中学",
+        "primaryScope": "020-36035695",
+        "middleSchools": "广州市白云区珠江中学",
+        "area": "江高镇",
+        "sourceConfidence": "official-xlsx"
+      },
+      {
+        "group": "广州市白云区广州培文外国语学校（初中部）",
+        "primaryScope": "020-8662 8228",
+        "middleSchools": "广州市白云区广州培文外国语学校（初中部）",
+        "area": "江高镇",
+        "sourceConfidence": "official-xlsx"
+      },
+      {
+        "group": "广州市龙外实验学校",
+        "primaryScope": "18026420111",
+        "middleSchools": "广州市龙外实验学校",
+        "area": "人和镇",
+        "sourceConfidence": "official-xlsx"
+      },
+      {
+        "group": "广州市白云区珠江实验学校分校区",
+        "primaryScope": "36799662",
+        "middleSchools": "广州市白云区珠江实验学校分校区",
+        "area": "人和镇",
+        "sourceConfidence": "official-xlsx"
+      },
+      {
+        "group": "广州市白云区华赋学校",
+        "primaryScope": "13119508831 13160878831",
+        "middleSchools": "广州市白云区华赋学校",
+        "area": "太和镇",
+        "sourceConfidence": "official-xlsx"
+      },
+      {
+        "group": "广州市源雅学校（初中部）",
+        "primaryScope": "36077833",
+        "middleSchools": "广州市源雅学校（初中部）",
+        "area": "太和镇",
+        "sourceConfidence": "official-xlsx"
+      },
+      {
+        "group": "广州市白云区成龙中学",
+        "primaryScope": "87405800",
+        "middleSchools": "广州市白云区成龙中学",
+        "area": "钟落潭镇",
+        "sourceConfidence": "official-xlsx"
+      },
+      {
+        "group": "广州华联外语实验学校",
+        "primaryScope": "020-87060820",
+        "middleSchools": "广州华联外语实验学校",
+        "area": "永平片",
+        "sourceConfidence": "official-xlsx"
+      }
+    ],
+    "lottery": []
+  },
+  "notes": [
+    "已接入白云区政府门户2026年公办小学、初中招生计划表中的招生服务地段/对口小学字段。",
+    "白云区部分学校由教育指导中心按学位预警和当年报名情况统筹，结果仍以当年核验为准。",
+    "学校名次为非官方估值；招生表中的学校代码、电话和计划不参与评分。"
+  ]
+}
