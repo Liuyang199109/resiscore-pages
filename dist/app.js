@@ -317,7 +317,7 @@ const CITY_CATALOG = [
   { id: 'hangzhou', name: '杭州', subtitle: '新一线城市 · 需要下载数据' },
   { id: 'chengdu', name: '成都', subtitle: '新一线城市 · 需要下载数据' }
 ];
-const CITY_DATA_PACKS = ['交通路网与站点', 'CBD 与通勤基准', '广州 11 区招生来源索引（黄埔、荔湾、花都、南沙已标准化）', '广州公开小区均价包（估算）', '多来源小区证据与聚合索引', '商业医疗与公园', '小区品质与物业', '广州11区公开规划代理包（未来潜力）', '社区级离线评分索引'];
+const CITY_DATA_PACKS = ['统一小区登记层', '交通路网与站点', 'CBD 与通勤基准', '公开招生来源索引', '公开小区均价包（估算）', '多来源小区证据与聚合索引', '商业医疗与公园', '小区品质与物业', '公开区域规划代理包（未来潜力）', '社区级离线评分索引'];
 // These keys are retained only so the one-time startup migration can remove
 // implicit overrides written by older builds. New manual edits live in memory
 // until the explicit post-save consent writes the confirmed layer below.
@@ -361,12 +361,17 @@ let cityDataRefreshPromise = null;
 const state = {
   property: '大壮名城',
   cityId: 'guangzhou',
-  transportData: null,
-  amenityData: null,
-  priceData: null,
-  communityQualityData: null,
-  futureData: null,
+  // The published Guangzhou bundles are available synchronously so the
+  // first search is not evaluated against an empty data window.  The async
+  // loaders below still probe the remote/local versions and replace these
+  // snapshots when a newer package is available.
+  transportData: globalThis.RESISCORE_BUNDLED_TRANSPORT?.guangzhou || null,
+  amenityData: globalThis.RESISCORE_BUNDLED_AMENITIES?.guangzhou || null,
+  priceData: globalThis.RESISCORE_BUNDLED_PRICE_DATA || null,
+  communityQualityData: globalThis.RESISCORE_BUNDLED_QUALITY_DATA || null,
+  futureData: globalThis.RESISCORE_BUNDLED_FUTURE_DATA || null,
   multiSourceData: null,
+  communityRegistryData: globalThis.RESISCORE_BUNDLED_COMMUNITY_REGISTRY || null,
   amenityLookup: { query: '', match: null, error: '' },
   schoolDistrictData: null,
   schoolDistrictManifest: null,
@@ -381,6 +386,7 @@ const state = {
   // Every city/data load gets a generation token. A slower response from a
   // previous city must never overwrite the currently selected city's score.
   dataLoadToken: 0,
+  initialDataReady: false,
   missingPromptProperty: '',
   // When a saved/compare snapshot is loaded, keep its origin so “保存结果”
   // can ask whether to replace that historical record or create a copy.
@@ -1053,13 +1059,15 @@ function applyTransportLookup(query = state.property) {
     const key = `${state.cityId}:${transportPropertyKey(query)}:${normalizePlaceName(route.stationName || route.station || '')}`;
     return overrides[key] ? { ...route, ...overrides[key] } : route;
   });
-  factor.transportLookup = { query, match, source: routeSource, error: '' };
+  const dataScope = phaseDataScopeLabel(match);
+  factor.transportLookup = { query, match, source: routeSource, dataScope: match.fallbackScope || 'community-route', fallbackFromName: match.fallbackFromName || '', error: '' };
   const assessment = transportAssessment(factor);
-  const routeEvidenceText = routeSource.includes('parent-project')
+  const baseRouteEvidenceText = routeSource.includes('parent-project')
     ? `父项目整体数据回退（${fallbackFromName || '父项目'}）`
     : routeSource === 'coordinate-estimate'
     ? '坐标估算，1个路网来源，需进一步确认'
     : '路线包记录，需进一步确认';
+  const routeEvidenceText = [baseRouteEvidenceText, dataScope].filter(Boolean).join(' · ');
   factor.subscores[0].current = assessment?.ready ? `${assessment.candidates.map((route) => `${route.stationName || route.station || '地铁站'} ${formatNumber(route.walkDistanceM)}m${route.distanceQuality === 'estimated' ? '（估算）' : ''}`).join('；')} · ${routeEvidenceText}` : '待补充路线';
   factor.subscores[1].current = assessment?.ready ? `${assessment.estimatedCount ? `含 ${assessment.estimatedCount} 条估算路线` : '已核验路线'} · ${routeEvidenceText}` : '待补充路线';
 }
@@ -1088,34 +1096,70 @@ function findResidentialMatch(data, query) {
       ...communityQueryCandidates(query)
     ])];
   }
+  // 先读取统一登记层。登记层负责实体身份、坐标和行政区；如果评分维度包
+  // 已有同名记录，则把登记层元数据合并进去，避免住宅目录的早返回路径丢失
+  // registryStatus / dimensionStatus / district 等审计信息。
+  const registry = state.cityId === 'guangzhou' && Array.isArray(state.communityRegistryData?.records)
+    ? state.communityRegistryData.records : [];
+  const registryMatches = findCommunityNamedRecords(registry, query);
+  const registryMatch = registryMatches.find((record) => record?.phase || record?.phaseLabel || record?.parentName) || registryMatches[0];
   const phaseRecord = findCommunityPhaseRecord(query);
   const hasCoordinates = (record) => Number.isFinite(Number(record?.latitude)) && Number.isFinite(Number(record?.longitude));
   if (phaseRecord) {
     // 先把分期坐标作为基线，再叠加同一期住宅目录字段。
     if (residentialMatch) {
-      const merged = mergeCommunityRecords(phaseRecord, residentialMatch);
+      const merged = mergeCommunityRecords(phaseRecord, residentialMatch, registryMatch || {});
       Object.assign(merged, {
         name: phaseRecord.name,
         parentName: phaseRecord.parentName,
         phase: phaseRecord.phase,
         phaseLabel: phaseRecord.phaseLabel,
-        aliases: [...new Set([...(phaseRecord.aliases || []), ...(residentialMatch.aliases || [])])]
+        aliases: [...new Set([...(phaseRecord.aliases || []), ...(residentialMatch.aliases || []), ...(registryMatch?.aliases || [])])]
       });
       return hasCoordinates(merged) ? merged : null;
     }
-    if (hasCoordinates(phaseRecord)) return phaseRecord;
+    if (hasCoordinates(phaseRecord)) {
+      const merged = registryMatch ? mergeCommunityRecords(phaseRecord, registryMatch) : phaseRecord;
+      return hasCoordinates(merged) ? merged : null;
+    }
   }
-  if (residentialMatch && hasCoordinates(residentialMatch)) return residentialMatch;
+  if (residentialMatch && hasCoordinates(residentialMatch)) {
+    if (!registryMatch) return residentialMatch;
+    const merged = mergeCommunityRecords(registryMatch, residentialMatch);
+    Object.assign(merged, {
+      name: communityCanonicalName(query),
+      aliases: [...new Set([...(registryMatch.aliases || []), ...(residentialMatch.aliases || []), ...communityQueryCandidates(query)])],
+      fallbackScope: registryMatch.registryStatus === 'candidate' ? 'registry-candidate' : 'community-registry',
+      fallbackFromName: '',
+      fallbackReason: '使用统一小区登记层坐标计算交通、CBD和生活配套'
+    });
+    return merged;
+  }
   // 住宅目录基线覆盖范围比生活配套住宅索引更广；当生活配套包暂未登记名称时，
   // 仍使用同一小区的公开坐标计算 CBD、交通和附近点位，并保留来源为公开目录。
   const baseline = Array.isArray(state.communityQualityData?.records) ? state.communityQualityData.records : [];
   const baselineMatch = findCommunityNamedRecords(baseline, query)[0];
   if (hasCoordinates(baselineMatch)) return baselineMatch;
 
+  // The registry is intentionally broader than the quality/price baselines.
+  // Newly discovered communities can participate in coordinate-based
+  // dimensions immediately while their individual raw fields are enriched.
+  if (hasCoordinates(registryMatch)) {
+    return {
+      ...registryMatch,
+      name: communityCanonicalName(query),
+      aliases: [...new Set([...(registryMatch.aliases || []), ...communityQueryCandidates(query)])],
+      fallbackScope: registryMatch.registryStatus === 'candidate' ? 'registry-candidate' : 'community-registry',
+      fallbackFromName: '',
+      fallbackReason: '使用统一小区登记层坐标计算交通、CBD和生活配套'
+    };
+  }
+
   // 分期没有独立坐标时，按用户确认的原则回退到父项目坐标；
   // 只回退父项目，绝不拿其他期坐标代替。
   if (communityPhaseLabel(query)) {
-    const parent = findCommunityParentRecord(residential, query) || findCommunityParentRecord(baseline, query);
+    const parentRecords = [...residential, ...baseline, ...registry];
+    const parent = findCommunityParentRecord(parentRecords, query);
     if (hasCoordinates(parent)) {
       return {
         ...parent,
@@ -1417,8 +1461,13 @@ function findCommunityPriceRecord(query = state.property) {
   // 社区 URL 恢复的人工校准项，优先于同 URL 的旧乱码或泛化小区名。
   const found = matches.find((record) => record?.canonical === true) || matches[0];
   if (found && Number.isFinite(Number(found.pricePerSqm))) return found;
+  const registryRecords = state.cityId === 'guangzhou' && Array.isArray(state.communityRegistryData?.records)
+    ? state.communityRegistryData.records : [];
+  const registryPrice = findCommunityNamedRecords(registryRecords, query)
+    .find((record) => Number.isFinite(Number(record?.pricePerSqm)));
+  if (registryPrice) return { ...registryPrice, sourceKind: 'community-registry' };
   if (communityPhaseLabel(query)) {
-    const parent = findCommunityParentRecord(records, query);
+    const parent = findCommunityParentRecord([...records, ...registryRecords], query);
     if (parent && Number.isFinite(Number(parent.pricePerSqm))) {
       const phase = findCommunityPhaseRecord(query);
       return {
@@ -1433,7 +1482,253 @@ function findCommunityPriceRecord(query = state.property) {
       };
     }
   }
+  const coordinateEstimate = buildCoordinatePriceEstimate(query);
+  if (coordinateEstimate) return coordinateEstimate;
   return null;
+}
+
+// The registry deliberately contains more communities than the historical
+// price/quality baselines.  Keep the lookup useful for those newly registered
+// records by deriving a clearly labelled local estimate from nearby records.
+// This is a fallback only: an exact community or parent-project value always
+// wins, and the returned provenance remains visible to the scoring UI.
+function communityCoordinateMatch(query) {
+  const residential = findResidentialMatch(state.amenityData || {}, query);
+  // Amenity candidates may have coordinates but no administrative district.
+  // Prefer the unified registry when it carries the inferred district; the
+  // district is required by school and nearby-data fallbacks.
+  if (residential && residential.district
+    && Number.isFinite(Number(residential.latitude)) && Number.isFinite(Number(residential.longitude))) return residential;
+  const registryRecords = state.cityId === 'guangzhou' && Array.isArray(state.communityRegistryData?.records)
+    ? state.communityRegistryData.records : [];
+  const registry = findCommunityNamedRecords(registryRecords, query)[0];
+  if (registry && Number.isFinite(Number(registry.latitude)) && Number.isFinite(Number(registry.longitude))) return registry;
+  return residential && Number.isFinite(Number(residential.latitude)) && Number.isFinite(Number(residential.longitude))
+    ? residential : null;
+}
+
+function normalizedDistrict(value) {
+  return String(value || '').replace(/市|区|县|新区|开发区/g, '').trim();
+}
+
+// OSM candidate records are intentionally broader than the 5,743-record
+// quality baseline, but they do not carry an administrative district.  A
+// school package cannot be selected for those records unless we resolve the
+// district from their coordinates.  Use the nearest known, district-labelled
+// quality records as a conservative offline fallback and keep the result
+// explicitly estimated so it is never presented as an official boundary hit.
+function inferDistrictFromCoordinates(query) {
+  const match = communityCoordinateMatch(query);
+  if (!match || !Number.isFinite(Number(match.latitude)) || !Number.isFinite(Number(match.longitude))) return null;
+  const sources = [
+    ...(Array.isArray(state.communityQualityData?.records) ? state.communityQualityData.records : []),
+    ...(state.cityId === 'guangzhou' && Array.isArray(state.communityRegistryData?.records) ? state.communityRegistryData.records : [])
+  ];
+  const seen = new Set();
+  const candidates = sources.map((record) => {
+    const district = String(record?.district || '').trim();
+    const lat = Number(record?.latitude);
+    const lon = Number(record?.longitude);
+    if (!district || !Number.isFinite(lat) || !Number.isFinite(lon)) return null;
+    const key = `${normalizePlaceName(record?.name)}:${district}`;
+    if (seen.has(key)) return null;
+    seen.add(key);
+    const distanceKm = haversineKm(Number(match.latitude), Number(match.longitude), lat, lon);
+    return Number.isFinite(distanceKm) ? { district, distanceKm } : null;
+  }).filter(Boolean).sort((a, b) => a.distanceKm - b.distanceKm);
+  if (!candidates.length) return null;
+  // A very distant nearest point is more likely to cross a district boundary
+  // or be a bad coordinate.  15 km is still enough for the sparse outer-area
+  // baseline while avoiding a city-wide arbitrary school package.
+  const nearby = candidates.filter((item) => item.distanceKm <= 15).slice(0, 12);
+  if (!nearby.length) return null;
+  const scores = new Map();
+  nearby.forEach(({ district, distanceKm }) => {
+    const weight = 1 / Math.max(0.15, distanceKm);
+    scores.set(district, (scores.get(district) || 0) + weight);
+  });
+  const [district, score] = [...scores.entries()].sort((a, b) => b[1] - a[1])[0] || [];
+  if (!district) return null;
+  return {
+    district,
+    estimated: true,
+    method: 'nearest-district-labelled-quality-records',
+    nearestDistanceKm: nearby[0].distanceKm,
+    candidateCount: nearby.length,
+    confidence: nearby[0].distanceKm <= 3 && score >= 1 ? 'medium' : 'low'
+  };
+}
+
+function nearbyQualityRecords(query, options = {}) {
+  const match = communityCoordinateMatch(query);
+  if (!match) return { match: null, records: [] };
+  const lat = Number(match.latitude);
+  const lon = Number(match.longitude);
+  const all = Array.isArray(state.communityQualityData?.records) ? state.communityQualityData.records : [];
+  const district = normalizedDistrict(match.district);
+  const maxKm = Number(options.maxKm) || 5;
+  const limit = Number(options.limit) || 12;
+  const candidates = all.map((record) => {
+    const rLat = Number(record?.latitude);
+    const rLon = Number(record?.longitude);
+    if (!Number.isFinite(rLat) || !Number.isFinite(rLon)) return null;
+    const distanceKm = haversineKm(lat, lon, rLat, rLon);
+    if (!Number.isFinite(distanceKm) || distanceKm > maxKm) return null;
+    return { record, distanceKm, sameDistrict: district && normalizedDistrict(record.district) === district };
+  }).filter(Boolean).sort((a, b) => {
+    if (a.sameDistrict !== b.sameDistrict) return a.sameDistrict ? -1 : 1;
+    return a.distanceKm - b.distanceKm;
+  });
+  const sameDistrict = candidates.filter((item) => item.sameDistrict);
+  const selected = (sameDistrict.length >= 4 ? sameDistrict : candidates).slice(0, limit);
+  return { match, records: selected };
+}
+
+function medianNumber(values) {
+  const numbers = values.map(Number).filter(Number.isFinite).sort((a, b) => a - b);
+  if (!numbers.length) return null;
+  const middle = Math.floor(numbers.length / 2);
+  return numbers.length % 2 ? numbers[middle] : (numbers[middle - 1] + numbers[middle]) / 2;
+}
+
+function estimateSourceUrls(records) {
+  return [...new Set(records.flatMap(({ record }) => Array.isArray(record?.sourceUrls)
+    ? record.sourceUrls : (record?.sourceUrl ? [record.sourceUrl] : [])))].filter(Boolean).slice(0, 8);
+}
+
+function buildCoordinatePriceEstimate(query) {
+  if (state.cityId !== 'guangzhou') return null;
+  let nearby = nearbyQualityRecords(query, { maxKm: 5, limit: 12 });
+  if (nearby.records.length < 3) nearby = nearbyQualityRecords(query, { maxKm: 15, limit: 12 });
+  if (!nearby.match || nearby.records.length < 3) return null;
+  const samples = nearby.records.filter(({ record }) => Number.isFinite(Number(record?.pricePerSqm)) && Number(record.pricePerSqm) > 0);
+  if (samples.length < 3) return null;
+  const price = medianNumber(samples.map(({ record }) => record.pricePerSqm));
+  if (!Number.isFinite(price)) return null;
+  const sourceUrls = estimateSourceUrls(samples);
+  const sampleDistanceKm = Math.max(...samples.map(({ distanceKm }) => distanceKm));
+  return {
+    ...nearby.match,
+    name: communityCanonicalName(query),
+    aliases: [...new Set([...(nearby.match.aliases || []), ...communityQueryCandidates(query)])],
+    pricePerSqm: Math.round(price),
+    sourceKind: 'coordinate-neighbor-estimate',
+    sourceLabel: '同区邻近小区公开均价估算',
+    sourceUrl: sourceUrls.join('；'),
+    sourceUrls,
+    sourceCount: samples.length,
+    fallbackScope: 'coordinate-neighbor-estimate',
+    fallbackFromName: '',
+    fallbackReason: `以 ${samples.length} 个同区邻近公开小区均价的中位数估算，样本最远约 ${formatNumber(sampleDistanceKm * 1000)}m；需用当前挂牌/成交数据核验`,
+    confidence: samples.length >= 8 ? 'medium' : 'low',
+    estimateMethod: `同区邻近小区均价中位数（样本最远约 ${formatNumber(sampleDistanceKm)}km，优先同区）`
+  };
+}
+
+function buildCoordinateQualityEstimate(query) {
+  if (state.cityId !== 'guangzhou') return null;
+  let nearby = nearbyQualityRecords(query, { maxKm: 5, limit: 16 });
+  if (nearby.records.length < 3) nearby = nearbyQualityRecords(query, { maxKm: 15, limit: 16 });
+  if (!nearby.match || nearby.records.length < 3) return null;
+  const fields = [
+    { key: 'buildYear', qualityKey: 'buildYear', sourceKey: '建成年代', parse: (record) => {
+      const years = String(qualityRecordField(record, 'buildYear', '建成年代') || '').match(/(?:19|20)\d{2}/g) || [];
+      return years.length ? Math.max(...years.map(Number)) : null;
+    } },
+    { key: 'greenRate', qualityKey: 'greenRate', sourceKey: '绿化率', parse: (record) => qualityRecordNumber(record, 'greenRate', '绿化率') },
+    { key: 'plotRatio', qualityKey: 'plotRatio', sourceKey: '容积率', parse: (record) => qualityRecordNumber(record, 'plotRatio', '容积率') },
+    { key: 'buildingCount', qualityKey: 'buildingCount', sourceKey: '楼栋总数', parse: (record) => qualityRecordNumber(record, 'buildingCount', '楼栋总数') },
+    { key: 'maxFloor', qualityKey: 'maxFloor', sourceKey: '最高层数', parse: (record) => qualityRecordNumber(record, 'maxFloor', '最高层数') },
+    { key: 'floorHeight', qualityKey: 'floorHeight', sourceKey: '层高', parse: (record) => qualityRecordNumber(record, 'floorHeight', '层高') },
+    { key: 'ladderHouseholdRatio', qualityKey: 'ladderHouseholdRatio', sourceKey: '梯户比', parse: (record) => qualityRecordNumber(record, 'ladderHouseholdRatio', '梯户比') },
+    { key: 'noiseDb', qualityKey: 'noiseLevel', sourceKey: '噪音分贝', parse: (record) => qualityRecordNumber(record, 'noiseDb', '噪音分贝') ?? qualityRecordNumber(record, 'noiseLevel', '噪音') }
+  ];
+  const estimate = { ...nearby.match };
+  const qualityFields = { ...(estimate.qualityFields || {}) };
+  const sourceUrls = estimateSourceUrls(nearby.records);
+  const sampleDistanceKm = Math.max(...nearby.records.map(({ distanceKm }) => distanceKm));
+  let estimatedFieldCount = 0;
+  fields.forEach((field) => {
+    const values = nearby.records.map(({ record }) => field.parse(record)).filter(Number.isFinite);
+    if (values.length < 3) return;
+    const value = medianNumber(values);
+    if (!Number.isFinite(value)) return;
+    const normalizedValue = field.key === 'buildYear' ? `${Math.round(value)}年` : Number(value.toFixed(2));
+    estimate[field.key] = normalizedValue;
+    const metric = {
+      label: field.sourceKey,
+      kind: field.key === 'buildYear' ? 'text' : 'number',
+      value: normalizedValue,
+      rawValue: normalizedValue,
+      sourceIds: 'coordinate-neighbor-estimate-2026',
+      source: '同区邻近小区公开品质字段估算',
+      status: 'estimated',
+      needsConfirmation: true,
+      reason: `以 ${values.length} 个同区邻近公开小区字段的中位数估算，样本最远约 ${formatNumber(sampleDistanceKm * 1000)}m；不等于本小区实测值，请核验`,
+      estimateMethod: `同区邻近小区字段中位数（样本最远约 ${formatNumber(sampleDistanceKm)}km，优先同区）`
+    };
+    qualityFields[field.qualityKey] = metric;
+    // 兼容旧版读取路径：噪音原字段有 noiseLevel，评分读取同时支持 noiseDb。
+    if (field.key === 'noiseDb') qualityFields.noiseDb = metric;
+    estimatedFieldCount += 1;
+  });
+  // 项目名称明确包含开发商品牌时，可以把品牌作为“名称识别估算”写入，
+  // 但不把它冒充为已核验的法律主体；页面会继续显示待核验标识。
+  if (!estimate.developer) {
+    const brand = KNOWN_DEVELOPER_BRANDS.find((name) => String(query || estimate.name || '').replace(/\s/g, '').includes(name));
+    if (brand) {
+      const metric = {
+        label: '开发企业',
+        kind: 'text',
+        value: `${brand}（项目名称识别）`,
+        rawValue: `${brand}（项目名称识别）`,
+        sourceIds: 'community-name-brand-estimate-2026',
+        source: '小区名称品牌识别',
+        status: 'estimated',
+        needsConfirmation: true,
+        reason: `项目名称包含“${brand}”，仅作为品牌估算，不等于已核验的开发企业法律主体`,
+        estimateMethod: '小区名称品牌关键词识别'
+      };
+      estimate.developer = metric.value;
+      qualityFields.developer = metric;
+      estimatedFieldCount += 1;
+    }
+  }
+  if (!estimatedFieldCount) return null;
+  estimate.qualityFields = qualityFields;
+  estimate.sourceLabel = '同区邻近小区公开品质字段估算';
+  estimate.sourceUrl = sourceUrls.join('；');
+  estimate.sourceUrls = sourceUrls;
+  estimate.fallbackScope = 'coordinate-neighbor-estimate';
+  estimate.fallbackFromName = '';
+  estimate.fallbackReason = `以 ${estimatedFieldCount} 项邻近公开品质字段中位数估算，需进一步核验`;
+  estimate.confidence = nearby.records.length >= 8 ? 'medium' : 'low';
+  estimate.estimateMethod = `同区邻近小区品质字段中位数（样本最远约 ${formatNumber(sampleDistanceKm)}km，优先同区）`;
+  return estimate;
+}
+
+function mergeQualityEstimate(base, estimate) {
+  if (!base) return estimate;
+  if (!estimate) return base;
+  const merged = { ...estimate, ...base };
+  const fields = ['buildYear', 'greenRate', 'officialGreenRate', 'plotRatio', 'parkingCount', 'advertisedParkingCount', 'householdCount', 'buildingCount', 'maxFloor', 'floorHeight', 'ladderHouseholdRatio', 'noiseDb', 'noiseLevel'];
+  fields.forEach((field) => {
+    if (base[field] !== null && base[field] !== undefined && String(base[field]).trim() !== '') merged[field] = base[field];
+    else if (estimate[field] !== null && estimate[field] !== undefined && String(estimate[field]).trim() !== '') merged[field] = estimate[field];
+  });
+  merged.qualityFields = { ...(estimate.qualityFields || {}), ...(base.qualityFields || {}) };
+  Object.keys(estimate.qualityFields || {}).forEach((field) => {
+    const baseField = base.qualityFields?.[field];
+    if (!baseField || baseField.status === 'missing' || baseField.value === null || baseField.value === undefined || String(baseField.value).trim() === '') {
+      merged.qualityFields[field] = estimate.qualityFields[field];
+    }
+  });
+  merged.sourceUrls = [...new Set([...(estimate.sourceUrls || []), ...(base.sourceUrls || []), ...(base.sourceUrl ? [base.sourceUrl] : [])])].filter(Boolean);
+  merged.sourceLabel = base.sourceLabel || estimate.sourceLabel;
+  merged.fallbackScope = base.fallbackScope && base.fallbackScope !== 'community-registry'
+    ? base.fallbackScope : estimate.fallbackScope;
+  merged.fallbackReason = [base.fallbackReason, estimate.fallbackReason].filter(Boolean).join('；');
+  return merged;
 }
 
 const COMMUNITY_NAME_ALIASES = {
@@ -1537,6 +1832,11 @@ function communityPhaseLabel(name) {
   ];
   const matchedPhase = phaseAliases.find(([, names]) => names.some((candidate) => normalized === normalizePlaceName(candidate)));
   if (matchedPhase) return matchedPhase[0];
+  const compound = value.match(/(?:第)?(一二期|二三期|三四期|一至三期)/);
+  if (compound) {
+    const compoundLabels = { 一二期: '一期+二期', 二三期: '二期+三期', 三四期: '三期+四期', 一至三期: '一期+二期+三期' };
+    return compoundLabels[compound[1]] || compound[1];
+  }
   const explicit = value.match(/(?:第)?([一二三四五六七八九十\d]+)期/);
   if (explicit) {
     const numerals = { 一: 1, 二: 2, 三: 3, 四: 4, 五: 5, 六: 6, 七: 7, 八: 8, 九: 9, 十: 10 };
@@ -1564,18 +1864,30 @@ function communityPhaseCompatible(left, right) {
 
 function communityPhaseRecords() {
   const cityPackage = globalThis.RESISCORE_COMMUNITY_SCORE_PACKAGE?.cities?.[state.cityId];
-  return Array.isArray(cityPackage?.phaseRecords) ? cityPackage.phaseRecords : [];
+  const packageRecords = Array.isArray(cityPackage?.phaseRecords) ? cityPackage.phaseRecords : [];
+  const registryRecords = state.cityId === 'guangzhou' && Array.isArray(state.communityRegistryData?.records)
+    ? state.communityRegistryData.records.filter((record) => record?.phase || record?.phaseLabel || record?.parentName) : [];
+  const catalogRecords = state.cityId === 'guangzhou'
+    && Array.isArray(globalThis.RESISCORE_BUNDLED_COMMUNITY_PHASE_REGISTRY?.records)
+    ? globalThis.RESISCORE_BUNDLED_COMMUNITY_PHASE_REGISTRY.records : [];
+  const merged = new Map();
+  [...packageRecords, ...registryRecords, ...catalogRecords].forEach((record) => {
+    const key = normalizePlaceName(record?.name || '');
+    if (key) merged.set(key, mergeCommunityRecords(merged.get(key), record));
+  });
+  return [...merged.values()];
 }
 
 function findCommunityPhaseRecord(query = state.property) {
-  return findCommunityNamedRecords(communityPhaseRecords(), query)[0] || null;
+  const matches = findCommunityNamedRecords(communityPhaseRecords(), query);
+  return matches.find((record) => record?.phase || record?.phaseLabel || record?.parentName) || matches[0] || null;
 }
 
 function communityPhaseBaseName(value) {
   const text = String(value || '').trim();
   if (!communityPhaseLabel(text)) return '';
   // 只去掉期数标记，保留“名门/峻森园”等分期名称，供父项目回退时使用。
-  return text.replace(/(?:第)?[一二三四五六七八九十\d]+期.*$/i, '').replace(/[·\-—\s]+$/g, '').trim();
+  return text.replace(/(?:第)?(?:一二期|二三期|三四期|一至三期|[一二三四五六七八九十\d]+期).*$/i, '').replace(/[·\-—\s]+$/g, '').trim();
 }
 
 function findCommunityParentRecord(records, query) {
@@ -1605,12 +1917,17 @@ function mergeCommunityRecords(...records) {
 
 function phaseDataScopeLabel(record) {
   if (!record?.fallbackScope) return '';
+  if (record.fallbackScope === 'registry-candidate') return '统一小区登记层坐标估算（候选记录）';
+  if (record.fallbackScope === 'community-registry') return '统一小区登记层数据';
   const sourceName = record.fallbackFromName || '父项目';
   return `小区整体数据回退（${sourceName}）`;
 }
 
 function communitySearchRecords() {
   const sourceRecords = [
+    state.cityId === 'guangzhou' ? state.communityRegistryData?.records : null,
+    state.cityId === 'guangzhou' ? globalThis.RESISCORE_BUNDLED_COMMUNITY_REGISTRY?.records : null,
+    state.cityId === 'guangzhou' ? globalThis.RESISCORE_BUNDLED_COMMUNITY_PHASE_REGISTRY?.records : null,
     state.amenityData?.residential,
     state.amenityData?.residentialOverrides,
     state.priceData?.records,
@@ -1772,12 +2089,23 @@ function findCommunityQualityRecord(query = state.property) {
   const overrides = Array.isArray(globalThis.RESISCORE_COMMUNITY_SCORE_PACKAGE?.qualityOverrides)
     ? globalThis.RESISCORE_COMMUNITY_SCORE_PACKAGE.qualityOverrides : [];
   const overrideDirect = findCommunityNamedRecords(overrides, query)[0];
+  const registryRecords = state.cityId === 'guangzhou' && Array.isArray(state.communityRegistryData?.records)
+    ? state.communityRegistryData.records : [];
+  const registryMatches = findCommunityNamedRecords(registryRecords, query);
+  const registryDirect = registryMatches.find((record) => record?.phase || record?.phaseLabel || record?.parentName) || registryMatches[0];
   const phaseRecord = findCommunityPhaseRecord(query);
   const phaseQuery = Boolean(communityPhaseLabel(query));
-  if (!phaseQuery) return direct || overrideDirect || null;
-  const parent = findCommunityParentRecord(records, query) || findCommunityParentRecord(overrides, query);
+  if (!phaseQuery) {
+    const base = direct || overrideDirect || registryDirect || null;
+    // Newly registered communities often have coordinates but no historical
+    // quality row.  Fill only absent fields from nearby public rows; direct
+    // community/project values remain authoritative.
+    return mergeQualityEstimate(base, buildCoordinateQualityEstimate(query));
+  }
+  const parentRecords = [...records, ...overrides, ...registryRecords];
+  const parent = findCommunityParentRecord(parentRecords, query);
   const phaseData = phaseRecord || direct || overrideDirect;
-  const merged = mergeCommunityRecords(parent, phaseRecord, direct, overrideDirect);
+  const merged = mergeCommunityRecords(parent, phaseRecord, direct, overrideDirect, registryDirect);
   if (!merged) return null;
   const fieldMap = {
     buildYear: ['buildYear', '建成年代'], greenRate: ['greenRate', '绿化率'],
@@ -1791,6 +2119,7 @@ function findCommunityQualityRecord(query = state.property) {
   const fallbackFields = {};
   Object.entries(fieldMap).forEach(([field, [topLevel, sourceKey]]) => {
     const phaseValue = qualityRecordField(direct, topLevel, sourceKey)
+      ?? qualityRecordField(registryDirect, topLevel, sourceKey)
       ?? qualityRecordField(phaseRecord, topLevel, sourceKey)
       ?? qualityRecordField(overrideDirect, topLevel, sourceKey);
     const parentValue = qualityRecordField(parent, topLevel, sourceKey);
@@ -1809,17 +2138,24 @@ function findCommunityQualityRecord(query = state.property) {
     fallbackScope: Object.keys(fallbackFields).length ? 'parent-project-fields' : undefined,
     fallbackFromName: parent?.name || ''
   });
-  return merged;
+  return mergeQualityEstimate(merged, buildCoordinateQualityEstimate(query));
+}
+
+function findCommunityDistrictEvidence(query = state.property) {
+  const quality = findCommunityQualityRecord(query);
+  if (quality?.district) return { district: String(quality.district), estimated: false, source: 'community-record' };
+  const residential = findResidentialMatch(state.amenityData, query);
+  if (residential?.district) return { district: String(residential.district), estimated: false, source: 'residential-record' };
+  const evidence = findCommunityEvidenceRecord(query);
+  if (evidence?.district) return { district: String(evidence.district), estimated: false, source: 'evidence-record' };
+  const registry = state.cityId === 'guangzhou' && Array.isArray(state.communityRegistryData?.records)
+    ? findCommunityNamedRecords(state.communityRegistryData.records, query)[0] : null;
+  if (registry?.district) return { district: String(registry.district), estimated: false, source: 'registry-record' };
+  return inferDistrictFromCoordinates(query);
 }
 
 function findCommunityDistrict(query = state.property) {
-  const quality = findCommunityQualityRecord(query);
-  if (quality?.district) return String(quality.district);
-  const residential = findResidentialMatch(state.amenityData, query);
-  if (residential?.district) return String(residential.district);
-  const evidence = findCommunityEvidenceRecord(query);
-  if (evidence?.district) return String(evidence.district);
-  return '';
+  return String(findCommunityDistrictEvidence(query)?.district || '');
 }
 
 function futureDistrictProfile(query = state.property) {
@@ -1832,11 +2168,16 @@ function futureDistrictProfile(query = state.property) {
 
 function findCommunityFutureEvidence(query = state.property) {
   const records = Array.isArray(state.futureData?.communityEvidence) ? state.futureData.communityEvidence : [];
+  const registryRecords = state.cityId === 'guangzhou' && Array.isArray(state.communityRegistryData?.records)
+    ? state.communityRegistryData.records : [];
   const phaseRecord = findCommunityPhaseRecord(query);
   const direct = findCommunityNamedRecords(records, query)[0];
   if (direct) return direct;
+  const registryEvidence = findCommunityNamedRecords(registryRecords, query)
+    .find((record) => record?.futureEvidence && typeof record.futureEvidence === 'object');
+  if (registryEvidence) return { ...registryEvidence, ...registryEvidence.futureEvidence };
   if (communityPhaseLabel(query)) {
-    const parent = findCommunityParentRecord(records, query);
+    const parent = findCommunityParentRecord([...records, ...registryRecords], query);
     if (parent) return { ...parent, name: phaseRecord?.name || query, phase: phaseRecord?.phase || communityPhaseLabel(query), phaseLabel: phaseRecord?.phaseLabel || communityPhaseLabel(query), fallbackScope: 'parent-project', fallbackFromName: parent.name };
   }
   return direct || null;
@@ -1844,11 +2185,16 @@ function findCommunityFutureEvidence(query = state.property) {
 
 function findCommunityEvidenceRecord(query = state.property) {
   const records = Array.isArray(state.multiSourceData?.records) ? state.multiSourceData.records : [];
+  const registryRecords = state.cityId === 'guangzhou' && Array.isArray(state.communityRegistryData?.records)
+    ? state.communityRegistryData.records : [];
   const phaseRecord = findCommunityPhaseRecord(query);
   const direct = findCommunityNamedRecords(records, query)[0];
   if (direct) return direct;
+  const registryEvidence = findCommunityNamedRecords(registryRecords, query)
+    .find((record) => record?.metrics && typeof record.metrics === 'object');
+  if (registryEvidence) return registryEvidence;
   if (communityPhaseLabel(query)) {
-    const parent = findCommunityParentRecord(records, query);
+    const parent = findCommunityParentRecord([...records, ...registryRecords], query);
     if (parent) return { ...parent, name: phaseRecord?.name || query, phase: phaseRecord?.phase || communityPhaseLabel(query), phaseLabel: phaseRecord?.phaseLabel || communityPhaseLabel(query), fallbackScope: 'parent-project', fallbackFromName: parent.name };
   }
   return direct || null;
@@ -1953,6 +2299,8 @@ function applyOfflineScoreLookup(query = state.property) {
         ? `小区整体均价回退（父项目：${publicPrice.fallbackFromName || '父项目'}）`
         : publicPrice.sourceKind === 'multi-source-average'
         ? `多来源公开均价（${evidenceLabel || '平均'}）`
+        : publicPrice.sourceKind === 'coordinate-neighbor-estimate'
+        ? `同区邻近小区公开均价估算（${publicPrice.sourceCount || 0} 条样本）`
         : publicPrice.sourceKind === 'community-directory' ? '广州住宅目录公开均价（估算）' : '房天下公开小区均价（估算）';
       price.priceSourceUrl = publicPrice.sourceUrl || state.priceData?.source?.baseUrl || '';
       price.priceEvidence = priceEvidence || null;
@@ -2193,8 +2541,10 @@ function applyCommunityBaselineScores(query = state.property) {
     const evidenceLabel = !userEdited && evidenceMetric ? communityEvidenceLabel(query, evidenceMetric, evidenceNoun) : '';
     const fallbackName = !userEdited && editedField ? record.fallbackFields?.[editedField] : '';
     const fallbackLabel = fallbackName ? `小区整体数据回退（父项目：${fallbackName}）` : '';
-    item.offlineSource = userEdited ? '用户填写' : [source, evidenceLabel, fallbackLabel].filter(Boolean).join(' · ');
-    item.current = [text, fallbackLabel].filter(Boolean).join(' · ');
+    const estimateLabel = !userEdited && record.fallbackScope === 'coordinate-neighbor-estimate'
+      ? '同区邻近小区字段估算 · 需核验' : '';
+    item.offlineSource = userEdited ? '用户填写' : [source, evidenceLabel, estimateLabel, fallbackLabel].filter(Boolean).join(' · ');
+    item.current = [text, estimateLabel, fallbackLabel].filter(Boolean).join(' · ');
   };
   const latestYear = rawNumber(raw.buildYear);
   const age = latestYear ? Math.max(0, new Date().getFullYear() - latestYear) : null;
@@ -2290,7 +2640,9 @@ function applyCommunityBaselineScores(query = state.property) {
     missingReasons: qualityMissingReasons,
     sourceLabel: record.fallbackFields && Object.keys(record.fallbackFields).length
       ? `${record.sourceLabel || '广州小区公开目录'} · 部分字段回退父项目`
-      : (record.sourceLabel || '广州小区公开目录'),
+      : (record.fallbackScope === 'coordinate-neighbor-estimate'
+        ? `${record.sourceLabel || '广州小区公开目录'} · 坐标邻近估算，需核验`
+        : (record.sourceLabel || '广州小区公开目录')),
     sourceUrls: record.sourceUrls || (record.sourceUrl ? [record.sourceUrl] : [])
   };
   const futureItems = future?.subscores || [];
@@ -2610,21 +2962,214 @@ function uniqueSchoolNames(names) {
   return [...new Set((names || []).map((name) => String(name || '').trim()).filter(Boolean))];
 }
 
+// The 2026 Tianhe OCR package contains a duplicated 谷 character in the
+// middle-school label. Keep the clean display name in project candidates and
+// accept the published package spelling when looking up its neutral rank.
+const SCHOOL_RANKING_NAME_ALIASES = {
+  '广州市天河外国语学校智谷学校小学部': ['广州市天河外国语智谷学校小学部'],
+  '广州市天河外国语智谷学校': ['广州市天河外国语学校智谷谷学校'],
+  '广州市天河外国语学校智谷谷学校': ['广州市天河外国语智谷学校', '广州市天河外国语学校智谷学校']
+};
+
 function schoolRankingEstimate(name, levelLabel) {
   const data = state.schoolDistrictData?.data;
   const estimates = data?.rankingEstimates?.[levelLabel] || {};
   const normalized = normalizeSchoolLookupText(name);
-  const entry = Object.entries(estimates).find(([school]) => normalizeSchoolLookupText(school) === normalized);
-  if (!entry) return null;
+  const candidates = [name, ...(SCHOOL_RANKING_NAME_ALIASES[String(name || '').trim()] || [])]
+    .map(normalizeSchoolLookupText)
+    .filter(Boolean);
+  const entry = Object.entries(estimates).find(([school]) => candidates.includes(normalizeSchoolLookupText(school)));
   const totalSchools = Number(levelLabel === '小学'
     ? data.rankingEstimatePolicy?.primaryTotalSchools
     : data.rankingEstimatePolicy?.middleTotalSchools);
   if (!Number.isFinite(totalSchools) || totalSchools < 1) return null;
-  return { rank: Number(entry[1]), totalSchools, rankingSource: 'estimate' };
+  if (entry) return { rank: Number(entry[1]), totalSchools, rankingSource: 'estimate' };
+  // A provisional school candidate can be validly named but absent from the
+  // current public ranking sample (for example a newly opened school or a
+  // district package that only publishes its service-area table).  Keep the
+  // dimension computable with a neutral midpoint and label it as an estimate;
+  // this is preferable to silently turning the whole school dimension into a
+  // blank score.  Users can replace it with an official rank at any time.
+  return {
+    rank: Math.ceil((totalSchools + 1) / 2),
+    totalSchools,
+    rankingSource: 'estimate',
+    rankingReason: '当前学校未出现在公开排名样本，按同学段中位名次估算'
+  };
+}
+
+function districtMatchesCommunity(packageData, district) {
+  const target = normalizedDistrict(district);
+  if (!target || !packageData) return false;
+  const names = [packageData.district?.name, packageData.district?.districtName, packageData.districtName, packageData.data?.districtName, packageData.data?.district]
+    .map(normalizedDistrict).filter(Boolean);
+  return names.some((name) => name === target || name.includes(target) || target.includes(name));
+}
+
+function districtBaselineSchoolName(packageData, levelLabel) {
+  const estimates = packageData?.data?.rankingEstimates?.[levelLabel] || {};
+  const ranked = Object.entries(estimates)
+    .map(([name, rank]) => ({ name, rank: Number(rank) }))
+    .filter((entry) => entry.name && Number.isFinite(entry.rank))
+    .sort((a, b) => a.rank - b.rank);
+  if (ranked.length) return ranked[Math.floor(ranked.length / 2)].name;
+  if (levelLabel === '小学') return packageData?.data?.elementaryZones?.find((row) => row.school)?.school || '';
+  const groups = [...(packageData?.data?.middleGroups?.direct || []), ...(packageData?.data?.middleGroups?.lottery || [])];
+  const fromGroups = groups.find((row) => row.middleSchools)?.middleSchools?.split(/[、,，；;]/)[0]?.trim() || '';
+  if (fromGroups) return fromGroups;
+  // Several district packages publish complete elementary service-area rows
+  // before their middle-school group table is normalized.  Reuse the
+  // district-tagged provisional candidates as a named, auditable baseline so
+  // the middle-school subscore does not become blank merely because that
+  // package is missing one attachment.
+  const district = normalizedDistrict(packageData?.district?.name || packageData?.data?.districtName || packageData?.data?.district);
+  const supplementRecords = Array.isArray(state.schoolDistrictData?.supplement?.records)
+    ? state.schoolDistrictData.supplement.records : [];
+  const counts = new Map();
+  supplementRecords.filter((record) => !district || normalizedDistrict(record?.district) === district)
+    .forEach((record) => (record?.middle || []).forEach((name) => {
+      const label = String(name || '').trim();
+      if (label) counts.set(label, (counts.get(label) || 0) + 1);
+    }));
+  return [...counts.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))[0]?.[0] || '';
+}
+
+function buildDistrictBaselineSchoolMapping(packageData, query, district) {
+  const data = packageData?.data;
+  if (!data) return null;
+  const elementary = districtBaselineSchoolName(packageData, '小学');
+  const middle = districtBaselineSchoolName(packageData, '初中');
+  if (!elementary && !middle) return null;
+  const districtLabel = packageData.district?.name || data.districtName || district || '当前行政区';
+  const rankingPolicy = data.rankingEstimatePolicy || {};
+  return {
+    elementary: elementary ? [elementary] : [],
+    middle: middle ? [middle] : [],
+    unclassifiedSchools: [],
+    sourceUrls: data.sourceUrls || packageData.district?.sourceUrls || [],
+    sourceName: `${districtLabel}学校排名样本基线`,
+    sourceKind: 'district-baseline-estimate',
+    status: 'provisional',
+    needsConfirmation: true,
+    mappingConfidence: 'district-baseline-estimate',
+    notice: `未找到“${query}”的具体招生地段，暂按${districtLabel}学校排名样本的中位学校生成行政区基线估算；这不是该小区确定学位，需按当年招生文件核验。`,
+    estimateMethod: `从${districtLabel}排名估算样本中取中位学校，作为缺少小区/道路映射时的回退`
+  };
+}
+
+// Final generic school fallback for a registered community that is absent from
+// the current annual property-to-school table and from third-party project
+// pages.  The offline supplement contains coordinates plus provisional school
+// candidates for many mapped communities.  Use nearby records only as
+// evidence, never as a confirmed catchment: two or more nearby records must
+// agree on a school, and the evidence radius/method is retained for the UI.
+function buildSpatialSchoolConsensusMapping(query, district) {
+  const target = communityCoordinateMatch(query);
+  if (!target) return null;
+  const lat = Number(target.latitude);
+  const lon = Number(target.longitude);
+  if (!Number.isFinite(lat) || !Number.isFinite(lon)) return null;
+  const targetDistrict = normalizedDistrict(district || target.district);
+  const supplement = state.schoolDistrictData?.supplement;
+  const records = Array.isArray(supplement?.records) ? supplement.records : [];
+  const targetKey = normalizePlaceName(query);
+  const allNearby = records.map((record) => {
+    const rLat = Number(record?.latitude);
+    const rLon = Number(record?.longitude);
+    if (!Number.isFinite(rLat) || !Number.isFinite(rLon)) return null;
+    if (targetDistrict && normalizedDistrict(record?.district) !== targetDistrict) return null;
+    const recordKey = normalizePlaceName(record?.property || record?.name);
+    if (recordKey && recordKey === targetKey) return null;
+    const distanceKm = haversineKm(lat, lon, rLat, rLon);
+    if (!Number.isFinite(distanceKm) || distanceKm > 3) return null;
+    return { record, distanceKm };
+  }).filter(Boolean).sort((a, b) => a.distanceKm - b.distanceKm);
+  // Match the offline builder's confidence tiers: prefer up to 800 m when
+  // there are at least two independent records; only widen to 3 km when the
+  // close tier is too sparse. This prevents a broad district vote from
+  // overwhelming a nearby boundary signal.
+  const closeNearby = allNearby.filter(({ distanceKm }) => distanceKm <= 0.8);
+  const nearby = (closeNearby.length >= 2 ? closeNearby : allNearby).slice(0, 12);
+  if (!nearby.length) return null;
+
+  const displayNames = new Map();
+  const votes = { elementary: new Map(), middle: new Map() };
+  const supporters = { elementary: new Map(), middle: new Map() };
+  nearby.forEach(({ record }) => {
+    for (const level of ['elementary', 'middle']) {
+      const names = Array.isArray(record?.[level]) ? record[level] : [];
+      names.forEach((name) => {
+        const normalized = normalizeSchoolLookupText(name);
+        if (!normalized) return;
+        displayNames.set(normalized, name);
+        votes[level].set(normalized, (votes[level].get(normalized) || 0) + 1);
+        if (!supporters[level].has(normalized)) supporters[level].set(normalized, []);
+        supporters[level].get(normalized).push(record);
+      });
+    }
+  });
+  const pick = (level) => {
+    const entries = [...votes[level].entries()]
+      .map(([name, count]) => ({ name, count }))
+      .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name));
+    // Require agreement from two distinct mapped communities.  A single
+    // nearest record is too easy to misapply across a school boundary.
+    return entries.filter((entry) => entry.count >= 2).map((entry) => displayNames.get(entry.name) || entry.name).slice(0, 4);
+  };
+  const elementary = pick('elementary');
+  const middle = pick('middle');
+  if (!elementary.length && !middle.length) return null;
+  const radiusKm = Math.min(3, Math.max(...nearby.flatMap(({ record }) =>
+    ['elementary', 'middle'].flatMap((level) => (record?.[level] || []).map((name) => {
+      const key = normalizeSchoolLookupText(name);
+      return (elementary.concat(middle).map(normalizeSchoolLookupText).includes(key))
+        ? (nearby.find((item) => item.record === record)?.distanceKm || 0) : 0;
+    }))), 0));
+  const evidenceRecords = nearby.filter(({ record }) =>
+    ['elementary', 'middle'].some((level) => (record?.[level] || []).some((name) =>
+      elementary.concat(middle).map(normalizeSchoolLookupText).includes(normalizeSchoolLookupText(name)))));
+  const sourceUrls = [...new Set(evidenceRecords.flatMap(({ record }) =>
+    Array.isArray(record?.sourceUrls) ? record.sourceUrls : (record?.sourceUrl ? [record.sourceUrl] : [])))].filter(Boolean).slice(0, 8);
+  const districtLabel = district || target.district || '当前行政区';
+  return {
+    elementary,
+    middle,
+    unclassifiedSchools: [],
+    sourceUrls,
+    sourceName: `同区邻近已映射小区学校候选（${evidenceRecords.length} 条证据）`,
+    sourceKind: 'spatial-school-estimate',
+    status: 'provisional',
+    needsConfirmation: true,
+    mappingConfidence: evidenceRecords.length >= 3 ? 'spatial-consensus-3plus' : 'spatial-consensus-2',
+    notice: `未找到“${query}”的官方确定招生地段，按${districtLabel}内约 ${formatNumber(radiusKm, 1)} 公里范围内至少两个已映射小区的一致学校候选估算；该结果不等于确定学位，需按当年招生文件核验。`,
+    estimateMethod: '同区邻近学校候选按独立小区投票，至少两条一致证据才采用；官方映射优先。',
+    neighborEvidence: {
+      radiusKm: Number(radiusKm.toFixed(2)),
+      neighborCount: nearby.length,
+      evidenceCount: evidenceRecords.length,
+      elementaryAgreement: Math.max(...elementary.map((name) => votes.elementary.get(normalizeSchoolLookupText(name)) || 0), 0),
+      middleAgreement: Math.max(...middle.map((name) => votes.middle.get(normalizeSchoolLookupText(name)) || 0), 0)
+    }
+  };
 }
 
 function applySchoolLookup(query) {
   if (!state.schoolDistrictData?.search) return;
+  // Resolve the community's district before querying any package.  The
+  // previous order searched whichever district happened to be active first;
+  // short labels such as “10栋” could therefore match a phone number in an
+  // unrelated service-area row and contaminate the school result.
+  const initialDistrictEvidence = findCommunityDistrictEvidence(query);
+  const initialDistrict = initialDistrictEvidence?.district || '';
+  const initialDistrictEntry = initialDistrict
+    ? Object.entries(state.schoolDistrictPackages || {}).find(([, packageData]) => districtMatchesCommunity(packageData, initialDistrict))
+    : null;
+  if (initialDistrictEntry && initialDistrictEntry[1] !== state.schoolDistrictData) {
+    const [districtId, packageData] = initialDistrictEntry;
+    state.schoolDistrictData = packageData;
+    state.schoolDistrictId = districtId;
+    state.schoolDistrictManifest = packageData.manifest || state.schoolDistrictManifest;
+  }
   let result = state.schoolDistrictData.search(query);
   let schoolDataScope = 'phase-or-community';
   let schoolFallbackFromName = '';
@@ -2636,6 +3181,27 @@ function applySchoolLookup(query) {
     || Boolean(value?.provisionalMapping?.elementary?.length)
     || Boolean(value?.provisionalMapping?.middle?.length)
     || Boolean(value?.provisionalMapping?.unclassifiedSchools?.length);
+  const hasMappingLevel = (value, level) => Boolean(value?.confirmedMapping?.[level]?.length)
+    || Boolean(value?.[level]?.length)
+    || Boolean(value?.provisionalMapping?.[level]?.length);
+  // Do not let the initially loaded Huangpu package win merely because a
+  // similarly named community happens to appear in its coverage text. When
+  // the registry has a district for the query, try that district's package
+  // first so same-name communities across Guangzhou cannot cross-match.
+  const districtEvidenceAtStart = state.cityId === 'guangzhou'
+    ? findCommunityDistrictEvidence(query)
+    : null;
+  const districtAtStart = districtEvidenceAtStart?.district || '';
+  const districtEntryAtStart = Object.entries(state.schoolDistrictPackages || {})
+    .find(([, packageData]) => districtMatchesCommunity(packageData, districtAtStart));
+  if (districtEntryAtStart && districtEntryAtStart[1] !== state.schoolDistrictData) {
+    const [districtId, packageData] = districtEntryAtStart;
+    const districtCandidate = packageData.search(query);
+    state.schoolDistrictData = packageData;
+    state.schoolDistrictId = districtId;
+    state.schoolDistrictManifest = packageData.manifest || state.schoolDistrictManifest;
+    result = districtCandidate;
+  }
   if (!hasMapping(result)) {
     const packages = Object.entries(state.schoolDistrictPackages || {});
     for (const [districtId, packageData] of packages) {
@@ -2663,6 +3229,113 @@ function applySchoolLookup(query) {
         schoolFallbackFromName = parentName;
       }
     }
+  }
+  // Before falling back to a district-wide median, use nearby mapped
+  // communities when the registry has coordinates and the supplement has
+  // independent school evidence.  This keeps the result community-specific
+  // while remaining explicitly provisional and auditable.
+  if (state.cityId === 'guangzhou'
+    && (!hasMapping(result) || !hasMappingLevel(result, 'elementary') || !hasMappingLevel(result, 'middle'))) {
+    const districtEvidence = findCommunityDistrictEvidence(query);
+    const district = districtEvidence?.district || '';
+    const spatial = buildSpatialSchoolConsensusMapping(query, district);
+    if (spatial) {
+      // The candidate schools belong to the resolved district.  Keep the
+      // matching district package active before schoolRankingEstimate runs;
+      // otherwise a query entered while Huangpu is selected is scored against
+      // Huangpu ranking totals even when the community is in Yuexiu/Tianhe.
+      const districtEntry = Object.entries(state.schoolDistrictPackages || {})
+        .find(([, packageData]) => districtMatchesCommunity(packageData, district));
+      if (districtEntry) {
+        const [districtId, packageData] = districtEntry;
+        state.schoolDistrictData = packageData;
+        state.schoolDistrictId = districtId;
+        state.schoolDistrictManifest = packageData.manifest || state.schoolDistrictManifest;
+        spatial.districtId = districtId;
+      }
+      if (districtEvidence?.estimated) {
+        spatial.mappingConfidence = `${spatial.mappingConfidence || 'spatial-consensus'}-district-coordinate-estimate`;
+        spatial.districtResolution = districtEvidence;
+        spatial.notice = `${spatial.notice} 登记层行政区为坐标邻近估算（最近样本约 ${formatNumber((districtEvidence.nearestDistanceKm || 0) * 1000)}m），请一并核验行政区。`;
+      }
+      const previous = result.provisionalMapping || {};
+      const elementaryPreserved = hasMappingLevel(result, 'elementary');
+      const middlePreserved = hasMappingLevel(result, 'middle');
+      const mergedSpatial = {
+        ...spatial,
+        elementary: previous.elementary?.length ? previous.elementary : (elementaryPreserved ? [] : spatial.elementary),
+        middle: previous.middle?.length ? previous.middle : (middlePreserved ? [] : spatial.middle),
+        sourceKind: elementaryPreserved && middlePreserved ? spatial.sourceKind : (previous.sourceKind ? 'mixed-with-spatial-school-estimate' : spatial.sourceKind),
+        sourceName: elementaryPreserved && middlePreserved ? spatial.sourceName : [previous.sourceName, spatial.sourceName].filter(Boolean).join(' + '),
+        notice: elementaryPreserved && middlePreserved ? spatial.notice : [previous.notice, spatial.notice].filter(Boolean).join(' '),
+        candidateSources: [...(previous.candidateSources || []), ...(spatial.candidateSources || [])]
+      };
+      result = { ...result, provisionalMapping: mergedSpatial };
+      schoolDataScope = 'spatial-school-estimate';
+      schoolFallbackFromName = '';
+    }
+  }
+  // 登记层可能早于学区细分包更新。此时仍按小区行政区选择对应学校包，
+  // 以排名样本中位学校生成“行政区基线估算”，避免整项学区评分直接变空。
+  if (state.cityId === 'guangzhou'
+    && (!hasMapping(result) || !hasMappingLevel(result, 'elementary') || !hasMappingLevel(result, 'middle'))) {
+    const districtEvidence = findCommunityDistrictEvidence(query);
+    const district = districtEvidence?.district || '';
+    const entry = Object.entries(state.schoolDistrictPackages || {})
+      .find(([, packageData]) => districtMatchesCommunity(packageData, district));
+    if (entry) {
+      const [districtId, packageData] = entry;
+      const fallback = buildDistrictBaselineSchoolMapping(packageData, query, district);
+      if (fallback) {
+        const previous = result.provisionalMapping || {};
+        const elementaryPreserved = hasMappingLevel(result, 'elementary');
+        const middlePreserved = hasMappingLevel(result, 'middle');
+        const mergedFallback = {
+          ...fallback,
+          elementary: previous.elementary?.length ? previous.elementary : (elementaryPreserved ? [] : fallback.elementary),
+          middle: previous.middle?.length ? previous.middle : (middlePreserved ? [] : fallback.middle),
+          sourceKind: elementaryPreserved || middlePreserved ? 'mixed-with-district-baseline' : fallback.sourceKind,
+          sourceName: elementaryPreserved || middlePreserved ? [previous.sourceName, fallback.sourceName].filter(Boolean).join(' + ') : fallback.sourceName,
+          notice: elementaryPreserved || middlePreserved ? [previous.notice, fallback.notice].filter(Boolean).join(' ') : fallback.notice,
+          candidateSources: [...(previous.candidateSources || []), { kind: fallback.sourceKind, name: fallback.sourceName }]
+        };
+        if (districtEvidence?.estimated) {
+          fallback.sourceKind = 'district-coordinate-estimate';
+          fallback.mappingConfidence = 'district-coordinate-estimate';
+          fallback.notice = `未找到“${query}”的具体招生地段；登记层缺少行政区字段，已按坐标与${districtEvidence.candidateCount || 0}个已标注小区的邻近关系估算为${district}，再使用该区排名样本中位学校。该结果不是确定学位，需按当年招生文件核验。`;
+          fallback.estimateMethod = `坐标邻近行政区推断（最近样本约 ${formatNumber((districtEvidence.nearestDistanceKm || 0) * 1000)}m） + 行政区排名样本中位学校`;
+          fallback.districtResolution = districtEvidence;
+          schoolDataScope = 'district-coordinate-estimate';
+        } else {
+          schoolDataScope = 'district-baseline-estimate';
+        }
+        state.schoolDistrictData = packageData;
+        state.schoolDistrictId = districtId;
+        state.schoolDistrictManifest = packageData.manifest || state.schoolDistrictManifest;
+        result = { ...result, provisionalMapping: mergedFallback };
+        schoolFallbackFromName = district || '';
+      }
+    }
+  }
+  // Supplement records carry their own district. Switch the ranking/source
+  // package before resolving school ranks; otherwise a Tianhe candidate found
+  // through the shared Guangzhou supplement would be scored against the
+  // initially loaded Huangpu package and appear as missing rank data.
+  const provisionalDistrictId = result.provisionalMapping?.districtId;
+  const provisionalPackage = provisionalDistrictId
+    ? state.schoolDistrictPackages?.[provisionalDistrictId]
+    : null;
+  if (provisionalPackage && provisionalPackage !== state.schoolDistrictData) {
+    state.schoolDistrictData = provisionalPackage;
+    state.schoolDistrictId = provisionalDistrictId;
+    state.schoolDistrictManifest = provisionalPackage.manifest || state.schoolDistrictManifest;
+  }
+  // A project-specific public claim is stronger than a generic district
+  // median, but it is still provisional until the education bureau publishes
+  // the annual property-to-school row. Keep the source kind visible in the
+  // UI and do not turn it into a confirmed mapping.
+  if (result.provisionalMapping?.sourceKind && schoolDataScope === 'phase-or-community') {
+    schoolDataScope = result.provisionalMapping.sourceKind;
   }
   const confirmed = result.confirmedMapping;
   const provisional = result.provisionalMapping;
@@ -2788,12 +3461,18 @@ function renderSchoolLookup() {
     ? '3公里内邻近小区一致候选'
     : hasSpatialConsensus || /spatial-neighbor-consensus/.test(provisionalKind)
       ? '邻近已映射小区一致候选'
+    : /district-coordinate-estimate/.test(provisionalKind)
+      ? '坐标推断行政区基线候选'
+    : /district-baseline-estimate|mixed-with-district-baseline/.test(provisionalKind)
+      ? '行政区学校样本基线候选'
     : hasRoadTokenConsensus
       ? '同道路/片区已映射小区一致候选'
     : hasPriorYearGroup
       ? '官方往年/招生范围表交叉候选'
     : hasOfficialPhaseBridge
       ? '官方小学—初中对口组表交叉候选'
+    : /project-public-claim/.test(provisionalKind)
+      ? '项目公开资料候选'
     : /official-road-text-intersection|mixed-nearby-and-road-text|mixed-multi-source/.test(provisionalKind)
       ? '地址/官方地段文本交叉候选'
       : '第三方附近学校候选';
@@ -2848,7 +3527,18 @@ function displaySubscore(factor, subscore) {
 // the visible subscore sum (for example 3 + 1.8 + 1 + 1.4 + 0 + 1 + 0.5 + 1 = 9.7).
 function displayedPointTotal(factor) {
   const values = (factor?.subscores || []).map((subscore) => displaySubscore(factor, subscore).score);
-  if (!values.length || values.some((value) => value === null || value === undefined || value === '' || !Number.isFinite(Number(value)))) return null;
+  if (!values.length) return null;
+  const available = values.filter((value) => value !== null && value !== undefined && value !== '' && Number.isFinite(Number(value)));
+  if (!available.length) return null;
+  // Quality and future potential are additive dimensions.  A missing raw
+  // field contributes no points and remains visibly marked “待补充”, while
+  // the available fields still produce a conservative partial dimension
+  // score.  This prevents one unavailable field from invalidating the whole
+  // dimension or the other dimensions.
+  if (factor.id === 'quality' || factor.id === 'future') {
+    return round1(available.reduce((sum, value) => sum + Number(value), 0));
+  }
+  if (values.some((value) => value === null || value === undefined || value === '' || !Number.isFinite(Number(value)))) return null;
   return round1(values.reduce((sum, value) => sum + Number(value), 0));
 }
 
@@ -3209,7 +3899,7 @@ function renderTransportRuleDetail(factor) {
     </div>`).join('')
     : '<div class="transport-missing-inline">请输入小区名称，系统会优先使用已核验路线；未登记路线但有坐标的小区会自动生成附近站点估算。</div>';
   return `<div class="transport-rule-detail">
-    <div class="transport-rule-note">统一口径：小区最近人行道出入口 → 地铁站可用人行出口，优先使用已登记步行路线；缺少完整路线时取直线距离 × 1.15 与公开步行距离 × 1.00 的较高值，并四舍五入到 10 米。1.15 是基于已有直线/步行样本的保守绕行系数，结果标记为“估算”，用户可直接修改米数，修改后标记为“用户修正”。</div>
+    <div class="transport-rule-note">统一口径：小区最近人行道出入口 → 地铁站可用人行出口；有公开的入口到出口步行距离时优先直接采用，不再与直线距离比较取最大值。没有公开步行距离时，才按直线距离 × 1.35 估算；只有坐标时会明确标记为中心点代理估算，不能冒充最近人行道出入口路线。结果标记为“估算”，用户可直接修改米数，修改后标记为“用户修正”。</div>
     <div class="transport-route-list">${routeRows}</div>
   </div>`;
 }
@@ -3662,7 +4352,7 @@ const FAVORITE_RESULTS_KEY = 'resiscore.favoriteResults.v1';
 const MAX_SAVED_RESULTS = 24;
 const MAX_COMPARE_RESULTS = 16;
 const MAX_FAVORITE_RESULTS = 50;
-const SCORE_MODEL_VERSION = '2026.10.05-live-community-data-v12-parity-caps-load-generation';
+const SCORE_MODEL_VERSION = '2026.10.07-registry-layer-fallback-loading-transport-public-first-1.35-v15';
 let activeCompareDragId = '';
 
 function escapeHtml(value) {
@@ -5129,6 +5819,9 @@ function confirmMissingData() {
 
 function promptMissingDataIfNeeded() {
   if (state.manualMode || !String(state.property || '').trim()) return;
+  // Do not freeze the first evaluation's missing-data modal while the
+  // asynchronously loaded school/remote packages are still arriving.
+  if (state.cityId === 'guangzhou' && !state.initialDataReady) return;
   const modal = $('#missingDataModal');
   if (modal && !modal.hidden) return;
   if (scoreCoverage().completedCount < factors.length && missingRawDataItems().length) openMissingDataModal();
@@ -5202,7 +5895,14 @@ function evaluate(valueOverride = null, options = {}) {
 function readCityDataState() {
   try {
     const parsed = JSON.parse(localStorage.getItem(CITY_DATA_KEY) || '{}');
-    return parsed && typeof parsed === 'object' ? parsed : {};
+    if (!parsed || typeof parsed !== 'object') return {};
+    // Older builds marked a city ready after a timer without downloading any
+    // package. Keep Guangzhou's published package, but force other legacy
+    // entries through the real download gate before they can be selected.
+    Object.entries(parsed).forEach(([cityId, entry]) => {
+      if (cityId !== 'guangzhou' && entry?.ready && entry.requiredReady !== true) entry.ready = false;
+    });
+    return parsed;
   } catch (error) {
     return {};
   }
@@ -5273,7 +5973,11 @@ function cityMeta(cityId = state.cityId) {
 }
 
 function cityDataReady(cityId) {
-  return Boolean(state.cityData[cityId]?.ready);
+  const entry = state.cityData[cityId];
+  // Non-Guangzhou cities must carry the explicit gate written by a successful
+  // transport+amenity download. This also protects the current session from
+  // legacy timer-only entries that predate the persisted requiredReady flag.
+  return Boolean(entry?.ready && (cityId === 'guangzhou' || entry.requiredReady === true));
 }
 
 function cityDataNeedsAutoRefresh(cityId, now = Date.now()) {
@@ -5291,9 +5995,13 @@ function markCityDataReady(cityId, source = 'downloaded', details = {}) {
   const previous = state.cityData[cityId] || {};
   const now = new Date().toISOString();
   const updated = Boolean(details.updated);
+  const requiredReady = details.requiredReady !== undefined
+    ? Boolean(details.requiredReady)
+    : (previous.requiredReady !== undefined ? Boolean(previous.requiredReady) : cityId === 'guangzhou');
   state.cityData[cityId] = {
     ...previous,
     ready: true,
+    requiredReady,
     source: source === 'local' ? (previous.source || 'downloaded') : source,
     version: details.version || previous.version || 'v1.0',
     downloadedAt: previous.downloadedAt || details.downloadedAt || now,
@@ -5304,9 +6012,10 @@ function markCityDataReady(cityId, source = 'downloaded', details = {}) {
   persistCityDataState();
 }
 
-function recordCityDataResult(cityId, result) {
+function recordCityDataResult(cityId, result, details = {}) {
   if (!result) return;
   markCityDataReady(cityId, result.source, {
+    ...details,
     version: result.version,
     checkedAt: result.checkedAt,
     updated: result.updated,
@@ -5341,8 +6050,13 @@ function openCityMenu() {
   if (switcher) switcher.setAttribute('aria-expanded', 'true');
 }
 
-function applyCity(cityId) {
+function applyCity(cityId, loadedResults = null) {
   const city = cityMeta(cityId);
+  const loadedByKind = Array.isArray(loadedResults)
+    ? Object.fromEntries(loadedResults
+      .filter((item) => item?.kind && item?.result?.data)
+      .map((item) => [item.kind, item.result.data]))
+    : {};
   // A loaded history record belongs to the previous city. Do not let a later
   // save action use that record as the replacement target after switching.
   state.editingSnapshotContext = null;
@@ -5354,10 +6068,17 @@ function applyCity(cityId) {
   state.schoolDistrictDirty = false;
   const loadToken = ++state.dataLoadToken;
   applyWeightPreferenceForCity(state.cityId);
+  // A newly downloaded non-Guangzhou package is passed in by the download
+  // flow. Keep those actual payloads when switching cities; clearing them here
+  // would make a successful download look ready while the next lookup still
+  // sees null data.
+  state.transportData = city.id === 'guangzhou' ? state.transportData : (loadedByKind.transport || null);
+  state.amenityData = city.id === 'guangzhou' ? state.amenityData : (loadedByKind.amenity || null);
   state.priceData = city.id === 'guangzhou' ? state.priceData : null;
   state.communityQualityData = city.id === 'guangzhou' ? state.communityQualityData : null;
   state.futureData = city.id === 'guangzhou' ? state.futureData : null;
   state.multiSourceData = city.id === 'guangzhou' ? state.multiSourceData : null;
+  state.communityRegistryData = city.id === 'guangzhou' ? state.communityRegistryData : null;
   state.property = city.id === 'guangzhou' ? '大壮名城' : '';
   persistActiveView();
   const transportFactor = factors.find((item) => item.id === 'transport');
@@ -5473,7 +6194,7 @@ function closeCityDataModal() {
   state.pendingCityId = null;
 }
 
-function downloadPendingCityData() {
+async function downloadPendingCityData() {
   const cityId = state.pendingCityId;
   const city = cityMeta(cityId);
   const modal = $('#cityDataModal');
@@ -5486,26 +6207,58 @@ function downloadPendingCityData() {
   button.disabled = true;
   button.textContent = '正在下载…';
   packs.forEach((pack) => pack.classList.remove('done'));
-  let completed = 0;
-  const tick = () => {
-    completed += 1;
-    if (packs[completed - 1]) packs[completed - 1].classList.add('done');
-    const progressValue = Math.round(completed / packs.length * 100);
-    progress.style.width = `${progressValue}%`;
-    percent.textContent = `${progressValue}%`;
-    status.textContent = completed < packs.length ? `正在准备：${CITY_DATA_PACKS[completed - 1]}` : '数据已准备完成';
-    if (completed < packs.length) window.setTimeout(tick, 180);
-    else {
-      markCityDataReady(cityId);
-      if (modal) modal.hidden = true;
-      applyCity(cityId);
-      showToast(`${city.name}多维数据已下载到本机`);
+  progress.style.width = '8%';
+  percent.textContent = '8%';
+  status.textContent = '正在检查交通与配套数据…';
+  try {
+    const result = await refreshSingleCityData(cityId);
+    if (!result?.requiredReady) {
+      throw new Error(result?.errors?.join('；') || '交通与配套数据未完整下载');
     }
-  };
-  window.setTimeout(tick, 220);
+
+    // Only mark packs for which refreshSingleCityData returned a real payload.
+    // The modal may list optional dimensions, but they must not be presented as
+    // downloaded when this city has no corresponding package yet.
+    const packIndex = {
+      registry: 0,
+      transport: 1,
+      center: 2,
+      school: 3,
+      price: 4,
+      evidence: 5,
+      amenity: 6,
+      quality: 7,
+      future: 8,
+      score: 9
+    };
+    (result.results || []).forEach(({ kind, result: payload }) => {
+      const index = packIndex[kind];
+      if (Number.isInteger(index) && payload?.data && packs[index]) packs[index].classList.add('done');
+    });
+    progress.style.width = '100%';
+    percent.textContent = '100%';
+    status.textContent = result.warnings?.length
+      ? '交通与配套已下载；部分可选数据源暂不可用'
+      : '所需数据已准备完成';
+    closeCityDataModal();
+    // Preserve the payloads fetched for this pending city. applyCity normally
+    // clears data when switching away from Guangzhou, so dropping these here
+    // would make the just-completed download unusable until a second refresh.
+    applyCity(cityId, result.results);
+    showToast(`${city.name}交通与配套数据已下载到本机`);
+  } catch (error) {
+    packs.forEach((pack) => pack.classList.remove('done'));
+    progress.style.width = '0%';
+    percent.textContent = '0%';
+    status.textContent = `下载失败：${error.message || '当前城市数据不可用，请稍后重试'}`;
+    showToast(`${city.name}数据下载失败，请检查网络后重试`);
+  } finally {
+    button.disabled = false;
+    button.textContent = '重试下载';
+  }
 }
 
-function selectCity(cityId) {
+async function selectCity(cityId) {
   if (cityId === state.cityId) {
     closeCityMenu();
     return;
@@ -5513,6 +6266,27 @@ function selectCity(cityId) {
   if (!cityDataReady(cityId)) {
     closeCityMenu();
     openCityDataModal(cityId);
+    return;
+  }
+  // Switching back to a previously downloaded non-Guangzhou city must
+  // rehydrate its cached packages. The ready flag is only metadata; it is not
+  // the score payload itself.
+  if (cityId !== 'guangzhou') {
+    closeCityMenu();
+    try {
+      const result = await refreshSingleCityData(cityId);
+      if (!result?.requiredReady) {
+        state.cityData[cityId].ready = false;
+        state.cityData[cityId].requiredReady = false;
+        persistCityDataState();
+        openCityDataModal(cityId);
+        return;
+      }
+      applyCity(cityId, result.results);
+    } catch (error) {
+      showToast(`${cityMeta(cityId).name}本地数据读取失败，请重新下载`);
+      openCityDataModal(cityId);
+    }
     return;
   }
   applyCity(cityId);
@@ -5659,17 +6433,6 @@ async function loadCommunityEvidenceData(options = {}) {
     }
   } catch (error) {
     if (!activeDataLoad(token, cityId)) return;
-    const bundled = globalThis.RESISCORE_BUNDLED_EVIDENCE_DATA;
-    if (bundled) {
-      state.multiSourceData = bundled;
-      if (state.property) {
-        applyOfflineScoreLookup(state.property);
-        applyLifeLookup(state.property);
-        renderScore();
-      }
-      console.warn('广州多来源证据远端文件不可用，已使用随版本发布的内置证据包：', error);
-      return;
-    }
     state.multiSourceData = null;
     console.warn('广州多来源证据包不可用，继续使用单源字段并标记待确认：', error);
     if (state.property) renderScore();
@@ -5734,6 +6497,44 @@ async function loadCommunityFutureData(options = {}) {
   }
 }
 
+async function loadCommunityRegistryData(options = {}) {
+  const cityId = options.cityId || state.cityId;
+  const token = options.loadToken ?? state.dataLoadToken;
+  if (cityId !== 'guangzhou') return;
+  try {
+    const data = await requestAppJson('data/guangzhou-community-registry-2026.json');
+    if (!activeDataLoad(token, cityId)) return;
+    state.communityRegistryData = data;
+    if (state.property) {
+      applyTransportLookup(state.property);
+      applyLifeLookup(state.property);
+      applyCenterLookup(state.property);
+      applyOfflineScoreLookup(state.property);
+      if (state.schoolDistrictData?.search) applySchoolLookup(state.property);
+      renderScore();
+    }
+  } catch (error) {
+    if (!activeDataLoad(token, cityId)) return;
+    const bundled = globalThis.RESISCORE_BUNDLED_COMMUNITY_REGISTRY?.city === cityId
+      ? globalThis.RESISCORE_BUNDLED_COMMUNITY_REGISTRY : null;
+    if (bundled) {
+      state.communityRegistryData = bundled;
+      if (state.property) {
+        applyTransportLookup(state.property);
+        applyLifeLookup(state.property);
+        applyCenterLookup(state.property);
+        applyOfflineScoreLookup(state.property);
+        if (state.schoolDistrictData?.search) applySchoolLookup(state.property);
+        renderScore();
+      }
+      console.warn('广州统一小区登记层远端文件不可用，已使用随版本发布的内置登记包：', error);
+      return;
+    }
+    state.communityRegistryData = null;
+    console.warn('广州统一小区登记层不可用，继续使用维度数据包：', error);
+  }
+}
+
 async function refreshSingleCityData(cityId) {
   const results = [];
   const errors = [];
@@ -5752,6 +6553,74 @@ async function refreshSingleCityData(cityId) {
       errors.push(`配套：${error.message}`);
     }
   }
+  if (cityId === 'guangzhou') {
+    try {
+      const data = await requestAppJson('data/guangzhou-community-registry-2026.json');
+      results.push({ kind: 'registry', result: {
+        data,
+        source: 'updated',
+        version: data.generatedAt || 'registry',
+        updatedAt: data.generatedAt,
+        checkedAt: new Date().toISOString(),
+        updated: true
+      } });
+    } catch (error) {
+      const bundled = globalThis.RESISCORE_BUNDLED_COMMUNITY_REGISTRY;
+      if (bundled) {
+        results.push({ kind: 'registry', result: {
+          data: bundled,
+          source: 'bundled',
+          version: bundled.generatedAt || 'registry',
+          updatedAt: bundled.generatedAt,
+          checkedAt: new Date().toISOString(),
+          checkError: error.message,
+          updated: false
+        } });
+        warnings.push(`登记层：${error.message}`);
+      } else {
+        errors.push(`登记层：${error.message}`);
+      }
+    }
+  }
+  // 登记层之外的维度包也按同一更新周期检查。每个包独立回退到随版本
+  // 发布的内置副本；某一个维度的远端失败不会清空其他维度或阻断本次刷新。
+  if (cityId === 'guangzhou') {
+    const dimensionPackages = [
+      { kind: 'price', label: '单价', path: 'data/guangzhou-community-price-2026.json', stateKey: 'priceData', bundleKey: 'RESISCORE_BUNDLED_PRICE_DATA' },
+      { kind: 'quality', label: '小区品质', path: 'data/guangzhou-community-quality-2026.json', stateKey: 'communityQualityData', bundleKey: 'RESISCORE_BUNDLED_QUALITY_DATA' },
+      { kind: 'evidence', label: '多来源证据', path: 'data/guangzhou-community-evidence-2026.json', stateKey: 'multiSourceData', bundleKey: 'RESISCORE_BUNDLED_EVIDENCE_DATA' },
+      { kind: 'future', label: '未来潜力', path: 'data/guangzhou-future-potential-2026.json', stateKey: 'futureData', bundleKey: 'RESISCORE_BUNDLED_FUTURE_DATA' }
+    ];
+    for (const descriptor of dimensionPackages) {
+      try {
+        const data = await requestAppJson(descriptor.path);
+        results.push({ kind: descriptor.kind, result: {
+          data,
+          source: 'updated',
+          version: data.generatedAt || descriptor.kind,
+          updatedAt: data.generatedAt,
+          checkedAt: new Date().toISOString(),
+          updated: true
+        } });
+      } catch (error) {
+        const bundled = globalThis[descriptor.bundleKey];
+        if (bundled) {
+          results.push({ kind: descriptor.kind, result: {
+            data: bundled,
+            source: 'bundled',
+            version: bundled.generatedAt || descriptor.kind,
+            updatedAt: bundled.generatedAt,
+            checkedAt: new Date().toISOString(),
+            checkError: error.message,
+            updated: false
+          } });
+          warnings.push(`${descriptor.label}：${error.message}`);
+        } else {
+          errors.push(`${descriptor.label}：${error.message}`);
+        }
+      }
+    }
+  }
   if (!results.length) {
     if (errors.length && errors.every((error) => /暂未提供/.test(error))) {
       return { cityId, updated: false, checked: false, errors, unavailable: true };
@@ -5759,8 +6628,30 @@ async function refreshSingleCityData(cityId) {
     throw new Error(errors.join('；') || '当前没有可更新的数据源');
   }
 
+  // A city is only considered downloadable when the two coordinate-based
+  // foundations are actually available.  Do this gate before recording any
+  // result: otherwise a successful transport (or amenity) response could mark
+  // the whole city ready while the other required package is still missing.
+  const requiredKinds = ['transport', 'amenity'];
+  const requiredLabels = { transport: '交通', amenity: '配套' };
+  const missingRequired = requiredKinds.filter((kind) => !results.some((item) => item.kind === kind && item.result?.data));
+  const requiredErrors = missingRequired.map((kind) => `${requiredLabels[kind]}：当前城市未获得可用数据包`);
+  const blockingErrors = [...errors, ...requiredErrors];
+  if (missingRequired.length) {
+    return {
+      cityId,
+      updated: false,
+      checked: results.some(({ result }) => result.checkedAt),
+      errors: blockingErrors,
+      warnings,
+      unavailable: blockingErrors.length > 0 && blockingErrors.every((error) => /暂未提供|未获得/.test(error)),
+      requiredReady: false,
+      results
+    };
+  }
+
   results.forEach(({ result }) => {
-    recordCityDataResult(cityId, result);
+    recordCityDataResult(cityId, result, { requiredReady: true });
     // A checkError means the optional remote manifest/package probe failed.
     // The loader has already returned a valid local/bundled data object, so it
     // is a warning rather than a scoring failure. Only thrown load errors above
@@ -5770,8 +6661,18 @@ async function refreshSingleCityData(cityId) {
   if (cityId === state.cityId) {
     const transport = results.find((item) => item.kind === 'transport')?.result;
     const amenity = results.find((item) => item.kind === 'amenity')?.result;
+    const registry = results.find((item) => item.kind === 'registry')?.result;
+    const price = results.find((item) => item.kind === 'price')?.result;
+    const quality = results.find((item) => item.kind === 'quality')?.result;
+    const evidence = results.find((item) => item.kind === 'evidence')?.result;
+    const future = results.find((item) => item.kind === 'future')?.result;
     if (transport) state.transportData = transport.data;
     if (amenity) state.amenityData = amenity.data;
+    if (registry) state.communityRegistryData = registry.data;
+    if (price) state.priceData = price.data;
+    if (quality) state.communityQualityData = quality.data;
+    if (evidence) state.multiSourceData = evidence.data;
+    if (future) state.futureData = future.data;
     if (state.property) {
       applyTransportLookup(state.property);
       applyLifeLookup(state.property);
@@ -5788,7 +6689,9 @@ async function refreshSingleCityData(cityId) {
     checked: results.some(({ result }) => result.checkedAt),
     errors,
     warnings,
-    unavailable
+    unavailable,
+    requiredReady: true,
+    results
   };
 }
 
@@ -5901,8 +6804,17 @@ document.addEventListener('DOMContentLoaded', () => {
     loadCommunityPriceData({ loadToken }),
     loadCommunityQualityData({ loadToken }),
     loadCommunityFutureData({ loadToken }),
-    loadCommunityEvidenceData({ loadToken })
-  ]).then(scheduleAutomaticCityDataRefresh);
+    loadCommunityEvidenceData({ loadToken }),
+    loadCommunityRegistryData({ loadToken })
+  ]).then(() => {
+    if (loadToken !== state.dataLoadToken) return;
+    state.initialDataReady = true;
+    if (state.property) {
+      renderScore();
+      promptMissingDataIfNeeded();
+    }
+    scheduleAutomaticCityDataRefresh();
+  });
   $('#citySwitcher').addEventListener('click', () => {
     const menu = $('#cityMenu');
     menu.hidden ? openCityMenu() : closeCityMenu();

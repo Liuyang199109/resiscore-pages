@@ -1,0 +1,274 @@
+{
+  "schemaVersion": 1,
+  "city": "guangzhou",
+  "cityName": "广州",
+  "schoolYear": 2026,
+  "generatedAt": "2026-10-04",
+  "completeForAnyCommunity": false,
+  "summary": "广州住宅目录主索引为5,743条，另有4,861条生活配套住宅点位可直接匹配；多源审计显示5,743不是官方全市总量。现已生成逐小区证据包，坐标、交通估算、CBD和生活配套可在本地优先计算；品质只对公开字段实际命中的子项评分，缺失字段不使用默认分。未来潜力增加广州11区公开规划代理包：小区级/项目级证据优先，缺少逐小区结构化字段时关联当前交通、生活配套和所属片区规划，并在界面标注代理范围。",
+  "dimensions": {
+    "residentialIndex": {
+      "status": "ready_with_directory_coordinate_fallback",
+      "records": 5743,
+      "coordinates": 5743,
+      "aliases": 2,
+      "source": "广州生活配套住宅点位 + 广州住宅目录质量基线；目录基线可作为未登记名称的坐标回退",
+      "coordinateFallbackRecords": 5743,
+      "multiSourceStatus": "single-canonical-directory-with-external-aggregate-cross-checks",
+      "comparisonSources": [
+        {
+          "name": "城市房网",
+          "reportedSample": 6290,
+          "url": "https://gz.cityhouse.com.cn/market/ALL/",
+          "comparable": "partial",
+          "note": "无逐小区标准名称+坐标下载清单，547差异仅作缺口提示"
+        },
+        {
+          "name": "房天下",
+          "reportedSample": 22498,
+          "url": "https://gz.esf.fang.com/housing/__0_1_0_0_7_0_0_0/",
+          "comparable": "low",
+          "note": "挂牌/类别/别名混合，不可直接相减"
+        },
+        {
+          "name": "安居客",
+          "reportedSample": 34173,
+          "url": "https://guangzhou.anjuke.com/guangzhou/cm-zu/",
+          "comparable": "low",
+          "note": "小区大全含别墅、分期、广州周边和别名"
+        },
+        {
+          "name": "链家",
+          "reportedSample": null,
+          "url": "https://gz.lianjia.com/xiaoqu/2111103316884/",
+          "comparable": "sample-only",
+          "note": "详情字段可核验，未提供全量下载清单"
+        }
+      ],
+      "primaryAmenityRecords": 4861
+    },
+    "transport": {
+      "status": "partial",
+      "stations": 310,
+      "explicitCommunityRoutes": 5,
+      "estimatedRouteCoverageWithin1500m": 4112,
+      "estimatedRouteCoverageOutside1500m": 1631,
+      "source": "广州地铁站点 + 5 条已登记社区路线 + 5,743 条住宅坐标候选路线 + 公开目录步行比例校准",
+      "walkingRatioCalibration": {
+        "validRatioSamples": 49,
+        "mean": 1.236,
+        "median": 1.059,
+        "trimmedMean10to90": 1.144,
+        "appliedMultiplier": 1.35,
+        "note": "公开的最近人行道出入口→地铁可用出口步行距离优先直接采用；缺少公开步行距离时按直线距离×1.35估算。1.35仅作为缺少公开路线时的兜底系数，公开距离不再与直线距离取高值；仅有中心坐标时标记为代理估算。"
+      },
+      "coordinateCommunityRecords": 5743
+    },
+    "cbd": {
+      "status": "ready_for_coordinates",
+      "coordinateCoverage": 5743,
+      "peakTransitRecords": 5,
+      "source": "广州住宅目录坐标可计算 CBD 直线距离；真实高峰公交耗时仅部分历史记录，当前界面按距离代理并标估算"
+    },
+    "life": {
+      "status": "ready_for_coordinate_matched_communities_provisional",
+      "commercial": 1863,
+      "dining": 2158,
+      "medical": 424,
+      "parks": 493,
+      "coordinateFallbackRecords": 5743,
+      "source": "广州生活配套公开点位 + 住宅目录坐标回退；附近点位计数只对已采集公开点位计算",
+      "commercialWithin2Km": 5150,
+      "diningWithin2Km": 5177,
+      "medicalWithin5Km": 5405,
+      "parkWithin5Km": 5672,
+      "amenitiesMultiSourceRecords": 17,
+      "amenitySourceRule": "OSM 作为城市点位基础源；仅当前小区半径内实际命中公开地图补录样本时计入第二来源；少于3个独立来源均标记需进一步确认",
+      "zeroPointRecords": {
+        "commercialWithin2Km": 593,
+        "diningWithin2Km": 566,
+        "medicalWithin5Km": 338,
+        "parkWithin5Km": 71
+      }
+    },
+    "school": {
+      "status": "partial",
+      "districts": 11,
+      "pendingDistricts": [],
+      "source": "广州各区2026招生来源索引",
+      "availableOfflinePackages": [
+        "liwan",
+        "huangpu",
+        "huadu",
+        "nansha",
+        "yuexiu",
+        "haizhu",
+        "tianhe",
+        "baiyun",
+        "panyu",
+        "zengcheng",
+        "conghua"
+      ],
+      "partialPackages": [
+        "liwan",
+        "huadu",
+        "nansha",
+        "yuexiu",
+        "haizhu",
+        "tianhe",
+        "panyu",
+        "zengcheng",
+        "conghua"
+      ],
+      "completePackages": [
+        "huangpu",
+        "baiyun"
+      ],
+      "rankingEstimatePackages": {
+        "baiyun": 283,
+        "conghua": 87,
+        "haizhu": 66,
+        "huadu": 56,
+        "黄埔区": 17,
+        "liwan": 59,
+        "nansha": 82,
+        "panyu": 147,
+        "tianhe": 94,
+        "yuexiu": 53,
+        "zengcheng": 6
+      },
+      "rankingEstimateMethod": "基于公开办学属性关键词分层的非官方名次估计；仅用于补齐计算链路，界面标记中性估值，可人工修正。",
+      "notes": [
+        "11个行政区已有可加载离线包；海珠为官方图片OCR、增城为官方PDF OCR草稿、从化为官方2025 PDF参考（2026 DOC待转换），越秀为公开摘要+官方附件。",
+        "非官方全市学校名次仅用于计算链路的相对先验，界面明确标记为估值，可人工修正。",
+        "花都2026初中计划PDF已转换为42条官方OCR招生/派位文本；仍非逐小区确认映射。"
+      ],
+      "conversionAudit": "data/guangzhou-school-conversion-audit-2026.json",
+      "normalizedPackages": 4,
+      "normalizedPackageIds": [
+        "huangpu",
+        "yuexiu",
+        "huadu",
+        "conghua"
+      ]
+    },
+    "price": {
+      "status": "public_estimate_partial",
+      "publicRecords": 1278,
+      "exactResidentialNameMatches": 452,
+      "fuzzyResidentialNameMatches": 858,
+      "source": "房天下广州小区价格列表 + 广州住宅目录公开字段；均为挂牌/统计均价估算，非官方成交价，可能滞后；独立价格包优先，目录价格作为第二级回退",
+      "canonicalRecords": 5,
+      "directoryBaselineRecords": 5743,
+      "directoryPriceRecords": 4883
+    },
+    "quality": {
+      "status": "public_directory_fields_partial_no_default_score",
+      "directoryRecords": 5743,
+      "detailFetched": 5743,
+      "greenOrPlotFieldCoverage": 4409,
+      "source": "广州都市圈公开小区目录；实际映射建成年代、绿化率和命中知名开发商品牌，车位总数仅作证据展示；梯户比、噪音、最高层数、层高和车位/户数缺失时保持待补充，不用中性默认分。",
+      "notes": [
+        "已完成5743条公开目录详情抓取，其中7条请求超时；可结构化字段覆盖显著提高，但物业公司、住宅总户数、最高层数、层高、梯户比、噪音在该目录结构化字段中仍为0。",
+        "证据包按字段记录sourceCount/status/needsConfirmation；来源不足3个不会冒充多源平均，缺失字段不使用默认分。",
+        "车位总数不能替代住宅总户数，因此不直接计算车位配比。"
+      ],
+      "directoryPriceRecords": 4883,
+      "fieldAudit": "data/guangzhou-community-quality-field-audit-2026.json",
+      "fieldCoverage": {
+        "buildYear": 4734,
+        "greenRate": 4261,
+        "plotRatio": 4240,
+        "parkingCount": 3748,
+        "buildingCount": 5735,
+        "developer": 4427,
+        "propertyCompany": 0,
+        "householdCount": 0,
+        "maxFloor": 0,
+        "floorHeight": 0,
+        "ladderHouseholdRatio": 0,
+        "noiseLevel": 0
+      },
+      "detailErrors": 7,
+      "schemaAudit": "data/guangzhou-community-quality-schema-audit-2026.json"
+    },
+    "future": {
+      "status": "ready_with_11_district_regional_proxies",
+      "directoryRecords": 5743,
+      "communityEvidenceRecords": 5,
+      "source": "data/guangzhou-future-potential-2026.json；小区/项目公开证据优先，缺少逐小区字段时使用广州11区官方规划代理",
+      "notes": [
+        "生活配套成熟度和交通兑现度使用当前小区公开点位/路线结果；产业人口导入、供需竞争压力使用所属行政区公开规划与重点项目，并在页面标注区域代理。",
+        "11个行政区均已接入统一 districtProfiles schema；片区分数为依据官方规划的透明档位代理，不能解释为小区级规划承诺。",
+        "片区级公开规划通常没有逐小区去化率、人口净流入或项目兑现率；缺少这些字段时保持区域代理并标记 medium 可信度，不使用统一默认分。",
+        "communityEvidence 仍只覆盖已有项目级公开证据的小区；其余小区使用所在行政区代理。"
+      ],
+      "districtProfileRecords": 11,
+      "profileCoverage": {
+        "districts": [
+          "越秀",
+          "海珠",
+          "天河",
+          "白云",
+          "黄埔",
+          "荔湾",
+          "番禺",
+          "花都",
+          "南沙",
+          "增城",
+          "从化"
+        ],
+        "schemaVersion": 2,
+        "proxyScores": [
+          "futureIndustry",
+          "futureSupply"
+        ],
+        "derivedFromCommunityData": [
+          "future-amenities",
+          "future-transport"
+        ],
+        "pendingAtCommunityLevel": [
+          "future-amenities规划兑现",
+          "future-transport规划节点",
+          "futureIndustry小区级人口导入",
+          "futureSupply小区级去化率"
+        ]
+      },
+      "package": "data/guangzhou-future-potential-2026.json"
+    },
+    "evidence": {
+      "status": "auditable_per_community",
+      "records": 5743,
+      "priceRecords": 4921,
+      "priceMultiSourceRecords": 471,
+      "buildYearRecords": 4734,
+      "greenRateRecords": 4261,
+      "plotRatioRecords": 4240,
+      "transportVerifiedRecords": 4,
+      "transportEstimatedRecords": 5739,
+      "rule": "相似时至少3个独立来源平均；差异大时至少5个独立来源平均；不足时保留临时值并标记待确认",
+      "source": "data/guangzhou-community-evidence-2026.json",
+      "amenityCoverage": {
+        "commercialWithin2Km": 5150,
+        "diningWithin2Km": 5177,
+        "medicalWithin5Km": 5405,
+        "parkWithin5Km": 5672,
+        "amenitiesMultiSourceRecords": 17
+      },
+      "parkingRecords": 3748,
+      "buildingRecords": 5735,
+      "developerRecords": 4427,
+      "propertyCompanyRecords": 0,
+      "householdCountRecords": 0,
+      "maxFloorRecords": 0,
+      "floorHeightRecords": 0,
+      "ladderHouseholdRecords": 0,
+      "noiseRecords": 0,
+      "detailFetchedRecords": 5743,
+      "detailTimeoutRecords": 7,
+      "qualitySchemaAudit": "data/guangzhou-community-quality-schema-audit-2026.json"
+    }
+  },
+  "multiSourceCoverageAudit": "data/guangzhou-community-multisource-audit-2026.json",
+  "coverageReport": "data/guangzhou-community-coverage-report-2026.json"
+}

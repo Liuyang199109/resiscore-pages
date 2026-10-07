@@ -1,0 +1,258 @@
+{
+  "schemaVersion": 1,
+  "city": "guangzhou",
+  "schoolYear": 2026,
+  "recordCount": 5743,
+  "totals": {
+    "elementary_without_middle": 891,
+    "name_or_property_alias": 1225,
+    "package_text_without_community_hit": 4471,
+    "exact_address_alias_provisional": 47
+  },
+  "byDistrict": {
+    "从化": {
+      "name_or_property_alias": 66,
+      "package_text_without_community_hit": 157
+    },
+    "南沙": {
+      "name_or_property_alias": 62,
+      "package_text_without_community_hit": 157
+    },
+    "增城": {
+      "package_text_without_community_hit": 455,
+      "name_or_property_alias": 20
+    },
+    "天河": {
+      "name_or_property_alias": 208,
+      "package_text_without_community_hit": 541,
+      "exact_address_alias_provisional": 9
+    },
+    "海珠": {
+      "package_text_without_community_hit": 688,
+      "name_or_property_alias": 23
+    },
+    "番禺": {
+      "package_text_without_community_hit": 546,
+      "name_or_property_alias": 213,
+      "exact_address_alias_provisional": 1
+    },
+    "白云": {
+      "package_text_without_community_hit": 574,
+      "name_or_property_alias": 51
+    },
+    "花都": {
+      "name_or_property_alias": 237,
+      "package_text_without_community_hit": 345,
+      "exact_address_alias_provisional": 14
+    },
+    "荔湾": {
+      "package_text_without_community_hit": 383,
+      "name_or_property_alias": 34
+    },
+    "越秀": {
+      "package_text_without_community_hit": 434,
+      "name_or_property_alias": 234,
+      "exact_address_alias_provisional": 14
+    },
+    "黄埔": {
+      "package_text_without_community_hit": 191,
+      "name_or_property_alias": 77,
+      "exact_address_alias_provisional": 9
+    }
+  },
+  "examples": {
+    "name_or_property_alias": [
+      {
+        "name": "113中学宿舍",
+        "address": "五山路",
+        "district": "天河"
+      },
+      {
+        "name": "30号小区",
+        "address": "新华路81号",
+        "district": "花都"
+      },
+      {
+        "name": "37小区",
+        "address": "新中路1号",
+        "district": "花都"
+      },
+      {
+        "name": "57号小区",
+        "address": "云山大道57号",
+        "district": "花都"
+      },
+      {
+        "name": "一德路",
+        "address": "一德路",
+        "district": "越秀"
+      },
+      {
+        "name": "七星路",
+        "address": "从化七星路",
+        "district": "从化"
+      },
+      {
+        "name": "万丰路",
+        "address": "万丰路",
+        "district": "番禺"
+      },
+      {
+        "name": "万和苑",
+        "address": "兴东路23号",
+        "district": "荔湾"
+      },
+      {
+        "name": "万安小区",
+        "address": "长堤路61号",
+        "district": "南沙"
+      },
+      {
+        "name": "万松园",
+        "address": "前进路万松园",
+        "district": "海珠"
+      },
+      {
+        "name": "万福路",
+        "address": "万福路",
+        "district": "越秀"
+      },
+      {
+        "name": "万科云",
+        "address": "华观路与高唐路交汇处,华观路1933号,华观路19333号",
+        "district": "天河"
+      }
+    ],
+    "package_text_without_community_hit": [
+      {
+        "name": "128社区",
+        "address": "菜园中路108号",
+        "district": "增城"
+      },
+      {
+        "name": "A+创新基地",
+        "address": "新港东路2443号",
+        "district": "海珠"
+      },
+      {
+        "name": "CFD商汇",
+        "address": "叠景中路92号",
+        "district": "海珠"
+      },
+      {
+        "name": "IPC港航中心",
+        "address": "黄埔大道东974号,黄埔大道东976号",
+        "district": "黄埔"
+      },
+      {
+        "name": "SOLO禺意湾8号",
+        "address": "沿江中路8号",
+        "district": "番禺"
+      },
+      {
+        "name": "we公馆",
+        "address": "大石街We公馆",
+        "district": "番禺"
+      },
+      {
+        "name": "一品湖山",
+        "address": "同和路一品湖山",
+        "district": "白云"
+      },
+      {
+        "name": "一品灏景",
+        "address": "坑口路一品灏景",
+        "district": "番禺"
+      },
+      {
+        "name": "一处春大厦",
+        "address": "先烈东路316号",
+        "district": "天河"
+      },
+      {
+        "name": "一德东路",
+        "address": "一德东路",
+        "district": "越秀"
+      },
+      {
+        "name": "一德花园",
+        "address": "一德路202号",
+        "district": "越秀"
+      },
+      {
+        "name": "一德西路",
+        "address": "一德西路",
+        "district": "越秀"
+      }
+    ],
+    "exact_address_alias_provisional": [
+      {
+        "name": "东方文德森岛湖",
+        "address": "狮岭大道东63号",
+        "district": "花都"
+      },
+      {
+        "name": "乙烯大院",
+        "address": "泰景南街5号大院",
+        "district": "黄埔"
+      },
+      {
+        "name": "二棉厂宿舍",
+        "address": "员村西街4号大院",
+        "district": "天河"
+      },
+      {
+        "name": "光明北路241号大院",
+        "address": "光明北路241号",
+        "district": "番禺"
+      },
+      {
+        "name": "共和怡苑",
+        "address": "共和西路10号",
+        "district": "越秀"
+      },
+      {
+        "name": "华南国家植物园",
+        "address": "天源路1190号",
+        "district": "天河"
+      },
+      {
+        "name": "南北商贸城",
+        "address": "宏发南路9号",
+        "district": "花都"
+      },
+      {
+        "name": "南国公馆",
+        "address": "海乐路11号",
+        "district": "天河"
+      },
+      {
+        "name": "南岗街四航局塘头生活区",
+        "address": "竹山路92号大院",
+        "district": "黄埔"
+      },
+      {
+        "name": "印象东山",
+        "address": "永安横26号",
+        "district": "越秀"
+      },
+      {
+        "name": "天马丽苑二期",
+        "address": "望亭路15号",
+        "district": "花都"
+      },
+      {
+        "name": "天马河壹号五期",
+        "address": "荔红南路1号",
+        "district": "花都"
+      }
+    ]
+  },
+  "definitions": {
+    "name_or_property_alias": "小区名称或官方别名在服务地段文本中命中；不等于逐户籍官方确认。",
+    "exact_address_alias_provisional": "完整门牌地址精确命中唯一服务地段行，已标待年度核验。",
+    "package_text_without_community_hit": "该区有官方/公开地段包，但文本主要按道路、村居、片区表述，尚未可靠归一到该小区名称。",
+    "no_normalized_package": "当前索引没有可加载的标准化区级包，不能推断没有学区。",
+    "elementary_without_middle": "小学命中，但初中对口/派位组在当前包中没有可匹配记录。"
+  }
+}

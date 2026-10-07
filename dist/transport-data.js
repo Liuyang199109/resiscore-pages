@@ -1,11 +1,11 @@
 (function (global) {
   // Bump the namespace when the offline package schema/coordinates change.
-  // v5 invalidates v4 snapshots, which could contain older CBD coordinates
-  // and community routes.  The generation check below also prevents a stale
-  // v5 snapshot from winning over the bundled package while offline/from
+  // v8 invalidates v5-v7 snapshots, which could contain the previous max-based
+  // walking estimate rule. The generation check below also prevents a stale v7
+  // snapshot from winning over the bundled package while offline/from
   // file://.
-  const CACHE_KEY = 'resiscore.transport.cache.v5';
-  const LEGACY_CACHE_PREFIXES = ['resiscore.transport.cache', 'resiscore.transport.cache.v1', 'resiscore.transport.cache.v2', 'resiscore.transport.cache.v3', 'resiscore.transport.cache.v4'];
+  const CACHE_KEY = 'resiscore.transport.cache.v8';
+  const LEGACY_CACHE_PREFIXES = ['resiscore.transport.cache', 'resiscore.transport.cache.v1', 'resiscore.transport.cache.v2', 'resiscore.transport.cache.v3', 'resiscore.transport.cache.v4', 'resiscore.transport.cache.v5', 'resiscore.transport.cache.v6', 'resiscore.transport.cache.v7'];
   const DATA_BASE_URL = global.RESISCORE_DATA_BASE_URL || '';
   const isMiniProgram = typeof wx !== 'undefined' && typeof wx.getFileSystemManager === 'function';
   const fs = isMiniProgram ? wx.getFileSystemManager() : null;
@@ -59,6 +59,14 @@
     const timestamp = Date.parse(String(value?.generatedAt || ''));
     return Number.isFinite(timestamp) ? timestamp : 0;
   };
+  // 规则版本必须参与缓存淘汰。仅比较 generatedAt 会放过“同一天生成、但
+  // 估算系数已经改变”的旧包，导致设备继续显示旧的步行距离和估算说明。
+  const routeRuleVersionOf = (value) => String(
+    value?.routeRuleVersion
+    || value?.communityRouteSchema?.routeRuleVersion
+    || value?.scoring?.routeEstimation?.ruleVersion
+    || ''
+  );
   const localOlderThanBundled = (localCity, bundled) => Boolean(
     localCity && bundled
     && generatedAtMs(bundled) > 0
@@ -132,8 +140,14 @@
     if (!cityMeta) throw new Error(`暂未提供 ${cityId} 的交通数据`);
 
     const localVersion = localManifest?.cities?.[cityId]?.version;
+    const bundledRuleVersion = routeRuleVersionOf(bundled);
+    const expectedRuleVersion = remoteManifest?.cities?.[cityId]?.routeRuleVersion
+      || bundledRuleVersion
+      || cityMeta.routeRuleVersion
+      || '';
     const localIsStale = localOlderThanBundled(localCity, bundled);
-    const usableLocalCity = localCity && !localIsStale ? localCity : null;
+    const localRuleIsStale = Boolean(expectedRuleVersion && routeRuleVersionOf(localCity) !== expectedRuleVersion);
+    const usableLocalCity = localCity && !localIsStale && !localRuleIsStale ? localCity : null;
     const shouldUpdate = !usableLocalCity || (remoteManifest && localVersion !== cityMeta.version);
     let data = usableLocalCity;
     let source = usableLocalCity ? 'local' : 'bundled';
@@ -197,9 +211,10 @@
     return String(value || '').replace(/[\s（）()、，,·\-—]/g, '').toLowerCase();
   }
 
-  // 当地图只提供小区中心点、直线距离或楼盘宣传距离时，先给出可解释的估算值。
-  // 有中心点步行路线时优先扣除“小区中心→最近人行入口”和“站点中心→出口”的偏移；
-  // 只有在缺少中心点路线时，才用直线距离和公开距离的保守放大值兜底。
+  // 统一口径：公开的“最近人行道出入口→地铁可用出口”步行距离优先，
+  // 有公开步行距离时不再与直线距离比较取最大值。只有没有公开步行距离
+  // 时，才按直线距离×1.35估算；中心点路线只能作为缺数据时的标记估算，
+  // 不能冒充最近人行道出入口路线。
   function estimateWalkingDistanceM({
     straightDistanceM,
     publishedDistanceM,
@@ -207,20 +222,23 @@
     originOffsetM = 0,
     stationOffsetM = 0,
     publishedInflation = 1,
-    centerRouteWeight = 1
+    centerRouteWeight = 1,
+    completeRoute = false
   } = {}) {
-    const candidates = [];
     const straight = straightDistanceM === null || straightDistanceM === undefined || straightDistanceM === '' ? NaN : Number(straightDistanceM);
     const published = publishedDistanceM === null || publishedDistanceM === undefined || publishedDistanceM === '' ? NaN : Number(publishedDistanceM);
     const centerRoute = centerWalkingDistanceM === null || centerWalkingDistanceM === undefined || centerWalkingDistanceM === '' ? NaN : Number(centerWalkingDistanceM);
-    if (Number.isFinite(centerRoute) && centerRoute >= 0) {
+    if (Number.isFinite(published) && published >= 0) return Math.round(published);
+    if (completeRoute && Number.isFinite(centerRoute) && centerRoute >= 0) {
       const offsetRoute = (centerRoute - Math.max(0, Number(originOffsetM) || 0) - Math.max(0, Number(stationOffsetM) || 0)) * Math.max(0, Number(centerRouteWeight) || 0);
       return Math.max(0, Math.round(offsetRoute / 10) * 10);
     }
-    if (Number.isFinite(straight) && straight >= 0) candidates.push(straight * 1.15);
-    if (Number.isFinite(published) && published >= 0) candidates.push(published * publishedInflation);
-    const estimate = Math.max(0, ...candidates.filter((value) => Number.isFinite(value)));
-    return estimate ? Math.round(estimate / 10) * 10 : null;
+    if (Number.isFinite(straight) && straight >= 0) return Math.round(straight * 1.35);
+    if (Number.isFinite(centerRoute) && centerRoute >= 0) {
+      const offsetRoute = centerRoute - Math.max(0, Number(originOffsetM) || 0) - Math.max(0, Number(stationOffsetM) || 0);
+      return Math.max(0, Math.round(offsetRoute / 10) * 10);
+    }
+    return null;
   }
 
   function findCommunityRoutes(cityData, query) {
@@ -256,7 +274,7 @@
           copy.stationCenterDistanceKm = station.centerDistanceKm;
         }
         if (copy.distanceQuality === 'estimated') {
-          const estimate = estimateWalkingDistanceM(copy);
+           const estimate = estimateWalkingDistanceM({ ...copy, completeRoute: copy.routeType === 'complete-walking-route' || copy.distanceQuality === 'walking-route' });
           if (Number.isFinite(estimate)) copy.walkDistanceM = estimate;
         }
         return copy;
@@ -282,7 +300,7 @@
         const stationLongitude = Number(station.longitude);
         if (!Number.isFinite(stationLatitude) || !Number.isFinite(stationLongitude)) return null;
         const straightDistanceM = haversineKm(latitude, longitude, stationLatitude, stationLongitude) * 1000;
-        const walkDistanceM = Math.round(straightDistanceM * 1.15 / 10) * 10;
+        const walkDistanceM = Math.round(straightDistanceM * 1.35);
         return {
           stationName: station.name,
           stationLevelScore: Number(station.score),
@@ -295,7 +313,7 @@
           distanceQuality: 'estimated',
           source: '广州小区坐标 + 地铁站坐标（统一绕行系数估算）',
           verifiedAt: generatedAt,
-          estimateMethod: '直线距离 × 1.15，按 10m 取整；未取得具体人行入口和站点出口轨迹'
+          estimateMethod: '无公开步行距离，按直线距离 × 1.35 估算；当前以小区中心坐标代替最近人行道出入口，未取得具体入口和站点出口轨迹'
         };
       })
       .filter((route) => route && Number.isFinite(route.stationLevelScore))

@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 3,
+  "generatedAt": "2026-10-07T00:00:00+08:00",
+  "city": "guangzhou",
+  "cityName": "广州",
+  "version": "2026-10-registry-v5-phase-catalog",
+  "url": "data/guangzhou-community-registry-2026.json",
+  "phaseCatalogUrl": "data/guangzhou-community-phase-registry-2026.json",
+  "unifiedRowsUrl": "data/guangzhou-unified-community-rows-20261007.json",
+  "stats": {
+    "recordCount": 9300,
+    "baselineCount": 5743,
+    "candidateCount": 2924,
+    "phaseRecordCount": 172,
+    "registeredCoordinateCount": 1,
+    "phaseRegisteredCount": 172,
+    "districtInferredCount": 2924,
+    "districtInferredLowConfidence": 78,
+    "districtMissingAfterInference": 582,
+    "explicitPromotion": "保利辰园湖境",
+    "phaseVerifiedCount": 6,
+    "phaseInferredCount": 166,
+    "phaseGroupCount": 114,
+    "syntheticParentCount": 51
+  },
+  "phaseStats": {
+    "phaseRecordCount": 172,
+    "phaseGroupCount": 114,
+    "syntheticParentCount": 51,
+    "formalVerifiedCount": 6,
+    "inferredNameCount": 163,
+    "inferredCompoundCount": 3
+  }
+}

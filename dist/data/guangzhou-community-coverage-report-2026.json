@@ -1,0 +1,204 @@
+{
+  "schemaVersion": 1,
+  "city": "guangzhou",
+  "cityName": "广州",
+  "schoolYear": 2026,
+  "generatedAt": "2026-10-07T09:26:27.999890Z",
+  "recordCount": 5743,
+  "definition": "available 表示该细分项存在原始数值或可解释代理；missing=recordCount-available。estimated/verified 用于区分估算和核验。学校为当前名称/地段文本匹配命中数，不等于逐小区官方确认。",
+  "dimensions": {
+    "transport": {
+      "status": "all_coordinate_estimate_or_verified",
+      "stationDistance": {
+        "available": 5743,
+        "missing": 0,
+        "verified": 4,
+        "estimated": 5739
+      },
+      "stationLevel": {
+        "available": 5743,
+        "missing": 0,
+        "verified": 4,
+        "estimated": 5739
+      }
+    },
+    "center": {
+      "status": "cbd_distance_complete_commute_proxy",
+      "cbdStraightDistance": {
+        "available": 5743,
+        "missing": 0,
+        "verified": 0,
+        "estimated": 5743
+      },
+      "peakTransitTime": {
+        "available": 5743,
+        "missing": 0,
+        "verified": 0,
+        "estimated": 5743
+      }
+    },
+    "school": {
+      "status": "layered_official_plus_provisional",
+      "elementaryMapping": {
+        "available": 1273,
+        "missing": 4470,
+        "unit": "community-records",
+        "label": "小学学区命中小区数",
+        "mappingRows": 1611,
+        "uniqueSchoolNames": 380,
+        "provisionalAvailable": 4470,
+        "provisionalUniqueSchoolNames": 465,
+        "effectiveAvailable": 5743,
+        "effectiveMissing": 0
+      },
+      "middleMapping": {
+        "available": 954,
+        "missing": 4789,
+        "unit": "community-records",
+        "label": "初中学区命中小区数",
+        "mappingRows": 4143,
+        "uniqueSchoolNames": 90,
+        "provisionalAvailable": 4789,
+        "provisionalUniqueSchoolNames": 300,
+        "effectiveAvailable": 5743,
+        "effectiveMissing": 0
+      },
+      "note": "官方服务地段/初中分组未命中时，依次补充房天下“附近学校”候选、地址道路与官方招生地段文本交叉、同区邻近已映射小区一致候选，以及最后的行政区学校排名样本基线。基线只保证缺字段可计算，界面标红并按待确认摇号处理，不等于确定学位。"
+    },
+    "price": {
+      "status": "partial_public_estimate",
+      "pricePerSqm": {
+        "available": 4921,
+        "missing": 822,
+        "multiSource": 471,
+        "singleSourceOrProvisional": 4450
+      }
+    },
+    "life": {
+      "status": "coordinate_derived_provisional",
+      "commercial": {
+        "available": 5743,
+        "missing": 0,
+        "positivePointCount": 5150
+      },
+      "dining": {
+        "available": 5743,
+        "missing": 0,
+        "positivePointCount": 5177
+      },
+      "matureMall": {
+        "available": 26,
+        "missing": 5717
+      },
+      "tertiaryHospital": {
+        "available": 4870,
+        "missing": 873
+      },
+      "localMedical": {
+        "available": 5378,
+        "missing": 365
+      },
+      "park": {
+        "available": 5672,
+        "missing": 71
+      },
+      "multiSourceCommunityCount": 17
+    },
+    "quality": {
+      "status": "partial_public_detail_fields",
+      "buildYear": {
+        "available": 4734,
+        "missing": 1009
+      },
+      "greenRate": {
+        "available": 4261,
+        "missing": 1482
+      },
+      "plotRatio": {
+        "available": 4240,
+        "missing": 1503
+      },
+      "parkingCount": {
+        "available": 3748,
+        "missing": 1995
+      },
+      "buildingCount": {
+        "available": 5735,
+        "missing": 8
+      },
+      "developer": {
+        "available": 4454,
+        "missing": 1289
+      },
+      "propertyCompany": {
+        "available": 404,
+        "missing": 5339
+      },
+      "householdCount": {
+        "available": 5743,
+        "missing": 0
+      },
+      "maxFloor": {
+        "available": 5743,
+        "missing": 0
+      },
+      "floorHeight": {
+        "available": 5743,
+        "missing": 0
+      },
+      "ladderHouseholdRatio": {
+        "available": 5743,
+        "missing": 0
+      },
+      "noiseLevel": {
+        "available": 5743,
+        "missing": 0
+      },
+      "layoutQuality": {
+        "available": 5743,
+        "missing": 0,
+        "defaultValue": 1,
+        "negativeEvidence": 0,
+        "status": "default-or-curated-public-evidence"
+      },
+      "note": "房型质量默认 1 分；仅在导入名称+行政区精确匹配且含公开来源、采集日期和摘要的负面证据后改为 0 分。车位总数保留为辅助公开字段，不参与品质评分。"
+    },
+    "future": {
+      "status": "11_district_regional_proxy",
+      "districtProxyAvailable": 5743,
+      "districtProxyMissing": 0,
+      "amenitiesMaturity": {
+        "available": 5743,
+        "missing": 0
+      },
+      "transportDelivery": {
+        "available": 5743,
+        "missing": 0
+      },
+      "industryPopulation": {
+        "available": 5743,
+        "missing": 0
+      },
+      "supplyDemand": {
+        "available": 5743,
+        "missing": 0
+      },
+      "projectEvidenceRecords": 5,
+      "districtProfileRecords": 11,
+      "districtProfileCounts": {
+        "天河": 758,
+        "增城": 475,
+        "花都": 596,
+        "海珠": 711,
+        "黄埔": 277,
+        "番禺": 760,
+        "白云": 625,
+        "越秀": 682,
+        "从化": 223,
+        "荔湾": 417,
+        "南沙": 219
+      },
+      "note": "广州11区均有官方规划片区代理；产业/供需为区域代理，生活/交通为当前小区数据，均不解释为小区级规划承诺。"
+    }
+  }
+}

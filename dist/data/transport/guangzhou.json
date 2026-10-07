@@ -3,7 +3,6 @@
   "city": "guangzhou",
   "cityName": "广州",
   "generatedAt": "2026-10-07T00:00:00Z",
-  "routeRuleVersion": "2026-10-07-walk-estimate-public-first-1.35",
   "source": {
     "name": "OpenStreetMap Overpass API",
     "endpoints": [
@@ -24,13 +23,13 @@
     "maximum": 50,
     "routeEstimation": {
       "walkingRoutePriority": "完整的最近人行道出入口到地铁可用出口步行路线",
-      "fallback": "有公开步行距离时直接采用；缺少公开步行距离时直线距离×1.35",
+      "fallback": "max(直线距离×1.35，公开步行距离×1.00)",
       "straightMultiplier": 1.35,
       "publishedMultiplier": 1,
       "calibrationSampleCount": 49,
       "calibrationMeanWalkToStraight": 1.236,
       "calibrationMedianWalkToStraight": 1.059,
-      "note": "统一使用小区最近人行道出入口到地铁可用出口的距离；公开步行路线优先直接采用，只有缺少公开步行距离时才用直线距离×1.35估算。仅有小区中心坐标时必须标注为中心点代理估算。",
+      "note": "根据入口/出口口径一致的广州样本校准；排除明显将小区中心或道路距离当作步行距离的异常样本后，稳定样本中位约1.35。公开距离可能是地图估算，不等同核验步行轨迹，用户实测值优先。",
       "samples": [
         {
           "name": "大壮名城→暹岗站（中心点校准）",
@@ -68,8 +67,7 @@
       "calibrationP10": 0.849,
       "calibrationP90": 1.792,
       "calibrationSource": "data/transport/guangzhou-walking-ratio-calibration-2026.json",
-      "calibrationMethod": "高可信入口/出口样本用于1.35直线兜底系数；公开步行距离不再与直线距离比较取最大值",
-      "priority": "published-walking-distance"
+      "calibrationMethod": "高可信入口/出口样本中位数；异常中心点/道路口径样本不参与1.35系数"
     }
   },
   "stats": {
@@ -4847,9 +4845,8 @@
   "communityRouteSchema": {
     "version": 1,
     "description": "小区最近人行道出入口到地铁可用人行出口的步行距离。估算路线允许参与评分，但必须标明 distanceQuality=estimated；用户实测后可直接修改 walkDistanceM。",
-    "estimateFormula": "公开的最近人行道出入口→地铁可用出口步行距离优先直接采用；没有公开步行距离时，使用直线距离×1.35；只有中心坐标时标记为中心点代理估算，结果保留具体来源和口径。",
-    "updatedAt": "2026-10-07",
-    "routeRuleVersion": "2026-10-07-walk-estimate-public-first-1.35"
+    "estimateFormula": "优先完整入口到出口步行路线；缺少完整路线时 max(straightDistanceM×1.35, publishedDistanceM×1.00)，结果四舍五入到10米；中心点步行路线仅在明确标记完整路线时作为校准参考。",
+    "updatedAt": "2026-10-07"
   },
   "communityRoutes": [
     {
@@ -4866,34 +4863,28 @@
           "distanceQuality": "estimated",
           "source": "第三方步行路线测试摘要（用户提供）+ 公开项目资料；未取得接口原始轨迹",
           "verifiedAt": "2026-10-03",
-          "estimateMethod": "公开步行距离优先直接采用（700m）；口径为最近人行道出入口→地铁可用出口时作为最终距离",
+          "estimateMethod": "公开步行约600–800m取中位值，按10m取整",
           "straightDistanceM": 520,
           "publishedDistanceM": 700,
           "centerWalkingDistanceM": null,
           "originOffsetM": 570,
-          "stationOffsetM": 40,
-          "distanceBasis": "published-walking-distance",
-          "originBasis": "nearest-pedestrian-entrance-estimate",
-          "stationBasis": "nearest-available-exit-estimate"
+          "stationOffsetM": 40
         },
         {
           "stationName": "科丰路",
           "stationLevelScore": 16,
-          "walkDistanceM": 377,
+          "walkDistanceM": 380,
           "originEntrance": "大壮名城靠科丰路侧最近人行出入口（估算）",
           "stationExit": "科丰路站C口（估算）",
           "distanceQuality": "estimated",
           "source": "第三方步行路线测试摘要（用户提供）+ 广州地铁站点/出口公开位置；未取得接口原始轨迹",
           "verifiedAt": "2026-10-03",
-          "estimateMethod": "公开步行距离优先直接采用（377m）；口径为最近人行道出入口→地铁可用出口时作为最终距离",
+          "estimateMethod": "公开步行约377m与直线距离×1.35取高值，按10m取整",
           "straightDistanceM": 280,
           "publishedDistanceM": 377,
           "centerWalkingDistanceM": null,
           "originOffsetM": 540,
-          "stationOffsetM": 40,
-          "distanceBasis": "published-walking-distance",
-          "originBasis": "nearest-pedestrian-entrance-estimate",
-          "stationBasis": "nearest-available-exit-estimate"
+          "stationOffsetM": 40
         },
         {
           "stationName": "苏元",
@@ -4904,15 +4895,12 @@
           "distanceQuality": "estimated",
           "source": "第三方步行路线测试摘要（用户提供）+ 苏元站D口目的地指引；未取得接口原始轨迹",
           "verifiedAt": "2026-10-03",
-          "estimateMethod": "公开步行距离优先直接采用（1000m）；口径为最近人行道出入口→地铁可用出口时作为最终距离",
+          "estimateMethod": "公开步行约900–1100m取中位值，按10m取整",
           "straightDistanceM": 740,
           "publishedDistanceM": 1000,
           "centerWalkingDistanceM": null,
           "originOffsetM": 0,
-          "stationOffsetM": 0,
-          "distanceBasis": "published-walking-distance",
-          "originBasis": "nearest-pedestrian-entrance-estimate",
-          "stationBasis": "nearest-available-exit-estimate"
+          "stationOffsetM": 0
         }
       ]
     },
@@ -4926,40 +4914,34 @@
         {
           "stationName": "燕山",
           "stationLevelScore": 14,
-          "walkDistanceM": 70,
+          "walkDistanceM": 120,
           "originEntrance": "小区最近人行道出入口（估算）",
           "stationExit": "地铁站最近可用人行出口（估算）",
           "distanceQuality": "estimated",
           "source": "高德地图步行路线中心点校准 + 公开项目资料；未取得逐一入口路线时按统一估算公式",
           "verifiedAt": "2026-10-03",
-          "estimateMethod": "公开步行距离优先直接采用（70m）；口径为最近人行道出入口→地铁可用出口时作为最终距离",
+          "estimateMethod": "统一估算：完整入口到出口路线优先；缺少完整路线时取直线距离×1.35与公开步行距离×1.00的较高值，四舍五入到10米",
           "straightDistanceM": 90,
           "publishedDistanceM": 70,
           "centerWalkingDistanceM": null,
           "originOffsetM": 0,
-          "stationOffsetM": 0,
-          "distanceBasis": "published-walking-distance",
-          "originBasis": "nearest-pedestrian-entrance-estimate",
-          "stationBasis": "nearest-available-exit-estimate"
+          "stationOffsetM": 0
         },
         {
           "stationName": "水西",
           "stationLevelScore": 21,
-          "walkDistanceM": 900,
+          "walkDistanceM": 2000,
           "originEntrance": "小区最近人行道出入口（估算）",
           "stationExit": "地铁站最近可用人行出口（估算）",
           "distanceQuality": "estimated",
           "source": "高德地图步行路线中心点校准 + 公开项目资料；未取得逐一入口路线时按统一估算公式",
           "verifiedAt": "2026-10-03",
-          "estimateMethod": "公开步行距离优先直接采用（900m）；口径为最近人行道出入口→地铁可用出口时作为最终距离",
+          "estimateMethod": "统一估算：完整入口到出口路线优先；缺少完整路线时取直线距离×1.35与公开步行距离×1.00的较高值，四舍五入到10米",
           "straightDistanceM": 1484,
           "publishedDistanceM": 900,
           "centerWalkingDistanceM": 2454,
           "originOffsetM": 1000,
-          "stationOffsetM": 100,
-          "distanceBasis": "published-walking-distance",
-          "originBasis": "nearest-pedestrian-entrance-estimate",
-          "stationBasis": "nearest-available-exit-estimate"
+          "stationOffsetM": 100
         }
       ]
     },
@@ -4976,21 +4958,18 @@
         {
           "stationName": "水西",
           "stationLevelScore": 21,
-          "walkDistanceM": 1100,
+          "walkDistanceM": 1160,
           "originEntrance": "小区最近人行道出入口（估算）",
           "stationExit": "地铁站最近可用人行出口（估算）",
           "distanceQuality": "estimated",
           "source": "高德地图步行路线中心点校准 + 公开项目资料；未取得逐一入口路线时按统一估算公式",
           "verifiedAt": "2026-10-03",
-          "estimateMethod": "公开步行距离优先直接采用（1100m）；口径为最近人行道出入口→地铁可用出口时作为最终距离",
+          "estimateMethod": "统一估算：完整入口到出口路线优先；缺少完整路线时取直线距离×1.35与公开步行距离×1.00的较高值，四舍五入到10米",
           "straightDistanceM": 862,
           "publishedDistanceM": 1100,
           "centerWalkingDistanceM": 1348,
           "originOffsetM": 80,
-          "stationOffsetM": 40,
-          "distanceBasis": "published-walking-distance",
-          "originBasis": "nearest-pedestrian-entrance-estimate",
-          "stationBasis": "nearest-available-exit-estimate"
+          "stationOffsetM": 40
         }
       ]
     },
@@ -5005,21 +4984,18 @@
         {
           "stationName": "长平",
           "stationLevelScore": 13,
-          "walkDistanceM": 1100,
+          "walkDistanceM": 2970,
           "originEntrance": "小区最近人行道出入口（估算）",
           "stationExit": "地铁站最近可用人行出口（估算）",
           "distanceQuality": "estimated",
           "source": "高德地图步行路线中心点校准 + 公开项目资料；未取得逐一入口路线时按统一估算公式",
           "verifiedAt": "2026-10-03",
-          "estimateMethod": "公开步行距离优先直接采用（1100m）；口径为最近人行道出入口→地铁可用出口时作为最终距离",
+          "estimateMethod": "统一估算：完整入口到出口路线优先；缺少完整路线时取直线距离×1.35与公开步行距离×1.00的较高值，四舍五入到10米",
           "straightDistanceM": 2203,
           "publishedDistanceM": 1100,
           "centerWalkingDistanceM": 2576,
           "originOffsetM": 1080,
-          "stationOffsetM": 40,
-          "distanceBasis": "published-walking-distance",
-          "originBasis": "nearest-pedestrian-entrance-estimate",
-          "stationBasis": "nearest-available-exit-estimate"
+          "stationOffsetM": 40
         }
       ]
     },
@@ -5038,21 +5014,18 @@
         {
           "stationName": "香雪",
           "stationLevelScore": 13,
-          "walkDistanceM": 1400,
+          "walkDistanceM": 1630,
           "originEntrance": "小区最近人行道出入口（估算）",
           "stationExit": "地铁站最近可用人行出口（估算）",
           "distanceQuality": "estimated",
           "source": "高德地图步行路线中心点校准 + 公开项目资料；未取得逐一入口路线时按统一估算公式",
           "verifiedAt": "2026-10-03",
-          "estimateMethod": "公开步行距离优先直接采用（1400m）；口径为最近人行道出入口→地铁可用出口时作为最终距离",
+          "estimateMethod": "统一估算：完整入口到出口路线优先；缺少完整路线时取直线距离×1.35与公开步行距离×1.00的较高值，四舍五入到10米",
           "straightDistanceM": 1209,
           "publishedDistanceM": 1400,
           "centerWalkingDistanceM": 1783,
           "originOffsetM": 330,
-          "stationOffsetM": 40,
-          "distanceBasis": "published-walking-distance",
-          "originBasis": "nearest-pedestrian-entrance-estimate",
-          "stationBasis": "nearest-available-exit-estimate"
+          "stationOffsetM": 40
         }
       ]
     }

@@ -1,15 +1,16 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-04T00:00:00Z",
+  "generatedAt": "2026-10-07T00:00:00Z",
   "cities": {
     "guangzhou": {
       "cityName": "广州",
-      "version": "2026-10-04-transport-v4",
+      "version": "2026-10-07-transport-v6",
       "url": "data/transport/cities/guangzhou.json",
-      "sha256": "ff9ec9995fd96f2e396c7b5c03b4e59c94d72053fef66ab105716fb6d5e6adcb",
-      "bytes": 120529,
+      "sha256": "058ffceb9080ab5c497eacd1b468a2a7cd9956fa8d14fefbc9e17eaa4ff5a783",
+      "bytes": 117494,
       "stationCount": 310,
-      "generatedAt": "2026-10-04T00:00:00Z"
+      "generatedAt": "2026-10-07T00:00:00Z",
+      "routeRuleVersion": "2026-10-07-walk-estimate-public-first-1.35"
     }
   }
 }

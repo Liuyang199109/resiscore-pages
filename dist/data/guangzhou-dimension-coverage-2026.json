@@ -1,0 +1,584 @@
+{
+  "schemaVersion": 1,
+  "city": "guangzhou",
+  "cityName": "广州",
+  "generatedAt": "2026-10-07T09:26:17.630370Z",
+  "recordCount": 5743,
+  "countDefinition": "主表按软件可显示/可计算值统计；估算、片区代理、单源待确认和可解释零值均算有数据。空字段或无法生成结果才算缺失。严格来源覆盖另列 evidenceValue/evidenceMissing。",
+  "dimensions": {
+    "transport": {
+      "name": "交通位置",
+      "subitems": {
+        "stationDistance": {
+          "label": "地铁站步行距离",
+          "available": 5743,
+          "missing": 0,
+          "status": "coordinate-estimate-fallback",
+          "verifiedRouteRecords": 4,
+          "estimatedRecords": 5739
+        },
+        "stationLevel": {
+          "label": "地铁站等级",
+          "available": 5743,
+          "missing": 0,
+          "status": "station-coordinate-estimate",
+          "verifiedRouteRecords": 4,
+          "estimatedRecords": 5739
+        }
+      },
+      "note": "310个站点坐标；交通包内明确路线5条，其中4条可与主索引小区对应，其余使用坐标估算。"
+    },
+    "center": {
+      "name": "市中心距离",
+      "subitems": {
+        "cbdDistance": {
+          "label": "到市级CBD直线距离",
+          "available": 5743,
+          "missing": 0,
+          "status": "coordinate-derived"
+        },
+        "peakTransitTime": {
+          "label": "高峰公共交通时间",
+          "available": 5743,
+          "missing": 0,
+          "status": "cbd-distance-proxy",
+          "verifiedRecords": 5,
+          "estimatedRecords": 5738
+        }
+      },
+      "note": "CBD直线距离全部由坐标计算；高峰时间只有5条历史实测，其余按距离代理并标待确认。"
+    },
+    "school": {
+      "name": "学区资源",
+      "subitems": {
+        "elementary": {
+          "label": "小学学区映射",
+          "available": 1272,
+          "missing": 4471,
+          "provisionalAvailable": 4471,
+          "availableWithProvisional": 5743,
+          "missingAfterProvisional": 0,
+          "status": "official-text-plus-layered-fallback"
+        },
+        "middle": {
+          "label": "初中对口/派位映射",
+          "available": 954,
+          "missing": 4789,
+          "provisionalAvailable": 4789,
+          "availableWithProvisional": 5743,
+          "missingAfterProvisional": 0,
+          "status": "official-text-plus-layered-fallback"
+        }
+      },
+      "bothAvailable": 381,
+      "bothAvailableWithProvisional": 5743,
+      "anyAvailableWithProvisional": 5743,
+      "noneAvailableWithProvisional": 0,
+      "normalizedPackages": 33,
+      "supplementRecords": 5744,
+      "byDistrict": {
+        "从化": {
+          "elementary": 66,
+          "middle": 59,
+          "both": 53,
+          "elementaryMissing": 157,
+          "provisionalElementary": 157,
+          "middleMissing": 164,
+          "provisionalMiddle": 164
+        },
+        "南沙": {
+          "elementary": 62,
+          "middleMissing": 211,
+          "provisionalMiddle": 211,
+          "elementaryMissing": 157,
+          "provisionalElementary": 157,
+          "middle": 8,
+          "both": 8
+        },
+        "增城": {
+          "elementaryMissing": 455,
+          "provisionalElementary": 455,
+          "middleMissing": 452,
+          "provisionalMiddle": 452,
+          "elementary": 20,
+          "middle": 23,
+          "both": 9
+        },
+        "天河": {
+          "elementary": 217,
+          "middleMissing": 751,
+          "provisionalMiddle": 751,
+          "elementaryMissing": 541,
+          "provisionalElementary": 541,
+          "middle": 7,
+          "both": 7
+        },
+        "海珠": {
+          "elementaryMissing": 688,
+          "provisionalElementary": 688,
+          "middleMissing": 711,
+          "provisionalMiddle": 711,
+          "elementary": 23
+        },
+        "番禺": {
+          "elementaryMissing": 546,
+          "provisionalElementary": 546,
+          "middle": 760,
+          "elementary": 214,
+          "both": 214
+        },
+        "白云": {
+          "elementaryMissing": 574,
+          "provisionalElementary": 574,
+          "middleMissing": 614,
+          "provisionalMiddle": 614,
+          "elementary": 51,
+          "middle": 11,
+          "both": 8
+        },
+        "花都": {
+          "elementary": 251,
+          "middle": 21,
+          "both": 17,
+          "middleMissing": 575,
+          "provisionalMiddle": 575,
+          "elementaryMissing": 345,
+          "provisionalElementary": 345
+        },
+        "荔湾": {
+          "elementaryMissing": 383,
+          "provisionalElementary": 383,
+          "middleMissing": 417,
+          "provisionalMiddle": 417,
+          "elementary": 34
+        },
+        "越秀": {
+          "elementaryMissing": 434,
+          "provisionalElementary": 434,
+          "middleMissing": 682,
+          "provisionalMiddle": 682,
+          "elementary": 248
+        },
+        "黄埔": {
+          "elementaryMissing": 191,
+          "provisionalElementary": 191,
+          "middleMissing": 212,
+          "provisionalMiddle": 212,
+          "elementary": 86,
+          "middle": 65,
+          "both": 65
+        }
+      },
+      "note": "官方招生表未按小区名直接命中时，按地址/道路、官方小学—初中派位组、公开候选、邻近小区共识逐层回退；最后对仍缺少精确映射的小区使用行政区学校排名样本基线，确保评分可计算但明确标为待确认估算。"
+    },
+    "price": {
+      "name": "单价压力",
+      "subitems": {
+        "pricePerSqm": {
+          "label": "小区均价",
+          "available": 4921,
+          "missing": 822,
+          "status": "public-average-provisional",
+          "multiSourceRecords": 471
+        }
+      }
+    },
+    "life": {
+      "name": "生活配套",
+      "subitems": {
+        "commercial": {
+          "label": "2km商业店铺",
+          "available": 5743,
+          "missing": 0,
+          "status": "osm-derived-provisional",
+          "strictEvidenceNonZero": 5150,
+          "strictEvidenceMissing": 593
+        },
+        "dining": {
+          "label": "2km餐饮店铺",
+          "available": 5743,
+          "missing": 0,
+          "status": "osm-derived-provisional",
+          "strictEvidenceNonZero": 5177,
+          "strictEvidenceMissing": 566
+        },
+        "matureMall": {
+          "label": "大型成熟商场加分",
+          "available": 5743,
+          "missing": 0,
+          "status": "derived-zero-valid",
+          "strictEvidenceNonZero": 26,
+          "strictEvidenceMissing": 5717
+        },
+        "tertiaryHospital": {
+          "label": "最近三级医院距离",
+          "available": 5743,
+          "missing": 0,
+          "status": "nearest-point-fallback-provisional",
+          "strictEvidenceValue": 4870,
+          "strictEvidenceMissing": 873
+        },
+        "localMedical": {
+          "label": "最近基层医疗距离",
+          "available": 5743,
+          "missing": 0,
+          "status": "nearest-point-fallback-provisional",
+          "strictEvidenceValue": 5378,
+          "strictEvidenceMissing": 365
+        },
+        "park": {
+          "label": "最近公园距离",
+          "available": 5743,
+          "missing": 0,
+          "status": "nearest-point-fallback-provisional",
+          "strictEvidenceValue": 5672,
+          "strictEvidenceMissing": 71
+        }
+      }
+    },
+    "quality": {
+      "name": "小区品质",
+      "subitems": {
+        "age": {
+          "label": "建成年代/老旧程度",
+          "available": 4734,
+          "missing": 1009,
+          "status": "observed-provisional"
+        },
+        "greenery": {
+          "label": "绿化率",
+          "available": 4261,
+          "missing": 1482,
+          "status": "observed-provisional"
+        },
+        "elevatorHousehold": {
+          "label": "梯户比",
+          "available": 5743,
+          "missing": 0,
+          "status": "estimated",
+          "estimatedRecords": 5743
+        },
+        "noise": {
+          "label": "噪音",
+          "available": 5743,
+          "missing": 0,
+          "status": "estimated",
+          "estimatedRecords": 5743
+        },
+        "maxFloor": {
+          "label": "最高楼层",
+          "available": 5743,
+          "missing": 0,
+          "status": "estimated",
+          "estimatedRecords": 5743
+        },
+        "layoutQuality": {
+          "label": "房型质量（0/1分）",
+          "available": 5743,
+          "missing": 0,
+          "status": "default-or-curated-public-evidence",
+          "defaultValue": 1,
+          "negativeEvidence": 0
+        },
+        "developer": {
+          "label": "开发商品牌",
+          "available": 4454,
+          "missing": 1289,
+          "status": "observed/provisional",
+          "recognizedBrandScoreRecords": 420
+        },
+        "floorHeight": {
+          "label": "层高",
+          "available": 5743,
+          "missing": 0,
+          "status": "estimated",
+          "estimatedRecords": 5743
+        }
+      },
+      "rawFields": {
+        "buildYear": {
+          "available": 4734,
+          "missing": 1009
+        },
+        "greenRate": {
+          "available": 4261,
+          "missing": 1482
+        },
+        "plotRatio": {
+          "available": 4240,
+          "missing": 1503
+        },
+        "parkingCount": {
+          "available": 3748,
+          "missing": 1995
+        },
+        "buildingCount": {
+          "available": 5735,
+          "missing": 8
+        },
+        "developer": {
+          "available": 4454,
+          "missing": 1289
+        },
+        "propertyCompany": {
+          "available": 404,
+          "missing": 5339
+        },
+        "householdCount": {
+          "available": 5743,
+          "missing": 0
+        },
+        "maxFloor": {
+          "available": 5743,
+          "missing": 0
+        },
+        "floorHeight": {
+          "available": 5743,
+          "missing": 0
+        },
+        "ladderHouseholdRatio": {
+          "available": 5743,
+          "missing": 0
+        },
+        "noiseLevel": {
+          "available": 5743,
+          "missing": 0
+        },
+        "layoutQuality": {
+          "available": 5743,
+          "missing": 0
+        }
+      },
+      "note": "房型质量默认 1 分；只有导入可审计公开负面证据后才改为 0 分。车位总数仅作辅助公开字段，不参与评分。"
+    },
+    "future": {
+      "name": "未来潜力",
+      "subitems": {
+        "amenities": {
+          "label": "生活配套成熟度",
+          "available": 5743,
+          "missing": 0,
+          "status": "district-proxy-plus-current-life"
+        },
+        "transport": {
+          "label": "交通兑现度",
+          "available": 5743,
+          "missing": 0,
+          "status": "current-transport-proxy"
+        },
+        "industry": {
+          "label": "产业与人口导入",
+          "available": 5743,
+          "missing": 0,
+          "status": "district-proxy"
+        },
+        "supply": {
+          "label": "供需竞争压力",
+          "available": 5743,
+          "missing": 0,
+          "status": "district-proxy"
+        }
+      },
+      "districtProfiles": 11,
+      "directCommunityEvidence": 5
+    }
+  },
+  "qualityRawFields": {
+    "buildYear": {
+      "available": 4734,
+      "missing": 1009
+    },
+    "greenRate": {
+      "available": 4261,
+      "missing": 1482
+    },
+    "plotRatio": {
+      "available": 4240,
+      "missing": 1503
+    },
+    "parkingCount": {
+      "available": 3748,
+      "missing": 1995
+    },
+    "buildingCount": {
+      "available": 5735,
+      "missing": 8
+    },
+    "developer": {
+      "available": 4454,
+      "missing": 1289
+    },
+    "propertyCompany": {
+      "available": 404,
+      "missing": 5339
+    },
+    "householdCount": {
+      "available": 5743,
+      "missing": 0
+    },
+    "maxFloor": {
+      "available": 5743,
+      "missing": 0
+    },
+    "floorHeight": {
+      "available": 5743,
+      "missing": 0
+    },
+    "ladderHouseholdRatio": {
+      "available": 5743,
+      "missing": 0
+    },
+    "noiseLevel": {
+      "available": 5743,
+      "missing": 0
+    },
+    "layoutQuality": {
+      "available": 5743,
+      "missing": 0
+    }
+  },
+  "strictEvidenceAmenityMetrics": {
+    "commercialCount": {
+      "evidenceValue": 5743,
+      "evidenceMissing": 0
+    },
+    "diningCount": {
+      "evidenceValue": 5743,
+      "evidenceMissing": 0
+    },
+    "tertiaryHospitalDistanceKm": {
+      "evidenceValue": 4870,
+      "evidenceMissing": 873
+    },
+    "localMedicalDistanceKm": {
+      "evidenceValue": 5378,
+      "evidenceMissing": 365
+    },
+    "parkDistanceKm": {
+      "evidenceValue": 5672,
+      "evidenceMissing": 71
+    }
+  },
+  "school": {
+    "available": {
+      "elementary": 1272,
+      "middle": 954,
+      "both": 381
+    },
+    "missing": {
+      "elementary": 4471,
+      "middle": 4789
+    },
+    "provisional": {
+      "elementary": 4471,
+      "middle": 4789
+    },
+    "withProvisional": {
+      "elementary": 5743,
+      "middle": 5743,
+      "both": 5743,
+      "any": 5743,
+      "none": 0
+    },
+    "byDistrict": {
+      "从化": {
+        "elementary": 66,
+        "middle": 59,
+        "both": 53,
+        "elementaryMissing": 157,
+        "provisionalElementary": 157,
+        "middleMissing": 164,
+        "provisionalMiddle": 164
+      },
+      "南沙": {
+        "elementary": 62,
+        "middleMissing": 211,
+        "provisionalMiddle": 211,
+        "elementaryMissing": 157,
+        "provisionalElementary": 157,
+        "middle": 8,
+        "both": 8
+      },
+      "增城": {
+        "elementaryMissing": 455,
+        "provisionalElementary": 455,
+        "middleMissing": 452,
+        "provisionalMiddle": 452,
+        "elementary": 20,
+        "middle": 23,
+        "both": 9
+      },
+      "天河": {
+        "elementary": 217,
+        "middleMissing": 751,
+        "provisionalMiddle": 751,
+        "elementaryMissing": 541,
+        "provisionalElementary": 541,
+        "middle": 7,
+        "both": 7
+      },
+      "海珠": {
+        "elementaryMissing": 688,
+        "provisionalElementary": 688,
+        "middleMissing": 711,
+        "provisionalMiddle": 711,
+        "elementary": 23
+      },
+      "番禺": {
+        "elementaryMissing": 546,
+        "provisionalElementary": 546,
+        "middle": 760,
+        "elementary": 214,
+        "both": 214
+      },
+      "白云": {
+        "elementaryMissing": 574,
+        "provisionalElementary": 574,
+        "middleMissing": 614,
+        "provisionalMiddle": 614,
+        "elementary": 51,
+        "middle": 11,
+        "both": 8
+      },
+      "花都": {
+        "elementary": 251,
+        "middle": 21,
+        "both": 17,
+        "middleMissing": 575,
+        "provisionalMiddle": 575,
+        "elementaryMissing": 345,
+        "provisionalElementary": 345
+      },
+      "荔湾": {
+        "elementaryMissing": 383,
+        "provisionalElementary": 383,
+        "middleMissing": 417,
+        "provisionalMiddle": 417,
+        "elementary": 34
+      },
+      "越秀": {
+        "elementaryMissing": 434,
+        "provisionalElementary": 434,
+        "middleMissing": 682,
+        "provisionalMiddle": 682,
+        "elementary": 248
+      },
+      "黄埔": {
+        "elementaryMissing": 191,
+        "provisionalElementary": 191,
+        "middleMissing": 212,
+        "provisionalMiddle": 212,
+        "elementary": 86,
+        "middle": 65,
+        "both": 65
+      }
+    },
+    "normalizedPackages": 33,
+    "supplementRecords": 5744
+  },
+  "limitations": [
+    "软件可计算不等于官方核验；红色待确认值仍可能需要现场或官方来源复核。",
+    "学区统计包含小区名/别名/地址别名及道路/片区文本交叉候选；道路候选可能对应多所学校，不等于确定学位。",
+    "未命中不等于现实中没有学区；生活配套主表的0值表示在当前半径和点位源中未识别到目标，不是数据库字段空白。"
+  ]
+}

@@ -3931,5 +3931,8 @@
       "ratio": 0.154,
       "sourceUrl": "https://gz.dushiquan.net/xiaoqu/13131/"
     }
-  ]
+  ],
+  "productionMultiplier": 1.35,
+  "productionMultiplierRationale": "只有缺少公开步行距离时才使用入口/出口口径样本校准的1.35直线兜底系数；有公开步行距离时直接采用公开值，不再取最大值。",
+  "productionPriority": "published-walking-distance-first"
 }
